@@ -1,0 +1,195 @@
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+.spacer-v {
+  min-height: 10px;
+}
+
+.spacer-h {
+  min-width: 10px;
+}
+
+.window-module {
+  background-color: #282828;
+  border: none;
+  border-bottom: 8px solid #252c32;
+  border-radius: 5px;
+  margin-bottom: -6px;
+  margin-left: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.window-module label {
+  color: #ebdbb2;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.workspace-button {
+  background-color: #689d6a;
+  border: none;
+  border-bottom: 8px solid #518554;
+  border-radius: 5px;
+  margin-left: 4px;
+  margin-bottom: -6px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.workspace-button label {
+  color: #282828;
+  font-family: JetBrainsMono Nerd Font, sans-sherif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bar {
+  background-color: #1f2223;
+  border-bottom: 8px solid #191c1d;
+  color: #ebdbb2;
+  border-radius: 0px;
+}
+
+.bar-menu {
+  background-color: #1d2021;
+  border: none;
+  color: #ebdbb2;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.bar-menu-button {
+  background-color: #689d6a;
+  border: none;
+  border-radius: 2px;
+  text-shadow: none;
+  box-shadow: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 4px;
+}
+
+.bar-menu-button label {
+  color: #1d2021;
+  text-shadow: none;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: JetBrainsMono Nerd Font, monospace;
+}
+
+.bar-menu-spacer {
+  min-height: 50px;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #689d6a;
+  color: #000000;
+  border-radius: 2px;
+  /* margin: 4px; */
+  /* min-height: 16px; */
+}
+
+.metric scale trough {
+  all: unset;
+  background-color: #3c3836;
+  border-radius: 2px;
+  min-height: 18px;
+  min-width: 200px;
+  margin-left: -50px;
+  margin-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  color: #ebdbb2;
+  font-family: bold;
+}
+
+.metric label {
+  min-width: 40px;
+}
+
+.metric-label {
+  margin-left: -90px;
+}
+
+.metric-label-text label {
+  font-size: 28px;
+  color: #689d6a;
+}
+
+.powermenu-window {
+  background-color: #1d2021;
+  border: none;
+  color: #ebdbb2;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.powermenu-window label {
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ebdbb2;
+  background-color: #32302f;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.powermenu-button {
+  background-color: #e23c2c;
+  border: none;
+  border-radius: 2px;
+  text-shadow: none;
+  box-shadow: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.powermenu-button label {
+  color: #1d2021;
+  text-shadow: none;
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  background: none;
+  border: none;
+  padding: 0px;
+}
+
+.powermenu-poweroff-button label {
+  padding-right: 6px;
+}
+
+.powermenu-reboot-button label {
+  padding-left: 8px;
+}
+
+.powermenu-spacer-v {
+  min-height: 20px;
+}
+
+.powermenu-button-spacer {
+  min-width: 10px;
+}
