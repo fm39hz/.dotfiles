@@ -1,6 +1,10 @@
 dconf/*
 Code/*
 *.*
-# specific KDE files
+# Specific KDE files
 kde?*
 arkrc
+# Ibus runtime
+ibus/*
+# Pulse runtime
+pulse/*
