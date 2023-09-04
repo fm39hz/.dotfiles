@@ -54,4 +54,4 @@ colors:
     white: "#fbf1c7"
 
 selection:
-  save_to_clipboard: false
+  save_to_clipboard: true
