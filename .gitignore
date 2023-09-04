@@ -1,6 +1,16 @@
 dconf/*
 Code/*
 *.*
+# Sublime text files
+sublime-text/Installed Packages
+sublime-text/Lib
+sublime-text/Local
+sublime-text/Log
+sublime-text/Packages/markupsafe
+sublime-text/Packages/mdpopups
+sublime-text/Packages/pygments
+sublime-text/Packages/python-jinja2
+sublime-text/Packages/python-markdown
 # Specific KDE files
 kde?*
 arkrc
