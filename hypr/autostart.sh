@@ -10,7 +10,7 @@ run_hook pre &
 
 swww init
 
-set_wallpaper ~/.config/hypr/wallpaper.png
+set_wallpaper ~/.config/waypaper/wallpaper/GruvArch.png
 
 ~/.config/hypr/waybar/start
 ~/.config/hypr/swaync/start
@@ -23,10 +23,7 @@ lxsession &
 
 brightnessctl --restore
 
+eval "ibus start"
 eval "sleep 0.5; hyprctl reload" &
-
-eval "sleep 0.5; killall flameshot; pkill flameshot" &
-eval "sleep 0.5; killall flameshot; pkill flameshot" &
-eval "sleep 0.5; killall flameshot; pkill flameshot" &
 
 run_hook post &
