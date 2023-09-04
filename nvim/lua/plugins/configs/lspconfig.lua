@@ -40,16 +40,7 @@ M.capabilities.textDocument.completion.completionItem = {
     },
   },
 }
-require("lspconfig").csharp_ls.setup {
-  on_attach = M.on_attach,
-  capabilities = M.capabilities,
-}
 
-require("lspconfig").omnisharp.setup {
-  on_attach = M.on_attach,
-  capabilities = M.capabilities,
-  cmd = { "dotnet", "/home/fm39hz/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-}
 require("lspconfig").lua_ls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
