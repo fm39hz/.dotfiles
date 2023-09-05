@@ -55,6 +55,10 @@ local plugins = {
     lazy = true,
   },
   {
+    "rcarriga/nvim-dap-ui",
+    lazy = true,
+  },
+  {
     "theHamsta/nvim-dap-virtual-text",
     lazy = true,
   },
