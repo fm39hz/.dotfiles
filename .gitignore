@@ -5,6 +5,8 @@ Code/*
 kde?*
 arkrc
 # Ibus runtime
-ibus/*
+ibus/* 
 # Pulse runtime
 pulse/*
+# Npm plugin nvim
+nvim/node_modules/
