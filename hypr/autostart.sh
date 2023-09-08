@@ -23,7 +23,6 @@ lxsession &
 
 brightnessctl --restore
 
-eval "ibus-daemon -drxR"
 eval "sleep 0.5; hyprctl reload" &
 
 run_hook post &
