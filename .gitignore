@@ -10,3 +10,5 @@ ibus/*
 pulse/*
 # Npm plugin nvim
 nvim/node_modules/
+# Notion local storage
+notion-app-enhanced
