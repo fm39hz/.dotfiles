@@ -23,6 +23,7 @@ lxsession &
 
 brightnessctl --restore
 
+eval "sleep 1; fcitx5" &
 eval "sleep 0.5; hyprctl reload" &
 
 run_hook post &
