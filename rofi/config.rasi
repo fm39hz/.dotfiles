@@ -1,17 +1,16 @@
 configuration {
-    modi: "drun,run";
     lines: 5;
     font: "JetBrains Mono Nerd Font Bold 14";
     show-icons: true;
     terminal: "alacritty";
-    drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
     sidebar-mode: true;
-    display-drun: " 󰀘  Apps ";
-    display-run: "   Command ";
-    display-window: "   Window ";
+    display-drun: " 󰘴  Apps ";
+    display-run: "   Command ";
+    display-window: " 󱂬  Window ";
+    display-ssh: "  Ssh ";
 }
 
 @theme "themes/gruvbox"

@@ -9,7 +9,7 @@
 
 window#waybar {
     background: transparent;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 window#waybar.hidden {
@@ -58,7 +58,8 @@ window#waybar.hidden {
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    margin: 4px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -70,13 +71,43 @@ window#waybar.hidden {
     font-size: 22px;
     font-weight: bold;
     border: none;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     padding-left: 16px;
-    padding-right: 10px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    padding-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     margin-left: 2px;
-    margin-right: 16px;
+    margin-right: 14px;
+}
+
+#custom-menu {
+    background-color: transparent;
+    color: #B3B995;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#custom-swaync {
+    background-color: transparent;
+    color: #B3B995;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
 }
 
 #cpu {
@@ -89,8 +120,8 @@ window#waybar.hidden {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px 0px 0px 10px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 #memory {
@@ -103,8 +134,8 @@ window#waybar.hidden {
     border-radius: 0px 10px 10px 0px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     margin-right: 2px;
 }
 
@@ -154,8 +185,8 @@ window#waybar.hidden {
 }
 
 #clock {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px 10px 10px 10px;
@@ -173,8 +204,8 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-    margin-bottom: 4px;
-    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-top: 8px;
     margin-right: 0px;
     padding-left: 16px;
     padding-right: 16px;
@@ -190,8 +221,8 @@ window#waybar.hidden {
 }
 
 #custom-mem {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
@@ -216,8 +247,8 @@ window#waybar.hidden {
 }
 
 #backlight {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     margin-right: 2px;
     padding-left: 16px;
     padding-right: 16px;
@@ -228,8 +259,8 @@ window#waybar.hidden {
 }
 
 #battery {
-    margin-bottom: 4px;
-    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-top: 8px;
     margin-right: 2px;
     padding-left: 16px;
     padding-right: 16px;
@@ -260,8 +291,8 @@ window#waybar.hidden {
 }
 
 #tray {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 0px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;

@@ -5,27 +5,40 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "hyprland/window"],
+    "modules-left": [
+        "wlr/workspaces",
+        "hyprland/window"
+    ],
     //"modules-center": ["hyprland/window"],
-    "modules-right": ["custom/swaync", "custom/menu", "tray", "pulseaudio", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "custom/powermenu"],
+    "modules-right": [
+        "custom/swaync",
+        "custom/menu",
+        "tray",
+        "cpu",
+        "memory",
+        "battery",
+        "battery#bat2",
+        "clock",
+        "custom/powermenu"
+    ],
     // Modules configuration
     "custom/powermenu": {
-	"format": " ",
-	"on-click": "~/.config/hypr/eww/scripts/waybar/powermenu",
-	"tooltip": false,
+        "format": " ",
+        "on-click": "~/.config/hypr/eww/scripts/waybar/powermenu",
+        "tooltip": false,
     },
     "custom/swaync": {
-	"format": " ",
-	"on-click": "~/.config/hypr/swaync/scripts/tray_waybar.sh",
-	"tooltip": false,
+        "format": " ",
+        "on-click": "~/.config/hypr/swaync/scripts/tray_waybar.sh",
+        "tooltip": false,
     },
     "custom/menu": {
-	"format": " ",
-	"on-click": "~/.config/hypr/eww/scripts/waybar/bar_menu",
-	"tooltip": false,
+        "format": " ",
+        "on-click": "~/.config/hypr/eww/scripts/waybar/bar_menu",
+        "tooltip": false,
     },
     "wlr/workspaces": {
-	"on-click": "activate",
+        "on-click": "activate",
     },
     "keyboard-state": {
         "numlock": true,
@@ -42,7 +55,10 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": [
+            "",
+            ""
+        ],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -88,10 +104,10 @@
         "tooltip-format": "{:%H:%M}",
         "tooltip": true,
         "format-alt": "{:%B %d, %Y}",
-	    "format": "{:%I:%M %p}"
+        "format": "{:%I:%M %p}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
@@ -103,12 +119,26 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
     },
     "battery": {
         "states": {
@@ -117,12 +147,18 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}%  ",
+        "format-charging": "{capacity}% 󰂄 ",
         "format-plugged": "{capacity}%  ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -151,7 +187,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -168,4 +208,3 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
-
