@@ -34,8 +34,8 @@ window {
     height: 400px;
     width: 600px;
     border: 0px;
-    border-radius: 4px;
-    background-color: #2e450f;
+    border-radius: 10px;
+    background-color: #A6B8C1;
     padding: 4px 8px 4px 8px;
     fullscreen: false;
 }
@@ -47,16 +47,16 @@ mainbox {
 inputbar {
     children: [prompt,entry];
     background-color: #00000000;
-    border-radius: 2px;
+    border-radius: 10px;
     padding: 2px;
     margin: 0px -5px -4px -5px;
 }
 
 prompt {
-    background-color: @button;
+    background-color: #B3B995;
     padding: 12px;
     text-color: @bg-col;
-    border-radius: 2px;
+    border-radius: 10px;
     margin: 8px 0px 0px 8px;
 }
 
@@ -70,7 +70,7 @@ entry {
     margin: 8px 8px -4px 8px;
     text-color: @fg-col;
     background-color: @blank;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 0px 0px 8px 0px;
 }
 
@@ -83,10 +83,10 @@ listview {
 
 element {
     padding: 12px 12px 12px 12px;
-    background-color: @blank;
-    text-color: @fg-col;
+    background-color: #C6B0BC;
+    text-color: @fg-col2;
     margin: 0px 0px 8px 0px;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 0px 0px 0px 0px;
 }
 
@@ -96,9 +96,9 @@ element-icon {
 }
 
 element selected {
-    background-color: @button;
+    background-color: #E1B87F;
     text-color: @fg-col2;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 0px 0px 0px 0px;
 }
 
@@ -109,17 +109,17 @@ mode-switcher {
 button {
     padding: 12px;
     margin: 10px 5px 10px 5px;
-    background-color: @blank;
+    background-color: #B3B995;
     text-color: @tab;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 0px 0px 0px 0px;
 }
 
 button selected {
     background-color: @bg-col-light;
     text-color: @tab-selected;
-    border-radius: 2px;
+    border-radius: 10px;
     border: 0px 0px 0px 0px;
 }
