@@ -5,7 +5,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.92
+  opacity: 0.8
 
 scrolling:
   history: 10000
