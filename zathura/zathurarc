@@ -6,7 +6,7 @@ map <Right> navigate next
 map J zoom out
 map K zoom in
 
-set font "JetBrainsMono Nerd Font Regular 9"
+set font "JetBrains Mono Nerd Font Bold 16"
 set selection-clipboard clipboard
 set adjust-open "width"
 set window-title-basename true
