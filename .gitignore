@@ -6,6 +6,8 @@ kde?*
 arkrc
 # Ibus runtime
 ibus/* 
+# Fcitx runtime
+fcitx5/*
 # Pulse runtime
 pulse/*
 # Npm plugin nvim
