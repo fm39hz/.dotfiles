@@ -53,8 +53,8 @@ window#waybar.hidden {
 #window {
     background-color: #B3B995;
     color: #1d2021;
-    font-family: JetBrainsMono Nerd Font, monospace;
-    font-size: 15px;
+    font-family: JetBrainsMono Nerd Font Bold, monospace;
+    font-size: 16px;
     font-weight: bold;
     border: none;
     border-radius: 10px;
