@@ -2,12 +2,12 @@
  * vim: ft=less
 */
 
-@define-color cc-bg #1d2021;
+@define-color cc-bg #7c818c;
 
 @define-color noti-border-color #689d6a;
-@define-color noti-bg #1d2021;
-@define-color noti-bg-darker #1d2021;
-@define-color noti-bg-hover #1d2021;
+@define-color noti-bg #7c818c;
+@define-color noti-bg-darker #7c818c;
+@define-color noti-bg-hover #7c818c;
 @define-color noti-bg-focus rgba(0, 0, 0, 0);
 @define-color noti-close-bg #3c3836;
 @define-color noti-close-bg-hover #cc241d;
@@ -17,7 +17,7 @@
 
 @define-color bg-selected #689d6a;
 
-@define-color dnd-bg #3c3836;
+@define-color dnd-bg #7c818c;
 @define-color dnd-selected #689d6a;
 @define-color dnd-dot #282828;
 
@@ -42,7 +42,7 @@
 }
 
 .notification {
-  border-radius: 6px;
+  border-radius: 10px;
   margin: 6px 12px;
   box-shadow: none;
   padding: 0;
@@ -58,20 +58,20 @@
   background-color: @noti-border-color;
   padding: 4px 4px 4px 4px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .critical {
   background-color: #cc241d;
   padding: 4px 4px 4px 4px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .notification-content {
   background: transparent;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .close-button {
@@ -79,7 +79,7 @@
   color: @text-color;
   text-shadow: none;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 10px;
   margin-top: 12px;
   margin-right: 16px;
   box-shadow: none;
@@ -127,7 +127,7 @@
 }
 
 .notification-default-action {
-  border-radius: 3px;
+  border-radius: 13px;
 }
 
 /* When alternative actions are visible */
@@ -137,7 +137,7 @@
 }
 
 .notification-action {
-  border-radius: 0px;
+  border-radius: 10px;
   border-top: none;
   border-right: none;
 }
@@ -155,6 +155,7 @@
 .inline-reply {
   margin-top: 8px;
 }
+
 .inline-reply-entry {
   background: @noti-bg-darker;
   color: @text-color;
@@ -162,6 +163,7 @@
   border: 1px solid @noti-border-color;
   border-radius: 12px;
 }
+
 .inline-reply-button {
   margin-left: 4px;
   background: @noti-bg;
@@ -169,17 +171,18 @@
   border-radius: 12px;
   color: @text-color;
 }
+
 .inline-reply-button:disabled {
   background: initial;
   color: @text-color-disabled;
   border: 1px solid transparent;
 }
+
 .inline-reply-button:hover {
   background: @noti-bg-hover;
 }
 
-.image {
-}
+.image {}
 
 .body-image {
   margin-top: 6px;
@@ -219,7 +222,7 @@
   padding-left: 10px;
   padding-right: 9px;
   margin: 4px;
-  border-radius: 3px;
+  border-radius: 13px;
 }
 
 .control-center-list {
@@ -248,7 +251,8 @@
   font-weight: bold;
   color: @text-color;
 }
-.widget-title > button {
+
+.widget-title>button {
   font-size: 20px;
   font-weight: bold;
   color: #1d2021;
@@ -256,13 +260,14 @@
   background-color: #689d6a;
   border: none;
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 12px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 6px;
 }
-.widget-title > button:hover {
+
+.widget-title>button:hover {
   background-color: #8ec07c;
 }
 
@@ -272,21 +277,24 @@
   font-size: 1.1rem;
   color: @text-color;
 }
-.widget-dnd > switch {
+
+.widget-dnd>switch {
   font-size: initial;
-  border-radius: 2px;
+  border-radius: 12px;
   background: @dnd-bg;
   border: none;
   box-shadow: none;
   color: transparent;
   margin: 0px;
 }
-.widget-dnd > switch:checked {
+
+.widget-dnd>switch:checked {
   background: @dnd-selected;
 }
-.widget-dnd > switch slider {
+
+.widget-dnd>switch slider {
   background: @dnd-dot;
-  border-radius: 2px;
+  border-radius: 12px;
   padding-top: 0px;
   padding-bottom: 0px;
   min-height: 18px;
@@ -298,7 +306,8 @@
 .widget-label {
   margin: 8px;
 }
-.widget-label > label {
+
+.widget-label>label {
   font-size: 1.1rem;
 }
 
@@ -306,14 +315,17 @@
 .widget-mpris {
   /* The parent to all players */
 }
+
 .widget-mpris-player {
   padding: 8px;
   margin: 8px;
 }
+
 .widget-mpris-title {
   font-weight: bold;
   font-size: 1.25rem;
 }
+
 .widget-mpris-subtitle {
   font-size: 1.1rem;
 }
@@ -326,7 +338,7 @@
   background-color: @noti-bg;
 }
 
-.widget-buttons-grid>flowbox>flowboxchild>button{
+.widget-buttons-grid>flowbox>flowboxchild>button {
   background: @noti-bg;
   border-radius: 12px;
 }
@@ -357,7 +369,8 @@
   background-color: @noti-bg-hover;
 }
 
-.topbar-buttons>button { /* Name defined in config after # */
+.topbar-buttons>button {
+  /* Name defined in config after # */
   border: none;
   background: transparent;
 }
@@ -396,7 +409,8 @@
   margin: 8px;
   font-size: 1.5rem;
 }
-.widget-inhibitors > button {
+
+.widget-inhibitors>button {
   font-size: initial;
   color: @text-color;
   text-shadow: none;
@@ -405,6 +419,7 @@
   box-shadow: none;
   border-radius: 12px;
 }
-.widget-inhibitors > button:hover {
+
+.widget-inhibitors>button:hover {
   background: @noti-bg-hover;
 }
