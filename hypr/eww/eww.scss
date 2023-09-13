@@ -59,17 +59,17 @@
 }
 
 .bar-menu {
-  background-color: #1d2021;
+  background-color: #7c818c;
   border: none;
   color: #ebdbb2;
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .bar-menu-button {
-  background-color: #689d6a;
+  background-color: #1d2021;
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
   text-shadow: none;
   box-shadow: none;
   padding-left: 10px;
@@ -94,7 +94,7 @@
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #689d6a;
+  background-color: #E1B87F;
   color: #000000;
   border-radius: 2px;
   /* margin: 4px; */
@@ -128,7 +128,7 @@ label {
 
 .metric-label-text label {
   font-size: 28px;
-  color: #689d6a;
+  color: #E1B87F;
 }
 
 .powermenu-window {
