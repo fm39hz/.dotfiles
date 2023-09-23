@@ -34,7 +34,7 @@ window {
     width: 600px;
     border: 0px;
     border-radius: 10px;
-    background-color: #A6B8C1;
+    background-color: black;
     padding: 4px 8px 4px 8px;
     fullscreen: false;
 }
@@ -82,7 +82,7 @@ listview {
 
 element {
     padding: 12px 12px 12px 12px;
-    background-color: #C6B0BC;
+    background-color: #A6B8C1;
     text-color: @fg-col2;
     margin: 0px 0px 8px 0px;
     border-radius: 10px;
@@ -95,7 +95,7 @@ element-icon {
 }
 
 element selected {
-    background-color: #E1B87F;
+    background-color: #C6B0BC;
     text-color: @fg-col2;
     border-radius: 10px;
     border: 0px 0px 0px 0px;

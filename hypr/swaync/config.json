@@ -1,5 +1,5 @@
 {
-  "$schema": "~/.config/swaync/configSchema.json",
+  "$schema": "configSchema.json",
   "positionX": "right",
   "positionY": "top",
   "layer": "overlay",
