@@ -23,6 +23,8 @@ lxsession &
 
 brightnessctl --restore
 
+eval "hyprctl setcursor Bibata_Ghost 24;" &
+
 eval "sleep 1; fcitx5" &
 eval "sleep 0.5; hyprctl reload" &
 
