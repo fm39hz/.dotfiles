@@ -14,3 +14,9 @@ pulse/*
 nvim/node_modules/
 # Notion local storage
 notion-app-enhanced
+# Flutter Specific
+flutter
+# Anytype cache
+anytype/*
+# GodotEnv 
+godotenv/*
