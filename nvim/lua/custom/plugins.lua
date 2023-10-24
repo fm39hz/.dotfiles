@@ -62,6 +62,14 @@ local plugins = {
     "theHamsta/nvim-dap-virtual-text",
     lazy = true,
   },
+  {
+    "MunifTanjim/nui.nvim",
+    lazy = true,
+  },
+  {
+    "VonHeikemen/fine-cmdline.nvim",
+    lazy = true,
+  },
 
   -- To make a plugin not be loaded
   -- {
