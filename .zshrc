@@ -119,3 +119,6 @@ export PATH="$PATH:$HOME/.pub-cache/bin"
 # Workaround for OMZ newlines problem
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# GodotEnv path
+export GODOT="$HOME/.config/godotenv/godot/bin"
