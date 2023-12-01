@@ -17,7 +17,6 @@ text_editor/theme/highlighting/base_type_color = Color(0.26, 1, 0.76, 1)
 text_editor/theme/highlighting/engine_type_color = Color(0.56, 1, 0.86, 1)
 text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
 text_editor/theme/highlighting/comment_color = Color(0.75, 0.75, 0.75, 0.5)
-text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
 text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
 text_editor/theme/highlighting/background_color = Color(0, 0, 0, 1)
 text_editor/theme/highlighting/completion_background_color = Color(0, 0, 0, 1)
@@ -41,6 +40,7 @@ text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
 text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
 text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
 run/output/font_size = 16
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
 asset_library/available_urls = {
 "godotengine.org (Official)": "https://godotengine.org/asset-library/api"
 }
@@ -150,6 +150,10 @@ export/android/wifi_remote_debug_host = "localhost"
 editors/3d_gizmos/gizmo_settings/path3d_tilt_disk_size = 0.8
 editors/3d_gizmos/gizmo_colors/path_tilt = Color(1, 1, 0.4, 0.9)
 dotnet/build/problems_layout = 1
+filesystem/import/blender/rpc_port = 6011
+filesystem/import/blender/rpc_server_uptime = 5
+filesystem/import/blender/blender3_path = ""
+filesystem/import/fbx/fbx2gltf_path = ""
 metadata/script_setup_templates_dictionary = {
 "Node": "0NodeDefault",
 "RichTextLabel": "0NodeDefault"
