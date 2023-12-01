@@ -11,7 +11,8 @@ fcitx5/*
 # Pulse runtime
 pulse/*
 # Npm plugin nvim
-nvim/node_modules/
+nvim/*
+!nvim/lua/custom
 # Notion local storage
 notion-app-enhanced
 # Flutter Specific
@@ -20,3 +21,6 @@ flutter
 anytype/*
 # GodotEnv 
 godotenv/*
+# Thorium
+thorium/*
+content_shell/*
