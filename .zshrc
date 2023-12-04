@@ -101,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias getPower="upower -i $(upower -e | grep 'BAT') | grep -E \"state|to full|percentage\""
 alias top="btop --utf-force"
 alias vim="nvim"
 
@@ -117,8 +116,9 @@ export PATH="$PATH:$HOME/workspace/Code_environment/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
 # Workaround for OMZ newlines problem
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+ export LANG=en_US.UTF-8
+ export LC_ALL=en_US.UTF-8
 
 # GodotEnv path
+alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
