@@ -6,7 +6,7 @@
 ## Install
 
   ```bash
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/fm39hz/.dotfiles/master/arch_setup.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/fm39hz/.dotfiles/main/arch_setup.sh)"
   ```
 
 ## Screenshot
