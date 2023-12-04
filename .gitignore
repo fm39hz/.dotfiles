@@ -1,6 +1,5 @@
 dconf/*
 Code/*
-*.*
 # Specific KDE files
 kde?*
 arkrc
