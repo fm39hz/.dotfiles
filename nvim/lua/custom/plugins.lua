@@ -48,29 +48,26 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
-    lazy = true,
   },
   {
     "Hoffs/omnisharp-extended-lsp.nvim",
-    lazy = true,
   },
   {
     "rcarriga/nvim-dap-ui",
-    lazy = true,
   },
   {
     "theHamsta/nvim-dap-virtual-text",
-    lazy = true,
   },
   {
     "MunifTanjim/nui.nvim",
-    lazy = true,
   },
   {
     "VonHeikemen/fine-cmdline.nvim",
-    lazy = true,
   },
-
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = 'LazyGit',
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

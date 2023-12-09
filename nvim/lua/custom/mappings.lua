@@ -5,7 +5,7 @@ M.general = {
   n = {
     [":"] = { ":", "enter command mode", opts = { nowait = true } },
     [";"] = {"<cmd> lua require('fine-cmdline').open({default_value = ''}) <CR>"},
-
+    ["<leader>gg"] = {"<cmd> LazyGit <CR> "}
   },
 }
 M.disabled = {
