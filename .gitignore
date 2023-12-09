@@ -14,6 +14,7 @@ nvim/*
 !nvim/lua/custom
 # Notion local storage
 notion-app-enhanced
+notion-app/*
 # Flutter Specific
 flutter
 # Anytype cache
@@ -23,3 +24,14 @@ godotenv/*
 # Thorium
 thorium/*
 content_shell/*
+# Lazy Git
+lazygit/state.yml
+# Node
+*nodejs*
+# Thunar
+*Thunar*
+*thunar*
+# Tor
+torbrowser
+# Misc
+*.log
