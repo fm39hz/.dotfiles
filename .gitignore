@@ -33,5 +33,7 @@ lazygit/state.yml
 *thunar*
 # Tor
 torbrowser
+# Firebase
+configstore
 # Misc
 *.log
