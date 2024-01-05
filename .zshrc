@@ -105,19 +105,25 @@ alias top="btop --utf-force"
 alias vim="nvim"
 
 # Android Dev environment
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/tools/
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/tools/
 
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+export PATH=$PATH:$ANDROID_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+alias CHROME_EXECUTABLE='thorium-browser'
 # Flutter environment
-export PATH="$PATH:$HOME/workspace/Code_environment/flutter/bin"
+# export PATH="$PATH:$HOME/workspace/Code_environment/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
 # Workaround for OMZ newlines problem
- export LANG=en_US.UTF-8
- export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # GodotEnv path
 alias godotenv="$HOME/.dotnet/tools/godotenv"
