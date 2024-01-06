@@ -1,4 +1,5 @@
 #Setup config
+sudo chown -R $(whoami) ~/
 rm -rf ~/.config
 git clone git@github.com:fm39hz/.dotfiles.git ~/.config/
 
