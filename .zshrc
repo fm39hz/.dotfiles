@@ -79,7 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -97,34 +99,24 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
 alias top="btop --utf-force"
 alias vim="nvim"
+alias omzconfig="nvim ~/.config/.zshrc"
 
 # Android Dev environment
-# export ANDROID_HOME=$HOME/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-# export PATH=$PATH:$ANDROID_HOME/tools/bin
-# export PATH=$PATH:$ANDROID_HOME/tools/
-
 export ANDROID_SDK_ROOT='/opt/android-sdk'
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 alias CHROME_EXECUTABLE='thorium-browser'
+
 # Flutter environment
-# export PATH="$PATH:$HOME/workspace/Code_environment/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 
-# Workaround for OMZ newlines problem
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-# GodotEnv path
+# GodotEnv environment
 alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
