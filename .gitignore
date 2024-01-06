@@ -10,8 +10,7 @@ fcitx5/*
 # Pulse runtime
 pulse/*
 # Npm plugin nvim
-nvim/*
-!nvim/lua/custom
+nvim
 # Notion local storage
 notion-app-enhanced
 notion-app/*
