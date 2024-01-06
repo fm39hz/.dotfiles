@@ -1,14 +1,9 @@
 #Setup config
 rm -rf ~/.config
 git clone git@github.com:fm39hz/.dotfiles.git ~/.config/
-mkdir -p ~/.config/backup/nvim/lua/custom
 
 #Setup NvChad
-cp ~/.config/nvim/lua/custom ~/.config/backup/nvim/lua/custom -r
-rm -rf ~/.config/nvim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-rm -rf ~/.config/nvim/lua/custom 
-cp ~/.config/backup/nvim/lua/custom ~/.config/nvim/lua/custom -r
+git clone git@github.com:fm39hz/NvChad.git ~/.config/nvim/ --depth 1 && nvim
 
 #Setup Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
