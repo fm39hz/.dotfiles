@@ -103,6 +103,7 @@ export LC_ALL=en_US.UTF-8
 
 # Aliases
 alias top="btop --utf-force"
+alias vi="nvim"
 alias vim="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 
@@ -112,7 +113,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
-alias CHROME_EXECUTABLE='thorium-browser'
 
 # Flutter environment
 export PATH="$PATH:$HOME/.pub-cache/bin"
