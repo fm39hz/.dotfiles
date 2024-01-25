@@ -3,6 +3,12 @@ Code/*
 # Specific KDE files
 kde?*
 arkrc
+# Docker Desktop
+Docker Desktop
+# libreoffice
+libreoffice
+# Postman
+Postman
 # Ibus runtime
 ibus/* 
 # Fcitx runtime
@@ -37,3 +43,6 @@ configstore
 # Misc
 *.log
 backup
+QtProject.conf
+user-dirs*
+mimeapps.list
