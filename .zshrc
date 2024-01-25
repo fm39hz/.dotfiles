@@ -70,7 +70,7 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aliases archlinux sudo npm dotnet repo vscode zsh-navigation-tools zsh-interactive-cd z colorize colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git aliases archlinux sudo npm dotnet zsh-navigation-tools zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,6 +104,7 @@ export LC_ALL=en_US.UTF-8
 # Aliases
 alias top="btop --utf-force"
 alias vim="nvim"
+alias vi="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 
 # Android Dev environment
@@ -112,11 +113,14 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
-alias CHROME_EXECUTABLE='thorium-browser'
 
 # Flutter environment
-export PATH="$PATH:$HOME/.pub-cache/bin"
+# export PATH="$PATH:$HOME/.pub-cache/bin"
 
 # GodotEnv environment
 alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
+
+# Docker alias 
+alias dockerup="docker-compose --log-level ERROR up -d --build"
+alias dockerdown="docker-compose down"
