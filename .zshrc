@@ -103,8 +103,8 @@ export LC_ALL=en_US.UTF-8
 
 # Aliases
 alias top="btop --utf-force"
-alias vim="nvim"
 alias vi="nvim"
+alias vim="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 
 # Android Dev environment
