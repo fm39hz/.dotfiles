@@ -122,5 +122,6 @@ alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
 
 # Docker alias 
+alias docker="sudo docker"
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
