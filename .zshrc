@@ -103,8 +103,8 @@ export LC_ALL=en_US.UTF-8
 
 # Aliases
 alias top="btop --utf-force"
-alias vi="nvim"
 alias vim="nvim"
+export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 
 # Android Dev environment
@@ -122,6 +122,5 @@ alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
 
 # Docker alias 
-alias docker="sudo docker"
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
