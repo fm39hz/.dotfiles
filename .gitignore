@@ -10,7 +10,8 @@ libreoffice
 # Postman
 Postman
 # Jetbrains product 
-Jetbrains
+JetBrains
+jgit
 # Ibus runtime
 ibus/* 
 # Fcitx runtime
