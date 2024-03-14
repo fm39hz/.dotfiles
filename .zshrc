@@ -108,11 +108,11 @@ export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 
 # Android Dev environment
-export ANDROID_SDK_ROOT='/opt/android-sdk'
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
-export PATH=$PATH:$ANDROID_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export ANDROID_SDK_HOME='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_HOME/tools/bin/
+export PATH=$PATH:$ANDROID_SDK_HOME/emulator
+export PATH=$PATH:$ANDROID_SDK_HOME/tools/
 
 # Flutter environment
 # export PATH="$PATH:$HOME/.pub-cache/bin"
