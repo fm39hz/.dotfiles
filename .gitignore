@@ -1,5 +1,3 @@
-dconf/*
-Code/*
 # Specific KDE files
 kde?*
 arkrc
@@ -36,6 +34,7 @@ content_shell/*
 lazygit/state.yml
 # Node
 *nodejs*
+yarn
 # Thunar
 *Thunar*
 *thunar*
@@ -43,10 +42,15 @@ lazygit/state.yml
 torbrowser
 # Firebase
 configstore
+# beekeeper
+beekeeper-studio/*
 # Misc
 *.log
+dconf/*
+Code/*
+*Cache
+user-dirs*
 backup
 QtProject.conf
-user-dirs*
 mimeapps.list
 Trolltech.conf
