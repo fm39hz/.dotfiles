@@ -121,6 +121,6 @@ export PATH=$PATH:$ANDROID_SDK_HOME/tools/
 alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin"
 
-# Docker alias 
+# Docker alias
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
