@@ -3,7 +3,7 @@
 
 
 set_wallpaper () {
-	swww img "$1" -t grow --transition-pos top
+  wbg ~/.config/Wallpaper/AestheticCity.jpg &
 }
 
 run_hook () {
@@ -11,5 +11,5 @@ run_hook () {
 }
 
 eww-rice () {
-	eww --config ~/.config/hypr/eww/ $*
+	eww --config ~/.config/eww/ $*
 }

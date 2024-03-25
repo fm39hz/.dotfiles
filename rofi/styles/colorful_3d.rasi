@@ -3,7 +3,7 @@ configuration {
     lines: 5;
     font: "JetBrains Mono Nerd Font Bold 14";
     show-icons: true;
-    terminal: "alacritty";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;

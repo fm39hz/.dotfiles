@@ -12,9 +12,9 @@ swww init
 
 set_wallpaper ~/.config/Wallpaper/AestheticCity.jpg
 
-~/.config/hypr/waybar/start
-~/.config/hypr/swaync/start
-~/.config/hypr/eww/start
+~/.config/waybar/start
+~/.config/swaync/start
+~/.config/eww/start
 
 nm-applet &
 blueman-applet &
