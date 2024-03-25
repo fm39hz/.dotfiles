@@ -42,8 +42,11 @@ yarn
 torbrowser
 # Firebase
 configstore
-# beekeeper
+# Beekeeper
 beekeeper-studio/*
+# Tabnine
+TabNine/*
+!TabNine/*_config.json
 # Misc
 *.log
 dconf/*
