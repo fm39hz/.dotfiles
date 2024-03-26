@@ -15,5 +15,6 @@
 
   ```
 ## Screenshot
-![image](https://github.com/fm39hz/.dotfiles/assets/71458213/729ebc12-db64-4b34-a859-300f56337250)
+![image](https://github.com/fm39hz/.dotfiles/assets/71458213/a43484cb-15c4-4bd5-bd6b-30f1a91dbdb2)
+
 
