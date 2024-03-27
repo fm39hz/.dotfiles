@@ -106,6 +106,7 @@ alias top="btop --utf-force"
 alias vim="nvim"
 export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
+eval $(thefuck --alias)
 
 # Android Dev environment
 export ANDROID_SDK_HOME='/opt/android-sdk'
