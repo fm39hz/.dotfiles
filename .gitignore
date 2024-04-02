@@ -13,7 +13,8 @@ jgit
 # Ibus runtime
 ibus/* 
 # Fcitx runtime
-fcitx5/*
+fcitx
+fcitx5
 # Pulse runtime
 pulse/*
 # Npm plugin nvim
@@ -47,6 +48,10 @@ beekeeper-studio/*
 # Tabnine
 TabNine/*
 !TabNine/*_config.json
+# Thefuck
+__pycache__
+# Localsend
+autostart/localsend_app.desktop
 # Misc
 *.log
 dconf/*
