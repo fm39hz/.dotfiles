@@ -12,6 +12,10 @@ rm ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+#Start service
+sudo systemctl enable greetd.service
+
 #Symlink script & rc files
 ln -s ~/.config/.zshrc ~/.zshrc
+sudo ln -S ~/.config/greetd/ /etc/greetd/
 sudo ln -s ~/.config/hyprland_autolog.sh /etc/profile.d/hyprland_autolog.sh
