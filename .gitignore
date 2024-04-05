@@ -52,6 +52,8 @@ TabNine/*
 __pycache__
 # Localsend
 autostart/localsend_app.desktop
+# LarkSuite
+LarkInternational
 # Misc
 *.log
 dconf/*
