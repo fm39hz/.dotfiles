@@ -55,6 +55,7 @@ autostart/localsend_app.desktop
 # LarkSuite
 LarkInternational
 # Misc
+.trash
 *.log
 dconf/*
 Code/*
