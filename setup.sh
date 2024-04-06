@@ -17,5 +17,5 @@ sudo systemctl enable greetd.service
 
 #Symlink script & rc files
 ln -s ~/.config/.zshrc ~/.zshrc
-sudo ln -S ~/.config/greetd/ /etc/greetd/
+sudo ln -S ~/.config/greetd/config.toml /etc/greetd/config.toml
 sudo ln -s ~/.config/hyprland_autolog.sh /etc/profile.d/hyprland_autolog.sh
