@@ -93,7 +93,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		gtklock
+		hyprlock
         ;;
     $suspend)
 		run_cmd --suspend
