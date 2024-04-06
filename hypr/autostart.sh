@@ -8,6 +8,8 @@ swww init
 
 set_wallpaper ~/.config/Wallpaper/AestheticCity.jpg
 
+eval "hypridle" &
+
 ~/.config/waybar/start
 ~/.config/swaync/start
 ~/.config/eww/start
