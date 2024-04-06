@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-
-
 source ~/.config/hypr/lib.sh
-
-
 
 run_hook pre &
 
@@ -15,6 +11,8 @@ set_wallpaper ~/.config/Wallpaper/AestheticCity.jpg
 ~/.config/waybar/start
 ~/.config/swaync/start
 ~/.config/eww/start
+
+eval "hyprlock" &
 
 nm-applet &
 blueman-applet &
