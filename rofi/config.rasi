@@ -13,7 +13,7 @@ configuration {
     display-ssh: "  Ssh ";
 }
 
-@theme "themes/gruvbox"
+@theme "styles/colorful_3d.rasi"
 
 element-text {
     background-color: #00000000;
