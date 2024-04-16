@@ -50,11 +50,12 @@ TabNine/*
 !TabNine/*_config.json
 # Thefuck
 __pycache__
-# Localsend
-autostart/localsend_app.desktop
 # LarkSuite
 LarkInternational
+# Android Studio
+*Android*
 # Misc
+autostart
 .trash
 *.log
 dconf/*
