@@ -108,6 +108,17 @@ export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 eval $(thefuck --alias)
 
+# Nvim Distro select
+vv() {
+  # Assumes all configs exist in directories named ~/.config/nvim-*
+  local config=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=~50% --layout=reverse --border --exit-0)
+ 
+  # If I exit fzf without selecting a config, don't open Neovim
+  [[ -z $config ]] && echo "No config selected" && return
+ 
+  # Open Neovim with the selected config
+  NVIM_APPNAME=$(basename $config) nvim $@
+}
 # Android Dev environment
 export ANDROID_SDK_HOME='/opt/android-sdk'
 export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools/
@@ -126,3 +137,5 @@ export PATH="$HOME/.config/godotenv/godot/bin:$PATH"
 # Docker alias
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
+export GODOT="/home/fm39hz/.config/godotenv/godot/bin/godot"
+export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
