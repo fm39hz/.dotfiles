@@ -106,6 +106,7 @@ alias top="btop --utf-force"
 alias vim="nvim"
 export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
+alias tempnote="cd ~/Workspace/Notes/ && vv TempNote.md"
 eval $(thefuck --alias)
 
 # Nvim Distro select
@@ -119,6 +120,7 @@ vv() {
   # Open Neovim with the selected config
   NVIM_APPNAME=$(basename $config) nvim $@
 }
+
 # Android Dev environment
 export ANDROID_SDK_HOME='/opt/android-sdk'
 export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools/
