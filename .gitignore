@@ -1,8 +1,6 @@
 # Specific KDE files
 kde?*
 arkrc
-# Docker Desktop
-Docker Desktop
 # libreoffice
 libreoffice
 # Postman
@@ -10,50 +8,44 @@ Postman
 # Jetbrains product 
 JetBrains
 jgit
-# Ibus runtime
+# Keyboard config runtime
 ibus/* 
-# Fcitx runtime
 fcitx
 fcitx5
 # Pulse runtime
 pulse/*
-# Npm plugin nvim
-nvim
-# Notion local storage
+# Nvim config
+nvim*
+# Note storage
+anytype/*
 notion-app-enhanced
 notion-app/*
-# Flutter Specific
-flutter
-# Anytype cache
-anytype/*
-# GodotEnv 
-godotenv/*
-# Thorium
+# Brower cache
 thorium/*
 content_shell/*
+torbrowser
+configstore
 # Lazy Git
 lazygit/state.yml
-# Node
+# Development cache
+godotenv/*
 *nodejs*
 yarn
+flutter
+*Android*
 # Thunar
 *Thunar*
 *thunar*
-# Tor
-torbrowser
-# Firebase
-configstore
 # Beekeeper
 beekeeper-studio/*
-# Tabnine
+# AI config 
 TabNine/*
 !TabNine/*_config.json
+Jan
 # Thefuck
 __pycache__
 # LarkSuite
 LarkInternational
-# Android Studio
-*Android*
 # Misc
 autostart
 .trash
