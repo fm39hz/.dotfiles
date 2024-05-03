@@ -130,14 +130,15 @@ export PATH=$PATH:$ANDROID_SDK_HOME/tools/
 
 # Flutter environment
 # export PATH="$PATH:$HOME/.pub-cache/bin"
+export CHROME_EXECUTABLE='thorium-browser'
 
 # GodotEnv environment
 alias godotenv="$HOME/.dotnet/tools/godotenv"
 export GODOT="$HOME/.config/godotenv/godot/bin/godot"
+export GODOT="/home/fm39hz/.config/godotenv/godot/bin/godot"
 export PATH="$HOME/.config/godotenv/godot/bin:$PATH"
+export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
 
 # Docker alias
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
-export GODOT="/home/fm39hz/.config/godotenv/godot/bin/godot"
-export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
