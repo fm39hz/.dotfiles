@@ -15,7 +15,7 @@ fcitx5
 # Pulse runtime
 pulse/*
 # Nvim config
-nvim*
+nvim
 # Note storage
 anytype/*
 notion-app-enhanced
