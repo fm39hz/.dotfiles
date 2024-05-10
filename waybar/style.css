@@ -49,7 +49,7 @@ window#waybar.hidden {
   background: #7c818c;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
   color: white;
 }
 
