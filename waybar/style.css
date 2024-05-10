@@ -22,9 +22,6 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-top: 8px;
   border-radius: 10px;
   transition: none;
   background: #383c4a;
@@ -34,7 +31,6 @@ window#waybar.hidden {
   transition: none;
   color: #7c818c;
   background: transparent;
-  padding: 5px;
   font-size: 18px;
 }
 
@@ -67,6 +63,7 @@ window#waybar.hidden {
   font-weight: bold;
   border: none;
   border-radius: 10px;
+  margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0px;
   padding-left: 10px;
