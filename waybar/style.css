@@ -1,5 +1,10 @@
 * {
-  font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial,
+  font-family:
+    JetBrainsMono Nerd Font,
+    FontAwesome,
+    Roboto,
+    Helvetica,
+    Arial,
     sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -17,7 +22,9 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  margin-left: 8px;
   margin-right: 8px;
+  margin-top: 8px;
   border-radius: 10px;
   transition: none;
   background: #383c4a;
@@ -53,7 +60,9 @@ window#waybar.hidden {
 #window {
   background-color: #b3b995;
   color: #1d2021;
-  font-family: JetBrainsMono Nerd Font Bold, monospace;
+  font-family:
+    JetBrainsMono Nerd Font Bold,
+    monospace;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -67,7 +76,9 @@ window#waybar.hidden {
 #custom-powermenu {
   background-color: #df8877;
   color: #1d2021;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -83,7 +94,9 @@ window#waybar.hidden {
 #custom-menu {
   background-color: transparent;
   color: #b3b995;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -98,7 +111,9 @@ window#waybar.hidden {
 #custom-swaync {
   background-color: transparent;
   color: #b3b995;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -113,7 +128,9 @@ window#waybar.hidden {
 #cpu {
   background-color: #e1b87f;
   color: #1d2021;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 18px;
   font-weight: bold;
   border: none;
@@ -127,7 +144,9 @@ window#waybar.hidden {
 #memory {
   background-color: #e1b87f;
   color: #1d2021;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 18px;
   font-weight: bold;
   border: none;
