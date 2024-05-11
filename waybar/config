@@ -34,14 +34,14 @@
     },
     "hyprland/workspaces": {
         "format": "{name}",
-        "format-icons": {
+        /* "format-icons": {
           "active": "",
           "default": "",
           "persistent": ""
-        },
+        }, */
         "on-scroll-up": "hyprctl dispatch workspace r-1",
         "on-scroll-down": "hyprctl dispatch workspace r+1",
-        "all-outputs": false,
+        // "all-outputs": false,
         //"persistent_workspaces": {
         //  "*": 5
         //}

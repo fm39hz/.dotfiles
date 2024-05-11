@@ -22,6 +22,8 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  margin-left: 8px;
+  border: none;
   border-radius: 10px;
   transition: none;
   background: #383c4a;
@@ -50,7 +52,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-  color: white;
+  color: #b3b995;
 }
 
 #window {
