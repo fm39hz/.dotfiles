@@ -46,6 +46,9 @@ Jan
 __pycache__
 # LarkSuite
 LarkInternational
+# Zed
+zed
+!zed/*.json
 # Misc
 autostart
 .trash
