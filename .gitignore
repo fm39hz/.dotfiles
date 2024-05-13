@@ -50,6 +50,7 @@ LarkInternational
 zed
 !zed/*.json
 # Misc
+*.bak
 autostart
 .trash
 *.log
