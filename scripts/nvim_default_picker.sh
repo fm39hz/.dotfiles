@@ -6,11 +6,12 @@ config=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Confi
 
 # Create Distro
 distro_name=$(basename "$config")
-# Backup local config
-mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
+
+# Remove local config
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
 
 # Create symbolic links
 ln -s ~/.config/"${distro_name}" ~/.config/nvim
