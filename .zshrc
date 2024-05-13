@@ -107,7 +107,7 @@ alias vim="nvim"
 alias nvimpicker="~/.config/scripts/nvim_default_picker.sh"
 export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
-alias tempnote="cd ~/Workspace/Notes/ && vv TempNote.md"
+alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 eval $(thefuck --alias)
 
 # Android Dev environment
