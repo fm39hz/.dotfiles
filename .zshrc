@@ -104,23 +104,29 @@ export LC_ALL=en_US.UTF-8
 # Aliases
 alias top="btop --utf-force"
 alias vim="nvim"
+alias nvimpicker="~/.config/scripts/nvim_default_picker.sh"
 export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
+alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 eval $(thefuck --alias)
 
 # Android Dev environment
-export ANDROID_SDK_HOME='/opt/android-sdk'
-export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_HOME/tools/bin/
-export PATH=$PATH:$ANDROID_SDK_HOME/emulator
-export PATH=$PATH:$ANDROID_SDK_HOME/tools/
+export ANDROID_HOME='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/tools/bin/
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools/
 
 # Flutter environment
 # export PATH="$PATH:$HOME/.pub-cache/bin"
+export CHROME_EXECUTABLE='thorium-browser'
 
 # GodotEnv environment
 alias godotenv="$HOME/.dotnet/tools/godotenv"
-export GODOT="$HOME/.config/godotenv/godot/bin"
+export GODOT="$HOME/.config/godotenv/godot/bin/godot"
+export GODOT="/home/fm39hz/.config/godotenv/godot/bin/godot"
+export PATH="$HOME/.config/godotenv/godot/bin:$PATH"
+export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
 
 # Docker alias
 alias dockerup="docker-compose --log-level ERROR up -d --build"

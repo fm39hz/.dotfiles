@@ -6,27 +6,22 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "wlr/workspaces",
         "hyprland/window"
     ],
-    //"modules-center": ["hyprland/window"],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
     "modules-right": [
         "custom/swaync",
         "custom/menu",
+        "keyboard-state",
         "tray",
         "cpu",
         "memory",
         "battery",
         "battery#bat2",
         "clock",
-        "custom/powermenu"
     ],
-    // Modules configuration
-    "custom/powermenu": {
-        "format": " ",
-        "on-click": "~/.config/eww/scripts/waybar/powermenu",
-        "tooltip": false,
-    },
     "custom/swaync": {
         "format": " ",
         "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
@@ -37,8 +32,32 @@
         "on-click": "~/.config/eww/scripts/waybar/bar_menu",
         "tooltip": false,
     },
-    "wlr/workspaces": {
-        "on-click": "activate",
+    "hyprland/workspaces": {
+        "format": "{name}",
+        /* "format-icons": {
+          "active": "",
+          "default": "",
+          "persistent": ""
+        }, */
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        // "all-outputs": false,
+        "persistent_workspaces": {
+          "*": 5
+        }
+      },
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "": "󰣇 FM39hz Hyprland",
+            "(.*)vim": " Neovim",
+            "(.*)vim(.*.)": " Neovim $2",
+            "(.*)zsh": " Terminal",
+            "(.*)64Gram(.*.)": " Telegram",
+            "(.*) - Visual Studio Code": "󰘐 $1",
+            "(.*) - Thorium": "󰊯 $1"
+        },
+        "separate-outputs": true,
     },
     "keyboard-state": {
         "numlock": true,

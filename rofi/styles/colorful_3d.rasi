@@ -14,7 +14,7 @@ configuration {
     display-window: "   Window ";
 }
 
-@theme "themes/gruvbox"
+@theme "themes/everforest"
 
 element-text {
     background-color: #00000000;
