@@ -9,7 +9,7 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "custom/swaync",
@@ -20,17 +20,17 @@
         "memory",
         "battery",
         "battery#bat2",
-        "clock",
+        "clock"
     ],
     "custom/swaync": {
         "format": " ",
         "on-click": "~/.config/swaync/scripts/tray_waybar.sh",
-        "tooltip": false,
+        "tooltip": false
     },
     "custom/menu": {
         "format": " ",
         "on-click": "~/.config/eww/scripts/waybar/bar_menu",
-        "tooltip": false,
+        "tooltip": false
     },
     "hyprland/workspaces": {
         "format": "{name}",
@@ -48,16 +48,18 @@
       },
     "hyprland/window": {
         "format": "{title}",
+        "separate-outputs": true,
         "rewrite": {
-            "": "󰣇 FM39hz Hyprland",
+            "": "󰣇 Hyprland",
             "(.*)vim": " Neovim",
             "(.*)vim(.*.)": " Neovim $2",
             "(.*)zsh": " Terminal",
             "(.*)64Gram(.*.)": " Telegram",
+            "(.*)Tdesktop(.*.)": " Telegram",
             "(.*) - Visual Studio Code": "󰘐 $1",
-            "(.*) - Thorium": "󰊯 $1"
-        },
-        "separate-outputs": true,
+            "(.*) - Thorium": "󰊯 $1",
+            "Thorium-browser(.*)": "󰊯 $1"
+        }
     },
     "keyboard-state": {
         "numlock": true,
@@ -126,11 +128,11 @@
         "format": "{:%I:%M %p}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}%  ",
         "tooltip": true
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}%  "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -157,7 +159,7 @@
             "",
             "",
             ""
-        ],
+        ]
     },
     "battery": {
         "states": {
