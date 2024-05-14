@@ -22,6 +22,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  margin-top: 8px;
   margin-left: 8px;
   border: none;
   border-radius: 10px;
@@ -48,16 +49,16 @@ window#waybar.hidden {
   text-shadow: inherit;
   border-radius: inherit;
   color: #383c4a;
-  background: #7c818c;
+  background: #dbbc7f;
 }
 
 #workspaces button.active {
-  color: #b3b995;
+  color: #e67e80;
 }
 
 #window {
-  background-color: #b3b995;
-  color: #1d2021;
+  background-color: #a7c080;
+  color: #1e2326;
   font-family:
     JetBrainsMono Nerd Font Bold,
     monospace;
@@ -73,7 +74,7 @@ window#waybar.hidden {
 }
 
 #custom-powermenu {
-  background-color: #df8877;
+  background-color: transparent;
   color: #1d2021;
   font-family:
     JetBrainsMono Nerd Font,
@@ -125,8 +126,8 @@ window#waybar.hidden {
 }
 
 #cpu {
-  background-color: #e1b87f;
-  color: #1d2021;
+  background-color: #45443c;
+  color: #d3c6aa;
   font-family:
     JetBrainsMono Nerd Font,
     monospace;
@@ -141,8 +142,8 @@ window#waybar.hidden {
 }
 
 #memory {
-  background-color: #e1b87f;
-  color: #1d2021;
+  background-color: #45443c;
+  color: #d3c6aa;
   font-family:
     JetBrainsMono Nerd Font,
     monospace;
@@ -210,8 +211,8 @@ window#waybar.hidden {
   padding-right: 16px;
   border-radius: 10px 10px 10px 10px;
   transition: none;
-  color: #1d2021;
-  background: #a6b8c1;
+  color: #f1e6b2;
+  background: #384b55;
 }
 
 #custom-weather {
@@ -248,7 +249,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #f1e6b2;
-  background: #383c4a;
+  background: #45443c;
 }
 
 #temperature {
@@ -285,8 +286,8 @@ window#waybar.hidden {
   padding-right: 16px;
   border-radius: 10px;
   transition: none;
-  color: #1d2021;
-  background: #c6b0bc;
+  color: #f1e6b2;
+  background: #384b55;
 }
 
 #battery.charging {
@@ -317,7 +318,7 @@ window#waybar.hidden {
   border-radius: 10px;
   transition: none;
   color: #f1e6b2;
-  background: #a6b8c1;
+  background: #384b55;
 }
 
 @keyframes blink {

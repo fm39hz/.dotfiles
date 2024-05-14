@@ -46,6 +46,19 @@
           "*": 5
         }
       },
+    "hyprland/window": {
+        "format": "{title}",
+        "rewrite": {
+            "": "󰣇 FM39hz Hyprland",
+            "(.*)vim": " Neovim",
+            "(.*)vim(.*.)": " Neovim $2",
+            "(.*)zsh": " Terminal",
+            "(.*)64Gram(.*.)": " Telegram",
+            "(.*) - Visual Studio Code": "󰘐 $1",
+            "(.*) - Thorium": "󰊯 $1"
+        },
+        "separate-outputs": true,
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

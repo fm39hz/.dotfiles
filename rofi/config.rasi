@@ -32,9 +32,9 @@ mode-switcher {
 window {
     height: 400px;
     width: 600px;
-    border: 0px;
+    border: 2px;
     border-radius: 10px;
-    background-color: black;
+    background-color: @bg-col;
     padding: 4px 8px 4px 8px;
     fullscreen: false;
 }
@@ -95,7 +95,7 @@ element-icon {
 }
 
 element selected {
-    background-color: #C6B0BC;
+    background-color: @bg-col-light;
     text-color: @fg-col2;
     border-radius: 10px;
     border: 0px 0px 0px 0px;
@@ -109,7 +109,7 @@ button {
     padding: 12px;
     margin: 10px 5px 10px 5px;
     background-color: #B3B995;
-    text-color: @tab;
+    text-color: @tab-selected;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
     border-radius: 10px;
