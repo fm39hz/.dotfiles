@@ -16,6 +16,7 @@ git submodule sync
 # git clone git@github.com:fm39hz/nvim-nvchad.git --depth 1
 # git clone git@github.com:fm39hz/nvim-lazyvim.git --depth 1
 ~/.config/scripts/nvim_default_picker.sh
+nvim
 
 # Start service
 sudo systemctl enable greetd.service

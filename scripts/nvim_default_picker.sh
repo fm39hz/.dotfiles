@@ -1,22 +1,16 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Retrieve exist config
-config=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=~50% --layout=reverse --border --exit-0)
-[[ -z $config ]] && echo "No config selected" && exit
+configs=$(fd --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=~50% --layout=reverse --border --exit-0)
+[[ -z $configs ]] && echo "No config selected" && exit
 
 # Create Distro
-distro_name=$(basename "$config")
+distros=$(basename "$configs")
 
-# Remove local config
-rm -rf ~/.config/nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.local/state/nvim
-rm -rf ~/.cache/nvim
+# Link Distro
+directories=(~/.config ~/.local/share ~/.local/state ~/.cache)
+for dir in "${directories[@]}"; do
+	ln -sfn "$dir/$distros" "$dir/nvim"
+done
 
-# Create symbolic links
-ln -s ~/.config/"${distro_name}" ~/.config/nvim
-ln -s ~/.local/share/"${distro_name}" ~/.local/share/nvim
-ln -s ~/.local/state/"${distro_name}" ~/.local/state/nvim
-ln -s ~/.cache/"${distro_name}" ~/.cache/nvim
-
-echo "Symbolic links created with '$distro_name'."
+echo "Switched to '$distros'."
