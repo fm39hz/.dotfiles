@@ -51,8 +51,7 @@
         "separate-outputs": true,
         "rewrite": {
             "": "󰣇 Hyprland",
-            "(.*)vim": " Neovim",
-            "(.*)vim(.*.)": " Neovim $2",
+            "nvim(.*)": " Neovim$1",
             "(.*)zsh": " Terminal",
             "(.*)64Gram(.*.)": " Telegram",
             "(.*)Tdesktop(.*.)": " Telegram",
