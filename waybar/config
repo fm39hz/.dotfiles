@@ -52,7 +52,7 @@
         "rewrite": {
             "": "󰣇 Hyprland",
             "nvim(.*)": " Neovim$1",
-            "(.*)zsh": " Terminal",
+            "zsh": " Terminal",
             "(.*)64Gram(.*.)": " Telegram",
             "(.*)Tdesktop(.*.)": " Telegram",
             "(.*) - Visual Studio Code": "󰘐 $1",
