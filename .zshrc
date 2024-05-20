@@ -111,7 +111,7 @@ alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 eval $(thefuck --alias)
 
 # Android Dev environment
-export ANDROID_HOME='/opt/android-sdk'
+export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/tools/bin/
 export PATH=$PATH:$ANDROID_HOME/emulator
