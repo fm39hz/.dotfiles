@@ -102,11 +102,10 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
+export EDITOR="nvim"
 alias top="btop --utf-force"
-alias vim="nvim"
 alias nvim_set_default="~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use="~/.config/scripts/nvim_direct_picker.sh"
-export EDITOR="nvim"
 alias omzconfig="nvim ~/.config/.zshrc"
 alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 eval $(thefuck --alias)
