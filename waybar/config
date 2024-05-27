@@ -59,7 +59,8 @@
             "(.*) - Thorium": "󰊯 $1",
             "Thorium-browser(.*)": "󰊯 $1",
             "(.*).pdf(.*)": "󰈙 Zathura: $1.pdf$2",
-            "(.*).epub(.*)": "󰈙 Zathura: $1.epub$2"
+            "(.*).epub(.*)": "󰈙 Zathura: $1.epub$2",
+            "tmux (.*)": " Tmux"
         }
     },
     "keyboard-state": {
