@@ -6,7 +6,7 @@ run_hook pre &
 
 swww init
 
-set_wallpaper ~/.config/Wallpaper/AestheticCity.jpg
+set_wallpaper
 
 eval "hypridle" &
 
@@ -26,7 +26,7 @@ brightnessctl --restore
 eval "hyprctl setcursor Bibata_Ghost 24;" &
 
 eval "sleep 1; fcitx5" &
-# eval "sleep 3; localsend; sleep 3; hyprctl dipatch closewindow localsend" &
+eval "localsend; sleep 15; hyprctl dipatch closewindow localsend" &
 eval "sleep 0.5; hyprctl reload" &
 
 run_hook post &
