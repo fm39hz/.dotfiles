@@ -108,6 +108,7 @@ alias nvim_set_default="~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use="~/.config/scripts/nvim_direct_picker.sh"
 alias omzconfig="nvim ~/.config/.zshrc"
 alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
+alias aemu="emulator -avd Pixel_3a_API_34_extension_level_7_x86_64"
 eval $(thefuck --alias)
 
 # Android Dev environment
