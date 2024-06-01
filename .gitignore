@@ -1,65 +1,69 @@
-# Specific KDE files
+# Distro configs
 kde?*
 arkrc
-# libreoffice
+QtProject.conf
+
+# Mixed work
 libreoffice
-# Postman
+LarkInternational
+
+# Dev editor
+lazygit/state.yml
 Postman
-# Jetbrains product 
+Code/*
 JetBrains
 jgit
+zed
+!zed/*.json
+nvim
+
 # Keyboard config runtime
 ibus/* 
 fcitx
 fcitx5
-# Pulse runtime
-pulse/*
-# Nvim config
-nvim
+
 # Note storage
 anytype/*
 notion-app-enhanced
 notion-app/*
+
 # Brower cache
 thorium/*
 content_shell/*
 torbrowser
 configstore
-# Lazy Git
-lazygit/state.yml
+
 # Development cache
 godotenv/*
 *nodejs*
 yarn
 flutter
 *Android*
-# Thunar
+
+# File manager config
 *Thunar*
 *thunar*
-# Beekeeper
+
+# Database client
+MongoDB Compass/
 beekeeper-studio/*
+**/*.db
+
 # AI config 
 TabNine/*
 !TabNine/*_config.json
 Jan
-# Thefuck
-__pycache__
-# LarkSuite
-LarkInternational
-# Zed
-zed
-!zed/*.json
+
 # Misc
-**/*.db
+__pycache__
 *.bak
 autostart
 .trash
 *.log
 dconf/*
-Code/*
 *Cache
 user-dirs*
 backup
-QtProject.conf
 mimeapps.list
 Trolltech.conf
+pulse/*
