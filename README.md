@@ -20,4 +20,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/fm39hz/.dotfiles/main/scri
 ## Screenshot
 
 ![image](https://github.com/fm39hz/.dotfiles/assets/71458213/6f7c7bcf-d0e0-4ba1-b126-b6a428f63d18)
-
