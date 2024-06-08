@@ -133,7 +133,3 @@ export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
 # Docker alias
 alias dockerup="docker-compose --log-level ERROR up -d --build"
 alias dockerdown="docker-compose down"
-
-# Tmux auto-update
-tmux-git-autofetch() {(/home/fm39hz/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
-add-zsh-hook chpwd tmux-git-autofetch
