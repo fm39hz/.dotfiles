@@ -32,6 +32,7 @@ thorium/*
 content_shell/*
 torbrowser
 configstore
+BraveSoftware
 
 # Development cache
 godotenv/*
