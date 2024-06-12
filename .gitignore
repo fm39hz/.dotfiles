@@ -6,6 +6,7 @@ QtProject.conf
 # Mixed work
 libreoffice
 LarkInternational
+spotify
 
 # Dev editor
 lazygit/state.yml
