@@ -70,7 +70,7 @@ ZSH_THEME="intheloop"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aliases vi-mode archlinux sudo zsh-navigation-tools zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode fzf sudo zsh-navigation-tools zsh-interactive-cd zsh-autosuggestions zsh-syntax-highlighting zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 
