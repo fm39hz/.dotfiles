@@ -159,5 +159,6 @@ export/android/java_sdk_path = ""
 network/language_server/poll_limit_usec = 100000
 metadata/script_setup_templates_dictionary = {
 "Node": "0NodeDefault",
+"Node2D": "0NodeDefault",
 "RichTextLabel": "0NodeDefault"
 }
