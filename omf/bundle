@@ -1,0 +1,6 @@
+package fzf
+package sudope
+package thefuck
+package vi-mode
+theme bobthefish
+theme default
