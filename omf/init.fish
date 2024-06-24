@@ -1,5 +1,4 @@
 # Fish configuration
-set -U fish_greeting
 set -U fish_prompt_pwd_dir_length 10
 set -U fish_escape_delay_ms 10
 set -U fish_cursor_default block
