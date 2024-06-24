@@ -1,4 +1,5 @@
 package fzf
+package https://github.com/jorgebucaran/autopair.fish
 package sudope
 package thefuck
 package vi-mode
