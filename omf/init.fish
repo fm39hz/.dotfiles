@@ -10,6 +10,8 @@ set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 set -U EDITOR nvim
 alias top "btop --utf-force"
+
+# Neovim aliases
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use "~/.config/scripts/nvim_direct_picker.sh"
 alias nvim_delete "~/.config/scripts/nvim_delete.sh"
@@ -22,7 +24,7 @@ set -U PATH $PATH:$ANDROID_HOME/emulator
 set -U PATH $PATH:$ANDROID_HOME/tools/
 
 # Flutter environment
-# export PATH="$PATH:$HOME/.pub-cache/bin"
+# set -U PATH "$PATH:$HOME/.pub-cache/bin"
 set -U CHROME_EXECUTABLE thorium-browser
 
 # GodotEnv environment
