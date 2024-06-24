@@ -1,6 +1,8 @@
 # Fish configuration
 set -U fish_greeting
 set -U fish_prompt_pwd_dir_length 10
+set -U fish_cursor_default block
+set -U fish_cursor_insert line
 
 # Convenient config
 set -U LANG en_US.UTF-8
