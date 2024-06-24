@@ -9,6 +9,9 @@ LarkInternational
 spotify
 aseprite
 
+# Shell config
+fish/fish_variables
+
 # Dev editor
 lazygit/state.yml
 Postman
