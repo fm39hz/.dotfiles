@@ -1,20 +1,9 @@
 * {
-    bg-col:  #323D43FF;
-    bg-col-transparent:  #323D43FF;
-    bg-col-element:  #323D43FF;
-    bg-col-light: #7FBBB3FF;
-    border-col: #7FBBB3FF;
-    selected-col: #7FBBB3FF;
-    tab: #7FBBB3FF;
-    tab-selected: #323D43FF;
-    fg-col: #DAD1BEFF;
-    fg-col2: #323D43FF;
-    blank: #1f2223;
-    blank-underline: #191c1d;
-    button: #7FBBB3FF;
-    button-underline: #518554;
-    window: #303030;
-    window-underline: #272727;
-
-    width: 600;
+    background:     #1e2326;
+    foreground:     #495156;
+    active:         #374145;
+    selected:       #a7c080;
+    selected-text:  #1e2326;
 }
+
+/* vim:ft=css
