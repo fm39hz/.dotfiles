@@ -26,29 +26,11 @@
 
 .window-module label {
   color: #ebdbb2;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
   font-size: 15px;
   font-weight: bold;
-}
-
-.workspace-button {
-  background-color: #689d6a;
-  border: none;
-  border-bottom: 8px solid #518554;
-  border-radius: 5px;
-  margin-left: 4px;
-  margin-bottom: -6px;
-  padding-left: 14px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.workspace-button label {
-  color: #282828;
-  font-family: JetBrainsMono Nerd Font, sans-sherif;
-  font-weight: bold;
-  font-size: 14px;
 }
 
 .bar {
@@ -59,15 +41,15 @@
 }
 
 .bar-menu {
-  background-color: #7c818c;
+  background-color: #1e2326;
   border: none;
-  color: #ebdbb2;
+  color: #a7c080;
   padding: 20px;
   border-radius: 10px;
 }
 
 .bar-menu-button {
-  background-color: #1d2021;
+  background-color: #a7c080;
   border: none;
   border-radius: 10px;
   text-shadow: none;
@@ -85,7 +67,9 @@
   box-shadow: none;
   font-weight: bold;
   font-size: 20px;
-  font-family: JetBrainsMono Nerd Font, monospace;
+  font-family:
+    JetBrainsMono Nerd Font,
+    monospace;
 }
 
 .bar-menu-spacer {
@@ -94,7 +78,7 @@
 
 .metric scale trough highlight {
   all: unset;
-  background-color: #E1B87F;
+  background-color: #a7c080;
   color: #000000;
   border-radius: 2px;
   /* margin: 4px; */
@@ -128,68 +112,5 @@ label {
 
 .metric-label-text label {
   font-size: 28px;
-  color: #E1B87F;
-}
-
-.powermenu-window {
-  background-color: #7c818c;
-  border: none;
-  color: #ebdbb2;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.powermenu-window label {
-  font-family: JetBrainsMono Nerd Font, monospace;
-  font-weight: bold;
-  font-size: 22px;
-  color: #1d2021;
-  background-color: #B3B995;
-  border: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
-.powermenu-button {
-  background-color: #E1B87F;
-  border: none;
-  border-radius: 10px;
-  text-shadow: none;
-  box-shadow: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-
-.powermenu-button label {
-  color: #1d2021;
-  text-shadow: none;
-  box-shadow: none;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "JetBrainsMono Nerd Font", monospace;
-  background: none;
-  border: none;
-  padding: 0px;
-}
-
-.powermenu-poweroff-button label {
-  padding-right: 6px;
-}
-
-.powermenu-reboot-button label {
-  padding-left: 8px;
-}
-
-.powermenu-spacer-v {
-  min-height: 20px;
-}
-
-.powermenu-button-spacer {
-  min-width: 10px;
+  color: #a7c080;
 }
