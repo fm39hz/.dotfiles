@@ -43,9 +43,9 @@
         "on-scroll-down": "hyprctl dispatch workspace r+1",
         // "all-outputs": false,
         "persistent_workspaces": {
-          "*": 5
+            "*": 5
         }
-      },
+    },
     "hyprland/window": {
         "format": "{title}",
         "separate-outputs": true,
