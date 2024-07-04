@@ -32,9 +32,10 @@ fcitx
 fcitx5
 
 # Note storage
-anytype/*
+anytype
 notion-app-enhanced
-notion-app/*
+notion-app
+obsidian
 
 # Brower cache
 thorium/*
