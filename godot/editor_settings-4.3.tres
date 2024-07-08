@@ -1,4 +1,10 @@
-[gd_resource type="EditorSettings" format=3]
+[gd_resource type="EditorSettings" load_steps=2 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2nbrx"]
+command_or_control_autoremap = true
+alt_pressed = true
+keycode = 75
+unicode = 75
 
 [resource]
 interface/editor/display_scale = 2
@@ -157,6 +163,10 @@ text_editor/theme/highlighting/comment_markers/notice_color = Color(0.56, 0.67, 
 text_editor/theme/highlighting/comment_markers/critical_list = "ALERT,ATTENTION,CAUTION,CRITICAL,DANGER,SECURITY"
 text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING"
 text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,TEST,TESTING"
+shortcuts = [{
+"name": "editor/clear_output",
+"shortcuts": [SubResource("InputEventKey_2nbrx")]
+}]
 metadata/script_setup_templates_dictionary = {
 "Node": "0NodeDefault",
 "Node2D": "0NodeDefault",
