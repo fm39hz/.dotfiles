@@ -3,6 +3,9 @@ kde?*
 arkrc
 QtProject.conf
 
+# Game
+StardewValley
+
 # Mixed work
 libreoffice
 LarkInternational
@@ -35,7 +38,8 @@ fcitx5
 anytype
 notion-app-enhanced
 notion-app
-obsidian
+obsidian/*
+!obsidian/*.css
 
 # Brower cache
 thorium/*
