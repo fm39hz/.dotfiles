@@ -57,6 +57,7 @@
             "(.*)Tdesktop(.*.)": " Telegram",
             "(.*) - Visual Studio Code": "󰘐 $1",
             "(.*) - Thorium": "󰊯 $1",
+            "(.*)— Ablaze Floorp": "  $1",
             "Thorium-browser(.*)": "󰊯 $1",
             "(.*).pdf(.*)": "󰈙 Zathura: $1.pdf$2",
             "(.*).epub(.*)": "󰈙 Zathura: $1.epub$2",
