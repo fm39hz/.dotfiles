@@ -17,6 +17,10 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 mkdir ~/.icons/
 wget -cO- https://github.com/talwat/everforest-cursors/releases/latest/download/everforest-cursors-variants.tar.bz2 | tar xfj - -C ~/.icons
 
+# Setup Hyprland plugins
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm add https://github.com/KZDKM/Hyprspace
+
 # Setup Neovim distro
 git submodule update --init
 git submodule sync
