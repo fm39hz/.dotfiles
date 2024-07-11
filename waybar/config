@@ -52,8 +52,8 @@
         "rewrite": {
             "": "󰣇 Hyprland",
             "nvim(.*)": " Neovim$1",
-            "zsh": " Terminal",
-            "(.*)64Gram(.*.)": " Telegram",
+            "zsh": "  Terminal",
+            "64Gram": "  Telegram",
             "(.*)Tdesktop(.*.)": " Telegram",
             "(.*) - Visual Studio Code": "󰘐 $1",
             "(.*) - Thorium": "󰊯 $1",
@@ -72,7 +72,7 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
+    "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
