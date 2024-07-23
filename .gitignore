@@ -16,6 +16,11 @@ spicetify/Backup
 spicetify/Extracted
 Bitwarden
 Todoist
+obs-studio/*
+!obs-studio/basic/profiles/Untitled/basic.ini
+Azagaya
+bless
+goldwarden
 
 # Shell config
 fish/fish_variables
@@ -84,3 +89,4 @@ mimeapps.list
 Trolltech.conf
 pulse/*
 turborepo
+bytertc
