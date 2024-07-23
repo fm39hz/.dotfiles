@@ -35,15 +35,23 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "format-icons": {
-          "active": "",
-          "default": "",
-          "persistent": ""
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
         },
-        "on-scroll-up": "hyprctl dispatch workspace r-1",
-        "on-scroll-down": "hyprctl dispatch workspace r+1",
-        // "all-outputs": false,
-        "persistent_workspaces": {
+        "format-window-separator": "\t",
+        "persistent-workspaces": {
             "*": 5
+        },
+        "window-rewrite-default": "󰣇",
+        "window-rewrite": {
+            "title<.*youtube.*>": "",
+            "class<firefox>": "",
+            "class<Brave-browser> title<.*github.*>": "",
+            "class<kitty>": "",
+            "class<kitty> title<tmux>": " Tmux"
         }
     },
     "hyprland/window": {
