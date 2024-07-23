@@ -12,6 +12,14 @@
   border-radius: 0;
 }
 
+tooltip {
+  background-color: #383c4a;
+  border: none;
+  border-radius: 10px;
+  box-shadow: transparent;
+  text-shadow: inherit;
+}
+
 window#waybar {
   background: transparent;
   opacity: 0.6;
@@ -319,6 +327,10 @@ window#waybar.hidden {
   transition: none;
   color: #f1e6b2;
   background: #384b55;
+}
+
+#tray menu {
+  border-radius: 10px;
 }
 
 @keyframes blink {
