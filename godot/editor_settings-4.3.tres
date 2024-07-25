@@ -125,9 +125,9 @@ network/language_server/remote_port = 6005
 network/language_server/enable_smart_resolve = true
 network/language_server/show_native_symbols_in_editor = false
 network/language_server/use_thread = false
-dotnet/editor/external_editor = 6
-dotnet/editor/custom_exec_path = "neovide"
-dotnet/editor/custom_exec_path_args = "."
+dotnet/editor/external_editor = 5
+dotnet/editor/custom_exec_path = ""
+dotnet/editor/custom_exec_path_args = "{file}"
 dotnet/build/verbosity_level = 2
 dotnet/build/no_console_logging = false
 dotnet/build/create_binary_log = false
@@ -166,6 +166,7 @@ text_editor/theme/highlighting/comment_markers/notice_color = Color(0.56, 0.67, 
 text_editor/theme/highlighting/comment_markers/critical_list = "ALERT,ATTENTION,CAUTION,CRITICAL,DANGER,SECURITY"
 text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING"
 text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,TEST,TESTING"
+dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbox/apps/rider/bin/rider.sh"
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_2nbrx")]
