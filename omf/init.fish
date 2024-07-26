@@ -9,6 +9,8 @@ set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 set -U EDITOR nvim
 alias top "btop --utf-force"
+alias tma "tmux a -t"
+alias tmd "tmux new -s"
 
 # Neovim aliases
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
