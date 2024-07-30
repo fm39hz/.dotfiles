@@ -7,7 +7,9 @@
   _battery: 4096
   _modelId: B02340820000
   _sensitive: {dpi: false, hires-smooth-resolution: false, smart-shift: false}
+  _serial: DDE59E1D
   _unitId: DDE59E1D
+  _wpid: '4082'
   change-host: null
   divert-keys: {82: 0, 83: 0, 86: 0, 195: 0, 196: 0}
   dpi: 1700
