@@ -16,6 +16,7 @@
         "custom/menu",
         "keyboard-state",
         "tray",
+        "custom/weather",
         "cpu",
         "memory",
         "battery",
@@ -219,6 +220,10 @@
             ]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+        "interval": 600,
+        "exec": "python -O $HOME/.config/waybar/scripts/weather/weather.py"
     },
     "custom/media": {
         "format": "{icon} {}",

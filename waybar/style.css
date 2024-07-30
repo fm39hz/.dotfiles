@@ -220,7 +220,7 @@ window#waybar.empty #window {
   margin-right: 12px;
   padding-left: 16px;
   padding-right: 16px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   transition: none;
   color: #f1e6b2;
   background: #384b55;
@@ -228,10 +228,14 @@ window#waybar.empty #window {
 
 #custom-weather {
   padding-right: 16px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
+  margin-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
   transition: none;
-  color: #ffffff;
-  background: #383c4a;
+  color: #f1e6b2;
+  font-size: 18px;
+  background: #384b55;
 }
 
 #pulseaudio {
@@ -260,7 +264,7 @@ window#waybar.empty #window {
   border-radius: 10px;
   transition: none;
   color: #f1e6b2;
-  background: #45443c;
+  background: #56635f;
 }
 
 #temperature {
@@ -274,7 +278,7 @@ window#waybar.empty #window {
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  background-color: #e67e80;
 }
 
 #backlight {
@@ -307,12 +311,12 @@ window#waybar.empty #window {
 }
 
 #battery.warning:not(.charging) {
-  background-color: #ffbe61;
+  background-color: #dbbc7f;
   color: black;
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
+  background-color: #e67e80;
   color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
