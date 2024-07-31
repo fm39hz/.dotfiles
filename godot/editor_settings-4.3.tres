@@ -1,6 +1,6 @@
 [gd_resource type="EditorSettings" load_steps=2 format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_e5hg8"]
+[sub_resource type="InputEventKey" id="InputEventKey_eq7tb"]
 command_or_control_autoremap = true
 alt_pressed = true
 keycode = 75
@@ -169,7 +169,7 @@ text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,T
 dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbox/apps/rider/bin/rider.sh"
 shortcuts = [{
 "name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_e5hg8")]
+"shortcuts": [SubResource("InputEventKey_eq7tb")]
 }]
 metadata/script_setup_templates_dictionary = {
 "Node": "0NodeDefault",
