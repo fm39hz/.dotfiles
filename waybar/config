@@ -17,9 +17,7 @@
         "keyboard-state",
         "tray",
         "custom/weather",
-        "cpu",
-        "memory",
-        "battery",
+        "group/hardware",
         "battery#bat2",
         "clock"
     ],
@@ -236,5 +234,17 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
+    "group/hardware": {
+		"orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+        },
+		"modules": [
+            "battery",
+			"cpu",
+			"memory",
+		]
+	},
 }
