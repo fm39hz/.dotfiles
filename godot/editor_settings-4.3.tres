@@ -1,6 +1,6 @@
 [gd_resource type="EditorSettings" load_steps=2 format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_eq7tb"]
+[sub_resource type="InputEventKey" id="InputEventKey_s4mcu"]
 command_or_control_autoremap = true
 alt_pressed = true
 keycode = 75
@@ -58,6 +58,7 @@ text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
 text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
 run/output/font_size = 16
 network/connection/network_mode = 1
+project_manager/directory_naming_convention = 4
 asset_library/available_urls = {
 "godotengine.org (Official)": "https://godotengine.org/asset-library/api"
 }
@@ -167,9 +168,10 @@ text_editor/theme/highlighting/comment_markers/critical_list = "ALERT,ATTENTION,
 text_editor/theme/highlighting/comment_markers/warning_list = "BUG,DEPRECATED,FIXME,HACK,TASK,TBD,TODO,WARNING"
 text_editor/theme/highlighting/comment_markers/notice_list = "INFO,NOTE,NOTICE,TEST,TESTING"
 dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbox/apps/rider/bin/rider.sh"
+aseprite/general/command_path = "/home/fm39hz/.local/share/Steam/steamapps/common/Aseprite/aseprite"
 shortcuts = [{
 "name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_eq7tb")]
+"shortcuts": [SubResource("InputEventKey_s4mcu")]
 }]
 metadata/script_setup_templates_dictionary = {
 "Node": "0NodeDefault",
