@@ -1,6 +1,6 @@
 [gd_resource type="EditorSettings" load_steps=2 format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_s4mcu"]
+[sub_resource type="InputEventKey" id="InputEventKey_1qwkf"]
 command_or_control_autoremap = true
 alt_pressed = true
 keycode = 75
@@ -25,7 +25,6 @@ interface/theme/border_size = 2
 interface/theme/corner_radius = 6
 interface/theme/base_spacing = 0
 interface/theme/additional_spacing = 4
-filesystem/file_dialog/show_hidden_files = true
 text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
 text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
 text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
@@ -171,10 +170,13 @@ dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbo
 aseprite/general/command_path = "/home/fm39hz/.local/share/Steam/steamapps/common/Aseprite/aseprite"
 shortcuts = [{
 "name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_s4mcu")]
+"shortcuts": [SubResource("InputEventKey_1qwkf")]
 }]
 metadata/script_setup_templates_dictionary = {
+"CharacterBody2D": "0CharacterBody2DBasic Movement",
 "Node": "0NodeDefault",
 "Node2D": "0NodeDefault",
-"RichTextLabel": "0NodeDefault"
+"RichTextLabel": "0NodeDefault",
+"Sprite2D": "0NodeDefault",
+"StaticBody2D": "0NodeDefault"
 }
