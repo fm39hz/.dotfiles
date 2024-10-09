@@ -1,4 +1,20 @@
 #Install dependencies
-sudo pacman -S git git-lfs diff-so-fancy npm unzip fish zsh neofetch ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
+sudo pacman -S git git-lfs diff-so-fancy npm fish neofetch
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
-yay -S greetd xclip ripgrep hyprcursor hyprland-git wireplumber waybar kitty man-db neovim rofi-lbonn-wayland wbg libnotify notification-daemon swaync networkmanager network-manager-applet bluez bluez-utils blueman noto-fonts-emoji lxsession grimblast-git brightnessctl nwg-look-bin yad sox gruvbox-{dark-icons-gtk,material-gtk-theme-git} xcursor-simp1e-gruvbox-dark gtklock eww-wayland btop zathura zathura-pdf-mupdf thunar thunar-archive-plugin thorium-browser xdg-desktop-portal-hyprland hyprlock hypridle ttf-jetbrains-mono-nerd hyprshot lazygit nitch-git fzf dotnet-sdk aspnet-runtime spicetify qiv spicetify spotx-linux
+
+# WM
+yay -S hyprland-git hyprcursor hypridle hyprlock hyprshot xdg-desktop-portal-hyprland eww wbg qiv swaync thunar
+# Libs
+yay -S libnotify notification-daemon networkmanager network-manager-applet bluez bluez-utils man-db lxsession brightnessctl yad sox ibus fcitx5-bamboo
+# Themes
+yay -S everforest-icon-themes-git
+# Fonts
+yay -S noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
+# Utilities
+yay -S waybar kitty rofi-lbonn-wayland-git greetd blueman xclip ripgrep wireplumber neovim nwg-look-bin btop zathura lazygit nitch-git fzf tmux unarchiver unrar unzip yazi zoxide fcitx5-configtool
+# Entertainment
+yay -S spotify
+# Plugins
+yay -S zathura-pdf-mupdf thunar-archive-plugin spicetify spotx-linux
+# Development
+yay -S docker docker-buildx docker-compose dotnet-sdk dotnet-sdk-7.0 aspnet-runtime mono python-pip
