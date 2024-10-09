@@ -7,24 +7,41 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "collaboration_panel": {
-    "dock": "right"
-  },
-  "features": {
-    "copilot": false
-  },
-  "telemetry": {
-    "metrics": false
-  },
-  "base_keymap": "VSCode",
-  "theme": "Atelier Seaside Dark",
-  "vim_mode": true,
-  "autosave": "on_focus_change",
-  "auto_update": false,
-  "ui_font_size": 24,
-  "buffer_font_size": 24,
-  "ui_font_family": "JetBrainsMonoNF-Bold",
-  "buffer_font_family": "JetBrainsMonoNF-Bold",
-  "buffer_line_height": "comfortable",
-  "hard_tabs": true
+	"assistant": {
+		"default_model": {
+			"provider": "zed.dev",
+			"model": "claude-3-5-sonnet-20240620"
+		},
+		"version": "2"
+	},
+	"collaboration_panel": {
+		"dock": "right"
+	},
+	"features": {
+		"copilot": false
+	},
+	"telemetry": {
+		"metrics": false
+	},
+	"base_keymap": "VSCode",
+	"theme": "Everforest Dark",
+	"vim_mode": true,
+	"autosave": "on_focus_change",
+	"auto_update": false,
+	"ui_font_size": 24,
+	"buffer_font_size": 24,
+	"ui_font_family": "JetBrainsMono Nerd Font",
+	"buffer_font_family": "JetBrainsMono Nerd Font",
+	"ui_font_weight": 700,
+	"buffer_font_weight": 700,
+	"buffer_line_height": "comfortable",
+	"hard_tabs": true,
+	"tab_size": 4,
+	"languages": {
+		"CSharp": {
+			"always_treat_brackets_as_autoclosed": false,
+			"format_on_save": "off",
+			"code_actions_on_format": {}
+		}
+	}
 }
