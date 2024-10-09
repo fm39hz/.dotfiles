@@ -52,8 +52,6 @@ class Weather:
                 print(f"{int(round(temp))}{unit} {icon} ")
         except requests.ConnectionError:
             self.error_handling()
-        except json.JSONDecodeError:
-            print("error in weather_settings.json file")
 
     def error_handling(self):
         """Handle errors."""
