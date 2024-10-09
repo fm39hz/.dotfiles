@@ -4,7 +4,7 @@ function bobthefish_colors -S -d 'Define a custom bobthefish color scheme'
     set -x color_initial_segment_private ffffff 7FBBB3 # blue
     set -x color_initial_segment_su ffffff A7C080 --bold # green
     set -x color_initial_segment_jobs ffffff 7FBBB3 --bold # blue
-    set -x color_path 2D353B D3C6AA # bg0 and bg5
+    set -x color_path 2D353B D3C6AA --bold # bg0 and bg5
     set -x color_path_basename 2D353B D3C6AA --bold
     set -x color_path_nowrite 543A48 D699B6 # bg_red and purple
     set -x color_path_nowrite_basename 543A48 D699B6 --bold # bg_red and purple
@@ -19,7 +19,7 @@ function bobthefish_colors -S -d 'Define a custom bobthefish color scheme'
     set -x color_aws_vault
     set -x color_aws_vault_expired
     set -x color_username 9DA9A0 232A2E --bold # fg and blue
-    set -x color_hostname 9DA9A0 232A2E # fg and blue
+    set -x color_hostname 9DA9A0 232A2E --bold # fg and blue
     set -x color_rvm E67E80 D3C6AA --bold # red and fg
     set -x color_virtualfish 83C092 D3C6AA --bold # aqua and fg
     set -x color_virtualgo 83C092 D3C6AA --bold # aqua and fg
