@@ -16,6 +16,9 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 # Setup Cursor
 mkdir ~/.icons/
 wget -cO- https://github.com/talwat/everforest-cursors/releases/latest/download/everforest-cursors-variants.tar.bz2 | tar xfj - -C ~/.icons
+cd ~/.icons || exit
+hyprcursor-util -x ~/.icons/everforest-cursors/ -o ./
+hyprcursor-util -c ~/.icons/extracted_everforest-cursors/
 
 # Setup Hyprland plugins
 hyprpm add https://github.com/hyprwm/hyprland-plugins
