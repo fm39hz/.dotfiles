@@ -1,5 +1,4 @@
 package fzf
-package https://github.com/acomagu/fish-async-prompt
 package https://github.com/jorgebucaran/autopair.fish
 package https://github.com/jorgebucaran/fish-bax
 package https://github.com/jorgebucaran/replay.fish
