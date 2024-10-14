@@ -13,6 +13,12 @@ ln -s ~/.config/.zshrc ~/.zshrc
 # Setup omf
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
+# Setup keyd
+sudo systemctl enable keyd
+sudo ln -s ~/.config/keyd/remap.conf /etc/keyd/default.conf
+sudo systemctl restart keyd
+sudo keyd reload
+
 # Setup Cursor
 mkdir ~/.icons/
 wget -cO- https://github.com/talwat/everforest-cursors/releases/latest/download/everforest-cursors-variants.tar.bz2 | tar xfj - -C ~/.icons

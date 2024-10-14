@@ -11,7 +11,7 @@ yay -S everforest-icon-themes-git
 # Fonts
 yay -S noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
 # Utilities
-yay -S waybar kitty rofi-lbonn-wayland-git greetd blueman xclip ripgrep wireplumber neovim nwg-look-bin btop zathura lazygit nitch-git fzf tmux unarchiver unrar unzip yazi zoxide fcitx5-configtool
+yay -S waybar kitty rofi-lbonn-wayland-git greetd blueman xclip ripgrep wireplumber neovim nwg-look-bin btop zathura lazygit nitch-git fzf tmux unarchiver unrar unzip yazi zoxide fcitx5-configtool keyd
 # Entertainment
 yay -S spotify
 # Plugins
