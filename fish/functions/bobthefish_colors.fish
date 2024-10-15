@@ -18,8 +18,8 @@ function bobthefish_colors -S -d 'Define a custom bobthefish color scheme'
     set -x color_vagrant 7FBBB3 ffffff --bold # blue
     set -x color_aws_vault
     set -x color_aws_vault_expired
-    set -x color_username 9DA9A0 232A2E --bold # fg and blue
-    set -x color_hostname 9DA9A0 232A2E --bold # fg and blue
+    set -x color_username 3D484D A7C080 --bold # fg and blue
+    set -x color_hostname 3D484D A7C080 --bold # fg and blue
     set -x color_rvm E67E80 D3C6AA --bold # red and fg
     set -x color_virtualfish 83C092 D3C6AA --bold # aqua and fg
     set -x color_virtualgo 83C092 D3C6AA --bold # aqua and fg
