@@ -3,6 +3,9 @@ kde?*
 arkrc
 QtProject.conf
 
+# Telemetry
+go
+
 # Game
 StardewValley
 
@@ -44,6 +47,7 @@ fcitx5
 anytype
 notion-app-enhanced
 notion-app
+Notion
 obsidian/*
 !obsidian/*.css
 
