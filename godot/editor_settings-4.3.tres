@@ -1,6 +1,6 @@
 [gd_resource type="EditorSettings" load_steps=2 format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_5j242"]
+[sub_resource type="InputEventKey" id="InputEventKey_5utgl"]
 command_or_control_autoremap = true
 alt_pressed = true
 keycode = 75
@@ -171,7 +171,7 @@ dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbo
 aseprite/general/command_path = "/home/fm39hz/.local/share/Steam/steamapps/common/Aseprite/aseprite"
 shortcuts = [{
 "name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_5j242")]
+"shortcuts": [SubResource("InputEventKey_5utgl")]
 }]
 metadata/script_setup_templates_dictionary = {
 "CharacterBody2D": "0CharacterBody2DBasic Movement",
