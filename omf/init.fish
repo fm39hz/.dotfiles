@@ -15,6 +15,7 @@ set -U EDITOR nvim
 alias top "btop --utf-force"
 alias tma "tmux a -t"
 alias tmn "tmux new -s"
+alias tml "tmux ls"
 
 # Neovim aliases
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
