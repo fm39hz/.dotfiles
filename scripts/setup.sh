@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 
 # Setup keyd
 sudo systemctl enable keyd
-sudo ln -s ~/.config/keyd/remap.conf /etc/keyd/default.conf
+sudo cp ~/.config/keyd/default.conf /etc/keyd/default.conf
 sudo systemctl restart keyd
 sudo keyd reload
 
