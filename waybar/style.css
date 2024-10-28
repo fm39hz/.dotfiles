@@ -147,7 +147,8 @@ window#waybar.empty #window {
   border: none;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 10px 0px 0px 10px;
+  margin-right: 6px;
+  border-radius: 10px;
   margin-top: 8px;
   margin-bottom: 0px;
 }
@@ -161,7 +162,7 @@ window#waybar.empty #window {
   font-size: 18px;
   font-weight: bold;
   border: none;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 8px;
@@ -240,16 +241,32 @@ window#waybar.empty #window {
   background: #384b55;
 }
 
-#pulseaudio {
-  margin-bottom: 0px;
-  margin-top: 8px;
-  margin-right: 0px;
-  padding-left: 16px;
+#custom-pomodoro {
   padding-right: 16px;
   border-radius: 10px;
+  margin-top: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
   transition: none;
   color: #f1e6b2;
-  background: #a6b8c1;
+  font-size: 18px;
+  background: #384b55;
+}
+
+#pulseaudio {
+  padding-right: 16px;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: none;
+  color: #f1e6b2;
+  font-size: 18px;
+  background: #384b55;
 }
 
 #pulseaudio.muted {

@@ -18,7 +18,8 @@
         "tray",
         "custom/weather",
         "group/hardware",
-        "battery#bat2",
+        // "group/music",
+        "battery",
         "clock"
     ],
     "custom/swaync": {
@@ -224,6 +225,13 @@
         "interval": 600,
         "exec": "python -O $HOME/.config/waybar/scripts/weather/weather.py"
     },
+    "custom/pomodoro": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/waybar-module-pomodoro",
+        "on-click": "waybar-module-pomodoro toggle",
+        "on-click-right": "waybar-module-pomodoro reset",
+    },
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
@@ -233,19 +241,28 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "group/hardware": {
-		"orientation": "inherit",
+        "orientation": "inherit",
         "drawer": {
             "transition-duration": 500,
             "transition-left-to-right": false,
         },
-		"modules": [
-            "battery",
-			"cpu",
-			"memory",
-		]
-	},
+        "modules": [
+            "memory",
+            "cpu"
+        ]
+    },
+    "group/music": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/media"
+        ]
+    },
 }
