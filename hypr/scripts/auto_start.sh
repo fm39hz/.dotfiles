@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-source ~/.config/hypr/lib.sh
-
-run_hook pre &
+source "$HOME"/.config/hypr/lib.sh
 
 swww init
 
@@ -28,4 +26,3 @@ eval "hyprctl setcursor everforest-cursors 32;" &
 eval "sleep 1; fcitx5" &
 # eval "localsend; sleep 15; hyprctl dipatch closewindow localsend" &
 eval "sleep 0.5; hyprctl reload" &
-run_hook post &
