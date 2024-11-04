@@ -16,7 +16,7 @@
         "custom/menu",
         "keyboard-state",
         "tray",
-        "custom/weather",
+        // "custom/weather",
         "group/hardware",
         // "group/music",
         "battery",
