@@ -15,6 +15,6 @@ yay -S waybar kitty rofi-lbonn-wayland-git greetd blueman xclip ripgrep wireplum
 # Entertainment
 yay -S spotify
 # Plugins
-yay -S zathura-pdf-mupdf thunar-archive-plugin spicetify spotx-linux
+yay -S zathura-pdf-mupdf thunar-archive-plugin spicetify-cli spotx-linux
 # Development
 yay -S docker docker-buildx docker-compose dotnet-sdk dotnet-sdk-7.0 aspnet-runtime mono python-pip
