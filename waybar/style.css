@@ -6,7 +6,7 @@
     Helvetica,
     Arial,
     sans-serif;
-  font-size: 23.5px;
+  font-size: 26.8px;
   font-weight: bold;
   border: none;
   border-radius: 0;
@@ -41,12 +41,12 @@ window#waybar.hidden {
   transition: none;
   color: #7c818c;
   background: transparent;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 #workspaces button.persistent {
   color: #7c818c;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -216,6 +216,7 @@ window#waybar.empty #window {
 }
 
 #clock {
+  font-size: 22px;
   margin-top: 8px;
   margin-bottom: 0px;
   margin-right: 12px;
