@@ -2,55 +2,51 @@
 import subprocess
 
 
-# Function to parse the output of "wpctl status" and return a dictionary of sinks with their id and name.
-def parse_wpctl_status():
-    # Execute the wpctl status command and store the output in a variable.
-    output = str(subprocess.check_output("wpctl status", shell=True, encoding="utf-8"))
-
-    # Remove the ASCII tree characters and return a list of lines
-    lines = (
-        output.replace("├", "")
-        .replace("─", "")
-        .replace("│", "")
-        .replace("└", "")
-        .splitlines()
+# Function to parse the output of "pactl list sinks" and return a list of sinks with their id and name.
+def parse_pactl_sinks():
+    # Execute the pactl list sinks command and store the output in a variable.
+    output = str(
+        subprocess.check_output("pactl list sinks", shell=True, encoding="utf-8")
     )
 
-    # Find the index of the "Sinks:" line as a starting point
-    sinks_index: int = None
-    for index, line in enumerate(lines):
-        if "Sinks:" in line:
-            sinks_index = index
-            break
-
-    # Gather the lines after "Sinks:" and before the next blank line
+    # Initialize variables to store sink information
     sinks = []
-    for line in lines[sinks_index + 1 :]:
-        if not line.strip():
-            break
-        sinks.append(line.strip())
+    current_sink = None
 
-    # Remove the "[vol:" suffix from the sink names
-    for index, sink in enumerate(sinks):
-        sinks[index] = sink.split("[vol:")[0].strip()
+    # Parse each line to extract sink ID, name, and whether it's the default
+    for line in output.splitlines():
+        line = line.strip()
 
-    # Mark the default sink by appending "- Default" to the end
-    for index, sink in enumerate(sinks):
-        if sink.startswith("*"):
-            sinks[index] = sink.strip().replace("*", "").strip() + " - Default"
+        # Identify the start of a new sink
+        if line.startswith("Sink #"):
+            if current_sink:  # Append the previous sink info before starting a new one
+                sinks.append(current_sink)
+            sink_id = int(line.split("#")[1])
+            current_sink = {"sink_id": sink_id, "sink_name": "", "is_default": False}
 
-    # Construct the dictionary in the format {'sink_id': <int>, 'sink_name': <str>}
-    sinks_dict = [
-        {"sink_id": int(sink.split(".")[0]), "sink_name": sink.split(".")[1].strip()}
-        for sink in sinks
-    ]
+        # Get the name of the sink
+        elif line.startswith("Description:") and current_sink:
+            current_sink["sink_name"] = line.split(":", 1)[1].strip()
 
-    return sinks_dict
+        # Check if the sink is the default based on state
+        elif line.startswith("State: RUNNING") and current_sink:
+            current_sink["is_default"] = True
+
+    # Append the last sink info
+    if current_sink:
+        sinks.append(current_sink)
+
+    # Adjust the names to mark the default sink for the menu
+    for sink in sinks:
+        if sink["is_default"]:
+            sink["sink_name"] += " - Default"
+
+    return sinks
 
 
 # Generate the list of sinks, highlighting the current default sink
 output = ""
-sinks = parse_wpctl_status()
+sinks = parse_pactl_sinks()
 for items in sinks:
     if items["sink_name"].endswith(" - Default"):
         output += f"<b>-> {items['sink_name']}</b>\n"
@@ -78,6 +74,6 @@ if rofi_process.returncode != 0:
 
 # Set the selected sink as the default
 selected_sink_name = rofi_process.stdout.strip()
-sinks = parse_wpctl_status()
+sinks = parse_pactl_sinks()
 selected_sink = next(sink for sink in sinks if sink["sink_name"] == selected_sink_name)
-subprocess.run(f"wpctl set-default {selected_sink['sink_id']}", shell=True)
+subprocess.run(f"pactl set-default-sink {selected_sink['sink_id']}", shell=True)
