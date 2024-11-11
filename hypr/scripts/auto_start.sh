@@ -8,7 +8,7 @@ set_wallpaper
 
 eval "hypridle" &
 
-~/.config/waybar/start
+# ~/.config/waybar/start
 ~/.config/swaync/start
 ~/.config/eww/start
 
