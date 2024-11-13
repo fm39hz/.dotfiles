@@ -4,3 +4,6 @@
 [submodule "nvim-lazyvim"]
 	path = nvim-lazyvim
 	url = git@github.com:fm39hz/nvim-lazyvim.git
+[submodule "ags"]
+	path = ags
+	url = git@github.com:fm39hz/HyprPanel.git
