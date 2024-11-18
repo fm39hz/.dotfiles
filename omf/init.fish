@@ -22,6 +22,9 @@ alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use "~/.config/scripts/nvim_direct_picker.sh"
 alias nvim_delete "~/.config/scripts/nvim_delete.sh"
 
+# Rust binary path
+fish_add_path -U "$HOME/.cargo/bin"
+
 # Android Dev environment
 set -U ANDROID_HOME "$HOME/Android/Sdk"
 fish_add_path -U "$ANDROID_HOME/platform-tools/"
