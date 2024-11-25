@@ -78,6 +78,7 @@ beekeeper-studio/*
 # AI config 
 TabNine/*
 !TabNine/*_config.json
+github-copilot/apps.json
 Jan
 
 # Misc
