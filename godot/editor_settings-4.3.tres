@@ -32,7 +32,7 @@ text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
 text_editor/theme/highlighting/comment_color = Color(0.794118, 0.801961, 0.807843, 0.5)
 text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
 text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
-text_editor/theme/highlighting/background_color = Color(0.152647, 0.179784, 0.200137, 1)
+text_editor/theme/highlighting/background_color = Color(0.152647, 0.179784, 0.200138, 1)
 text_editor/theme/highlighting/completion_background_color = Color(0.176471, 0.207843, 0.231373, 1)
 text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
 text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
@@ -53,6 +53,7 @@ text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
 text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
 text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
 text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+editors/panning/2d_editor_panning_scheme = 1
 asset_library/available_urls = {
 "godotengine.org (Official)": "https://godotengine.org/asset-library/api"
 }
