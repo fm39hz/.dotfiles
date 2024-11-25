@@ -25,7 +25,7 @@
   "bar.workspaces.workspaces": 5,
   "theme.notification.scaling": 70,
   "theme.osd.scaling": 70,
-  "theme.bar.menus.menu.dashboard.scaling": 70,
+  "theme.bar.menus.menu.dashboard.scaling": 55,
   "theme.bar.menus.menu.dashboard.confirmation_scaling": 70,
   "theme.bar.menus.menu.media.scaling": 100,
   "theme.bar.menus.menu.volume.scaling": 100,
@@ -94,10 +94,10 @@
   "menus.clock.weather.location": "127050",
   "menus.clock.time.military": false,
   "menus.clock.weather.unit": "metric",
-  "theme.bar.menus.menu.clock.scaling": 70,
+  "theme.bar.menus.menu.clock.scaling": 55,
   "theme.bar.menus.menu.notifications.scaling": 70,
   "notifications.position": "top right",
-  "menus.dashboard.powermenu.avatar.image": "/home/fm39hz/Downloads/icon.jpg",
+  "menus.dashboard.powermenu.avatar.image": "/home/fm39hz/.config/icons.jpg",
   "menus.dashboard.stats.enable_gpu": false,
   "bar.windowtitle.truncation": true,
   "bar.windowtitle.truncation_size": 70,
@@ -117,5 +117,6 @@
   "menus.dashboard.shortcuts.left.shortcut1.command": "bash - c \"$HOME/.config/hypr/scripts/browser.sh\"",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
   "bar.workspaces.showAllActive": false,
-  "bar.volume.scrollUp": "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
+  "bar.volume.scrollUp": "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+",
+  "theme.bar.menus.popover.scaling": 75
 }
