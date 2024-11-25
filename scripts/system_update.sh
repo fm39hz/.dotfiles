@@ -16,12 +16,10 @@ cd ~/.config/nvim/ || exit
 if git diff --quiet lazy-lock.json
     echo "No changes to commit for Nvim packages."
 else
+    git pull
     git add lazy-lock.json
     git commit -m "chore: update deps"
     git push
 end
-
-echo "Updating Steam"
-steam -silent
 
 echo "Update Complete!"
