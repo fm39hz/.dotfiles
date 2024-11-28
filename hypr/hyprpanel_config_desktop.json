@@ -1,0 +1,125 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.bar.opacity": 0,
+  "wallpaper.pywal": false,
+  "wallpaper.image": "",
+  "theme.bar.buttons.background_opacity": 80,
+  "theme.bar.floating": true,
+  "theme.bar.border_radius": "0em",
+  "theme.bar.outer_spacing": "0.3em",
+  "theme.bar.margin_sides": "0.25rem",
+  "theme.bar.layer": "bottom",
+  "theme.bar.buttons.padding_y": "0.5rem",
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.monitorSpecific": true,
+  "bar.windowtitle.custom_title": false,
+  "bar.windowtitle.class_name": false,
+  "bar.workspaces.workspaceMask": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.4em",
+  "bar.workspaces.spacing": 1,
+  "theme.bar.menus.menu.dashboard.scaling": 55,
+  "theme.bar.menus.menu.clock.scaling": 70,
+  "theme.bar.menus.menu.notifications.scaling": 70,
+  "menus.dashboard.shortcuts.left.shortcut1.command": "bash - c \"$HOME/.config/hypr/scripts/browser.sh\"",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "windowtitle"
+      ],
+      "middle": [
+        "workspaces"
+      ],
+      "right": [
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "windowtitle"
+      ],
+      "middle": [
+        "workspaces"
+      ],
+      "right": [
+        "media",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "windowtitle"
+      ],
+      "middle": [
+        "workspaces"
+      ],
+      "right": [
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.location": "top",
+  "theme.font.weight": 900,
+  "bar.workspaces.showAllActive": false,
+  "bar.volume.scrollUp": "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+",
+  "theme.bar.buttons.y_margins": "0em",
+  "theme.bar.margin_top": "0.4rem",
+  "theme.bar.buttons.padding_x": "0.7rem",
+  "bar.workspaces.hideUnoccupied": false,
+  "tear": true,
+  "menus.transition": "crossfade",
+  "scalingPriority": "hyprland",
+  "notifications.showActionsOnHover": false,
+  "menus.clock.weather.location": "Hanoi",
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.weather.enabled": true,
+  "menus.clock.time.military": false,
+  "menus.clock.weather.key": "fa019641ef2c4f0daf534835243007",
+  "menus.dashboard.powermenu.avatar.image": "/home/fm39hz/.config/icons.jpg",
+  "theme.font.name": "JetBrainsMono Nerd Font Mono Ultra-Bold",
+  "theme.bar.scaling": 70,
+  "theme.bar.buttons.enableBorders": true,
+  "theme.bar.menus.monochrome": true,
+  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.opacity": 100,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "theme.bar.buttons.radius": "0.5em",
+  "bar.workspaces.reverse_scroll": true,
+  "bar.workspaces.scroll_speed": 1,
+  "bar.workspaces.workspaces": 5,
+  "theme.notification.scaling": 70,
+  "theme.osd.scaling": 70,
+  "theme.bar.menus.menu.dashboard.confirmation_scaling": 70,
+  "theme.bar.menus.menu.media.scaling": 100,
+  "theme.bar.menus.menu.volume.scaling": 100,
+  "theme.bar.menus.menu.network.scaling": 100,
+  "theme.bar.menus.menu.bluetooth.scaling": 100,
+  "theme.bar.margin_bottom": "0em",
+  "theme.font.size": "1.2rem",
+  "theme.bar.buttons.spacing": "0.2em",
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.applicationIconOncePerWorkspace": false,
+  "theme.bar.buttons.opacity": 100,
+  "menus.clock.time.hideSeconds": false,
+  "notifications.position": "top right",
+  "menus.dashboard.stats.enable_gpu": true,
+  "bar.windowtitle.truncation": true,
+  "bar.windowtitle.truncation_size": 70,
+  "bar.workspaces.ignored": "-.*",
+  "bar.clock.format": "%I:%M %p",
+  "theme.bar.menus.popover.scaling": 100,
+  "theme.bar.dropdownGap": "3rem"
+}
