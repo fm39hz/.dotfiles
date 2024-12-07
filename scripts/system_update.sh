@@ -9,14 +9,14 @@ echo "Updating Oh My Fish and plugins..."
 omf update
 
 echo "Updating Nvim packages..."
-nvim --headless "+Lazy! sync" +qa
+git pull
 cd ~/.config/nvim/ || exit
+nvim --headless "+Lazy! sync" +qa
 
 # Check if there are any changes to commit
 if git diff --quiet lazy-lock.json
     echo "No changes to commit for Nvim packages."
 else
-    git pull
     git add lazy-lock.json
     git commit -m "chore: update deps"
     git push
