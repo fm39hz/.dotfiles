@@ -115,7 +115,7 @@
   "theme.bar.buttons.opacity": 100,
   "menus.clock.time.hideSeconds": false,
   "notifications.position": "top right",
-  "menus.dashboard.stats.enable_gpu": true,
+  "menus.dashboard.stats.enable_gpu": false,
   "bar.windowtitle.truncation": true,
   "bar.windowtitle.truncation_size": 70,
   "bar.workspaces.ignored": "-.*",
