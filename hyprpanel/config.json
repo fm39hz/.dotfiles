@@ -477,5 +477,8 @@
   "theme.bar.buttons.modules.hypridle.border": "#e67e80",
   "theme.bar.dropdownGap": "3rem",
   "notifications.showActionsOnHover": false,
-  "menus.clock.weather.enabled": true
+  "menus.clock.weather.enabled": true,
+  "theme.osd.orientation": "vertical",
+  "theme.osd.location": "right",
+  "theme.osd.active_monitor": false
 }
