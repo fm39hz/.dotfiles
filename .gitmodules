@@ -7,3 +7,6 @@
 [submodule "ags"]
 	path = ags
 	url = https://github.com/Jas-SinghFSU/HyprPanel
+[submodule "ghostty/shaders"]
+	path = ghostty/shaders
+	url = https://github.com/m-ahdal/ghostty-shaders.git
