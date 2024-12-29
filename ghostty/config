@@ -49,11 +49,11 @@
 #
 # Changing this configuration at runtime will only affect new terminals, i.e.
 # new windows, tabs, etc.
-font-family = JetbrainsMono NFM Bold
+font-family = "JetBrainsMono NF ExtraBold"
 
-font-family-bold = JetbrainsMono NFM Bold
-font-family-italic = JetbrainsMono NFM Bold Italic
-font-family-bold-italic = JetbrainsMono NFM Bold Italic
+# font-family-bold = JetBrainsMono Nerd Font Bold
+# font-family-italic = JetBrainsMono Nerd Font Bold Italic
+# font-family-bold-italic = JetBrainsMono Nerd Font Bold Italic
 # The named font style to use for each of the requested terminal font styles.
 # This looks up the style based on the font style string advertised by the
 # font itself. For example, "Iosevka Heavy" has a style of "Heavy". ===
@@ -66,11 +66,11 @@ font-family-bold-italic = JetbrainsMono NFM Bold Italic
 # These are only valid if its corresponding font-family is also specified. If
 # no font-family is specified, then the font-style is ignored unless you're
 # disabling the font style.
-font-style = bold
+font-style = Bold
 
-font-style-bold = bold
-font-style-italic = bold-italic
-font-style-bold-italic = bold-italic
+font-style-bold = ExtraBold
+font-style-italic = BoldItalic
+font-style-bold-italic = ExtraBoldItalic
 # Control whether Ghostty should synthesize a style if the requested style is
 # not available in the specified font-family.
 #
@@ -346,13 +346,13 @@ freetype-load-flags = hinting,force-autohint,monochrome,autohint
 #
 #   - macOS: titlebar tabs style is not updated when switching themes.
 #
-theme =
+theme = Everforest Dark - Hard
 
 # Background color for the window.
-background = #282c34
+background = #232A2E
 
 # Foreground color for the window.
-foreground = #ffffff
+foreground = #D3C6AA
 
 # The foreground and background color for selection. If this is not set, then
 # the selection color is just the inverted window background and foreground
@@ -766,7 +766,7 @@ mouse-scroll-multiplier = 1
 # On macOS, background opacity is disabled when the terminal enters native
 # fullscreen. This is because the background becomes gray and it can cause
 # widgets to show through which isn't generally desirable.
-background-opacity = 1
+background-opacity = 0.5
 
 # A positive value enables blurring of the background when background-opacity
 # is less than 1. The value is the blur radius to apply. A value of 20
@@ -1767,7 +1767,7 @@ vt-kam-allowed = false
 #
 # Changing this value at runtime and reloading the configuration will only
 # affect new windows, tabs, and splits.
-custom-shader =
+# custom-shader = ./shaders/bettercrt.glsl
 
 # If `true` (default), the focused terminal surface will run an animation
 # loop when custom shaders are used. This uses slightly more CPU (generally
