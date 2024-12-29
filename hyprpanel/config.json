@@ -11,7 +11,7 @@
   "theme.bar.menus.background": "#2b3339",
   "theme.bar.menus.opacity": 100,
   "theme.bar.buttons.dashboard.enableBorder": false,
-  "theme.bar.buttons.padding_y": "0.35rem",
+  "theme.bar.buttons.padding_y": "0.3em",
   "theme.bar.buttons.padding_x": "0.7rem",
   "theme.bar.buttons.radius": "0.5em",
   "theme.bar.layer": "bottom",
@@ -480,5 +480,12 @@
   "menus.clock.weather.enabled": true,
   "theme.osd.orientation": "vertical",
   "theme.osd.location": "right",
-  "theme.osd.active_monitor": false
+  "theme.osd.active_monitor": false,
+  "menus.dashboard.directories.right.directory3.command": "fish -c \"xdg-open $HOME/\"",
+  "menus.dashboard.directories.right.directory2.command": "fish -c \"xdg-open $HOME/Pictures/\"",
+  "menus.dashboard.directories.right.directory1.command": "fish -c \"xdg-open $HOME/Documents/\"",
+  "menus.dashboard.directories.left.directory3.command": "fish -c \"xdg-open $HOME/Projects/\"",
+  "menus.dashboard.directories.left.directory2.command": "fish -c \"xdg-open $HOME/Videos/\"",
+  "menus.dashboard.directories.left.directory1.command": "fish -c \"xdg-open $HOME/Downloads/\"",
+  "theme.bar.border.width": "0.1rem"
 }
