@@ -1317,7 +1317,7 @@ window-title-font-family =
 # non-terminal windows within Ghostty.
 #
 # This is currently only supported on macOS and Linux.
-window-theme = auto
+window-theme = dark
 
 # The colorspace to use for the terminal window. The default is `srgb` but
 # this can also be set to `display-p3` to use the Display P3 colorspace.
