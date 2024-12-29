@@ -49,7 +49,7 @@
 #
 # Changing this configuration at runtime will only affect new terminals, i.e.
 # new windows, tabs, etc.
-font-family = "JetBrainsMono NF ExtraBold"
+font-family = "JetBrainsMono Nerd Font"
 
 # font-family-bold = JetBrainsMono Nerd Font Bold
 # font-family-italic = JetBrainsMono Nerd Font Bold Italic
@@ -69,8 +69,8 @@ font-family = "JetBrainsMono NF ExtraBold"
 font-style = Bold
 
 font-style-bold = ExtraBold
-font-style-italic = BoldItalic
-font-style-bold-italic = ExtraBoldItalic
+font-style-italic = Bold Italic
+font-style-bold-italic = ExtraBold Italic
 # Control whether Ghostty should synthesize a style if the requested style is
 # not available in the specified font-family.
 #
@@ -120,7 +120,9 @@ font-synthetic-style = bold,italic,bold-italic
 #
 # To generally disable most ligatures, use `-calt`, `-liga`, and `-dlig` (as
 # separate repetitive entries in your config).
-font-feature =
+font-feature = calt
+font-feature = liga
+font-feature = dlig
 
 # Font size in points. This value can be a non-integer and the nearest integer
 # pixel size will be selected. If you have a high dpi display where 1pt = 2px
@@ -209,7 +211,7 @@ adjust-cell-width =
 adjust-cell-height = 
 # Distance in pixels from the bottom of the cell to the text baseline.
 # Increase to move baseline UP, decrease to move baseline DOWN.
-adjust-font-baseline =
+adjust-font-baseline = 1
 
 # Distance in pixels from the top of the cell to the top of the underline.
 # Increase to move underline DOWN, decrease to move underline UP.
