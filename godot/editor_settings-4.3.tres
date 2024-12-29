@@ -77,7 +77,7 @@ export/web/tls_certificate = ""
 export/windows/rcedit = ""
 export/windows/osslsigncode = ""
 export/windows/wine = ""
-_default_feature_profile = ""
+_default_feature_profile = "FM39hz's"
 interface/editors/show_scene_tree_root_selection = true
 interface/editors/derive_script_globals_by_name = true
 docks/scene_tree/ask_before_deleting_related_animation_tracks = true
@@ -167,5 +167,6 @@ shortcuts = [{
 }]
 metadata/script_setup_templates_dictionary = {
 "Control": "0NodeDefault",
-"Label": "0NodeDefault"
+"Label": "0NodeDefault",
+"Node2D": "0NodeDefault"
 }
