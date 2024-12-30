@@ -168,5 +168,6 @@ shortcuts = [{
 metadata/script_setup_templates_dictionary = {
 "Control": "0NodeDefault",
 "Label": "0NodeDefault",
-"Node2D": "0NodeDefault"
+"Node2D": "0NodeDefault",
+"StaticBody2D": "0NodeDefault"
 }
