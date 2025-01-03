@@ -1,24 +1,4 @@
-# == Font ==
-font-family = JetBrains Mono
-font-style = Bold
-font-style-bold = ExtraBold
-font-style-italic = Bold Italic
-font-style-bold-italic = ExtraBold Italic
-font-size = 15
-adjust-font-baseline = 1
-adjust-cell-height = 1
-
-# == Theme & Window ==
-theme = Everforest Dark - Hard
-background-opacity = 0.5
-window-padding-x = 0
-window-padding-y = 0
-window-padding-balance = true
-# custom-shader = ./shaders/bettercrt.glsl
-
-# == Shell ==
-shell-integration = fish
-
-# == Gtk ==
-gtk-single-instance = true
-gtk-titlebar = false
+config-file=./font.conf
+config-file=./theme.conf
+config-file=./shell.conf
+config-file=./gtk.conf
