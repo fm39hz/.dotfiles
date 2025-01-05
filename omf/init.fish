@@ -44,6 +44,9 @@ alias godotenv "$HOME/.dotnet/tools/godotenv"
 set -U GODOT "$HOME/.config/godotenv/godot/bin/godot"
 fish_add_path -U "$HOME/.config/godotenv/godot/bin:$PATH"
 
+# Aseprite environment
+alias aseprite "$HOME/.local/share/Steam/steamapps/common/Aseprite/aseprite"
+
 # Docker alias
 alias dockerup "docker-compose --log-level ERROR up -d --build"
 alias dockerdown "docker-compose down"
