@@ -11,7 +11,7 @@
   "theme.bar.menus.background": "#2b3339",
   "theme.bar.menus.opacity": 100,
   "theme.bar.buttons.dashboard.enableBorder": false,
-  "theme.bar.buttons.padding_y": "0.25rem",
+  "theme.bar.buttons.padding_y": "0.3rem",
   "theme.bar.buttons.padding_x": "0.7rem",
   "theme.bar.buttons.radius": "0.5em",
   "theme.bar.layer": "bottom",
