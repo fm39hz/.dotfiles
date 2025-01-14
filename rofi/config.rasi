@@ -1,5 +1,5 @@
 configuration {
-    font: "JetBrains Mono Nerd Font Bold 14";
+    font: "JetBrains Mono Bold 14";
     show-icons: true;
     terminal: "kitty";
     disable-history: false;
