@@ -1,6 +1,6 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.name": "JetBrainsMono Nerd Font Mono Ultra-Bold",
+  "theme.font.name": "JetBrains Mono Ultra-Bold",
   "theme.bar.scaling": 70,
   "theme.bar.floating": true,
   "theme.bar.buttons.enableBorders": true,
