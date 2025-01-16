@@ -494,5 +494,6 @@
   "theme.matugen_settings.scheme_type": "tonal-spot",
   "theme.matugen_settings.mode": "light",
   "menus.dashboard.shortcuts.left.shortcut3.command": "legcord",
-  "menus.power.lowBatteryNotification": true
+  "menus.power.lowBatteryNotification": true,
+  "menus.dashboard.shortcuts.left.shortcut2.command": "spotify"
 }
