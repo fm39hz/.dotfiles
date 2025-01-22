@@ -7,3 +7,6 @@
 [submodule "ghostty/shaders"]
 	path = ghostty/shaders
 	url = https://github.com/m-ahdal/ghostty-shaders.git
+[submodule "spicetify/Themes"]
+	path = spicetify/Themes
+	url = https://github.com/spicetify/spicetify-themes.git
