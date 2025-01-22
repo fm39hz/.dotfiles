@@ -11,6 +11,8 @@ omf update
 echo "Updating Nvim packages..."
 git pull
 cd ~/.config/nvim/ || exit
+git checkout master
+git pull
 nvim --headless "+Lazy! sync" +qa
 
 # Check if there are any changes to commit
