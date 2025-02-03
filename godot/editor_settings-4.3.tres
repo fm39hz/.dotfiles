@@ -1,10 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=2 format=3]
-
-[sub_resource type="InputEventKey" id="InputEventKey_2ypv7"]
-command_or_control_autoremap = true
-alt_pressed = true
-keycode = 75
-unicode = 75
+[gd_resource type="EditorSettings" format=3]
 
 [resource]
 interface/editor/main_font_size = 16
@@ -162,10 +156,6 @@ editors/3d_gizmos/gizmo_colors/joint_body_b = Color(0.6, 0.9, 1, 1)
 editors/3d_gizmos/gizmo_colors/fog_volume = Color(0.5, 0.7, 1, 1)
 aseprite/general/command_path = "aseprite"
 text_editor/help/sort_functions_alphabetically = true
-shortcuts = [{
-"name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_2ypv7")]
-}]
 metadata/script_setup_templates_dictionary = {
 "AnimationPlayer": "0NodeDefault",
 "CharacterBody2D": "0CharacterBody2DBasic Movement",
