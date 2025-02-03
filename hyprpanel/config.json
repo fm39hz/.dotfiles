@@ -12,7 +12,7 @@
   "theme.bar.menus.opacity": 100,
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.buttons.padding_y": "0.5rem",
-  "theme.bar.buttons.padding_x": "1.25rem",
+  "theme.bar.buttons.padding_x": "1rem",
   "theme.bar.buttons.radius": "0.5em",
   "theme.bar.layer": "bottom",
   "theme.bar.buttons.y_margins": "0em",
