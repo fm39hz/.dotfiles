@@ -36,7 +36,6 @@ Postman
 Code/*
 JetBrains
 jgit
-zed
 !zed/*.json
 nvim
 

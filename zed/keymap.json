@@ -1,11 +1,23 @@
 [
 	{
+		"bindings": {
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+		}
+	},
+	{
 		"context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
 		"bindings": {
 			// put key-bindings here if you want them to work in normal & visual mode
 			";": "command_palette::Toggle",
-			"alt-n": "pane::ActivateNextItem",
-			"alt-p": "pane::ActivatePrevItem"
+			"alt-h": "editor::Outdent",
+			"alt-l": "editor::Indent",
+			"alt-k": "editor::MoveLineUp",
+			"alt-j": "editor::MoveLineDown",
+			"L": "pane::ActivateNextItem",
+			"H": "pane::ActivatePrevItem"
 		}
 	},
 	{
@@ -35,10 +47,10 @@
 		"context": "ProjectPanel && not_editing",
 		"bindings": {
 			"h": "project_panel::CollapseSelectedEntry",
-			"l": "project_panel::ExpandSelectedEntry",
+			// "l": "project_panel::ExpandSelectedEntry",
 			"j": "menu::SelectNext",
 			"k": "menu::SelectPrev",
-			"o": "menu::Confirm",
+			"l": "project_panel::Open",
 			"r": "project_panel::Rename",
 			"z c": "project_panel::CollapseSelectedEntry",
 			"z o": "project_panel::ExpandSelectedEntry",
