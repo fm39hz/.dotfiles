@@ -33,6 +33,7 @@ fish/fish_variables
 # Dev editor
 lazygit/state.yml
 Postman
+bruno
 Code/*
 JetBrains
 jgit
