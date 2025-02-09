@@ -26,7 +26,7 @@
 	"ui_font_family": "JetBrains Mono",
 	"buffer_font_family": "JetBrains Mono",
 	"ui_font_weight": 900,
-	"buffer_font_weight": 700,
+	"buffer_font_weight": 800,
 	"buffer_line_height": "comfortable",
 	"hard_tabs": true,
 	"tab_size": 4,
@@ -46,9 +46,7 @@
 	},
 	"languages": {
 		"CSharp": {
-			"always_treat_brackets_as_autoclosed": false,
-			"format_on_save": "off",
-			"code_actions_on_format": {}
+			"format_on_save": "off"
 		}
 	}
 }
