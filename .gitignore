@@ -29,6 +29,7 @@ Grammarly
 
 # Shell config
 fish/fish_variables
+nushell/history.txt
 
 # Dev editor
 lazygit/state.yml
