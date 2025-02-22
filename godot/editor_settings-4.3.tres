@@ -1,6 +1,6 @@
 [gd_resource type="EditorSettings" load_steps=2 format=3]
 
-[sub_resource type="InputEventKey" id="InputEventKey_btdpe"]
+[sub_resource type="InputEventKey" id="InputEventKey_7bcdl"]
 command_or_control_autoremap = true
 alt_pressed = true
 keycode = 75
@@ -77,7 +77,7 @@ export/web/tls_certificate = ""
 export/windows/rcedit = ""
 export/windows/osslsigncode = ""
 export/windows/wine = ""
-_default_feature_profile = "FM39hz's"
+_default_feature_profile = "Default"
 interface/editors/show_scene_tree_root_selection = true
 interface/editors/derive_script_globals_by_name = true
 docks/scene_tree/ask_before_deleting_related_animation_tracks = true
@@ -164,7 +164,7 @@ aseprite/general/command_path = "aseprite"
 text_editor/help/sort_functions_alphabetically = true
 shortcuts = [{
 "name": "editor/clear_output",
-"shortcuts": [SubResource("InputEventKey_btdpe")]
+"shortcuts": [SubResource("InputEventKey_7bcdl")]
 }]
 metadata/script_setup_templates_dictionary = {
 "AnimationPlayer": "0NodeDefault",
@@ -173,5 +173,7 @@ metadata/script_setup_templates_dictionary = {
 "Label": "0NodeDefault",
 "Node": "0NodeDefault",
 "Node2D": "0NodeDefault",
+"Node3D": "0NodeDefault",
 "StaticBody2D": "0NodeDefault"
 }
+metadata/export_template_download_directory = "/home/fm39hz/.cache/godot"
