@@ -63,6 +63,9 @@ configstore
 BraveSoftware
 
 # Development cache
+ag
+blender
+godot/recent_dirs
 godotenv/*
 *nodejs*
 yarn
