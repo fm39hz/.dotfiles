@@ -439,7 +439,7 @@
   "menus.dashboard.powermenu.avatar.image": "/home/fm39hz/.config/icons.jpg",
   "menus.dashboard.stats.enable_gpu": true,
   "bar.windowtitle.truncation": true,
-  "bar.windowtitle.truncation_size": 70,
+  "bar.windowtitle.truncation_size": 55,
   "menus.clock.weather.key": "fa019641ef2c4f0daf534835243007",
   "bar.workspaces.ignored": "-.*",
   "bar.workspaces.hideUnoccupied": false,
