@@ -38,7 +38,6 @@ bruno
 Code/*
 JetBrains
 jgit
-zed
 !zed/*.json
 nvim
 
