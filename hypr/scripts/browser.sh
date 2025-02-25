@@ -2,4 +2,4 @@
 
 source "$HOME"/.config/hypr/lib.sh
 
-manage_focus "Zen Browser" "zen-browser"
+manage_focus "Brave-browser-nightly" "brave-browser-nightly" "3" "true"
