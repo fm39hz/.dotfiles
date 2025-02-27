@@ -4,10 +4,6 @@ set_wallpaper() {
 	wbg ~/.config/Wallpaper/japanese_pedestrian_street.png &
 }
 
-eww-rice() {
-	eww --config ~/.config/eww/ $*
-}
-
 # Function to manage application focus in Hyprland based on app name/class
 # Usage: manage_focus <search_term> <app_class> [<target_workspace>] [<search_by_class>] [<extra_args>]
 manage_focus() {
