@@ -9,7 +9,6 @@ set_wallpaper
 eval "hypridle" &
 
 ~/.config/swaync/start
-~/.config/eww/start
 
 eval "hyprlock" &
 
