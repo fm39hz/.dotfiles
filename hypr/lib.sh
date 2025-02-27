@@ -10,8 +10,8 @@ manage_focus() {
 	local search_term="$1"
 	local app_class="$2"
 	local target_workspace="$3"
-	local search_by_class="${4:-false}" # Optional parameter, defaults to false
-	local extra_args="${5:-""}"         # Optional parameter, defaults to empty string
+	local search_by_class="${4:-false}"
+	local extra_args="$5"
 	local grep_pattern=""
 
 	# Set the grep pattern based on whether we're searching by class or title
@@ -21,32 +21,29 @@ manage_focus() {
 		grep_pattern="$search_term"
 	fi
 
-	# Function to retrieve the workspace information by column number
+	# Function to retrieve and process workspace information
 	get_workspace() {
 		local pattern="$1"
-		local col="$2"
-		hyprctl clients | rg -B 5 "$pattern" | grep "workspace" | awk -v col="$col" '{print $col}' | head -n 1
+		local workspace
+
+		# Try to get workspace from column 2
+		workspace=$(hyprctl clients | rg -B 5 "$pattern" | grep "workspace" | awk '{print $2}' | head -n 1)
+
+		# Check if the workspace is numeric and greater than 0
+		if [[ ! "$workspace" =~ ^[0-9]+$ ]] || ((workspace < 0)); then
+			# Try column 3 and remove parentheses if needed
+			workspace=$(hyprctl clients | rg -B 5 "$pattern" | grep "workspace" | awk '{print $3}' | head -n 1 | sed 's/[()]//g')
+		fi
+		echo "$workspace"
 	}
 
 	# Check if any window with the search term exists
 	if hyprctl clients | rg -q "$grep_pattern"; then
 		# If an app window is open, find its workspace
-		target_workspace=$(get_workspace "$grep_pattern" 2)
-		echo "Found $search_term on workspace $target_workspace"
-		# Check if the workspace is numeric and greater than 0
-		if [[ ! "$target_workspace" =~ ^[0-9]+$ ]] || ((target_workspace < 0)); then
-			target_workspace=$(get_workspace "$grep_pattern" 3 | sed 's/[()]//g') # Remove parentheses from workspace name
-		fi
-		# Focus on the workspace
-		hyprctl dispatch workspace "$target_workspace"
+		target_workspace=$(get_workspace "$grep_pattern")
 	else
 		# If the app is not running, start it
-		hyprctl dispatch workspace "$target_workspace"
-		# Use -- to indicate the end of options for browsers like Brave
-		if [[ "$app_class" == "brave" || "$app_class" == "brave-browser" ]]; then
-			$app_class -- $extra_args &
-		else
-			$app_class $extra_args &
-		fi
+		$app_class "$extra_args" &
 	fi
+	hyprctl dispatch workspace "$target_workspace"
 }
