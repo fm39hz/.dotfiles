@@ -2,4 +2,4 @@
 
 source "$HOME"/.config/hypr/lib.sh
 
-manage_focus "Brave-browser-nightly" "brave-browser-nightly --password-store=basic" "3" "true"
+manage_focus "brave-browser-nightly" "brave-browser-nightly" "3" "true" "--enable-features=TouchpadOverscrollHistoryNavigation --password-store=basic"
