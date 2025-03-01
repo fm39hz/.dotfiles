@@ -16,7 +16,7 @@ manage_focus() {
 
 	# Set the grep pattern based on whether we're searching by class or title
 	if [[ "$search_by_class" == "true" ]]; then
-		grep_pattern="class: $app_class"
+		grep_pattern="class: $search_term"
 	else
 		grep_pattern="$search_term"
 	fi
@@ -44,6 +44,7 @@ manage_focus() {
 		echo "Found existing window for $search_term"
 		target_workspace=$(get_workspace "$grep_pattern")
 		hyprctl dispatch workspace "$target_workspace"
+		return
 	else
 		# If the app is not running, start it
 		hyprctl dispatch workspace "$target_workspace"
