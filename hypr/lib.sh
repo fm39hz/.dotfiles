@@ -48,8 +48,8 @@ manage_focus() {
 	else
 		# If the app is not running, start it
 		hyprctl dispatch workspace "$target_workspace"
-		app_class=$("$app_class" $extra_args)
-		echo "Starting $app_class"
-		$app_class &
 	fi
+	app_class=$("$app_class" $extra_args)
+	echo "Starting $app_class"
+	$app_class &
 }
