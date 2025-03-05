@@ -21,6 +21,7 @@ alias tml "tmux ls"
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use "~/.config/scripts/nvim_direct_picker.sh"
 alias nvim_delete "~/.config/scripts/nvim_delete.sh"
+set -U SNACKS_GHOSTTY true
 
 # Rust binary path
 fish_add_path -U "$HOME/.cargo/bin"
