@@ -3,4 +3,4 @@
 source "$HOME"/.config/hypr/lib.sh
 
 # manage_focus "Brave-browser-nightly" "brave-browser-nightly" "3" "true" "--enable-features=TouchpadOverscrollHistoryNavigation,vulkan,vulkanfromangle,defaultanglevulkan,vaapiignoredriverchecks,vaapivideodecoder,usemultiplaneformatforhardwarevideo,vaapivideoencoder --password-store=basic --enable-wayland-ime"
-manage_focus "Zen Browser" "zen-browser" "3"
+manage_focus "Zen Browser" "zen-browser" "4"
