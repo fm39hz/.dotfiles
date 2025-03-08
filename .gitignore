@@ -60,6 +60,7 @@ content_shell/*
 torbrowser
 configstore
 BraveSoftware
+microsoft-edge
 
 # Development cache
 ag
