@@ -46,7 +46,7 @@ set -U GODOT "$HOME/.config/godotenv/godot/bin/godot"
 fish_add_path -U "$HOME/.config/godotenv/godot/bin:$PATH"
 
 # Aseprite environment
-alias aseprite "$HOME/.local/share/Steam/steamapps/common/Aseprite/aseprite"
+fish_add_path -U "$HOME/.local/share/Steam/steamapps/common/Aseprite"
 
 # Docker alias
 alias dockerup "docker-compose --log-level ERROR up -d --build"
