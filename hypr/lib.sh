@@ -49,5 +49,6 @@ manage_focus() {
 		# If the app is not running, start it
 		hyprctl dispatch workspace "$target_workspace"
 	fi
+	app_class=$("$app_class" $extra_args)
 	hyprctl dispatch plugin:xtd:moveorexec $grep_pattern, $app_class
 }

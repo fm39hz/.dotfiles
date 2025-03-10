@@ -1,0 +1,77 @@
+[gd_resource type="EditorSettings" load_steps=3 format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_7bcdl"]
+command_or_control_autoremap = true
+alt_pressed = true
+keycode = 75
+unicode = 75
+
+[sub_resource type="InputEventKey" id="InputEventKey_ay65p"]
+keycode = 4194326
+
+[resource]
+interface/editor/main_font_size = 16
+interface/editor/code_font_contextual_ligatures = 0
+interface/theme/preset = "Custom"
+interface/theme/spacing_preset = "Custom"
+interface/theme/icon_and_font_color = 2
+interface/theme/base_color = Color(0.176471, 0.207843, 0.231373, 1)
+interface/theme/accent_color = Color(0.654902, 0.752941, 0.501961, 1)
+interface/theme/contrast = 0.09
+interface/theme/draw_extra_borders = true
+interface/theme/icon_saturation = 1.2
+interface/theme/relationship_line_opacity = 0.86
+interface/theme/border_size = 2
+interface/theme/corner_radius = 6
+interface/theme/base_spacing = 1
+interface/theme/additional_spacing = 4
+filesystem/external_programs/terminal_emulator = "kitty"
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/panning/2d_editor_panning_scheme = 1
+export/android/java_sdk_path = ""
+export/android/android_sdk_path = ""
+export/android/debug_keystore = "/home/fm39hz/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/rcedit = ""
+export/windows/osslsigncode = ""
+export/windows/wine = ""
+_default_feature_profile = "FM39hz's"
+_use_favorites_root_selection = false
+network/debug_adapter/request_timeout = 1000
+editors/grid_map/editor_side = 1
+dotnet/editor/external_editor = 5
+dotnet/editor/custom_exec_path = ""
+dotnet/editor/custom_exec_path_args = ""
+dotnet/build/verbosity_level = 2
+dotnet/build/problems_layout = 1
+aseprite/general/command_path = "/home/fm39hz/.local/share/Steam/steamapps/common/Aseprite/aseprite"
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = true
+_export_template_download_directory = ""
+_script_setup_templates_dictionary = {}
+_script_setup_use_script_templates = false
+shortcuts = [{
+"name": "editor/clear_output",
+"shortcuts": [SubResource("InputEventKey_7bcdl")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_1",
+"shortcuts": [SubResource("InputEventKey_ay65p")]
+}, {
+"name": "spatial_editor/viewport_zoom_modifier_2",
+"shortcuts": []
+}]
+metadata/script_setup_templates_dictionary = {
+"AnimationPlayer": "0NodeDefault",
+"CharacterBody2D": "0CharacterBody2DBasic Movement",
+"Control": "0NodeDefault",
+"Label": "0NodeDefault",
+"Node": "0NodeDefault",
+"Node2D": "0NodeDefault",
+"Node3D": "0NodeDefault",
+"StaticBody2D": "0NodeDefault"
+}
+metadata/export_template_download_directory = "/home/fm39hz/.cache/godot"
