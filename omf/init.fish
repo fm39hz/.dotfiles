@@ -46,6 +46,7 @@ set -U GODOT "$HOME/.config/godotenv/godot/bin/godot"
 fish_add_path -U "$HOME/.config/godotenv/godot/bin:$PATH"
 
 # Aseprite environment
+set -U STEAM_LIBRARY_PATH "$HOME/Hienpham/SteamLibrary/steamapps/common"
 fish_add_path -U "$HOME/.local/share/Steam/steamapps/common/Aseprite"
 
 # Docker alias
