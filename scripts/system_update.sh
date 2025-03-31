@@ -24,4 +24,7 @@ else
     git push
 end
 
+echo "Updating Hyprland plugins..."
+hyprpm update
+
 echo "Update Complete!"
