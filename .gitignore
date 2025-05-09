@@ -26,6 +26,7 @@ Azagaya
 bless
 goldwarden
 Grammarly
+GIMP
 
 # Shell config
 fish/fish_variables
@@ -71,6 +72,8 @@ godotenv/*
 yarn
 flutter
 *Android*
+Cursor
+composer
 
 # File manager config
 yazi/flavors
