@@ -7,8 +7,8 @@
     <Name>chrome-apps</Name>
     <Directory>chrome-apps.directory</Directory>
     <Include>
-        <Filename>thorium-kippjfofjhjlffjecoapiogbkgbpmgej-Default.desktop</Filename>
         <Filename>thorium-cifhbcnohmdccbgoicgdjpfamggdegmo-Default.desktop</Filename>
+        <Filename>thorium-kippjfofjhjlffjecoapiogbkgbpmgej-Default.desktop</Filename>
     </Include>
 </Menu>
 </Menu>

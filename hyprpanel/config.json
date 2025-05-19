@@ -366,10 +366,10 @@
   "theme.osd.scaling": 70,
   "theme.bar.menus.menu.dashboard.scaling": 55,
   "theme.bar.menus.menu.dashboard.confirmation_scaling": 70,
-  "theme.bar.menus.menu.media.scaling": 100,
-  "theme.bar.menus.menu.volume.scaling": 100,
-  "theme.bar.menus.menu.network.scaling": 100,
-  "theme.bar.menus.menu.bluetooth.scaling": 100,
+  "theme.bar.menus.menu.media.scaling": 70,
+  "theme.bar.menus.menu.volume.scaling": 70,
+  "theme.bar.menus.menu.network.scaling": 70,
+  "theme.bar.menus.menu.bluetooth.scaling": 70,
   "theme.bar.margin_bottom": "0em",
   "theme.bar.location": "top",
   "tear": true,
@@ -457,7 +457,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
   "bar.workspaces.showAllActive": false,
   "bar.volume.scrollUp": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-  "theme.bar.menus.popover.scaling": 100,
+  "theme.bar.menus.popover.scaling": 70,
   "theme.bar.menus.menu.network.switch.enabled": "#e69875",
   "theme.bar.menus.menu.network.switch.disabled": "#2f383e",
   "theme.bar.menus.menu.network.switch.puck": "#454b53",
@@ -496,5 +496,7 @@
   "menus.dashboard.shortcuts.left.shortcut3.command": "legcord",
   "menus.power.lowBatteryNotification": true,
   "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
-  "bar.volume.middleClick": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  "bar.volume.middleClick": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  "theme.tooltip.scaling": 70,
+  "theme.bar.menus.menu.battery.scaling": 70
 }

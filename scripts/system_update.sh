@@ -24,4 +24,7 @@ else
     git push
 end
 
+# refresh preload
+gopreload-batch-refresh.sh
+
 echo "Update Complete!"
