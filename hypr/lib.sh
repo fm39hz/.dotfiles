@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
-set_wallpaper() {
-	wbg ~/.config/Wallpaper/japanese_pedestrian_street.png &
-}
+#
+# set_wallpaper() {
+# 	wbg ~/.config/Wallpaper/japanese_pedestrian_street.png &
+# }
 
 # Function to bring a window to the current workspace in Hyprland
 # Usage: bring_window_to_current <search_term> <app_class> [<search_by_class>] [<extra_args>]
