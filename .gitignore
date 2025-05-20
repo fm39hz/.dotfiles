@@ -7,9 +7,13 @@ QtProject.conf
 go
 
 # Game
+heroic
 StardewValley
+unity3d
+steamtinkerlaunch
 
 # Mixed work
+Sideloader
 libreoffice
 LarkInternational
 spotify

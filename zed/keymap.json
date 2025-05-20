@@ -17,7 +17,7 @@
 			"alt-k": "editor::MoveLineUp",
 			"alt-j": "editor::MoveLineDown",
 			"L": "pane::ActivateNextItem",
-			"H": "pane::ActivatePrevItem"
+			"H": "pane::ActivatePreviousItem"
 		}
 	},
 	{
@@ -49,7 +49,7 @@
 			"h": "project_panel::CollapseSelectedEntry",
 			// "l": "project_panel::ExpandSelectedEntry",
 			"j": "menu::SelectNext",
-			"k": "menu::SelectPrev",
+			"k": "menu::SelectPrevious",
 			"l": "project_panel::Open",
 			"r": "project_panel::Rename",
 			"z c": "project_panel::CollapseSelectedEntry",
@@ -60,8 +60,8 @@
 			"d": "project_panel::Delete",
 			"a": "project_panel::NewFile",
 			"shift-a": "project_panel::NewDirectory",
-			"shift-y": "project_panel::CopyRelativePath",
-			"g y": "project_panel::CopyPath"
+			"shift-y": "workspace::CopyRelativePath",
+			"g y": "workspace::CopyPath"
 		}
 	}
 ]

@@ -1,6 +1,7 @@
 // Zed settings
 {
-	"assistant": {
+	"icon_theme": "Material Icon Theme",
+ "assistant": {
 		"default_model": {
 			"provider": "zed.dev",
 			"model": "claude-3-7-sonnet-latest"
