@@ -6,10 +6,10 @@
   "theme.bar.buttons.enableBorders": true,
   "theme.bar.margin_sides": "0em",
   "theme.bar.outer_spacing": "0.25em",
-  "theme.bar.menus.monochrome": true,
+  "theme.bar.menus.monochrome": false,
   "theme.bar.menus.border.size": "0.13em",
   "theme.bar.menus.background": "#2b3339",
-  "theme.bar.menus.opacity": 100,
+  "theme.bar.menus.opacity": 95,
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.buttons.padding_y": "0.2em",
   "theme.bar.buttons.padding_x": "0.7rem",
@@ -364,7 +364,7 @@
   "theme.bar.buttons.modules.submap.icon_background": "#323d43",
   "theme.notification.scaling": 70,
   "theme.osd.scaling": 70,
-  "theme.bar.menus.menu.dashboard.scaling": 55,
+  "theme.bar.menus.menu.dashboard.scaling": 45,
   "theme.bar.menus.menu.dashboard.confirmation_scaling": 70,
   "theme.bar.menus.menu.media.scaling": 70,
   "theme.bar.menus.menu.volume.scaling": 70,
@@ -433,7 +433,7 @@
   "menus.clock.weather.location": "Hanoi",
   "menus.clock.time.military": false,
   "menus.clock.weather.unit": "metric",
-  "theme.bar.menus.menu.clock.scaling": 70,
+  "theme.bar.menus.menu.clock.scaling": 55,
   "theme.bar.menus.menu.notifications.scaling": 70,
   "notifications.position": "top right",
   "menus.dashboard.powermenu.avatar.image": "/home/fm39hz/.config/icons.jpg",
@@ -498,5 +498,6 @@
   "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
   "bar.volume.middleClick": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   "theme.tooltip.scaling": 70,
-  "theme.bar.menus.menu.battery.scaling": 70
+  "theme.bar.menus.menu.battery.scaling": 70,
+  "theme.osd.opacity": 85
 }
