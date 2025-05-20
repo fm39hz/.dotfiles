@@ -499,5 +499,6 @@
   "bar.volume.middleClick": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   "theme.tooltip.scaling": 70,
   "theme.bar.menus.menu.battery.scaling": 70,
-  "theme.osd.opacity": 85
+  "theme.osd.opacity": 85,
+  "terminal": "kitty"
 }
