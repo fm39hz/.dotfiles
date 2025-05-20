@@ -23,6 +23,9 @@ alias nvim_direct_use "~/.config/scripts/nvim_direct_picker.sh"
 alias nvim_delete "~/.config/scripts/nvim_delete.sh"
 set -U SNACKS_GHOSTTY true
 
+# QOL tools
+fish_add_path -U "$HOME/.local/bin"
+
 # Rust binary path
 fish_add_path -U "$HOME/.cargo/bin"
 
@@ -35,6 +38,9 @@ fish_add_path -U "$ANDROID_HOME/tools/"
 
 # Dotnet path
 fish_add_path -U "$HOME/.dotnet/tools"
+
+# Laravel
+fish_add_path -U "$HOME/.config/composer/vendor/bin"
 
 # Flutter environment
 # set -U PATH "$PATH:$HOME/.pub-cache/bin"

@@ -28,6 +28,7 @@ interface/theme/additional_spacing = 4
 filesystem/external_programs/terminal_emulator = "kitty"
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/panning/2d_editor_panning_scheme = 1
+network/connection/network_mode = 1
 export/android/java_sdk_path = ""
 export/android/android_sdk_path = ""
 export/android/debug_keystore = "/home/fm39hz/.local/share/godot/keystores/debug.keystore"

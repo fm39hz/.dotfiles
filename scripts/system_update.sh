@@ -24,7 +24,10 @@ else
     git push
 end
 
-echo "Updating Hyprland plugins..."
+# refresh preload
+gopreload-batch-refresh.sh
+
+# update Hyprland plugins
 hyprpm update
 
 echo "Update Complete!"

@@ -29,6 +29,7 @@ hyprcursor-util -c ~/.icons/extracted_everforest-cursors/
 # Setup Hyprland plugins
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/shezdy/hyprsplit
+hyprpm add https://github.com/KZDKM/Hyprspace
 
 # Setup Neovim distro
 git submodule update --init
