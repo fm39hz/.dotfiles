@@ -14,4 +14,4 @@ if [[ "$player_status" == "Playing" ]]; then
   fi
 fi
 
-echo "$song_info"
+echo "<span>$song_info</span>"
