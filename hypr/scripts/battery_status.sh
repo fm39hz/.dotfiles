@@ -6,18 +6,21 @@
 status="$(cat /sys/class/power_supply/BAT0/status)"
 level="$(cat /sys/class/power_supply/BAT0/capacity)"
 
+output=""
 if [[ ("$status" == "Discharging") || ("$status" == "Full") ]]; then
   if [[ "$level" -eq "0" ]]; then
-    echo "<span> </span>"
+    output=" "
   elif [[ ("$level" -ge "0") && ("$level" -le "25") ]]; then
-    echo "<span> </span>"
+    output=" "
   elif [[ ("$level" -ge "25") && ("$level" -le "50") ]]; then
-    echo "<span> </span>"
+    output=" "
   elif [[ ("$level" -ge "50") && ("$level" -le "75") ]]; then
-    echo "<span> </span>"
+    output=" "
   elif [[ ("$level" -ge "75") && ("$level" -le "100") ]]; then
-    echo "<span> </span>"
+    output=" "
   fi
 elif [[ "$status" == "Charging" ]]; then
-  echo "<span> </span>"
+  output=" "
 fi
+
+echo "<span>$output</span>"
