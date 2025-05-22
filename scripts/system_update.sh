@@ -8,6 +8,42 @@ yay --noconfirm
 echo "Updating Oh My Fish and plugins..."
 omf update
 
+# Remove dangling (orphans)
+yay -Qdtq | yay -Rns --noconfirm -
+
+# Snapshot package lists
+set today ./backup/(date +%Y-%m-%d)
+mkdir -p $today
+
+# 1) AUR & local
+pacman -Qqm > $today/aurandlocal.lst
+
+# 2) Official repo only
+pacman -Qqe | grep -vxF -f $today/aurandlocal.lst > $today/main.lst
+
+# Now generate packages.json as before
+set json_path ~/.config/scripts/pkginst/packages.json
+mkdir -p (dirname $json_path)
+
+echo '{' > $json_path
+echo '    "packages": [' >> $json_path
+
+for pkg in (cat $today/main.lst)
+    echo "        { \"package\": \"$pkg\" }," >> $json_path
+end
+for pkg in (cat $today/aurandlocal.lst)
+    echo "        { \"package\": \"$pkg\" }," >> $json_path
+end
+
+# Remove trailing comma from last item
+sed -i '$ s/},/}/' $json_path
+
+echo '    ],' >> $json_path
+echo '    "options": []' >> $json_path
+echo '}' >> $json_path
+
+echo "packages.json generated at $json_path"
+
 # Update Neovim packages
 echo "Updating Nvim packages..."
 git pull
@@ -32,40 +68,4 @@ gopreload-batch-refresh.sh
 hyprpm update
 
 cd ~/.config/ || exit
-
-# Remove dangling (orphans)
-yay -Qdtq | yay -Rns --noconfirm -
-
-# Snapshot package lists
-set today ./backup/(date +%Y-%m-%d)
-mkdir -p $today
-
-# 1) AUR & local
-pacman -Qqm > $today/aurandlocal.lst
-
-# 2) Official repo only
-pacman -Qqe | grep -vxF -f $today/aurandlocal.lst > $today/main.lst
-
-# Now generate packages.json as before
-set json_path ~/.config/scripts/installer/packages.json
-mkdir -p (dirname $json_path)
-
-echo '{' > $json_path
-echo '    "packages": [' >> $json_path
-
-for pkg in (cat $today/main.lst)
-    echo "        { \"package\": \"$pkg\" }," >> $json_path
-end
-for pkg in (cat $today/aurandlocal.lst)
-    echo "        { \"package\": \"$pkg\" }," >> $json_path
-end
-
-# Remove trailing comma from last item
-sed -i '$ s/},/}/' $json_path
-
-echo '    ],' >> $json_path
-echo '    "options": []' >> $json_path
-echo '}' >> $json_path
-
-echo "packages.json generated at $json_path"
 echo "Update Complete!"
