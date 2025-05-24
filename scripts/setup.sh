@@ -35,7 +35,7 @@ hyprpm add https://github.com/KZDKM/Hyprspace
 git submodule update --init
 git submodule sync
 # git clone git@github.com:fm39hz/nvim-nvchad.git --depth 1
-# git clone git@github.com:fm39hz/nvim-lazyvim.git --depth 1
+git clone git@github.com:fm39hz/nvim-lazyvim.git --depth 1
 ~/.config/scripts/nvim_default_picker.sh
 nvim
 
@@ -45,7 +45,7 @@ sudo systemctl enable bluetooth.service
 
 # Symlink script & rc files
 sudo ln -S ~/.config/greetd/config.toml /etc/greetd/config.toml
-sudo ln -s ~/.config/scripts/hyprland_autolog.sh /etc/profile.d/hyprland_autolog.sh
+# sudo ln -s ~/.config/scripts/hyprland_autolog.sh /etc/profile.d/hyprland_autolog.sh
 
 # Config global gitattributes
 git config --global core.attributesfile ~/.config/git/.gitattribute
