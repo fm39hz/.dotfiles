@@ -5,13 +5,12 @@ customCommands:
     description: Pick AI commit
     command: aicommit2
     context: files
-    subprocess: true
-    showOutput: true
+    output: terminal
   - key: <c-n>
     description: Pick AI commit (no verify)
     command: aicommit2 --no-verify
     context: files
-    subprocess: true
+    output: terminal
 git:
   paging:
     colorArg: always
