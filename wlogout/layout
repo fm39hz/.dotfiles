@@ -2,7 +2,7 @@
     "label" : "lock",
     "action" : "hyprlock",
     "text" : "Lock",
-    "keybind" : "l"
+    "keybind" : "l",
 }
 {
     "label" : "hibernate",

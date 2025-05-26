@@ -1,19 +1,20 @@
 * {
+  font-family: "JetBrains Mono ExtraBold";
   background-image: none;
   box-shadow: none;
 }
 
 window {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 button {
   margin: 24px;
   border-radius: 0;
-  border-color: black;
-  text-decoration-color: #ffffff;
-  color: #ffffff;
-  background-color: #1e1e1e;
+  border-color: #a7c080;
+  text-decoration-color: #83c092;
+  color: #d3c6aa;
+  background-color: #2d353b;
   border-radius: 24px;
   border-style: solid;
   border-width: 1px;
@@ -25,7 +26,8 @@ button {
 button:focus,
 button:active,
 button:hover {
-  background-color: #425047;
+  background-size: 35%;
+  background-color: #475258;
   outline-style: none;
 }
 
