@@ -380,7 +380,7 @@
   "theme.bar.margin_top": "0.4rem",
   "theme.bar.border_radius": "0em",
   "theme.bar.buttons.workspaces.enableBorder": false,
-  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showWsIcons": false,
   "bar.workspaces.showApplicationIcons": false,
   "bar.workspaces.applicationIconOncePerWorkspace": false,
   "theme.bar.buttons.opacity": 100,
