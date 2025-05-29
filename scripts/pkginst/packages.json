@@ -24,6 +24,7 @@
         { "package": "docker-buildx" },
         { "package": "docker-compose" },
         { "package": "dotnet-sdk" },
+        { "package": "dotnet-sdk-8.0" },
         { "package": "efibootmgr" },
         { "package": "entr" },
         { "package": "fastfetch" },

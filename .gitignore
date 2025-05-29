@@ -98,6 +98,7 @@ Jan
 LM Studio
 
 # Misc
+.backup
 __pycache__
 *.bak
 autostart

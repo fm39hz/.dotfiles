@@ -12,7 +12,7 @@ omf update
 yay -Qdtq | yay -Rns --noconfirm -
 
 # Snapshot package lists
-set today ./backup/(date +%Y-%m-%d)
+set today ~/.config/.backup/(date +%Y-%m-%d)
 mkdir -p $today
 
 # 1) AUR & local
@@ -43,6 +43,7 @@ echo '    "options": []' >> $json_path
 echo '}' >> $json_path
 
 echo "packages.json generated at $json_path"
+zip -r EverLand.pkginst ~/.config/scripts/installer
 
 # Update Neovim packages
 echo "Updating Nvim packages..."
