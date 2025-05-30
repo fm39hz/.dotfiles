@@ -40,6 +40,7 @@
         { "package": "git-lfs" },
         { "package": "github-cli" },
         { "package": "gnome-bluetooth-3.0" },
+        { "package": "gnome-keyring" },
         { "package": "gpsd" },
         { "package": "graphviz" },
         { "package": "grc" },
