@@ -43,7 +43,7 @@ echo '    "options": []' >> $json_path
 echo '}' >> $json_path
 
 echo "packages.json generated at $json_path"
-zip -r EverLand.pkginst ~/.config/scripts/installer
+zip -r ~/.config/EverLand.pkginst ~/.config/scripts/installer
 
 # Update Neovim packages
 echo "Updating Nvim packages..."
