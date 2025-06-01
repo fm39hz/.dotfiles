@@ -143,6 +143,7 @@
         { "package": "unarchiver" },
         { "package": "unrar" },
         { "package": "unzip" },
+        { "package": "uwsm" },
         { "package": "vlc" },
         { "package": "vulkan-intel" },
         { "package": "waybar" },
