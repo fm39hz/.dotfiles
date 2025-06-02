@@ -22,7 +22,7 @@ pacman -Qqm > $today/aurandlocal.lst
 pacman -Qqe | grep -vxF -f $today/aurandlocal.lst > $today/main.lst
 
 # Now generate packages.json as before
-set json_path ~/.config/scripts/pkginst/packages.json
+set json_path ~/.config/hypr/com.fm39hz.everland/pkginst/packages.json
 mkdir -p (dirname $json_path)
 
 echo '{' > $json_path
@@ -43,7 +43,7 @@ echo '    "options": []' >> $json_path
 echo '}' >> $json_path
 
 echo "packages.json generated at $json_path"
-zip -r ~/.config/EverLand.pkginst ~/.config/scripts/installer
+zip -r ~/.config/com.fm39hz.everland.pkginst ~/.config/hypr/com.fm39hz.everland/
 
 # Update Neovim packages
 echo "Updating Nvim packages..."

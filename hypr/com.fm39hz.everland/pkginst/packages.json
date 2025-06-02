@@ -31,6 +31,7 @@
         { "package": "fcitx5-configtool" },
         { "package": "fd" },
         { "package": "ffmpegthumbnailer" },
+        { "package": "figlet" },
         { "package": "fish" },
         { "package": "fprintd" },
         { "package": "fzf" },
@@ -47,6 +48,7 @@
         { "package": "greetd" },
         { "package": "gst-plugin-pipewire" },
         { "package": "gtk-engine-murrine" },
+        { "package": "gum" },
         { "package": "hypridle" },
         { "package": "hyprland" },
         { "package": "hyprlock" },
@@ -233,7 +235,6 @@
         { "package": "vesktop-bin" },
         { "package": "visual-studio-code-bin" },
         { "package": "watchman-bin" },
-        { "package": "wbg" },
         { "package": "wlogout" },
         { "package": "yay-bin" },
         { "package": "zen-browser-bin" }
