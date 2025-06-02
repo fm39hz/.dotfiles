@@ -1,6 +1,5 @@
-# ~/.config/nixos/flake.nix (MISSING)
 {
-  description = "FM39hz's NixOS Configuration";
+  description = "EverLand";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -21,9 +20,11 @@
       url = "github:shezdy/hyprsplit";
       inputs.hyprland.follows = "hyprland";
     };
+
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprland, ... } @ inputs: {
     nixosConfigurations.fm39hz-desktop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };

@@ -1,4 +1,4 @@
-# ~/.config/nixos/hosts/fm39hz-desktop/default.nix - COMPLETE module enablement
+# ~/.config/nixos/hosts/fm39hz-desktop/default.nix
 { config, pkgs, inputs, ... }: {
   imports = [
     ./hardware-configuration.nix
@@ -16,81 +16,75 @@
     programs.development.enable = true;
     programs.media.enable = true;
     services.docker.enable = true;
+    services.greetd.enable = true;
+    services.keyd.enable = true;
     themes.everforest.enable = true;
   };
 
-  # User packages - ALL applications from your Arch setup
+  # User configuration
   users.users.fm39hz = {
     isNormalUser = true;
     description = "FM39hz";
     extraGroups = [ "networkmanager" "wheel" "docker" "audio" "video" ];
     shell = pkgs.fish;
     packages = with pkgs; [
-      # Browsers (available in nixpkgs)
-      brave firefox microsoft-edge
+      # Browsers
+      brave firefox
       
-      # Communication (available in nixpkgs)
-      telegram-desktop discord vesktop
-      _64gram # 64gram-desktop equivalent
+      # Communication
+      _64Gram vesktop
       
-      # Productivity (available in nixpkgs)
+      # Productivity
       obsidian libreoffice-fresh
       
-      # Development IDEs (available in nixpkgs)  
-      vscode beekeeper-studio bruno postman
+      # Development IDEs  
+      vscode jetbrains.idea-community
+      beekeeper-studio bruno postman
       
       # Terminals
       ghostty kitty
       
       # System tools
-      brightnessctl networkmanagerapplet
-      fastfetch lshw acpi figlet cmatrix
+      brightnessctl
+      lshw acpi figlet cmatrix
       
       # File management
       thunar xfce.thunar-archive-plugin
       yazi zathura zathura-pdf-mupdf
       
-      # Media (available in nixpkgs)
+      # Media
       vlc obs-studio spotify
       
       # Gaming
       steam lutris wine
       
-      # Utilities (available in nixpkgs)
+      # Utilities
       kdeconnect solaar
       
-      # Development (available in nixpkgs)
+      # Development
       flutter
       
-      # Panel - via flake input
-      inputs.hyprpanel.packages.${pkgs.system}.default
+      # HyprPanel (if available)
+      (inputs.hyprpanel.packages.${pkgs.system}.default or null)
     ];
   };
 
-  # System packages that need to be at system level
+  # System packages
   environment.systemPackages = with pkgs; [
     # Boot/system
-    efibootmgr linux-firmware intel-ucode
-    
-    # Keyd for key remapping  
-    keyd
+    efibootmgr linux-firmware
     
     # Bluetooth
     bluez bluez-utils blueman
     
-    # Audio/Video drivers
-    libva-utils intel-media-driver intel-vaapi-driver
-    # libva-nvidia-driver # If using Nvidia
-    vulkan-tools vulkan-headers
-    
-    # Fonts (already in fonts.nix but ensuring completeness)
+    # Fonts
     noto-fonts noto-fonts-cjk noto-fonts-emoji
     dejavu_fonts jetbrains-mono
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     adobe-source-han-sans adobe-source-han-serif
     
     # Shell and tools
-    fish nushell zellij tmux
-    starship
+    fish nushell zellij tmux starship
     
     # File compression
     unzip unrar p7zip
@@ -107,23 +101,39 @@
     # Bluetooth
     blueman.enable = true;
     
-    # GPS (if needed)
-    # gpsd.enable = true;
-    
     # Power management
     power-profiles-daemon.enable = true;
     
     # Fingerprint
     fprintd.enable = true;
     
-    # Audio
-    pipewire = {
+    # Location service
+    locate = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-      wireplumber.enable = true;
+      package = pkgs.plocate;
+      localuser = null;
+    };
+  };
+
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      jetbrains-mono
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      adobe-source-han-sans
+      adobe-source-han-serif
+      dejavu_fonts
+    ];
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "JetBrains Mono Bold" ];
+        sansSerif = [ "JetBrains Mono ExtraBold" ];
+        monospace = [ "JetBrains Mono Bold" ];
+      };
     };
   };
 

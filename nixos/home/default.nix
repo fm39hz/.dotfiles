@@ -1,4 +1,4 @@
-# ~/.config/nixos/home/default.nix - Link to existing dotfiles properly
+# ~/.config/nixos/home/default.nix
 { config, pkgs, inputs, ... }: {
   imports = [
     ./programs
@@ -10,33 +10,56 @@
     stateVersion = "25.05";
   };
 
-  # Use your existing dotfiles (they're already working)
+  # Link your existing dotfiles (proper way)
   home.file = {
-    # Link to your existing configs without modification
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/hypr";
-    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/waybar";
-    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/rofi";
-    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/fish";
-    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/btop";
-    ".config/yazi".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/yazi";
-    ".config/zathura".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/zathura";
-    ".config/ghostty".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/ghostty";
-    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/kitty";
-    ".config/tmux".source = config.lib.file.mkOutOfStoreSymlink 
-      "${config.home.homeDirectory}/.config/tmux";
+    ".config/hypr".source = ../hypr;
+    ".config/fish".source = ../fish;
+    ".config/ghostty".source = ../ghostty;
+    ".config/btop".source = ../btop;
+    ".config/yazi".source = ../yazi;
+    ".config/zathura".source = ../zathura;
+    ".config/tmux".source = ../tmux;
+    ".config/hyprpanel".source = ../hyprpanel;
+    ".config/rofi".source = ../rofi;
+    ".config/waybar".source = ../waybar;
+    ".config/kitty".source = ../kitty;
+    ".config/omf".source = ../omf;
+    ".config/fontconfig".source = ../fontconfig;
+    ".config/wal".source = ../wal;
+    ".config/nwg-look".source = ../nwg-look;
+    ".config/qt5ct".source = ../qt5ct;
+    ".config/keyd".source = ../keyd;
+    ".config/greetd".source = ../greetd;
+    ".config/scripts".source = ../scripts;
   };
 
+  # Enable home-manager
   programs.home-manager.enable = true;
 
-  # Enable everforest theme
-  modules.themes.everforest.enable = true;
+  # Session variables
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "brave";
+    TERMINAL = "ghostty";
+    SNACKS_GHOSTTY = "true";
+  };
+
+  # Essential packages for user
+  home.packages = with pkgs; [
+    # Terminal tools
+    bat eza fd ripgrep tree jq
+    fastfetch btop htop
+    
+    # Development
+    git lazygit gh
+    
+    # Multimedia
+    playerctl pamixer
+    
+    # File management
+    xarchiver unzip unrar p7zip
+    
+    # Network
+    networkmanagerapplet
+  ];
 }
