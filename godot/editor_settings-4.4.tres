@@ -56,7 +56,6 @@ _project_settings_advanced_mode = true
 _export_template_download_directory = ""
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
-dotnet/editor/editor_path_optional = "/home/fm39hz/.local/share/JetBrains/Toolbox/apps/rider/bin/rider.sh"
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_7bcdl")]
