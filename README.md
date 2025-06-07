@@ -8,7 +8,7 @@
 - Install dependencies
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fm39hz/.dotfiles/main/scripts/install.sh)"
+curl -s https://raw.githubusercontent.com/mylinuxforwork/packages-installer/main/setup.sh | bash -s -- -s https://raw.githubusercontent.com/fm39hz/.dotfiles/main/com.fm39hz.everland.pkginst com.fm39hz.everland
 ```
 
 - Setup config
