@@ -43,7 +43,8 @@ echo '    "options": []' >> $json_path
 echo '}' >> $json_path
 
 echo "packages.json generated at $json_path"
-zip -r ~/.config/com.fm39hz.everland.pkginst ~/.config/hypr/com.fm39hz.everland/
+cd ~/.config/hypr/ || exit
+zip -r ~/.config/com.fm39hz.everland.pkginst com.fm39hz.everland
 
 # Update Neovim packages
 echo "Updating Nvim packages..."
