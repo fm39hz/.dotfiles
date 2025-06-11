@@ -33,6 +33,7 @@ let external_completer = {|spans|
         dotnet => $fish_completer
         asdf => $fish_completer
         hyprctl => $fish_completer
+        yay => $fish_completer
         _ => $carapace_completer
     } | do $in $spans
 }
@@ -42,7 +43,7 @@ $env.config = {
     completions: {
         external: {
             enable: true
-            completer: $external_completer
+            completer: $fish_completer
         }
     }
     # ...

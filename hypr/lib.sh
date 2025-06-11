@@ -81,5 +81,5 @@ manage_focus() {
 		return
 	fi
 	hyprctl dispatch workspace "$target_workspace"
-	hyprctl dispatch plugin:xtd:moveorexec "$grep_pattern", "$app_class"
+	hyprctl dispatch plugin:xtd:moveorexec "$grep_pattern", "uwsm app -- $app_class"
 }

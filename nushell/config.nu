@@ -27,3 +27,32 @@ def "nu-complete zoxide path" [context: string] {
 def --env --wrapped z [...rest: string@"nu-complete zoxide path"] {
   __zoxide_z ...$rest
 }
+  $env.config = {
+    keybindings: [
+        {
+            name: prepend_sudo
+            modifier: alt
+            keycode: char_s
+            mode: vi_insert
+            event: [
+                { edit: MoveToStart }
+                { until: [
+                    { edit: InsertString, value: "sudo " }
+                    { edit: Undo }
+                    ]
+                }
+                { edit: MoveToEnd }
+            ]
+        }
+        {
+            name: premove_sudo
+            modifier: alt_shift
+            keycode: char_s
+            mode: vi_insert
+            event: [
+                { edit: MoveToStart }
+                { edit: MoveToEnd }
+            ]
+        }
+    ]
+  }

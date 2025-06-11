@@ -1,3 +1,3 @@
 #!/bin/bash
 hyprpanel -q
-hyprpanel
+uwsm app -- hyprpanel
