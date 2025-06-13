@@ -1,7 +1,7 @@
 configuration {
     font: "JetBrains Mono Bold 14";
     show-icons: true;
-    terminal: "kitty";
+    terminal: "ghostty";
     disable-history: false;
     drun {
         display-name: " ";
