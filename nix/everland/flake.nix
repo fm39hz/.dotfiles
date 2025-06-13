@@ -11,12 +11,21 @@
   outputs = { nixpkgs, home-manager, ... }: 
     let
       lib = nixpkgs.lib;
+      # NOTE: User's specific information
+      personal = {
+        user = "fm39hz";
+        hostname = "fm39hz-desktop";
+        timeZone = "Asia/Ho_Chi_Minh";
+        defaultLocale = "en_US.UTF-8";
+        city = "Hanoi";
+      };
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
     in {
       homeConfigurations = {
-        fm39hz-desktop = home-manager.lib.homeManagerConfiguration {
+        ${personal.hostname} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit personal; };
           modules = [
             ./home.nix
           ];

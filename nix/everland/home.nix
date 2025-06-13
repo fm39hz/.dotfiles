@@ -1,12 +1,12 @@
-{ lib, pkgs, ...}:
+{ personal, pkgs, ...}:
 {
   home = {
     packages = with pkgs; [
       home-manager
     ];
 
-    username = "fm39hz";
-    homeDirectory = "/home/fm39hz";
+    username = "${personal.user}";
+    homeDirectory = "/home/${personal.user}";
 
     # NOTE: NEVER Change this value
     stateVersion = "23.11";
