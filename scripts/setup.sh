@@ -38,6 +38,9 @@ git submodule sync
 git clone git@github.com:fm39hz/nvim-lazyvim.git --depth 1
 ~/.config/scripts/nvim_default_picker.sh
 nvim
+z ~/.local/share/nvim/mason/packages/omnisharp/
+ln -s OmniSharp omnisharp
+z
 
 # Start service
 sudo systemctl enable greetd.service
