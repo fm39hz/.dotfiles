@@ -1,5 +1,0 @@
-{
-  home-manager = {
-    enable = true;
-  };
-}
