@@ -6,7 +6,7 @@ config=$(fd --max-depth 1 --glob 'nvim-*' "$configs_dir" | fzf --prompt="Neovim 
 
 # If I exit fzf without selecting a config, don't open Neovim
 if [[ -z $config ]]; then
-	echo "No config selected"
+	notify-send "Nvim picker" "No config selected"
 	exit 1
 fi
 

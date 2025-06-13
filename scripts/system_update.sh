@@ -1,17 +1,18 @@
 #!/usr/bin/env fish
 
 # Update system packages using yay
-echo "Updating system packages with yay..."
+notify-send "System update" "Updating system packages with yay..."
 yay --noconfirm
 
 # Update Oh My Fish and any installed plugins
-echo "Updating Oh My Fish and plugins..."
+notify-send "System update" "Updating Oh My Fish and plugins..."
 omf update
 
 # Remove dangling (orphans)
 yay -Qdtq | yay -Rns --noconfirm -
 
 # Snapshot package lists
+notify-send "System update" "Snapshotting package lists..."
 set today ~/.config/.backup/(date +%Y-%m-%d)
 mkdir -p $today
 
@@ -47,7 +48,7 @@ cd ~/.config/hypr/ || exit
 zip -r ~/.config/com.fm39hz.everland.pkginst com.fm39hz.everland
 
 # Update Neovim packages
-echo "Updating Nvim packages..."
+notify-send "System update" "Updating Nvim packages..."
 git pull
 cd ~/.config/nvim/ || exit
 git checkout master
@@ -56,7 +57,7 @@ nvim --headless "+Lazy! sync" +qa
 
 # Commit & push lazy-lock if changed
 if git diff --quiet lazy-lock.json
-    echo "No changes to commit for Nvim packages."
+    notify-send "System update | Neovim" "No changes to commit for Nvim packages."
 else
     git add lazy-lock.json
     git commit -m "chore: update deps"
@@ -67,7 +68,8 @@ end
 gopreload-batch-refresh.sh
 
 # Update Hyprland plugins
+notify-send "System update" "Updating Hyprland plugins..."
 hyprpm update
 
 cd ~/.config/ || exit
-echo "Update Complete!"
+notify-send "System update" "Update Complete!"
