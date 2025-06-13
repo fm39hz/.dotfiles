@@ -1,8 +1,10 @@
 { personal, pkgs, ...}:
 {
+  programs.home-manager.enable = true;
   home = {
     packages = with pkgs; [
-      home-manager
+      lazygit
+      lazydocker
     ];
 
     username = "${personal.user}";
