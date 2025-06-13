@@ -1,3 +1,4 @@
+fenv "source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 # Fish configuration
 set -U fish_prompt_pwd_dir_length 10
 set -U fish_escape_delay_ms 10

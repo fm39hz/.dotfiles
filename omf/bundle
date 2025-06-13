@@ -1,3 +1,4 @@
+package foreign-env
 package fzf
 package https://github.com/jorgebucaran/autopair.fish
 package https://github.com/jorgebucaran/fish-bax

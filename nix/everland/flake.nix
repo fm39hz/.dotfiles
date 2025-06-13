@@ -8,7 +8,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager }: 
+  outputs = { nixpkgs, home-manager, ... }: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -16,8 +16,7 @@
     in {
       homeConfigurations = {
         fm39hz-desktop = home-manager.lib.homeManagerConfiguration {
-          inherit system;
-          pkgs = pkgs;
+          inherit pkgs;
           modules = [
             ./home.nix
           ];
