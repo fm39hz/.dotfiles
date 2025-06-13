@@ -11,15 +11,16 @@
   outputs = { nixpkgs, home-manager, ... }: 
     let
       lib = nixpkgs.lib;
-      # NOTE: User's specific information
+      system = "x86_64-linux";
+      # User's specific information
       personal = {
+        city = "Hanoi";
         user = "fm39hz";
         hostname = "fm39hz-desktop";
         timeZone = "Asia/Ho_Chi_Minh";
         defaultLocale = "en_US.UTF-8";
-        city = "Hanoi";
+        homeDir = if system == "aarch-darwin64" then "/Users" else "/home";
       };
-      system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
     in {
       homeConfigurations = {
