@@ -23,7 +23,7 @@
         hostname = "fm39hz-desktop";
         timeZone = "Asia/Ho_Chi_Minh";
         defaultLocale = "en_US.UTF-8";
-        homeDir = if system == "aarch-darwin64" then "/Users" else "/home";
+        homeDir = "${if system == "aarch-darwin64" then "/Users" else "/home"}/${personal.user}";
       };
       pkgs = import nixpkgs { inherit system; };
     in {

@@ -1,2 +1,6 @@
 { pkgs,... }:
-{}
+{
+  imports = [
+    ./stylix.nix
+  ];
+}
