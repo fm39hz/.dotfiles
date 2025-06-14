@@ -33,6 +33,26 @@
       };
       pkgs = import nixpkgs { inherit system; };
     in {
+      programs.hyprland = {
+        enable = true;
+        withUWSM = true;
+        package = pkgs.hyprland;
+        portalPackage = pkgs.xdg-desktop-portal-hyprland;
+      };
+
+      xdg.portal = {
+        enable = true;
+        xdgOpenUsePortal = true;
+        config = {
+          common.default = ["gtk"];
+          hyprland.default = [
+            "gtk"
+            "hyprland"
+          ];
+        };
+
+        extraPortals = [pkgs.xdg-desktop-portal-gtk];
+      };
       homeConfigurations = {
         ${personal.hostname} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
