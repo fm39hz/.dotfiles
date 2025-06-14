@@ -1,4 +1,4 @@
-{personal, ...}: {
+{ personal, ... }: {
   wayland.windowManager.hyprland.settings = let
     script-dir = "${personal.homeDir}/.config/hypr/scripts";
   in {
@@ -65,17 +65,39 @@
         # applications
         "$mod SHIFT, F12, exec, $browser"
         "$mod SHIFT, F11, exec, $telegram"
-      ];
+        "$mod ALT, L, split:workspace, e+1"
+        "$mod ALT, H, split:workspace, e-1"
+        "$mod, mouse_left, split:workspace, e-1"
+        "$mod, mouse_right, split:workspace, e+1"
+        "$mod SHIFT CTRL, H, split:workspace, e-1"
+        "$mod SHIFT CTRL, L, split:workspace, e+1"
+      ]++ (
+        # workspaces
+        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+        builtins.concatLists (builtins.genList (i:
+            let ws = i + 1;
+            in [
+              "$mod, code:1${toString i}, split:workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, split:movetoworkspace, ${toString ws}"
+            ]
+          )
+          9)
+      );
       binde = [
         ", XF86AudioRaiseVolume, exec, $volume +1% # Increase volume by 5%"
         ", XF86AudioLowerVolume, exec, $volume -1% # Reduce volume by 5%"
       ];
       bindl = [
         ", XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        ", switch:on:Lid Switch, exec, app2unit hyprlock"
       ];
       bindel = [
         ",XF86MonBrightnessDown, exec, hyprctl hyprsunset gamma -10"
         ",XF86MonBrightnessUp, exec, hyprctl hyprsunset gamma +10"
+      ];
+      bindm= [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
   };
 }

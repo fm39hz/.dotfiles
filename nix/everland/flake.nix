@@ -12,8 +12,14 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, stylix, ... }: 
-    let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    ...
+    }: let
+      inputs = self.inputs;
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       # User's specific information
@@ -30,7 +36,7 @@
       homeConfigurations = {
         ${personal.hostname} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit personal; };
+          extraSpecialArgs = { inherit personal; inherit inputs; };
           modules = [
             stylix.homeModules.stylix
             ./home.nix
