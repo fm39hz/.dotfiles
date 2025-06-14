@@ -1,6 +1,7 @@
-{ pkgs,... }:
+{ ... }:
 {
   imports = [
-    ./stylix.nix
+    # ./stylix.nix
+    ./hyprland
   ];
 }
