@@ -1,14 +1,18 @@
 {
   description = "FM39hz's Nix flake";
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-23.11";
+    nixpkgs.url = "nixpkgs/nixos-25.05";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    stylix = {
+      url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: 
+  outputs = { nixpkgs, home-manager, stylix, ... }: 
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -28,6 +32,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit personal; };
           modules = [
+            stylix.homeModules.stylix
             ./home.nix
           ];
         };
