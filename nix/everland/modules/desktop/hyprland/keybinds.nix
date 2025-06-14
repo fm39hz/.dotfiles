@@ -1,6 +1,8 @@
 { personal, ... }: {
   wayland.windowManager.hyprland.settings = let
     script-dir = "${personal.homeDir}/.config/scripts";
+    specialWorkspace = [ "pad" "chat" "debug" "browser" ];
+    workspacesCount = builtins.length specialWorkspace;
   in {
       "$mod" = "SUPER";
       "$terminalCli" = "app2unit kitty";
@@ -27,14 +29,6 @@
         "ALT, ESCAPE, exec, app2unit hyprpanel toggleWindow dashboardmenu"
         "$mod, S, exec, $bar"
         "$mod CTRL, U, exec, $terminalCli $updater"
-        "$mod, P, togglespecialworkspace, scratchpad"
-        "$mod, C, togglespecialworkspace, chat"
-        "$mod, D, togglespecialworkspace, debug"
-        "$mod, B, togglespecialworkspace, browser"
-        "$mod SHIFT, C, split:movetoworkspace, special:chat"
-        "$mod SHIFT, P, split:movetoworkspace, special:scratchpad"
-        "$mod SHIFT, D, split:movetoworkspace, special:debug"
-        "$mod SHIFT, B, split:movetoworkspace, special:browser"
         "$mod SHIFT, V, exec, python $volumeOutput"
         "$mod, M, split:swapactiveworkspaces, current +1"
         "$mod, G, split:grabroguewindows"
@@ -82,7 +76,17 @@
               "$mod SHIFT, code:1${toString i}, split:movetoworkspace, ${toString ws}"
             ]
           )
-          9)
+        9)
+      ) ++ (
+        # binds $mod + [shift +] {first letter of special workspaces} to [move to] special workspace
+        builtins.concatLists (builtins.genList (i: let
+            ws = builtins.elemAt specialWorkspace i;
+            in [
+              "$mod, ${builtins.substring 0 1 ws}, togglespecialworkspace, ${ws}"
+              "$mod SHIFT, ${builtins.substring 0 1 ws}, split:movetoworkspace, special:${ws}"
+            ]
+          )
+        workspacesCount)
       );
       binde = [
         ", XF86AudioRaiseVolume, exec, $volume +1% # Increase volume by 5%"
