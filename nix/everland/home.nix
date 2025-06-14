@@ -13,7 +13,7 @@
     ];
 
     username = "${personal.user}";
-    homeDirectory = "/${personal.homeDir}/${personal.user}";
+    homeDirectory = "${personal.homeDir}";
 
     # WARN: NEVER Change this value
     stateVersion = "25.05";
