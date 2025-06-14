@@ -1,6 +1,6 @@
 { personal, ... }: {
   wayland.windowManager.hyprland.settings = let
-    script-dir = "${personal.homeDir}/.config/hypr/scripts";
+    script-dir = "${personal.homeDir}/.config/scripts";
   in {
       "$mod" = "SUPER";
       "$terminalCli" = "app2unit kitty";
@@ -9,6 +9,7 @@
       "$telegram" = "${script-dir}/telegram.sh";
       "$volumeOutput" = "${script-dir}/volume.py";
       "$bar" = "${script-dir}/hyprpanel.sh";
+      "$updater" = "${script-dir}/system_update.sh";
       "$hyprShotDir" = "~/Pictures/ScreenShots";
       "$volume" = "pactl set-sink-volume @DEFAULT_SINK@";
       bind = [
@@ -25,7 +26,7 @@
         "$mod, ESCAPE, exec, pidof wlogout || app2unit  wlogout"
         "ALT, ESCAPE, exec, app2unit hyprpanel toggleWindow dashboardmenu"
         "$mod, S, exec, $bar"
-        "$mod CTRL, U, exec, $terminalCli ~/.config/scripts/system_update.sh"
+        "$mod CTRL, U, exec, $terminalCli $updater"
         "$mod, P, togglespecialworkspace, scratchpad"
         "$mod, C, togglespecialworkspace, chat"
         "$mod, D, togglespecialworkspace, debug"
