@@ -38,9 +38,9 @@ git submodule sync
 git clone git@github.com:fm39hz/nvim-lazyvim.git --depth 1
 ~/.config/scripts/nvim_default_picker.sh
 nvim
-z ~/.local/share/nvim/mason/packages/omnisharp/
+cd ~/.local/share/nvim/mason/packages/omnisharp/ || return
 ln -s OmniSharp omnisharp
-z
+cd || return
 
 # Setup yazi
 ya pkg install
