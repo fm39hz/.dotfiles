@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "cb6165b"
-hash = "ee5fa7e64db72d6b10c2315de97c9cc7"
+rev = "86d28e4"
+hash = "e01006bfb38951ea89031bd918b20dbb"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"

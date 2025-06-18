@@ -42,6 +42,9 @@ z ~/.local/share/nvim/mason/packages/omnisharp/
 ln -s OmniSharp omnisharp
 z
 
+# Setup yazi
+ya pkg install
+
 # Start service
 sudo systemctl enable greetd.service
 sudo systemctl enable bluetooth.service
