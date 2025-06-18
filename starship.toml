@@ -4,6 +4,7 @@ format = """
 [](color_green)\
 $os\
 $username\
+$hostname\
 [](bg:color_yellow fg:color_green)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
@@ -85,6 +86,11 @@ show_always = true
 style_user = "bg:color_green fg:color_fg0 bold"
 style_root = "bg:color_green fg:color_fg0"
 format = '[ $user ]($style)'
+
+[hostname]
+ssh_only = false
+detect_env_vars = ['!TMUX', 'SSH_CONNECTION']
+disabled = false
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow bold"

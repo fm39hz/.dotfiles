@@ -1,3 +1,5 @@
+# source ~/.cache/carapace/init.nu
+
 let fish_completer = {|spans|
     fish --command $"complete '--do-complete=($spans | str join ' ')'"
     | from tsv --flexible --noheaders --no-infer
@@ -31,9 +33,6 @@ let external_completer = {|spans|
         nu => $fish_completer
         git => $fish_completer
         dotnet => $fish_completer
-        asdf => $fish_completer
-        hyprctl => $fish_completer
-        yay => $fish_completer
         _ => $carapace_completer
     } | do $in $spans
 }
