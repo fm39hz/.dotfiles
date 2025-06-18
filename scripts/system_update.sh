@@ -2,6 +2,7 @@
 
 # Update system packages using yay
 notify-send "System update" "Updating system packages with yay..."
+# run0 pacman -Syu --noconfirm
 yay --noconfirm
 
 # Update Oh My Fish and any installed plugins
