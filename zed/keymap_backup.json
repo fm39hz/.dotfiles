@@ -1,24 +1,10 @@
 [
 	{
 		"bindings": {
-			"ctrl-h": "workspace::ActivatePaneLeft",
-			"ctrl-l": "workspace::ActivatePaneRight",
-			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown",
-			"ctrl-/": "terminal_panel::ToggleFocus",
-			"ctrl-alt-q": "pane::CloseActiveItem"
-		}
-	},
-	{
-		"context": "Terminal",
-		"bindings": {
-			"ctrl-n": ["terminal::SendKeystroke", "ctrl-n"]
-		}
-	},
-	{
-		"context": "Pane",
-		"bindings": {
-			"alt-/": "workspace::ToggleZoom"
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
 		}
 	},
 	{
@@ -37,10 +23,6 @@
 	{
 		"context": "Editor && vim_mode == normal && !VimWaiting && !menu",
 		"bindings": {
-			"alt-g": "git::ExpandCommitEditor",
-			"ctrl-e": "pane::RevealInProjectPanel",
-			"ctrl-alt-g": "git::Switch",
-			"ctrl-alt-c": "git::Commit"
 			// put key-bindings here if you want them to work only in normal mode
 			// "down": ["workspace::SendKeystrokes", "4 j"]
 			// "up": ["workspace::SendKeystrokes", "4 k"]
@@ -64,8 +46,8 @@
 		// Vim: File Tree ("ProjectPanel") actions
 		"context": "ProjectPanel && not_editing",
 		"bindings": {
-			"alt-h": "project_panel::ToggleHideGitIgnore",
 			"h": "project_panel::CollapseSelectedEntry",
+			// "l": "project_panel::ExpandSelectedEntry",
 			"j": "menu::SelectNext",
 			"k": "menu::SelectPrevious",
 			"l": "project_panel::Open",

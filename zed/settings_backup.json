@@ -1,18 +1,10 @@
 // Zed settings
 {
-	"language_models": {
-		"copilot_chat": {
-			"api_url": "https://api.githubcopilot.com/chat/completions",
-			"auth_url": "https://api.github.com/copilot_internal/v2/token",
-			"models_url": "https://api.githubcopilot.com/models"
-		}
-	},
 	"icon_theme": "Material Icon Theme",
-	"agent": {
-		"always_allow_tool_actions": true,
+ "assistant": {
 		"default_model": {
-			"provider": "google",
-			"model": "gemini-2.5-flash"
+			"provider": "copilot_chat",
+			"model": "claude-3.7-sonnet"
 		},
 		"version": "2"
 	},
@@ -40,7 +32,6 @@
 	"buffer_line_height": "comfortable",
 	"hard_tabs": true,
 	"tab_size": 4,
-	"hide_mouse": "on_typing",
 	"terminal": {
 		"copy_on_select": true,
 		"font_weight": 900,
@@ -52,7 +43,6 @@
 		"dock": "bottom"
 	},
 	"project_panel": {
-		"hide_gitignore": true,
 		"dock": "right",
 		"default_width": 360
 	},
