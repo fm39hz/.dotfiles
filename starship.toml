@@ -1,7 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_green)\
 $os\
 $username\
 $hostname\
@@ -23,9 +22,7 @@ $python\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
 $conda\
-[](fg:color_bg3 bg:color_bg1)\
-$time\
-[ ](fg:color_bg1)\
+[](fg:color_bg3 bg:transparent)\
 $line_break$character"""
 
 palette = 'everforest_dark'
@@ -56,7 +53,7 @@ color_yellow = "#dbbc7f"
 
 [os]
 disabled = false
-style = "bg:color_green fg:color_fg0 bold"
+style = "bg:color_bg3 fg:color_green bold"
 
 [os.symbols]
 Windows = "󰍲"
@@ -72,7 +69,7 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
-Arch = "󰣇"
+Arch = "||"
 Artix = "󰣇"
 EndeavourOS = ""
 CentOS = ""
@@ -103,7 +100,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"Workspace" = "󰲋 "
 
 [git_branch]
 symbol = ""

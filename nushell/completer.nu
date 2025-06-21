@@ -32,18 +32,16 @@ let external_completer = {|spans|
     match $spans.0 {
         nu => $fish_completer
         git => $fish_completer
-        dotnet => $fish_completer
+        asdf => $fish_completer
         _ => $carapace_completer
     } | do $in $spans
 }
 
 $env.config = {
-    # ...
     completions: {
         external: {
             enable: true
-            completer: $fish_completer
+            completer: $external_completer
         }
     }
-    # ...
 }
