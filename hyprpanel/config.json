@@ -500,5 +500,6 @@
   "theme.tooltip.scaling": 70,
   "theme.bar.menus.menu.battery.scaling": 70,
   "theme.osd.opacity": 85,
-  "terminal": "kitty"
+  "terminal": "kitty",
+  "theme.bar.buttons.borderSize": "0.1rem"
 }
