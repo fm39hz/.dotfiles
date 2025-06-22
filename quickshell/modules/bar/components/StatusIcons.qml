@@ -38,7 +38,7 @@ Item {
         anchors.leftMargin: Appearance.spacing.small
 
         animate: true
-        text: Bluetooth.powered ? "󰂯" : "󰂲"
+        text: Bluetooth.powered ? "bluetooth" : "bluetooth_disabled"
         color: root.colour
     }
 
@@ -58,13 +58,13 @@ Item {
                 values: Bluetooth.devices.filter(d => d.connected)
             }
 
-            MaterialIcon {
-                required property Bluetooth.Device modelData
-
-                animate: true
-                text: Icons.getBluetoothIcon(modelData.icon)
-                color: root.colour
-            }
+            // MaterialIcon {
+            //     required property Bluetooth.Device modelData
+            //
+            //     animate: true
+            //     text: Icons.getBluetoothIcon(modelData.icon)
+            //     color: root.colour
+            // }
         }
     }
 
@@ -79,43 +79,20 @@ MaterialIcon {
     text: {
         if (!UPower.displayDevice.isLaptopBattery) {
             if (PowerProfiles.profile === PowerProfile.PowerSaver)
-                return "";
+                return "energy_savings_leaf";
             if (PowerProfiles.profile === PowerProfile.Performance)
-                return "";
-            return "";
+                return "rocket_launch";
+            return "balance";
         }
 
         const perc = UPower.displayDevice.percentage;
         const charging = !UPower.onBattery;
-        
-        // CUSTOM CHARGING ICONS - Replace these with your preferred icons
-        if (charging) {
-            if (perc >= 0.95) return "󰂅";      // 95-100%
-            else if (perc >= 0.90) return "󰂋";   // 90-95%
-            else if (perc >= 0.80) return "󰂊";   // 80-90%
-            else if (perc >= 0.70) return "󰢞";   // 70-80%
-            else if (perc >= 0.60) return "󰂉";   // 60-70%
-            else if (perc >= 0.50) return "󰢝";   // 50-60%
-            else if (perc >= 0.40) return "󰂈";   // 40-50%
-            else if (perc >= 0.30) return "󰂇";   // 30-40%
-            else if (perc >= 0.20) return "󰂆";   // 20-30%
-            else return "󰢜";                           // Below 20%
-        }
-        
-        // CUSTOM DISCHARGING ICONS - Replace these with your preferred icons  
-        else {
-            if (perc >= 0.95) return "󰁹";               // 95-100%
-            else if (perc >= 0.90) return "󰂂";         // 90-95%
-            else if (perc >= 0.80) return "󰂁";         // 80-90%
-            else if (perc >= 0.70) return "󰂀";         // 70-80%
-            else if (perc >= 0.60) return "󰁿";         // 60-70%
-            else if (perc >= 0.50) return "󰁾";         // 50-60%
-            else if (perc >= 0.40) return "󰁽";         // 40-50%
-            else if (perc >= 0.30) return "󰁼";         // 30-40%
-            else if (perc >= 0.20) return "󰁻";         // 20-30%
-            else if (perc >= 0.10) return "󰁺";         // 10-20%
-            else return "󰂃";                           // Below 10%
-        }
+        if (perc === 1)
+            return charging ? "battery_charging_full" : "battery_full";
+        let level = Math.floor(perc * 7);
+        if (charging && (level === 4 || level === 1))
+            level--;
+        return charging ? `battery_charging_${(level + 3) * 10}` : `battery_${level}_bar`;
     }
     color: !UPower.onBattery || UPower.displayDevice.percentage > 0.2 ? root.colour : Colours.palette.m3error
     fill: 1

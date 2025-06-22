@@ -22,7 +22,7 @@ Column {
     SessionButton {
         id: logout
 
-        icon: "󰍃"
+        icon: "logout"
         command: ["loginctl", "terminate-user", ""]
 
         KeyNavigation.down: shutdown
@@ -40,7 +40,7 @@ Column {
     SessionButton {
         id: shutdown
 
-        icon: "󰐥"
+        icon: "power_settings_new"
         command: ["systemctl", "poweroff"]
 
         KeyNavigation.up: logout
@@ -62,7 +62,7 @@ Column {
     SessionButton {
         id: hibernate
 
-        icon: ""
+        icon: "downloading"
         command: ["systemctl", "hibernate"]
 
         KeyNavigation.up: shutdown
@@ -72,7 +72,7 @@ Column {
     SessionButton {
         id: reboot
 
-        icon: "󰃨"
+        icon: "cached"
         command: ["systemctl", "reboot"]
 
         KeyNavigation.up: hibernate

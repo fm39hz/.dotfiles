@@ -18,12 +18,12 @@ Column {
     VerticalSlider {
         icon: {
             if (Audio.muted)
-                return "";
+                return "no_sound";
             if (value >= 0.5)
-                return "";
+                return "volume_up";
             if (value > 0)
-                return "";
-            return "󰝟";
+                return "volume_down";
+            return "volume_mute";
         }
         value: Audio.volume
         onMoved: Audio.setVolume(value)

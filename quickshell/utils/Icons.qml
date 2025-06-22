@@ -53,7 +53,7 @@ Singleton {
 
     readonly property var weatherIcons: ({
             "113": "clear_day",
-            "116": "",
+            "116": "partly_cloudy_day",
             "119": "cloud",
             "122": "cloud",
             "143": "foggy",
@@ -107,7 +107,7 @@ Singleton {
         })
 
     readonly property var categoryIcons: ({
-            WebBrowser: "󰖟",
+            WebBrowser: "web",
             Printing: "print",
             Security: "security",
             Network: "chat",
@@ -128,7 +128,7 @@ Singleton {
             Settings: "settings",
             DesktopSettings: "settings",
             HardwareSettings: "settings",
-            TerminalEmulator: "",
+            TerminalEmulator: "terminal",
             ConsoleOnly: "terminal",
             Utility: "build",
             Monitor: "monitor_heart",
@@ -141,9 +141,9 @@ Singleton {
             Graphics: "photo_library",
             "2DGraphics": "photo_library",
             RasterGraphics: "photo_library",
-            TV: "",
-            System: "",
-            Office: "󰈙"
+            TV: "tv",
+            System: "host",
+            Office: "content_paste"
         })
 
     property string osIcon: ""

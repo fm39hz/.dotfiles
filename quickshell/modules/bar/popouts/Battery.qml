@@ -163,7 +163,7 @@ Column {
             anchors.leftMargin: Appearance.padding.small
 
             profile: PowerProfile.PowerSaver
-            icon: "  "
+            icon: "energy_savings_leaf"
         }
 
         Profile {
@@ -172,7 +172,7 @@ Column {
             anchors.centerIn: parent
 
             profile: PowerProfile.Balanced
-            icon: "  "
+            icon: "balance"
         }
 
         Profile {
@@ -183,7 +183,7 @@ Column {
             anchors.rightMargin: Appearance.padding.small
 
             profile: PowerProfile.Performance
-            icon: "  "
+            icon: "rocket_launch"
         }
     }
 

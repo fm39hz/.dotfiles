@@ -104,7 +104,7 @@ Item {
         MaterialIcon {
             anchors.centerIn: parent
 
-            text: ""
+            text: "art_track"
             color: Colours.palette.m3onSurfaceVariant
             font.pointSize: (parent.width * 0.4) || 1
         }
@@ -182,7 +182,7 @@ Item {
         spacing: Appearance.spacing.small
 
         Control {
-            icon: "󰙤"
+            icon: "skip_previous"
             canUse: Players.active?.canGoPrevious ?? false
 
             function onClicked(): void {
@@ -191,7 +191,7 @@ Item {
         }
 
         Control {
-            icon: Players.active?.isPlaying ? "" : ""
+            icon: Players.active?.isPlaying ? "play" : "play_arrow"
             canUse: Players.active?.canTogglePlaying ?? false
 
             function onClicked(): void {
@@ -200,7 +200,7 @@ Item {
         }
 
         Control {
-            icon: "󰙢"
+            icon: "skip_next"
             canUse: Players.active?.canGoNext ?? false
 
             function onClicked(): void {
