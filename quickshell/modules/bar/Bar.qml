@@ -102,7 +102,7 @@ Item {
 
             // Calculate exact widths to ensure perfect centering
             readonly property real totalWidth: width
-            readonly property real centerWidth: 120
+            readonly property real centerWidth: 240
             readonly property real remainingWidth: totalWidth - centerWidth - (columnSpacing * 2)
             readonly property real sideWidth: remainingWidth / 2
 
@@ -168,7 +168,7 @@ Item {
                 ActiveWindow {
                     id: activeWindow
 
-                    // Layout.fillWidth: true
+                    Layout.fillWidth: true
                     Layout.maximumWidth: 300
                     
                     monitor: Brightness.getMonitorForScreen(root.screen)
@@ -233,6 +233,9 @@ Item {
                     }
                 }
 
+                // Item {
+                //     Layout.fillWidth: true  // Takes all available space
+                // }
                 // System Status Icons
                 StyledRect {
                     id: statusIcons
@@ -242,7 +245,7 @@ Item {
                     radius: Appearance.rounding.full
                     color: Colours.palette.m3surfaceContainer
 
-                    implicitWidth: statusIconsInner.implicitWidth + Appearance.padding.normal * 2
+                    // implicitWidth: statusIconsInner.implicitWidth + Appearance.padding.normal * 2
 
                     StatusIcons {
                         id: statusIconsInner
@@ -250,10 +253,6 @@ Item {
                     }
                 }
 
-                Item {
-                    Layout.preferredWidth: 0.1
-                    Layout.fillWidth: true  // Takes all available space
-                }
                 // Power Menu - ends at right edge
                 Power {
                     id: power
