@@ -40,7 +40,8 @@
 			"alt-g": "git::ExpandCommitEditor",
 			"ctrl-e": "pane::RevealInProjectPanel",
 			"ctrl-alt-g": "git::Switch",
-			"ctrl-alt-c": "git::Commit"
+			"ctrl-alt-c": "git::Commit",
+			"ctrl-alt-shift-b": "debugger::ToggleEnableBreakpoint"
 			// put key-bindings here if you want them to work only in normal mode
 			// "down": ["workspace::SendKeystrokes", "4 j"]
 			// "up": ["workspace::SendKeystrokes", "4 k"]
