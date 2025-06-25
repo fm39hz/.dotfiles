@@ -30,6 +30,7 @@ text_editor/behavior/files/auto_reload_scripts_on_external_change = true
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/panning/2d_editor_panning_scheme = 1
 network/connection/network_mode = 1
+project_manager/directory_naming_convention = 4
 export/android/java_sdk_path = ""
 export/android/android_sdk_path = ""
 export/android/debug_keystore = "/home/fm39hz/.local/share/godot/keystores/debug.keystore"
@@ -45,8 +46,8 @@ _default_feature_profile = "FM39hz's"
 _use_favorites_root_selection = false
 network/debug_adapter/request_timeout = 1000
 editors/grid_map/editor_side = 1
-dotnet/editor/external_editor = 5
-dotnet/editor/custom_exec_path = ""
+dotnet/editor/external_editor = 6
+dotnet/editor/custom_exec_path = "/usr/bin/zededitor"
 dotnet/editor/custom_exec_path_args = "{file}"
 dotnet/build/verbosity_level = 2
 dotnet/build/problems_layout = 1
@@ -56,9 +57,7 @@ _project_settings_advanced_mode = true
 _export_template_download_directory = ""
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
-asset_library/available_urls = {
-"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
-}
+dotnet/editor/editor_path_optional = ""
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_7bcdl")]
