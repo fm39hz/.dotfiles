@@ -5,8 +5,7 @@
 	],
 	"disabled_editors": [],
 	"disabled_features": [
-		"3d",
-		"script"
+		"3d"
 	],
 	"disabled_properties": [],
 	"type": "feature_profile"
