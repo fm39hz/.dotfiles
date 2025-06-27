@@ -375,7 +375,7 @@
   "tear": true,
   "menus.transition": "crossfade",
   "theme.font.weight": 900,
-  "theme.font.size": "1.95rem",
+  "theme.font.size": "2.0rem",
   "theme.bar.buttons.spacing": "0.2em",
   "theme.bar.margin_top": "0.6rem",
   "theme.bar.border_radius": "0em",
