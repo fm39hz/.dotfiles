@@ -501,5 +501,8 @@
   "theme.bar.menus.menu.battery.scaling": 70,
   "theme.osd.opacity": 85,
   "terminal": "kitty",
-  "theme.bar.buttons.borderSize": "0.1rem"
+  "theme.bar.buttons.borderSize": "0.1rem",
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }
