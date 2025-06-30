@@ -11,8 +11,8 @@
 	"agent": {
 		"always_allow_tool_actions": true,
 		"default_model": {
-			"provider": "google",
-			"model": "gemini-2.5-flash"
+			"provider": "copilot_chat",
+			"model": "claude-sonnet-4"
 		},
 		"version": "2"
 	},
