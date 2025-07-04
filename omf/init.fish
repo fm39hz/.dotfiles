@@ -5,6 +5,10 @@ set -U fish_escape_delay_ms 10
 set -U fish_cursor_default block
 set -U fish_cursor_insert line
 
+# carapace config
+# set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+# carapace _carapace | source
+
 # Color config
 set -U fish_color_selection --background=7A8478 --foreground=232A2E
 set -U fish_color_search_match --background=7A8478 --foreground=232A2E
