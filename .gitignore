@@ -20,6 +20,7 @@ spotify
 aseprite
 legcord
 vesktop
+equibop
 spicetify/Backup
 spicetify/Extracted
 Bitwarden
@@ -31,6 +32,8 @@ bless
 goldwarden
 Grammarly
 GIMP
+calibre
+!calibre/global.py.json
 
 # Shell config
 fish/fish_variables
