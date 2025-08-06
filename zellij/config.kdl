@@ -1,30 +1,50 @@
-// Zellij config that behaves EXACTLY like tmux
-// ~/.config/zellij/config.kdl
-
 theme "everforest-dark"
-default_mode "locked"  // Start in locked mode (normal terminal)
+default_mode "locked"
+
+show_startup_tips false
+advance_mouse_action true               
+pane_frames false                       
+simplified_ui false                     
+mouse_mode true                         
+copy_on_select true                     
+scrollback_lines_to_serialize 2000      
+scroll_buffer_size 10000                
+session_serialization true              
+serialize_pane_viewport true            
+
+copy_command "wl-copy"                   
+copy_command "xclip -selection clipboard"
+copy_command "pbcopy"                    
+copy_command "clip.exe"                  
+
+on_force_close "detach"                 
+mirror_session false                    
+styled_underlines true                  
+disable_session_metadata false          
+
+ui {
+    pane_frames {
+        rounded_corners true            
+        hide_session_name false         
+    }
+}
 
 keybinds {
-    // Locked mode = Normal terminal (like tmux default)
     locked {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
-        bind "Ctrl g" { SwitchToMode "Normal"; }  // Emergency escape to normal mode
+        bind "Ctrl g" { SwitchToMode "Normal"; }
     }
     
-    // Tmux mode - activated by Ctrl-b prefix
     tmux {
-        // Send literal Ctrl-b (like tmux Ctrl-b Ctrl-b)
-        bind "Ctrl b" { Write 2; SwitchToMode "Locked"; }
+        bind "Esc" { Write 2; SwitchToMode "Locked"; }
         
-        // Pane operations - exactly like tmux
         bind "\"" { NewPane "Down"; SwitchToMode "Locked"; }
         bind "%" { NewPane "Right"; SwitchToMode "Locked"; }
         bind "x" { CloseFocus; SwitchToMode "Locked"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "Locked"; }
-        bind "!" { BreakPane; SwitchToMode "Locked"; }  // Break pane to new window
-        bind "q" { SwitchToMode "Locked"; }  // Display pane numbers (just exit for now)
+        bind "!" { BreakPane; SwitchToMode "Locked"; }
+        bind "q" { SwitchToMode "Locked"; }
         
-        // Pane navigation - exactly like tmux
         bind "h" { MoveFocus "Left"; SwitchToMode "Locked"; }
         bind "j" { MoveFocus "Down"; SwitchToMode "Locked"; }
         bind "k" { MoveFocus "Up"; SwitchToMode "Locked"; }
@@ -36,13 +56,11 @@ keybinds {
         bind "o" { FocusNextPane; SwitchToMode "Locked"; }
         bind ";" { ToggleFocusFullscreen; SwitchToMode "Locked"; }  // Last pane
         
-        // Pane resizing - like tmux
         bind "H" { Resize "Increase Left"; SwitchToMode "Locked"; }
         bind "J" { Resize "Increase Down"; SwitchToMode "Locked"; }
         bind "K" { Resize "Increase Up"; SwitchToMode "Locked"; }
         bind "L" { Resize "Increase Right"; SwitchToMode "Locked"; }
         
-        // Window/Tab operations - exactly like tmux
         bind "c" { NewTab; SwitchToMode "Locked"; }
         bind "n" { GoToNextTab; SwitchToMode "Locked"; }
         bind "p" { GoToPreviousTab; SwitchToMode "Locked"; }
@@ -57,7 +75,6 @@ keybinds {
         }
         bind "," { SwitchToMode "RenameTab"; }  // Rename window
         
-        // Window/Tab switching with numbers
         bind "0" { GoToTab 10; SwitchToMode "Locked"; }
         bind "1" { GoToTab 1; SwitchToMode "Locked"; }
         bind "2" { GoToTab 2; SwitchToMode "Locked"; }
@@ -69,16 +86,13 @@ keybinds {
         bind "8" { GoToTab 8; SwitchToMode "Locked"; }
         bind "9" { GoToTab 9; SwitchToMode "Locked"; }
         
-        // Layouts - like tmux
         bind "Space" { NextSwapLayout; SwitchToMode "Locked"; }
         bind "{" { MovePane "Left"; SwitchToMode "Locked"; }
         bind "}" { MovePane "Right"; SwitchToMode "Locked"; }
         
-        // Copy mode
         bind "[" { SwitchToMode "Scroll"; }
-        bind "]" { SwitchToMode "Locked"; }  // Paste (not implemented)
+        bind "]" { SwitchToMode "Locked"; }
         
-        // Session operations  
         bind "d" { Detach; }
         bind "s" {
             LaunchOrFocusPlugin "session-manager" {
@@ -87,32 +101,28 @@ keybinds {
             };
             SwitchToMode "Locked"
         }
-        bind "$" { SwitchToMode "RenameTab"; }  // Rename session
-        bind "(" { SwitchToMode "Locked"; }  // Previous session (not directly supported)
-        bind ")" { SwitchToMode "Locked"; }  // Next session (not directly supported)
-        bind "L" { SwitchToMode "Locked"; }  // Last session (not directly supported)
+        bind "$" { SwitchToMode "RenameTab"; }
+        bind "(" { SwitchToMode "Locked"; }
+        bind ")" { SwitchToMode "Locked"; }
+        bind "L" { SwitchToMode "Locked"; }
         
-        // Other tmux commands
-        bind "t" { SwitchToMode "Locked"; }  // Show time (not implemented)
-        bind "i" { SwitchToMode "Locked"; }  // Display info (not implemented)
-        bind "r" { SwitchToMode "Locked"; }  // Refresh (Zellij doesn't support reload)
-        bind "?" { SwitchToMode "Locked"; }  // List keys (not implemented)
+        bind "t" { SwitchToMode "Locked"; }
+        bind "i" { SwitchToMode "Locked"; }
+        bind "r" { SwitchToMode "Locked"; }
+        bind "?" { SwitchToMode "Locked"; }
         
-        // Quick escape
         bind "Esc" { SwitchToMode "Locked"; }
     }
     
-    // Scroll mode - exactly like tmux copy mode
     scroll {
         bind "Esc" { ScrollToBottom; SwitchToMode "Locked"; }
         bind "q" { ScrollToBottom; SwitchToMode "Locked"; }
         bind "Enter" { ScrollToBottom; SwitchToMode "Locked"; }
         
-        // Vi-style navigation
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
-        bind "h" "Left" { ScrollUp; }  // Scroll left not supported, use up
-        bind "l" "Right" { ScrollDown; }  // Scroll right not supported, use down
+        bind "h" "Left" { ScrollUp; }
+        bind "l" "Right" { ScrollDown; }
         bind "g" { ScrollToTop; SwitchToMode "Scroll"; }
         bind "G" { ScrollToBottom; SwitchToMode "Scroll"; }
         bind "Ctrl f" "PageDown" { PageScrollDown; }
@@ -120,18 +130,15 @@ keybinds {
         bind "Ctrl d" { HalfPageScrollDown; }
         bind "Ctrl u" { HalfPageScrollUp; }
         
-        // Search
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "?" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "n" { Search "down"; }
         bind "N" { Search "up"; }
         
-        // Copy
         bind "Space" { Copy; }
         bind "v" { Copy; }
     }
     
-    // Search mode
     search {
         bind "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Scroll"; }
@@ -144,26 +151,22 @@ keybinds {
         bind "Esc" { SwitchToMode "Scroll"; }
     }
     
-    // Tab rename - like tmux window rename
     renametab {
         bind "Enter" { SwitchToMode "Locked"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Locked"; }
         bind "Ctrl c" { UndoRenameTab; SwitchToMode "Locked"; }
     }
     
-    // Session mode - for interactive session switching
     session {
         bind "Esc" { SwitchToMode "Locked"; }
         bind "q" { SwitchToMode "Locked"; }
         bind "Ctrl c" { SwitchToMode "Locked"; }
         bind "Enter" { SwitchToMode "Locked"; }
         
-        // Navigate sessions
         bind "j" "Down" { GoToNextTab; }
         bind "k" "Up" { GoToPreviousTab; }
         bind "Enter" { SwitchToMode "Locked"; }
         
-        // Session operations
         bind "d" { Detach; }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
@@ -181,13 +184,11 @@ keybinds {
         }
     }
     
-    // Normal mode - only for emergencies
     normal {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Esc" { SwitchToMode "Locked"; }
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
     
-    // Only essential modes with minimal bindings
     pane {
         bind "Esc" { SwitchToMode "Locked"; }
         bind "Ctrl c" { SwitchToMode "Locked"; }
@@ -223,52 +224,20 @@ keybinds {
         bind "Enter" { SwitchToMode "Locked"; }
     }
     
-    // Global quit - only way to force quit
     shared {
         bind "Ctrl q" { Quit; }
     }
-    
-    // Remove ALL other mode switching to prevent confusion
-    // We only use Ctrl-b for everything
 }
 
-// Plugins - minimal for performance
 plugins {
     tab-bar location="zellij:tab-bar"
-    status-bar location="zellij:status-bar"  
-    compact-bar location="zellij:compact-bar"
-    session-manager location="zellij:session-manager"
-    welcome-screen location="zellij:session-manager" {
-        welcome_screen false  // No welcome screen, like tmux
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
+    compact-bar location="zellij:compact-bar" {
+        placement "top"
     }
-}
-
-// Visual settings - exactly like tmux
-pane_frames false                       // Show pane borders like tmux
-default_layout "compact"                // Minimal layout
-simplified_ui false                     // Keep unicode for borders
-mouse_mode true                         // Mouse support like tmux
-copy_on_select true                    // Don't auto-copy (like tmux default)
-scrollback_lines_to_serialize 2000      // Faster session restore
-scroll_buffer_size 10000                // Same as tmux default
-session_serialization true               // Auto-save sessions
-serialize_pane_viewport true            // Faster switching
-
-// Copy command - pick ONE based on your system
-copy_command "wl-copy"                  // Wayland
-// copy_command "xclip -selection clipboard"  // X11
-// copy_command "pbcopy"                     // macOS
-
-// Session behavior
-on_force_close "detach"                 // Detach on close like tmux
-mirror_session false                     // Each user has own cursor
-styled_underlines true                  // Simple rendering
-disable_session_metadata false           // Keep session data
-
-// UI settings for tmux-like appearance
-ui {
-    pane_frames {
-        rounded_corners false            // Square corners like tmux
-        hide_session_name false          // Show session name in status
+    session-manager location="zellij:session-manager"
+    filepicker location="zellij:strider" {
+        cwd "/"
     }
 }
