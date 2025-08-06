@@ -21,6 +21,7 @@ alias top "btop --utf-force"
 alias tma "tmux a -t"
 alias tmn "tmux new -s"
 alias tml "tmux ls"
+alias tmz "~/.config/scripts/zj_project.sh"
 
 # Neovim aliases
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
