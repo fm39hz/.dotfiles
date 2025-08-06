@@ -8,3 +8,5 @@ fish_add_path /home/fm39hz/.spicetify
 set -gx PATH $PATH /home/fm39hz/.cache/lm-studio/bin
 
 thefuck --alias | source
+
+alias claude="/home/fm39hz/.claude/local/claude"
