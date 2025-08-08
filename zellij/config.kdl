@@ -163,8 +163,6 @@ keybinds {
         bind "Ctrl c" { SwitchToMode "Locked"; }
         bind "Enter" { SwitchToMode "Locked"; }
         
-        bind "j" "Down" { GoToNextTab; }
-        bind "k" "Up" { GoToPreviousTab; }
         bind "Enter" { SwitchToMode "Locked"; }
         
         bind "d" { Detach; }
