@@ -33,9 +33,6 @@ echo '    "packages": [' >> $json_path
 for pkg in (cat $today/main.lst)
     echo "        { \"package\": \"$pkg\" }," >> $json_path
 end
-for pkg in (cat $today/aurandlocal.lst)
-    echo "        { \"package\": \"$pkg\" }," >> $json_path
-end
 
 # Remove trailing comma from last item
 sed -i '$ s/},/}/' $json_path
@@ -47,6 +44,37 @@ echo '}' >> $json_path
 echo "packages.json generated at $json_path"
 cd ~/.config/hypr/ || exit
 zip -r ~/.config/com.fm39hz.everland.pkginst com.fm39hz.everland
+
+# Update install.sh with current AUR packages
+set install_script ~/.config/scripts/install.sh
+echo "Updating install.sh with current AUR packages..."
+
+echo '#!/usr/bin/bash
+
+sudo pacman -S git git-lfs
+sudo pacman -S gum jq figlet wget unzip
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git ~/.cache/yay
+cd ~/.cache/yay || exit
+makepkg -si
+curl -s https://raw.githubusercontent.com/mylinuxforwork/packages-installer/main/setup.sh | bash -s -- -s https://raw.githubusercontent.com/fm39hz/.dotfiles/main/com.fm39hz.everland.pkginst com.fm39hz.everland
+
+# Install AUR packages
+echo "Installing AUR packages..."
+yay -S --needed --noconfirm \\' > $install_script
+
+# Add each AUR package with proper line continuation
+for pkg in (cat $today/aurandlocal.lst)
+    echo "    $pkg \\" >> $install_script
+end
+
+# Remove the last backslash and add completion message
+sed -i '$ s/ \\$//' $install_script
+echo '' >> $install_script
+echo 'echo "AUR packages installation complete!"' >> $install_script
+
+chmod +x $install_script
+echo "install.sh updated with "(wc -l < $today/aurandlocal.lst)" AUR packages"
 
 # Update Neovim packages
 notify-send "System update" "Updating Nvim packages..."

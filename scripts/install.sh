@@ -1,23 +1,103 @@
-#Install dependencies
-# sudo pacman -S git git-lfs diff-so-fancy npm fish neofetch
-# sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
-#
-# # WM
-# yay -S hyprland-git hyprcursor hypridle hyprlock hyprshot xdg-desktop-portal-hyprland eww wbg qiv swaync thunar
-# # Libs
-# yay -S libnotify notification-daemon networkmanager network-manager-applet bluez bluez-utils man-db lxsession brightnessctl yad sox ibus fcitx5-bamboo
-# # Themes
-# yay -S everforest-icon-themes-git
-# # Fonts
-# yay -S noto-fonts-emoji ttf-jetbrains-mono-nerd ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
-# # Utilities
-# yay -S waybar kitty rofi-lbonn-wayland-git greetd blueman xclip ripgrep wireplumber neovim nwg-look-bin btop zathura lazygit nitch-git fzf tmux unarchiver unrar unzip yazi zoxide fcitx5-configtool keyd
-# # Entertainment
-# yay -S spotify
-# # Plugins
-# yay -S zathura-pdf-mupdf thunar-archive-plugin spicetify-cli spotx-linux
-# # Development
-# yay -S docker docker-buildx docker-compose dotnet-sdk dotnet-sdk-7.0 aspnet-runtime mono python-pip
-#
-#
+#!/usr/bin/env fish
+
+sudo pacman -S git git-lfs
+sudo pacman -S gum jq figlet wget unzip
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git ~/.cache/yay
+cd ~/.cache/yay || exit
+makepkg -si
 curl -s https://raw.githubusercontent.com/mylinuxforwork/packages-installer/main/setup.sh | bash -s -- -s https://raw.githubusercontent.com/fm39hz/.dotfiles/main/com.fm39hz.everland.pkginst com.fm39hz.everland
+
+# Install AUR packages
+echo "Installing AUR packages..."
+yay -S --needed --noconfirm \
+    64gram-desktop-bin \
+    7-zip-bin \
+    ags-hyprpanel-git \
+    anytype-bin \
+    app2unit-git \
+    appimagelauncher \
+    appmenu-glib-translator-git \
+    aylurs-gtk-shell-git \
+    beekeeper-studio-bin \
+    brave-nightly-bin \
+    bruno-bin \
+    bun-bin \
+    calibre-bin \
+    carapace \
+    colloid-everforest-gtk-theme-git \
+    electron37-bin \
+    equibop-bin \
+    everforest-icon-theme-git \
+    flutter-bin \
+    gopreload-git \
+    gpu-screen-recorder \
+    grimblast-git \
+    gruvbox-dark-icons-gtk \
+    hyprwayland-scanner-git \
+    ibus-bamboo \
+    laigter \
+    larksuite-bin \
+    lazydocker \
+    libastal-4-git \
+    libastal-apps-git \
+    libastal-auth-git \
+    libastal-battery-git \
+    libastal-bluetooth-git \
+    libastal-cava-git \
+    libastal-git \
+    libastal-greetd-git \
+    libastal-hyprland-git \
+    libastal-io-git \
+    libastal-meta \
+    libastal-mpris-git \
+    libastal-network-git \
+    libastal-notifd-git \
+    libastal-powerprofiles-git \
+    libastal-river-git \
+    libastal-tray-git \
+    libastal-wireplumber-git \
+    libcava \
+    libinput-gestures \
+    libinput-gestures-qt \
+    libinput-multiplier \
+    lightnovel-crawler-bin \
+    localsend-bin \
+    luajit-tiktoken-bin \
+    matugen-bin \
+    microsoft-edge-stable-bin \
+    mongodb-compass-bin \
+    mongodb-tools-bin \
+    mongosh \
+    neofetch \
+    neovim-nightly-bin \
+    nitch-git \
+    nouveau-fw \
+    pm2ml \
+    postman-bin \
+    powerpill \
+    python-gpustat \
+    python-nvidia-ml-py \
+    python-pywal16 \
+    python-pywalfox \
+    python3-memoizedb \
+    python3-xcgf \
+    python3-xcpf \
+    pywal-spicetify \
+    rtl8821au-dkms-git \
+    sendme-bin \
+    spicetify-cli \
+    spotify \
+    spotx-git \
+    thorium-browser-bin \
+    todoist-appimage \
+    tofi \
+    ttf-material-icons-git \
+    unionfs-fuse \
+    vesktop-bin \
+    visual-studio-code-bin \
+    wlogout \
+    yay-bin \
+    zen-browser-bin \
+
+echo "AUR packages installation complete!"
