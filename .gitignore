@@ -3,6 +3,9 @@ kde?*
 arkrc
 QtProject.conf
 
+# Nix
+nix/*/result
+
 # Telemetry
 go
 

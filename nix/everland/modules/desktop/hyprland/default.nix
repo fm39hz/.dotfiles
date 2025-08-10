@@ -25,9 +25,7 @@
     hyprshot
     hyprpolkitagent
     
-    # Window management and utilities
-    rofi-wayland
-    waybar
+    # Window management and utilities - rofi and waybar configured in programs/
     wlogout
     
     # System utilities for Hyprland

@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   wayland.windowManager.hyprland.settings = {
     # Decoration and styling from style.conf
     decoration = {
@@ -24,8 +24,8 @@
       gaps_in = 5;
       gaps_out = 10;
       border_size = 2;
-      "col.active_border" = "rgba(a7c080ff)"; # Everforest green
-      "col.inactive_border" = "rgba(3d484dff)"; # Everforest dark
+      "col.active_border" = lib.mkForce "rgba(a7c080ff)"; # Everforest green
+      "col.inactive_border" = lib.mkForce "rgba(3d484dff)"; # Everforest dark
       layout = "dwindle";
       allow_tearing = false;
     };
