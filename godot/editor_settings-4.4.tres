@@ -23,9 +23,11 @@ interface/theme/icon_saturation = 1.2
 interface/theme/relationship_line_opacity = 0.86
 interface/theme/border_size = 2
 interface/theme/corner_radius = 6
-interface/theme/base_spacing = 1
+interface/theme/base_spacing = 3
 interface/theme/additional_spacing = 4
+interface/theme/custom_theme = "/home/fm39hz/.config/godot/minimal_theme.tres"
 filesystem/external_programs/terminal_emulator = "kitty"
+filesystem/file_dialog/show_hidden_files = true
 text_editor/behavior/files/auto_reload_scripts_on_external_change = true
 editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
 editors/panning/2d_editor_panning_scheme = 1
@@ -58,6 +60,9 @@ _export_template_download_directory = ""
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
 dotnet/editor/editor_path_optional = ""
+asset_library/available_urls = {
+"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
+}
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_7bcdl")]
