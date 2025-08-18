@@ -1,4 +1,4 @@
-#!/usr/bin/env fish
+#!/usr/bin/bash
 
 sudo pacman -S git git-lfs
 sudo pacman -S gum jq figlet wget unzip
@@ -27,7 +27,6 @@ yay -S --needed --noconfirm \
     carapace \
     colloid-everforest-gtk-theme-git \
     electron37-bin \
-    equibop-bin \
     everforest-icon-theme-git \
     flutter-bin \
     gopreload-git \
