@@ -37,7 +37,6 @@ yay -S --needed --noconfirm \
     ibus-bamboo \
     laigter \
     larksuite-bin \
-    lazydocker \
     libastal-4-git \
     libastal-apps-git \
     libastal-auth-git \
@@ -65,13 +64,15 @@ yay -S --needed --noconfirm \
     luajit-tiktoken-bin \
     matugen-bin \
     microsoft-edge-stable-bin \
-    mongodb-compass-bin \
     mongodb-tools-bin \
     mongosh \
     neofetch \
     neovim-nightly-bin \
     nitch-git \
+    nmgui-bin \
     nouveau-fw \
+    paru-bin \
+    paru-debug \
     pm2ml \
     postman-bin \
     powerpill \

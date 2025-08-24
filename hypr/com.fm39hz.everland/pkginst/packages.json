@@ -79,6 +79,7 @@
         { "package": "keyd" },
         { "package": "kitty" },
         { "package": "kvantum" },
+        { "package": "lazydocker" },
         { "package": "lazygit" },
         { "package": "libfaketime" },
         { "package": "libnotify" },
