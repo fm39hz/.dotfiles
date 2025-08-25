@@ -1,4 +1,4 @@
-[gd_resource type="EditorSettings" load_steps=3 format=3]
+[gd_resource type="EditorSettings" load_steps=7 format=3]
 
 [sub_resource type="InputEventKey" id="InputEventKey_7bcdl"]
 command_or_control_autoremap = true
@@ -8,6 +8,34 @@ unicode = 75
 
 [sub_resource type="InputEventKey" id="InputEventKey_ay65p"]
 keycode = 4194326
+
+[sub_resource type="InputEventKey" id="InputEventKey_wts2y"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 84
+unicode = 116
+
+[sub_resource type="InputEventKey" id="InputEventKey_tyflg"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_c5bya"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 69
+unicode = 101
+
+[sub_resource type="InputEventKey" id="InputEventKey_abegq"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 68
+unicode = 100
 
 [resource]
 interface/editor/main_font_size = 16
@@ -60,9 +88,6 @@ _export_template_download_directory = ""
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
 dotnet/editor/editor_path_optional = ""
-asset_library/available_urls = {
-"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
-}
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_7bcdl")]
@@ -72,6 +97,18 @@ shortcuts = [{
 }, {
 "name": "spatial_editor/viewport_zoom_modifier_2",
 "shortcuts": []
+}, {
+"name": "scene_tree/change_node_type",
+"shortcuts": [SubResource("InputEventKey_wts2y")]
+}, {
+"name": "scene_tree/attach_script",
+"shortcuts": [SubResource("InputEventKey_tyflg")]
+}, {
+"name": "scene_tree/extend_script",
+"shortcuts": [SubResource("InputEventKey_c5bya")]
+}, {
+"name": "scene_tree/detach_script",
+"shortcuts": [SubResource("InputEventKey_abegq")]
 }]
 metadata/script_setup_templates_dictionary = {
 "AnimationPlayer": "0NodeDefault",
