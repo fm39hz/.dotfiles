@@ -67,7 +67,6 @@ yay -S --needed --noconfirm \
     mongodb-tools-bin \
     mongosh \
     neofetch \
-    neovim-nightly-bin \
     nitch-git \
     nmgui-bin \
     nouveau-fw \

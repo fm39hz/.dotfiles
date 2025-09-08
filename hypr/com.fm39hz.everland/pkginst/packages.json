@@ -103,6 +103,7 @@
         { "package": "mpd" },
         { "package": "nasm" },
         { "package": "neovide" },
+        { "package": "neovim" },
         { "package": "network-manager-applet" },
         { "package": "networkmanager" },
         { "package": "ninja" },
