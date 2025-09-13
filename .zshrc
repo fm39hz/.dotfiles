@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-fzf-history-search zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-vi-mode zsh-autopair zoxide tmux)
+plugins=(git sudo zsh-fzf-history-search zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-vi-mode zsh-autopair zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,7 @@ tmux-git-autofetch() {(/home/fm39hz/.tmux/plugins/tmux-git-autofetch/git-autofet
 add-zsh-hook chpwd tmux-git-autofetch
     
 
+
 # Carapace
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
@@ -126,9 +127,6 @@ source <(carapace _carapace)
 export EDITOR="nvim"
 
 # Aliases
-alias tma="tmux a -t"
-alias tmn="tmux new -s"
-alias tml="tmux ls"
 alias tmz="~/.config/scripts/zj_project.sh"
 alias nvim_set_default="~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use="~/.config/scripts/nvim_direct_picker.sh"
@@ -137,6 +135,7 @@ alias omzconfig="nvim ~/.config/.zshrc"
 alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 alias aemu="emulator -avd Pixel_3a_API_34_extension_level_7_x86_64"
 eval $(thefuck --alias)
+eval "$(zoxide init zsh)"
 
 # Android Dev environment
 export ANDROID_HOME="$HOME/Android/Sdk"
