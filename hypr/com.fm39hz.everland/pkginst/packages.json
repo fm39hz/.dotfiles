@@ -138,7 +138,7 @@
         { "package": "qt5-wayland" },
         { "package": "qt5ct" },
         { "package": "ripgrep" },
-        { "package": "rofi-wayland" },
+        { "package": "rofi" },
         { "package": "rsync" },
         { "package": "rust" },
         { "package": "secrets" },

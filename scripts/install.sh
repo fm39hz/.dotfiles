@@ -29,6 +29,7 @@ yay -S --needed --noconfirm \
     electron37-bin \
     everforest-icon-theme-git \
     flutter-bin \
+    gnu-netcat \
     gopreload-git \
     gpu-screen-recorder \
     grimblast-git \
@@ -65,7 +66,6 @@ yay -S --needed --noconfirm \
     matugen-bin \
     microsoft-edge-stable-bin \
     mongodb-tools-bin \
-    mongosh \
     neofetch \
     nitch-git \
     nmgui-bin \
