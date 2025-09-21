@@ -142,6 +142,7 @@
         { "package": "rsync" },
         { "package": "rust" },
         { "package": "secrets" },
+        { "package": "sigil" },
         { "package": "solaar" },
         { "package": "sox" },
         { "package": "speedtest-cli" },
