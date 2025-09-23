@@ -2,15 +2,15 @@
 
 sudo pacman -S git git-lfs
 sudo pacman -S gum jq figlet wget unzip
-sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git ~/.cache/yay
-cd ~/.cache/yay || exit
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 curl -s https://raw.githubusercontent.com/mylinuxforwork/packages-installer/main/setup.sh | bash -s -- -s https://raw.githubusercontent.com/fm39hz/.dotfiles/main/com.fm39hz.everland.pkginst com.fm39hz.everland
 
 # Install AUR packages
 echo "Installing AUR packages..."
-yay -S --needed --noconfirm \
+paru -S --needed --noconfirm \
     64gram-desktop-bin \
     7-zip-bin \
     ags-hyprpanel-git \
