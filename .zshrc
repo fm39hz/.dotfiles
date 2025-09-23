@@ -113,8 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-tmux-git-autofetch() {(/home/fm39hz/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
-add-zsh-hook chpwd tmux-git-autofetch
+# tmux-git-autofetch() {(/home/fm39hz/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
+# add-zsh-hook chpwd tmux-git-autofetch
     
 
 
@@ -127,6 +127,7 @@ source <(carapace _carapace)
 export EDITOR="nvim"
 
 # Aliases
+alias ff="fastfetch"
 alias tmz="~/.config/scripts/zj_project.sh"
 alias nvim_set_default="~/.config/scripts/nvim_default_picker.sh"
 alias nvim_direct_use="~/.config/scripts/nvim_direct_picker.sh"
