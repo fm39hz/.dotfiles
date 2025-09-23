@@ -1,16 +1,16 @@
 #!/usr/bin/env fish
 
-# Update system packages using yay
+# Update system packages using paru
 notify-send "System update" "Updating system packages"
 # run0 pacman -Syu --noconfirm
-yay --noconfirm
+paru -Syu --noconfirm
 
 # Update Oh My Fish and any installed plugins
 notify-send "System update" "Updating Oh My Fish and plugins"
 omf update
 
 # Remove dangling (orphans)
-yay -Qdtq | yay -Rns --noconfirm -
+paru -Qdtq | paru -Rns --noconfirm -
 
 # Snapshot package lists
 notify-send "System update" "Snapshotting package lists"
@@ -53,15 +53,15 @@ echo '#!/usr/bin/bash
 
 sudo pacman -S git git-lfs
 sudo pacman -S gum jq figlet wget unzip
-sudo pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git ~/.cache/yay
-cd ~/.cache/yay || exit
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
 curl -s https://raw.githubusercontent.com/mylinuxforwork/packages-installer/main/setup.sh | bash -s -- -s https://raw.githubusercontent.com/fm39hz/.dotfiles/main/com.fm39hz.everland.pkginst com.fm39hz.everland
 
 # Install AUR packages
 echo "Installing AUR packages..."
-yay -S --needed --noconfirm \\' > $install_script
+paru -S --needed --noconfirm \\' > $install_script
 
 # Add each AUR package with proper line continuation
 for pkg in (cat $today/aurandlocal.lst)
