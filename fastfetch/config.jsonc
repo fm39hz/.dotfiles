@@ -1,146 +1,85 @@
+// Inspired by Catnap
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "file",
-    "source": "~/.config/fastfetch/logo.txt",
-    "position": "left",
-    "height": 15,
-    "width": 30,
-    "padding": {
-      "top": 5,
-      "left": 3,
-    },
-    "color": {
-      "3": "green",
-    },
+    "type": "kitty-icat",
+    "source": "~/.config/fastfetch/logo/arch.png",
+    "width": 25,
+    "height": 25,
+  },
+  "display": {
+    "separator": " ",
   },
   "modules": [
-    "break",
     {
+      "key": "╭───────────╮",
       "type": "custom",
-      "format": "\u001b[90m╭──────────────────────Hardware──────────────────────╮",
     },
     {
-      "type": "host",
-      "key": " PC",
-      "keyColor": "green",
+      "key": "│ {#31} user    {#keys}│",
+      "type": "title",
+      "format": "{user-name}",
     },
     {
-      "type": "cpu",
-      "key": "│ ├ ",
-      "keyColor": "green",
+      "key": "│ {#32}󰇅 hname   {#keys}│",
+      "type": "title",
+      "format": "{host-name}",
     },
     {
-      "type": "gpu",
-      "key": "│ ├󰡁 ",
-      "keyColor": "green",
-    },
-    {
-      "type": "memory",
-      "key": "│ ╰ ",
-      "keyColor": "green",
-    },
-    // {
-    //   "type": "disk",
-    //   "key": "╰ ╰",
-    //   "keyColor": "green",
-    // },
-    {
-      "type": "custom",
-      "format": "\u001b[90m╰────────────────────────────────────────────────────╯",
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "\u001b[90m╭──────────────────────Software──────────────────────╮",
-    },
-    {
-      "type": "os",
-      "key": " OS",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "kernel",
-      "key": "│ ├ ",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "bios",
-      "key": "│ ├ ",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "packages",
-      "key": "│ ├󰏖 ",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "shell",
-      "key": "╰ ╰ ",
-      "keyColor": "yellow",
-    },
-    "break",
-    {
-      "type": "de",
-      "key": " DE",
-      "keyColor": "blue",
-    },
-    {
-      "type": "lm",
-      "key": "│ ├ ",
-      "keyColor": "blue",
-    },
-    {
-      "type": "wm",
-      "key": "│ ├ ",
-      "keyColor": "blue",
-    },
-    {
-      "type": "wmtheme",
-      "key": "│ ├󰉼 ",
-      "keyColor": "blue",
-    },
-    {
-      "type": "terminal",
-      "key": "╰ ╰ ",
-      "keyColor": "blue",
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m╰────────────────────────────────────────────────────╯",
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "\u001b[90m╭────────────────────Uptime / Age / DT────────────────────╮",
-    },
-    {
-      "type": "command",
-      "key": "  OS Age ",
-      "keyColor": "magenta",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-    },
-    {
+      "key": "│ {#33}󰅐 uptime  {#keys}│",
       "type": "uptime",
-      "key": "  Uptime ",
-      "keyColor": "magenta",
     },
     {
-      "type": "datetime",
-      "key": "  DateTime ",
-      "keyColor": "magenta",
+      "key": "│ {#34}{icon} distro  {#keys}│",
+      "type": "os",
     },
     {
+      "key": "│ {#35} kernel  {#keys}│",
+      "type": "kernel",
+    },
+    {
+      "key": "│ {#36}󰇄 desktop {#keys}│",
+      "type": "de",
+    },
+    {
+      "key": "│ {#31} term    {#keys}│",
+      "type": "terminal",
+    },
+    {
+      "key": "│ {#32} shell   {#keys}│",
+      "type": "shell",
+    },
+    {
+      "key": "│ {#33}󰍛 cpu     {#keys}│",
+      "type": "cpu",
+      "showPeCoreCount": true,
+    },
+    {
+      "key": "│ {#34}󰉉 disk    {#keys}│",
+      "type": "disk",
+      "folders": "/",
+    },
+    {
+      "key": "│ {#35} memory  {#keys}│",
+      "type": "memory",
+    },
+    {
+      "key": "│ {#36}󰩟 network {#keys}│",
+      "type": "localip",
+      "format": "{ipv4} ({ifname})",
+    },
+    {
+      "key": "├───────────┤",
       "type": "custom",
-      "format": "\u001b[90m╰─────────────────────────────────────────────────────────╯",
     },
-    //        {
-    //            "type": "colors"
-    //        },
     {
+      "key": "│ {#39} colors  {#keys}│",
       "type": "colors",
-      "paddingLeft": 2,
       "symbol": "circle",
+    },
+    {
+      "key": "╰───────────╯",
+      "type": "custom",
     },
   ],
 }
