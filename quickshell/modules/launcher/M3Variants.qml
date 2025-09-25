@@ -8,7 +8,7 @@ import QtQuick
 Singleton {
     id: root
 
-    readonly property list<Variant> list: [
+    readonly property list<QtObject> list: [
         Variant {
             variant: "vibrant"
             icon: "sentiment_very_dissatisfied"
