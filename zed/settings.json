@@ -14,7 +14,6 @@
 			"provider": "copilot_chat",
 			"model": "claude-sonnet-4"
 		},
-		"version": "2"
 	},
 	"collaboration_panel": {
 		"dock": "right"
@@ -27,7 +26,7 @@
 		"metrics": false
 	},
 	"base_keymap": "VSCode",
-	"theme": "Everforest Dark",
+	"theme": "Everforest Dark Medium",
 	"vim_mode": true,
 	"autosave": "on_focus_change",
 	"auto_update": false,
