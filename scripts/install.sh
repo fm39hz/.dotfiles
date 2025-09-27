@@ -30,6 +30,7 @@ paru -S --needed --noconfirm \
     everforest-icon-theme-git \
     flutter-bin \
     gnu-netcat \
+    google-breakpad \
     gopreload-git \
     gpu-screen-recorder \
     grimblast-git \
@@ -83,6 +84,7 @@ paru -S --needed --noconfirm \
     python3-xcgf \
     python3-xcpf \
     pywal-spicetify \
+    quickshell \
     rtl8821au-dkms-git \
     sendme-bin \
     spicetify-cli \
@@ -92,6 +94,7 @@ paru -S --needed --noconfirm \
     todoist-appimage \
     tofi \
     ttf-material-icons-git \
+    ttf-material-symbols-variable-git \
     unionfs-fuse \
     vesktop-bin \
     visual-studio-code-bin \
