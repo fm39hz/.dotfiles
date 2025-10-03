@@ -1,1 +1,0 @@
-PLAYERS=spotify,quodlibet,firefox
