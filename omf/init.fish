@@ -18,10 +18,11 @@ set -U LANG en_US.UTF-8
 set -U LC_ALL en_US.UTF-8
 set -U EDITOR nvim
 alias top "btop --utf-force"
-alias tma "tmux a -t"
-alias tmn "tmux new -s"
-alias tml "tmux ls"
+# alias tma "tmux a -t"
+# alias tmn "tmux new -s"
+# alias tml "tmux ls"
 alias tmz "~/.config/scripts/zj_project.sh"
+alias ff fastfetch
 
 # Neovim aliases
 alias nvim_set_default "~/.config/scripts/nvim_default_picker.sh"
