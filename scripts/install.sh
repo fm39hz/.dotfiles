@@ -35,7 +35,8 @@ paru -S --needed --noconfirm \
     gpu-screen-recorder \
     grimblast-git \
     gruvbox-dark-icons-gtk \
-    hyprwayland-scanner-git \
+    gui-for-singbox \
+    hyprland-protocols-git \
     ibus-bamboo \
     laigter \
     larksuite-bin \
@@ -87,6 +88,7 @@ paru -S --needed --noconfirm \
     quickshell \
     rtl8821au-dkms-git \
     sendme-bin \
+    sing-box-bin \
     spicetify-cli \
     spotify \
     spotx-git \
