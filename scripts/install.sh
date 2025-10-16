@@ -69,6 +69,7 @@ paru -S --needed --noconfirm \
     microsoft-edge-stable-bin \
     mongodb-tools-bin \
     neofetch \
+    neovim-nightly-bin \
     nitch-git \
     nmgui-bin \
     nouveau-fw \
