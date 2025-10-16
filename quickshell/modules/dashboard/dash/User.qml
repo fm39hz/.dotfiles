@@ -129,13 +129,13 @@ Row {
         }
 
         InfoLine {
-            icon: ""
+            icon: "select_window_2"
             text: Quickshell.env("XDG_CURRENT_DESKTOP") || Quickshell.env("XDG_SESSION_DESKTOP")
             colour: Colours.palette.m3secondary
         }
 
         InfoLine {
-            icon: "󱎫"
+            icon: "timer"
             text: uptimeProc.uptime
             colour: Colours.palette.m3tertiary
 
