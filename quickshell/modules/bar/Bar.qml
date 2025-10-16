@@ -139,7 +139,7 @@ Item {
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: 300
-                    Layout.preferredHeight: 32
+                    Layout.preferredHeight: implicitHeight
 
                     radius: Appearance.rounding.full
                     color: Colours.palette.m3surfaceContainer
