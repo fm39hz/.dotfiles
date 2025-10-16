@@ -97,6 +97,53 @@ Item {
             Keys.onUpPressed: list.currentList?.decrementCurrentIndex()
             Keys.onDownPressed: list.currentList?.incrementCurrentIndex()
 
+            // Vim-style navigation
+            Keys.onPressed: (event) => {
+                const current = list.currentList;
+                if (!current) return;
+
+                // Ctrl-N: Next (down)
+                if (event.key === Qt.Key_N && event.modifiers & Qt.ControlModifier) {
+                    current.incrementCurrentIndex();
+                    event.accepted = true;
+                }
+                // Ctrl-P: Previous (up)
+                else if (event.key === Qt.Key_P && event.modifiers & Qt.ControlModifier) {
+                    current.decrementCurrentIndex();
+                    event.accepted = true;
+                }
+                // Ctrl-D: Down half page
+                else if (event.key === Qt.Key_D && event.modifiers & Qt.ControlModifier) {
+                    const isWallpapers = list.showWallpapers;
+                    if (isWallpapers) {
+                        // For wallpapers (PathView), move by 3 items
+                        const targetIndex = Math.min(current.currentIndex + 3, current.count - 1);
+                        current.currentIndex = targetIndex;
+                    } else {
+                        // For apps (ListView), move by half the visible items
+                        const halfPage = Math.floor(Config.launcher.maxShown / 2);
+                        const targetIndex = Math.min(current.currentIndex + halfPage, current.count - 1);
+                        current.currentIndex = targetIndex;
+                    }
+                    event.accepted = true;
+                }
+                // Ctrl-U: Up half page
+                else if (event.key === Qt.Key_U && event.modifiers & Qt.ControlModifier) {
+                    const isWallpapers = list.showWallpapers;
+                    if (isWallpapers) {
+                        // For wallpapers (PathView), move by 3 items
+                        const targetIndex = Math.max(current.currentIndex - 3, 0);
+                        current.currentIndex = targetIndex;
+                    } else {
+                        // For apps (ListView), move by half the visible items
+                        const halfPage = Math.floor(Config.launcher.maxShown / 2);
+                        const targetIndex = Math.max(current.currentIndex - halfPage, 0);
+                        current.currentIndex = targetIndex;
+                    }
+                    event.accepted = true;
+                }
+            }
+
             Keys.onEscapePressed: root.visibilities.launcher = false
 
             Connections {
