@@ -14,19 +14,19 @@ Row {
     spacing: Appearance.spacing.normal
 
     Resource {
-        icon: ""
+        icon: "memory"
         value: SystemUsage.cpuPerc
         colour: Colours.palette.m3primary
     }
 
     Resource {
-        icon: " "
+        icon: "memory_alt"
         value: SystemUsage.memPerc
         colour: Colours.palette.m3secondary
     }
 
     Resource {
-        icon: ""
+        icon: "hard_disk"
         value: SystemUsage.storagePerc
         colour: Colours.palette.m3tertiary
     }

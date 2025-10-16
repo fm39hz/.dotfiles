@@ -371,7 +371,7 @@ StyledRect {
                 anchors.centerIn: parent
 
                 animate: true
-                text: root.expanded ? "" : ""
+                text: root.expanded ? "expand_less" : "expand_more"
                 font.pointSize: Appearance.font.size.normal
             }
         }
