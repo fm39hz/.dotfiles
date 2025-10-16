@@ -15,14 +15,16 @@ Item {
 
     readonly property bool isWorkspace: true // Flag for finding workspace children
     // Unanimated prop for others to use as reference
-    readonly property real size: childrenRect.width + (hasWindows ? Appearance.padding.normal : 0)
+    readonly property real size: Config.bar.sizes.innerHeight
 
     readonly property int ws: groupOffset + index + 1
     readonly property bool isOccupied: occupied[ws] ?? false
     readonly property bool hasWindows: isOccupied && Config.bar.workspaces.showWindows
 
     Layout.preferredWidth: size
-    Layout.preferredHeight: childrenRect.height
+    Layout.preferredHeight: size
+    Layout.alignment: Qt.AlignVCenter
+    clip: true
 
     StyledText {
         id: indicator
@@ -41,52 +43,53 @@ Item {
         height: Config.bar.sizes.innerHeight
     }
 
-    Loader {
-        id: windows
-
-        active: Config.bar.workspaces.showWindows
-        asynchronous: true
-
-        anchors.verticalCenter: indicator.verticalCenter
-        anchors.left: indicator.right
-
-        sourceComponent: Row {
-            spacing: Appearance.spacing.small
-
-            add: Transition {
-                Anim {
-                    properties: "scale"
-                    from: 0
-                    to: 1
-                    easing.bezierCurve: Appearance.anim.curves.standardDecel
-                }
-            }
-
-            move: Transition {
-                Anim {
-                    properties: "scale"
-                    to: 1
-                    easing.bezierCurve: Appearance.anim.curves.standardDecel
-                }
-                Anim {
-                    properties: "x,y"
-                }
-            }
-
-            Repeater {
-                model: ScriptModel {
-                    values: Hyprland.clients.filter(c => c.workspace?.id === root.ws)
-                }
-
-                MaterialIcon {
-                    required property Hyprland.Client modelData
-
-                    text: Icons.getAppCategoryIcon(modelData.wmClass, "terminal")
-                    color: Colours.palette.m3onSurfaceVariant
-                }
-            }
-        }
-    }
+    // Disable window icons to prevent workspace expansion
+    // Loader {
+    //     id: windows
+    //
+    //     active: Config.bar.workspaces.showWindows
+    //     asynchronous: true
+    //
+    //     anchors.verticalCenter: indicator.verticalCenter
+    //     anchors.left: indicator.right
+    //
+    //     sourceComponent: Row {
+    //         spacing: Appearance.spacing.small
+    //
+    //         add: Transition {
+    //             Anim {
+    //                 properties: "scale"
+    //                 from: 0
+    //                 to: 1
+    //                 easing.bezierCurve: Appearance.anim.curves.standardDecel
+    //             }
+    //         }
+    //
+    //         move: Transition {
+    //             Anim {
+    //                 properties: "scale"
+    //                 to: 1
+    //                 easing.bezierCurve: Appearance.anim.curves.standardDecel
+    //             }
+    //             Anim {
+    //                 properties: "x,y"
+    //             }
+    //         }
+    //
+    //         Repeater {
+    //             model: ScriptModel {
+    //                 values: Hyprland.clients.filter(c => c.workspace?.id === root.ws)
+    //             }
+    //
+    //             MaterialIcon {
+    //                 required property Hyprland.Client modelData
+    //
+    //                 text: Icons.getAppCategoryIcon(modelData.wmClass, "terminal")
+    //                 color: Colours.palette.m3onSurfaceVariant
+    //             }
+    //         }
+    //     }
+    // }
 
     Behavior on Layout.preferredWidth {
         Anim {}
