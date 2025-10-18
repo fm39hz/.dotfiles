@@ -14,10 +14,38 @@ Item {
     required property ShellScreen screen
     required property BarPopouts.Wrapper popouts
 
+    // Monitor workspace hover changes
+    Connections {
+        target: workspacesInner
+
+        function onHoveredWorkspaceChanged() {
+            if (workspacesInner.hoveredWorkspace === -1) {
+                // Hide popout when leaving workspace area
+                popouts.hasCurrent = false;
+            } else {
+                // Show/update popout when hovering over a workspace
+                updateWorkspacePopout();
+            }
+        }
+    }
+
+    function updateWorkspacePopout() {
+        popouts.currentName = "workspace";
+        popouts.currentWorkspace = workspacesInner.hoveredWorkspace;
+        const aw = activeWindow.child;
+        popouts.currentCenter = Qt.binding(() => {
+            const awPos = activeWindow.mapToItem(child, 0, 0);
+            return awPos.x + aw.x + aw.implicitWidth / 2;
+        });
+        popouts.hasCurrent = true;
+    }
+
+    function isWorkspacePreviewActive(): bool {
+        return workspacesInner.showWorkspacePreview && workspacesInner.hoveredWorkspace !== -1;
+    }
+
     function checkPopout(x: real): void {
         const spacing = Appearance.spacing.small;
-        const aw = activeWindow.child;
-        const awx = activeWindow.x + aw.x;
 
         // Use mapToItem to get proper coordinates relative to the bar
         const trayPos = tray.mapToItem(child, 0, 0);
@@ -35,9 +63,15 @@ Item {
         const b = statusIconsInner.battery;
         const bx = statusPos.x + statusIconsInner.x + b.x - spacing / 2;
 
-        if (x >= awx && x <= awx + aw.implicitWidth) {
-            popouts.currentName = "activewindow";
-            popouts.currentCenter = Qt.binding(() => activeWindow.x + aw.x + aw.implicitWidth / 2);
+        // Check workspace hover preview
+        if (workspacesInner.showWorkspacePreview && workspacesInner.hoveredWorkspace !== -1) {
+            popouts.currentName = "workspace";
+            popouts.currentWorkspace = workspacesInner.hoveredWorkspace;
+            const aw = activeWindow.child;
+            popouts.currentCenter = Qt.binding(() => {
+                const awPos = activeWindow.mapToItem(child, 0, 0);
+                return awPos.x + aw.x + aw.implicitWidth / 2;
+            });
             popouts.hasCurrent = true;
         } else if (x >= tx && x <= tx + tw) {
             const index = Math.floor(((x - tx) / tw) * trayItems.count);

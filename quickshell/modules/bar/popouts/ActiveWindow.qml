@@ -2,6 +2,7 @@ import "root:/widgets"
 import "root:/services"
 import "root:/utils"
 import "root:/config"
+import Quickshell
 import Quickshell.Widgets
 import Quickshell.Wayland
 import QtQuick
@@ -9,7 +10,12 @@ import QtQuick
 Item {
     id: root
 
-    implicitWidth: Hyprland.activeClient ? child.implicitWidth : -Appearance.padding.large * 2
+    property int workspaceId: -1
+    readonly property var workspaceClients: workspaceId !== -1
+        ? Hyprland.clients.filter(c => c.workspace?.id === workspaceId)
+        : []
+
+    implicitWidth: workspaceClients.length > 0 ? child.implicitWidth : -Appearance.padding.large * 2
     implicitHeight: child.implicitHeight
 
     Column {
@@ -18,51 +24,48 @@ Item {
         anchors.centerIn: parent
         spacing: Appearance.spacing.normal
 
-        Row {
-            id: detailsRow
-
-            spacing: Appearance.spacing.normal
-
-            IconImage {
-                id: icon
-
-                implicitSize: details.implicitHeight
-                source: Icons.getAppIcon(Hyprland.activeClient?.wmClass ?? "", "image-missing")
-            }
-
-            Column {
-                id: details
-
-                StyledText {
-                    text: Hyprland.activeClient?.title ?? ""
-                    font.pointSize: Appearance.font.size.normal
-
-                    elide: Text.ElideRight
-                    width: preview.implicitWidth - icon.implicitWidth - detailsRow.spacing
-                }
-
-                StyledText {
-                    text: Hyprland.activeClient?.wmClass ?? ""
-                    color: Colours.palette.m3onSurfaceVariant
-
-                    elide: Text.ElideRight
-                    width: preview.implicitWidth - icon.implicitWidth - detailsRow.spacing
-                }
-            }
+        StyledText {
+            text: `Workspace ${root.workspaceId} (${root.workspaceClients.length} window${root.workspaceClients.length === 1 ? "" : "s"})`
+            font.pointSize: Appearance.font.size.small
+            color: Colours.palette.m3onSurfaceVariant
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
         }
 
-        ClippingWrapperRectangle {
-            color: "transparent"
-            radius: Appearance.rounding.small
+        Repeater {
+            model: ScriptModel {
+                values: root.workspaceClients
+            }
 
-            ScreencopyView {
-                id: preview
+            Row {
+                required property var modelData
+                spacing: Appearance.spacing.normal
 
-                captureSource: Hyprland.activeClient ? ToplevelManager.activeToplevel : null
-                live: visible
+                IconImage {
+                    id: icon
+                    implicitSize: 24
+                    source: Icons.getAppIcon(parent.modelData?.wmClass ?? "", "image-missing")
+                    anchors.verticalCenter: parent.verticalCenter
+                }
 
-                constraintSize.width: Config.bar.sizes.windowPreviewSize
-                constraintSize.height: Config.bar.sizes.windowPreviewSize
+                Column {
+                    spacing: 2
+
+                    StyledText {
+                        text: parent.parent.modelData?.title ?? ""
+                        font.pointSize: Appearance.font.size.normal
+                        elide: Text.ElideRight
+                        width: Math.min(implicitWidth, 400)
+                    }
+
+                    StyledText {
+                        text: parent.parent.modelData?.wmClass ?? ""
+                        color: Colours.palette.m3onSurfaceVariant
+                        font.pointSize: Appearance.font.size.smaller
+                        elide: Text.ElideRight
+                        width: Math.min(implicitWidth, 400)
+                    }
+                }
             }
         }
     }

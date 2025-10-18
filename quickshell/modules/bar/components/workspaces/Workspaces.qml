@@ -16,6 +16,9 @@ Item {
     }, {})
     readonly property int groupOffset: Math.floor((Hyprland.activeWsId - 1) / Config.bar.workspaces.shown) * Config.bar.workspaces.shown
 
+    property int hoveredWorkspace: -1
+    readonly property bool showWorkspacePreview: hoveredWorkspace !== -1
+
     implicitWidth: layout.implicitWidth
     implicitHeight: layout.implicitHeight
 
@@ -65,11 +68,30 @@ Item {
 
     MouseArea {
         anchors.fill: parent
+        hoverEnabled: true
 
         onPressed: event => {
             const ws = layout.childAt(event.x, event.y).index + root.groupOffset + 1;
             if (Hyprland.activeWsId !== ws)
                 Hyprland.dispatch(`workspace ${ws}`);
+        }
+
+        onEntered: event => {
+            const child = layout.childAt(event.x, event.y);
+            if (child && child.isWorkspace) {
+                root.hoveredWorkspace = child.index + root.groupOffset + 1;
+            }
+        }
+
+        onPositionChanged: event => {
+            const child = layout.childAt(event.x, event.y);
+            if (child && child.isWorkspace) {
+                root.hoveredWorkspace = child.index + root.groupOffset + 1;
+            }
+        }
+
+        onExited: {
+            root.hoveredWorkspace = -1;
         }
     }
 }

@@ -14,6 +14,7 @@ Item {
     property string currentName
     property real currentCenter
     property bool hasCurrent
+    property int currentWorkspace: -1
 
     anchors.centerIn: parent
 
@@ -29,8 +30,13 @@ Item {
         clip: true
 
         Popout {
-            name: "activewindow"
-            source: "ActiveWindow.qml"
+            id: workspacePopout
+            name: "workspace"
+            sourceComponent: Component {
+                ActiveWindow {
+                    workspaceId: root.currentWorkspace
+                }
+            }
         }
 
         Popout {

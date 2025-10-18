@@ -97,8 +97,11 @@ MouseArea {
             else
                 // Keep on hover
                 popouts.hasCurrent = withinPanelWidth(popout, x, y);
-        } else
-            popouts.hasCurrent = false;
+        } else {
+            // Don't clear if workspace preview is active
+            if (!bar.isWorkspacePreviewActive())
+                popouts.hasCurrent = false;
+        }
     }
 
     // Monitor individual visibility changes
