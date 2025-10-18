@@ -29,6 +29,21 @@ Item {
         }
     }
 
+    // Monitor special workspace hover changes
+    Connections {
+        target: specialWorkspacesInner
+
+        function onHoveredSpecialWorkspaceChanged() {
+            if (specialWorkspacesInner.hoveredSpecialWorkspace === "") {
+                // Hide popout when leaving special workspace area
+                popouts.hasCurrent = false;
+            } else {
+                // Show/update popout when hovering over a special workspace
+                updateSpecialWorkspacePopout();
+            }
+        }
+    }
+
     function updateWorkspacePopout() {
         popouts.currentName = "workspace";
         popouts.currentWorkspace = workspacesInner.hoveredWorkspace;
@@ -36,6 +51,16 @@ Item {
         popouts.currentCenter = Qt.binding(() => {
             const awPos = activeWindow.mapToItem(child, 0, 0);
             return awPos.x + aw.x + aw.implicitWidth / 2;
+        });
+        popouts.hasCurrent = true;
+    }
+
+    function updateSpecialWorkspacePopout() {
+        popouts.currentName = "specialworkspace";
+        popouts.currentSpecialWorkspace = specialWorkspacesInner.hoveredSpecialWorkspace;
+        popouts.currentCenter = Qt.binding(() => {
+            const swPos = specialWorkspaces.mapToItem(child, 0, 0);
+            return swPos.x + Appearance.padding.normal + specialWorkspacesInner.implicitWidth / 2;
         });
         popouts.hasCurrent = true;
     }
@@ -172,6 +197,7 @@ Item {
                     id: workspaces
 
                     Layout.fillWidth: true
+                    Layout.preferredWidth: implicitWidth
                     Layout.maximumWidth: 300
                     Layout.preferredHeight: implicitHeight
 
@@ -198,17 +224,39 @@ Item {
                     }
                 }
 
+                // Special Workspace Icons
+                StyledRect {
+                    id: specialWorkspaces
+
+                    Layout.fillWidth: true
+                    // Layout.preferredWidth: specialWorkspacesInner.implicitWidth + Appearance.padding.normal * 2
+                    Layout.maximumWidth: 300
+                    Layout.preferredHeight: implicitHeight
+
+                    radius: Appearance.rounding.full
+                    color: Colours.palette.m3surfaceContainer
+
+                    visible: specialWorkspacesInner.hasSpecialWorkspaces
+
+                    SpecialWorkspaces {
+                        id: specialWorkspacesInner
+                        anchors.left: parent.left
+                        anchors.leftMargin: Appearance.padding.normal
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
+                Item {
+                    Layout.fillWidth: true  // Takes all available space
+                }
+
                 // Window Title
                 ActiveWindow {
                     id: activeWindow
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: 300
-                    
+
                     monitor: Brightness.getMonitorForScreen(root.screen)
-                }
-                Item {
-                    Layout.fillWidth: true  // Takes all available space
                 }
             }
 

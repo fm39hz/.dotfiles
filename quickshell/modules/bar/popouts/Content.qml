@@ -15,6 +15,7 @@ Item {
     property real currentCenter
     property bool hasCurrent
     property int currentWorkspace: -1
+    property string currentSpecialWorkspace: ""
 
     anchors.centerIn: parent
 
@@ -35,6 +36,16 @@ Item {
             sourceComponent: Component {
                 ActiveWindow {
                     workspaceId: root.currentWorkspace
+                }
+            }
+        }
+
+        Popout {
+            id: specialWorkspacePopout
+            name: "specialworkspace"
+            sourceComponent: Component {
+                SpecialActiveWindow {
+                    workspaceName: root.currentSpecialWorkspace
                 }
             }
         }
