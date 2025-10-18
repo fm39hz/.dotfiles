@@ -188,7 +188,6 @@ Item {
                     id: osIcon
                     
                     StateLayer {
-                        anchors.fill: undefined
                         anchors.centerIn: parent
                         implicitWidth: parent.implicitHeight + Appearance.padding.small * 2
                         implicitHeight: implicitWidth
@@ -201,11 +200,10 @@ Item {
                     }
                 }
 
-
                 Item {
                     Layout.fillWidth: true  // Takes all available space
                 }
-                // Workspace Icons (includes both regular and special workspaces)
+
                 StyledRect {
                     id: workspaces
 
