@@ -47,10 +47,9 @@ Item {
     function updateWorkspacePopout() {
         popouts.currentName = "workspace";
         popouts.currentWorkspace = workspacesInner.hoveredWorkspace;
-        const aw = activeWindow.child;
         popouts.currentCenter = Qt.binding(() => {
-            const awPos = activeWindow.mapToItem(child, 0, 0);
-            return awPos.x + aw.x + aw.implicitWidth / 2;
+            const wsPos = workspaces.mapToItem(child, 0, 0);
+            return wsPos.x + workspaces.implicitWidth / 2;
         });
         popouts.hasCurrent = true;
     }
@@ -59,8 +58,9 @@ Item {
         popouts.currentName = "specialworkspace";
         popouts.currentSpecialWorkspace = specialWorkspacesInner.hoveredSpecialWorkspace;
         popouts.currentCenter = Qt.binding(() => {
-            const swPos = specialWorkspaces.mapToItem(child, 0, 0);
-            return swPos.x + Appearance.padding.normal + specialWorkspacesInner.implicitWidth / 2;
+            const wsPos = workspaces.mapToItem(child, 0, 0);
+            const swPosInWs = specialWorkspacesInner.mapToItem(workspaces, 0, 0);
+            return wsPos.x + swPosInWs.x + specialWorkspacesInner.implicitWidth / 2;
         });
         popouts.hasCurrent = true;
     }
@@ -88,14 +88,23 @@ Item {
         const b = statusIconsInner.battery;
         const bx = statusPos.x + statusIconsInner.x + b.x - spacing / 2;
 
-        // Check workspace hover preview
-        if (workspacesInner.showWorkspacePreview && workspacesInner.hoveredWorkspace !== -1) {
+        // Check special workspace hover preview first
+        if (specialWorkspacesInner.showSpecialWorkspacePreview && specialWorkspacesInner.hoveredSpecialWorkspace !== "") {
+            popouts.currentName = "specialworkspace";
+            popouts.currentSpecialWorkspace = specialWorkspacesInner.hoveredSpecialWorkspace;
+            popouts.currentCenter = Qt.binding(() => {
+                const wsPos = workspaces.mapToItem(child, 0, 0);
+                const swPosInWs = specialWorkspacesInner.mapToItem(workspaces, 0, 0);
+                return wsPos.x + swPosInWs.x + specialWorkspacesInner.implicitWidth / 2;
+            });
+            popouts.hasCurrent = true;
+        } else if (workspacesInner.showWorkspacePreview && workspacesInner.hoveredWorkspace !== -1) {
+            // Check workspace hover preview
             popouts.currentName = "workspace";
             popouts.currentWorkspace = workspacesInner.hoveredWorkspace;
-            const aw = activeWindow.child;
             popouts.currentCenter = Qt.binding(() => {
-                const awPos = activeWindow.mapToItem(child, 0, 0);
-                return awPos.x + aw.x + aw.implicitWidth / 2;
+                const wsPos = workspaces.mapToItem(child, 0, 0);
+                return wsPos.x + workspaces.implicitWidth / 2;
             });
             popouts.hasCurrent = true;
         } else if (x >= tx && x <= tx + tw) {
@@ -192,7 +201,11 @@ Item {
                     }
                 }
 
-                // Workspace Icons
+
+                Item {
+                    Layout.fillWidth: true  // Takes all available space
+                }
+                // Workspace Icons (includes both regular and special workspaces)
                 StyledRect {
                     id: workspaces
 
@@ -218,33 +231,20 @@ Item {
                         }
                     }
 
-                    Workspaces {
-                        id: workspacesInner
+                    RowLayout {
                         anchors.centerIn: parent
+                        spacing: Appearance.spacing.normal
+
+                        Workspaces {
+                            id: workspacesInner
+                        }
+
+                        SpecialWorkspaces {
+                            id: specialWorkspacesInner
+                        }
                     }
                 }
 
-                // Special Workspace Icons
-                StyledRect {
-                    id: specialWorkspaces
-
-                    Layout.fillWidth: true
-                    // Layout.preferredWidth: specialWorkspacesInner.implicitWidth + Appearance.padding.normal * 2
-                    Layout.maximumWidth: 300
-                    Layout.preferredHeight: implicitHeight
-
-                    radius: Appearance.rounding.full
-                    color: Colours.palette.m3surfaceContainer
-
-                    visible: specialWorkspacesInner.hasSpecialWorkspaces
-
-                    SpecialWorkspaces {
-                        id: specialWorkspacesInner
-                        anchors.left: parent.left
-                        anchors.leftMargin: Appearance.padding.normal
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
-                }
                 Item {
                     Layout.fillWidth: true  // Takes all available space
                 }

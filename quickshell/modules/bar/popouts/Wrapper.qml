@@ -12,6 +12,7 @@ Item {
     property alias currentCenter: content.currentCenter
     property alias hasCurrent: content.hasCurrent
     property alias currentWorkspace: content.currentWorkspace
+    property alias currentSpecialWorkspace: content.currentSpecialWorkspace
 
     visible: width > 0 && height > 0
 

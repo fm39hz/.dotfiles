@@ -71,22 +71,57 @@ Item {
         hoverEnabled: true
 
         onPressed: event => {
-            const ws = layout.childAt(event.x, event.y).index + root.groupOffset + 1;
-            if (Hyprland.activeWsId !== ws)
-                Hyprland.dispatch(`workspace ${ws}`);
+            const pos = mapToItem(layout, event.x, event.y);
+            const child = layout.childAt(pos.x, pos.y);
+            if (child && child.isWorkspace) {
+                const ws = child.index + root.groupOffset + 1;
+                if (Hyprland.activeWsId !== ws)
+                    Hyprland.dispatch(`workspace ${ws}`);
+            }
         }
 
         onEntered: event => {
-            const child = layout.childAt(event.x, event.y);
+            const pos = mapToItem(layout, event.x, event.y);
+            if (!pos) {
+                console.log("Workspaces onEntered: mapToItem returned null, using direct coords");
+                // Fallback to direct coordinates if mapping fails
+                const child = layout.childAt(event.x, event.y);
+                if (child && child.isWorkspace) {
+                    root.hoveredWorkspace = child.index + root.groupOffset + 1;
+                } else {
+                    root.hoveredWorkspace = -1;
+                }
+                return;
+            }
+            console.log("Workspaces onEntered: event.x=" + event.x + " event.y=" + event.y + " mapped.x=" + pos.x + " mapped.y=" + pos.y);
+            const child = layout.childAt(pos.x, pos.y);
+            console.log("Workspaces onEntered: child=" + child + " isWorkspace=" + (child ? child.isWorkspace : "null"));
             if (child && child.isWorkspace) {
+                console.log("Workspaces onEntered: Setting hoveredWorkspace to " + (child.index + root.groupOffset + 1));
                 root.hoveredWorkspace = child.index + root.groupOffset + 1;
+            } else {
+                console.log("Workspaces onEntered: Resetting hoveredWorkspace to -1");
+                root.hoveredWorkspace = -1;
             }
         }
 
         onPositionChanged: event => {
-            const child = layout.childAt(event.x, event.y);
+            const pos = mapToItem(layout, event.x, event.y);
+            if (!pos) {
+                // Fallback to direct coordinates if mapping fails
+                const child = layout.childAt(event.x, event.y);
+                if (child && child.isWorkspace) {
+                    root.hoveredWorkspace = child.index + root.groupOffset + 1;
+                } else {
+                    root.hoveredWorkspace = -1;
+                }
+                return;
+            }
+            const child = layout.childAt(pos.x, pos.y);
             if (child && child.isWorkspace) {
                 root.hoveredWorkspace = child.index + root.groupOffset + 1;
+            } else {
+                root.hoveredWorkspace = -1;
             }
         }
 

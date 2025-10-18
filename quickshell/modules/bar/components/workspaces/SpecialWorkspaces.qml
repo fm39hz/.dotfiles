@@ -33,17 +33,13 @@ Item {
 
     implicitWidth: hasSpecialWorkspaces ? layout.implicitWidth : 0
     implicitHeight: layout.implicitHeight
-    width: implicitWidth
-    height: implicitHeight
 
     visible: hasSpecialWorkspaces
 
     RowLayout {
         id: layout
 
-        anchors.fill: parent
         spacing: Appearance.spacing.small
-        visible: root.hasSpecialWorkspaces
 
         Repeater {
             model: root.specialWorkspaces
@@ -52,6 +48,7 @@ Item {
                 id: specialWorkspaceItem
 
                 required property var modelData
+                readonly property bool isSpecialWorkspace: true // Flag for finding special workspace children
 
                 Layout.preferredWidth: specialText.implicitWidth + Appearance.padding.small * 2
                 Layout.preferredHeight: Config.bar.sizes.innerHeight
@@ -101,23 +98,47 @@ Item {
         hoverEnabled: true
 
         onPressed: event => {
-            const child = layout.childAt(event.x, event.y);
-            if (child && child.modelData) {
-                // Toggle the special workspace
+            const pos = mapToItem(layout, event.x, event.y);
+            const child = layout.childAt(pos.x, pos.y);
+            if (child && child.isSpecialWorkspace) {
                 Hyprland.dispatch(`togglespecialworkspace ${child.modelData.shortName}`);
             }
         }
 
         onEntered: event => {
-            const child = layout.childAt(event.x, event.y);
-            if (child && child.modelData) {
+            const pos = mapToItem(layout, event.x, event.y);
+            if (!pos) {
+                // Fallback to direct coordinates if mapping fails
+                const child = layout.childAt(event.x, event.y);
+                if (child && child.isSpecialWorkspace) {
+                    root.hoveredSpecialWorkspace = child.modelData.name;
+                } else {
+                    root.hoveredSpecialWorkspace = "";
+                }
+                return;
+            }
+            const child = layout.childAt(pos.x, pos.y);
+            if (child && child.isSpecialWorkspace) {
                 root.hoveredSpecialWorkspace = child.modelData.name;
+            } else {
+                root.hoveredSpecialWorkspace = "";
             }
         }
 
         onPositionChanged: event => {
-            const child = layout.childAt(event.x, event.y);
-            if (child && child.modelData) {
+            const pos = mapToItem(layout, event.x, event.y);
+            if (!pos) {
+                // Fallback to direct coordinates if mapping fails
+                const child = layout.childAt(event.x, event.y);
+                if (child && child.isSpecialWorkspace) {
+                    root.hoveredSpecialWorkspace = child.modelData.name;
+                } else {
+                    root.hoveredSpecialWorkspace = "";
+                }
+                return;
+            }
+            const child = layout.childAt(pos.x, pos.y);
+            if (child && child.isSpecialWorkspace) {
                 root.hoveredSpecialWorkspace = child.modelData.name;
             } else {
                 root.hoveredSpecialWorkspace = "";
