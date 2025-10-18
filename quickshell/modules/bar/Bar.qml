@@ -162,8 +162,8 @@ Item {
             id: gridLayout
             
             anchors.fill: parent
-            anchors.leftMargin: 18
-            anchors.rightMargin: 18
+            anchors.leftMargin: 16
+            anchors.rightMargin: 16
             anchors.bottomMargin: 8
             columns: 3
             columnSpacing: 12
@@ -291,10 +291,11 @@ Item {
 
             // RIGHT SECTION: Tray + System Status + Power
             RowLayout {
-                Layout.column: 2
-                Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                Layout.column: 3
+                // Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 Layout.preferredWidth: gridLayout.sideWidth
                 Layout.maximumWidth: gridLayout.sideWidth
+                anchors.right: parent.right
                 spacing: 8
                 
                 // FLEX-END: Add spacer to push items to the right edge
@@ -311,17 +312,13 @@ Item {
                     
                     Tray {
                         id: tray
-                        anchors.centerIn: parent
                     }
                 }
 
-                // Item {
-                //     Layout.fillWidth: true  // Takes all available space
-                // }
                 // System Status Icons
                 StyledRect {
                     id: statusIcons
-                    Layout.preferredWidth: tray.implicitWidth
+                    Layout.preferredWidth: statusIconsInner.implicitWidth
                     Layout.preferredHeight: child.implicitHeight
 
                     radius: Appearance.rounding.full
