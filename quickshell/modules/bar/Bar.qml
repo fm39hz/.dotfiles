@@ -25,15 +25,15 @@ Item {
         const tw = tray.implicitWidth;
         const trayItems = tray.items;
 
-        // const statusPos = statusIcons.mapToItem(child, 0, 0);
-        // const n = statusIconsInner.network;
-        // const nx = statusPos.x + statusIconsInner.x + n.x - spacing / 2;
-        //
-        // const bls = statusPos.x + statusIconsInner.x + statusIconsInner.bs - spacing / 2;
-        // const ble = statusPos.x + statusIconsInner.x + statusIconsInner.be + spacing / 2;
-        //
-        // const b = statusIconsInner.battery;
-        // const bx = statusPos.x + statusIconsInner.x + b.x - spacing / 2;
+        const statusPos = statusIcons.mapToItem(child, 0, 0);
+        const n = statusIconsInner.network;
+        const nx = statusPos.x + statusIconsInner.x + n.x - spacing / 2;
+
+        const bls = statusPos.x + statusIconsInner.x + statusIconsInner.bs - spacing / 2;
+        const ble = statusPos.x + statusIconsInner.x + statusIconsInner.be + spacing / 2;
+
+        const b = statusIconsInner.battery;
+        const bx = statusPos.x + statusIconsInner.x + b.x - spacing / 2;
 
         if (x >= awx && x <= awx + aw.implicitWidth) {
             popouts.currentName = "activewindow";
@@ -49,27 +49,27 @@ Item {
                 return pos.x + item.x + item.implicitWidth / 2;
             });
             popouts.hasCurrent = true;
-        // } else if (x >= nx && x <= nx + n.implicitWidth + spacing) {
-        //     popouts.currentName = "network";
-        //     popouts.currentCenter = Qt.binding(() => {
-        //         const pos = statusIcons.mapToItem(child, 0, 0);
-        //         return pos.x + statusIconsInner.x + n.x + n.implicitWidth / 2;
-        //     });
-        //     popouts.hasCurrent = true;
-        // } else if (x >= bls && x <= ble) {
-        //     popouts.currentName = "bluetooth";
-        //     popouts.currentCenter = Qt.binding(() => {
-        //         const pos = statusIcons.mapToItem(child, 0, 0);
-        //         return pos.x + statusIconsInner.x + statusIconsInner.bs + (statusIconsInner.be - statusIconsInner.bs) / 2;
-        //     });
-        //     popouts.hasCurrent = true;
-        // } else if (x >= bx && x <= bx + b.implicitWidth + spacing) {
-        //     popouts.currentName = "battery";
-        //     popouts.currentCenter = Qt.binding(() => {
-        //         const pos = statusIcons.mapToItem(child, 0, 0);
-        //         return pos.x + statusIconsInner.x + b.x + b.implicitWidth / 2;
-        //     });
-        //     popouts.hasCurrent = true;
+        } else if (x >= nx && x <= nx + n.implicitWidth + spacing) {
+            popouts.currentName = "network";
+            popouts.currentCenter = Qt.binding(() => {
+                const pos = statusIcons.mapToItem(child, 0, 0);
+                return pos.x + statusIconsInner.x + n.x + n.implicitWidth / 2;
+            });
+            popouts.hasCurrent = true;
+        } else if (x >= bls && x <= ble) {
+            popouts.currentName = "bluetooth";
+            popouts.currentCenter = Qt.binding(() => {
+                const pos = statusIcons.mapToItem(child, 0, 0);
+                return pos.x + statusIconsInner.x + statusIconsInner.bs + (statusIconsInner.be - statusIconsInner.bs) / 2;
+            });
+            popouts.hasCurrent = true;
+        } else if (x >= bx && x <= bx + b.implicitWidth + spacing) {
+            popouts.currentName = "battery";
+            popouts.currentCenter = Qt.binding(() => {
+                const pos = statusIcons.mapToItem(child, 0, 0);
+                return pos.x + statusIconsInner.x + b.x + b.implicitWidth / 2;
+            });
+            popouts.hasCurrent = true;
         } else {
             popouts.hasCurrent = false;
         }
@@ -237,21 +237,21 @@ Item {
                 //     Layout.fillWidth: true  // Takes all available space
                 // }
                 // System Status Icons
-                // StyledRect {
-                //     id: statusIcons
-                //
-                //     Layout.preferredHeight: child.implicitHeight
-                //
-                //     radius: Appearance.rounding.full
-                //     color: Colours.palette.m3surfaceContainer
-                //
-                //     // implicitWidth: statusIconsInner.implicitWidth + Appearance.padding.normal * 2
-                //
-                //     StatusIcons {
-                //         id: statusIconsInner
-                //         anchors.centerIn: parent
-                //     }
-                // }
+                StyledRect {
+                    id: statusIcons
+                    Layout.preferredWidth: tray.implicitWidth
+                    Layout.preferredHeight: child.implicitHeight
+
+                    radius: Appearance.rounding.full
+                    color: Colours.palette.m3surfaceContainer
+
+                    // implicitWidth: statusIconsInner.implicitWidth + Appearance.padding.normal * 2
+
+                    StatusIcons {
+                        id: statusIconsInner
+                        anchors.centerIn: parent
+                    }
+                }
 
                 // Power Menu - ends at right edge
                 Power {
