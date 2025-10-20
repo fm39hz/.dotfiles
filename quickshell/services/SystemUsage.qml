@@ -21,6 +21,8 @@ Singleton {
     property int lastCpuIdle
     property int lastCpuTotal
 
+    property string gpuVendor: ""
+
     function formatKib(kib: int): var {
         const mib = 1024;
         const gib = 1024 ** 2;
@@ -175,21 +177,54 @@ Singleton {
     }
 
     Process {
-        id: gpuUsage
-        running: false
-        command: ["sh", "-c", `
-            case "$(lspci | grep -E 'VGA|3D')" in
-                *NVIDIA*) nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits 2>/dev/null || echo 0 ;;
-                *AMD*|*ATI*) cat /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null || echo 0 ;;
-                *Intel*) cat /sys/class/drm/card0/gt_busy_percent 2>/dev/null || echo 0 ;;
-                *) echo 0 ;;
-            esac
-        `]
+        id: gpuDetector
+        running: true
+        command: ["bash", "-c", "lspci | grep -E 'VGA|3D' | tr '[:upper:]' '[:lower:]'"]
         stdout: StdioCollector {
             onStreamFinished: {
-                const vals = text.trim().split(/\s+/).map(v => parseInt(v, 10)).filter(v => !isNaN(v));
-                const avg = vals.length ? vals.reduce((a, b) => a + b) / vals.length : 0;
-                root.gpuPerc = avg / 100;
+                const out = text.trim();
+                if (out.includes('nvidia')) {
+                    root.gpuVendor = 'nvidia';
+                    gpuUsage.command = ["nvidia-smi", "--query-gpu=utilization.gpu", "--format=csv,noheader,nounits"];
+                    gpuTemp.command = ["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"];
+                } else if (out.includes('amd') || out.includes('ati')) {
+                    root.gpuVendor = 'amd';
+                    gpuUsage.command = ["cat", "/sys/class/drm/card0/device/gpu_busy_percent"];
+                    gpuTemp.command = ["bash", "-c", "cat /sys/class/hwmon/hwmon*/temp*_input 2>/dev/null | head -n1"];
+                } else if (out.includes('intel')) {
+                    root.gpuVendor = 'intel';
+                    gpuUsage.command = ["cat", "/sys/class/drm/card0/gt_busy_percent"];
+                    gpuTemp.command = ["bash", "-c", "cat /sys/class/thermal/thermal_zone*/temp 2>/dev/null | head -n1"];
+                } else {
+                    root.gpuVendor = 'unknown';
+                    gpuUsage.command = ["echo", "0"];
+                    gpuTemp.command = ["echo", "0"];
+                }
+
+                // Now start periodic GPU polling
+                gpuPollTimer.running = true;
+            }
+        }
+    }
+
+    Timer {
+        id: gpuPollTimer
+        running: false
+        interval: 3000
+        repeat: true
+        onTriggered: {
+            gpuUsage.running = true;
+            gpuTemp.running = true;
+        }
+    }
+
+    Process {
+        id: gpuUsage
+        running: false
+        stdout: StdioCollector {
+            onStreamFinished: {
+                const val = parseFloat(text.trim());
+                root.gpuPerc = isNaN(val) ? 0 : val / 100;
             }
         }
     }
@@ -197,18 +232,10 @@ Singleton {
     Process {
         id: gpuTemp
         running: false
-        command: ["sh", "-c", `
-            case "$(lspci | grep -E 'VGA|3D')" in
-                *NVIDIA*) nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 0 ;;
-                *AMD*|*ATI*) sensors | grep -A1 amdgpu | grep -Eo '[0-9]+\\.[0-9]+' | head -n1 || echo 0 ;;
-                *Intel*) sensors | grep -A1 'Package id 0' | grep -Eo '[0-9]+\\.[0-9]+' | head -n1 || echo 0 ;;
-                *) echo 0 ;;
-            esac
-        `]
         stdout: StdioCollector {
             onStreamFinished: {
                 const val = parseFloat(text.trim());
-                root.gpuTemp = isNaN(val) ? 0 : val;
+                root.gpuTemp = isNaN(val) ? 0 : val > 1000 ? val / 1000 : val;
             }
         }
     }
