@@ -151,45 +151,64 @@ Singleton {
     }
 
     Process {
-        id: gpuUsage
-
+        id: gpuInfoDetector
         running: true
-        command: ["sh", "-c", "cat /sys/class/drm/card*/device/gpu_busy_percent"]
+        command: ["sh", "-c", "lspci | grep -E 'VGA|3D' | tr '[:upper:]' '[:lower:]'"]
         stdout: StdioCollector {
             onStreamFinished: {
-                const percs = text.trim().split("\n");
-                const sum = percs.reduce((acc, d) => acc + parseInt(d, 10), 0);
-                root.gpuPerc = sum / percs.length / 100;
+                const textLower = text.trim();
+
+                if (textLower.includes('nvidia')) {
+                    root.gpuVendor = 'nvidia';
+                } else if (textLower.includes('amd') || textLower.includes('ati')) {
+                    root.gpuVendor = 'amd';
+                } else if (textLower.includes('intel')) {
+                    root.gpuVendor = 'intel';
+                } else {
+                    root.gpuVendor = 'unknown';
+                }
+
+                gpuUsage.running = true;
+                gpuTemp.running = true;
+            }
+        }
+    }
+
+    Process {
+        id: gpuUsage
+        running: false
+        command: ["sh", "-c", `
+            case "$(lspci | grep -E 'VGA|3D')" in
+                *NVIDIA*) nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits 2>/dev/null || echo 0 ;;
+                *AMD*|*ATI*) cat /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null || echo 0 ;;
+                *Intel*) cat /sys/class/drm/card0/gt_busy_percent 2>/dev/null || echo 0 ;;
+                *) echo 0 ;;
+            esac
+        `]
+        stdout: StdioCollector {
+            onStreamFinished: {
+                const vals = text.trim().split(/\s+/).map(v => parseInt(v, 10)).filter(v => !isNaN(v));
+                const avg = vals.length ? vals.reduce((a, b) => a + b) / vals.length : 0;
+                root.gpuPerc = avg / 100;
             }
         }
     }
 
     Process {
         id: gpuTemp
-
-        running: true
-        command: ["sensors"]
+        running: false
+        command: ["sh", "-c", `
+            case "$(lspci | grep -E 'VGA|3D')" in
+                *NVIDIA*) nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 0 ;;
+                *AMD*|*ATI*) sensors | grep -A1 amdgpu | grep -Eo '[0-9]+\\.[0-9]+' | head -n1 || echo 0 ;;
+                *Intel*) sensors | grep -A1 'Package id 0' | grep -Eo '[0-9]+\\.[0-9]+' | head -n1 || echo 0 ;;
+                *) echo 0 ;;
+            esac
+        `]
         stdout: StdioCollector {
             onStreamFinished: {
-                let eligible = false;
-                let sum = 0;
-                let count = 0;
-
-                for (const line of text.trim().split("\n")) {
-                    if (line === "Adapter: PCI adapter")
-                        eligible = true;
-                    else if (line === "")
-                        eligible = false;
-                    else if (eligible) {
-                        const match = line.match(/^(temp[0-9]+|GPU core|edge)+:\s+\+([0-9]+\.[0-9]+)°C/);
-                        if (match) {
-                            sum += parseFloat(match[2]);
-                            count++;
-                        }
-                    }
-                }
-
-                root.gpuTemp = count > 0 ? sum / count : 0;
+                const val = parseFloat(text.trim());
+                root.gpuTemp = isNaN(val) ? 0 : val;
             }
         }
     }
