@@ -191,7 +191,7 @@ Item {
         }
 
         Control {
-            icon: Players.active?.isPlaying ? "play" : "play_arrow"
+            icon: Players.active?.isPlaying ? "pause" : "play_arrow"
             canUse: Players.active?.canTogglePlaying ?? false
 
             function onClicked(): void {
