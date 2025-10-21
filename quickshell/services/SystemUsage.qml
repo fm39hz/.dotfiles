@@ -11,6 +11,7 @@ Singleton {
     property real cpuTemp
     property real gpuPerc
     property real gpuTemp
+    property string gpuVendor: ""
     property int memUsed
     property int memTotal
     readonly property real memPerc: memTotal > 0 ? memUsed / memTotal : 0
@@ -21,7 +22,7 @@ Singleton {
     property int lastCpuIdle
     property int lastCpuTotal
 
-    property string gpuVendor: ""
+    property int refCount
 
     function formatKib(kib: int): var {
         const mib = 1024;
@@ -50,16 +51,16 @@ Singleton {
     }
 
     Timer {
-        running: true
+        running: root.refCount > 0
         interval: 3000
         repeat: true
+        triggeredOnStart: true
         onTriggered: {
             stat.reload();
             meminfo.reload();
             storage.running = true;
-            cpuTemp.running = true;
             gpuUsage.running = true;
-            gpuTemp.running = true;
+            sensors.running = true;
         }
     }
 
@@ -151,6 +152,7 @@ Singleton {
             }
         }
     }
+
 
     Process {
         id: gpuInfoDetector
