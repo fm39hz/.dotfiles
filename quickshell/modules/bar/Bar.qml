@@ -168,7 +168,6 @@ Item {
             columns: 3
             columnSpacing: 12
 
-            // Calculate exact widths to ensure perfect centering
             readonly property real totalWidth: width
             readonly property real centerWidth: 240
             readonly property real remainingWidth: totalWidth - centerWidth - (columnSpacing * 2)
@@ -182,15 +181,13 @@ Item {
                 Layout.maximumWidth: gridLayout.sideWidth
                 
                 // FLEX-START: Items start from left edge (default behavior)
-
-                // OS Icon / Launcher - starts from left edge
                 OsIcon {
                     id: osIcon
                     
                     StateLayer {
                         anchors.centerIn: parent
-                        implicitWidth: parent.implicitHeight + Appearance.padding.small * 2
-                        implicitHeight: implicitWidth
+                        implicitWidth: parent.implicitWidth
+                        implicitHeight: implicitHeight
                         radius: Appearance.rounding.full
 
                         function onClicked(): void {
@@ -201,7 +198,7 @@ Item {
                 }
 
                 Item {
-                    Layout.fillWidth: true  // Takes all available space
+                  Layout.minimumWidth: osIcon.implicitWidth * 8
                 }
 
                 StyledRect {
@@ -209,7 +206,6 @@ Item {
 
                     Layout.fillWidth: true
                     Layout.preferredWidth: implicitWidth
-                    Layout.maximumWidth: 300
                     Layout.preferredHeight: implicitHeight
 
                     radius: Appearance.rounding.full
@@ -244,17 +240,7 @@ Item {
                 }
 
                 Item {
-                    Layout.fillWidth: true  // Takes all available space
-                }
-
-                // Window Title
-                ActiveWindow {
-                    id: activeWindow
-
-                    Layout.fillWidth: true
-                    Layout.maximumWidth: 300
-
-                    monitor: Brightness.getMonitorForScreen(root.screen)
+                  Layout.fillWidth: true
                 }
             }
 
@@ -290,19 +276,21 @@ Item {
             // RIGHT SECTION: Tray + System Status + Power
             RowLayout {
                 Layout.column: 3
-                // Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                 Layout.preferredWidth: gridLayout.sideWidth
                 Layout.maximumWidth: gridLayout.sideWidth
                 anchors.right: parent.right
                 spacing: 8
                 
                 // FLEX-END: Add spacer to push items to the right edge
-                Item {
-                    Layout.fillWidth: true  // Takes all available space
+                ActiveWindow {
+                    id: activeWindow
+
+                    Layout.fillWidth: true
+
+                    monitor: Brightness.getMonitorForScreen(root.screen)
                 }
 
 
-                // System Tray - pushed to right
                 Item {
                     id: trayContainer
                     Layout.preferredWidth: tray.implicitWidth
@@ -313,7 +301,6 @@ Item {
                     }
                 }
 
-                // System Status Icons
                 StyledRect {
                     id: statusIcons
                     Layout.preferredWidth: statusIconsInner.implicitWidth
@@ -322,15 +309,12 @@ Item {
                     radius: Appearance.rounding.full
                     color: Colours.palette.m3surfaceContainer
 
-                    // implicitWidth: statusIconsInner.implicitWidth + Appearance.padding.normal * 2
-
                     StatusIcons {
                         id: statusIconsInner
                         anchors.centerIn: parent
                     }
                 }
 
-                // Power Menu - ends at right edge
                 Power {
                     id: power
                 }
