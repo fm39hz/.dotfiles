@@ -1,3 +1,4 @@
 export XDG_SESSION_TYPE="wayland"
+export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1:/dev/dri/card2"
 export XDG_SESSION_DESKTOP="hyprland"
 export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'

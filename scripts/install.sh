@@ -36,8 +36,9 @@ paru -S --needed --noconfirm \
     grimblast-git \
     gruvbox-dark-icons-gtk \
     gui-for-singbox \
+    how-cli-bin \
+    http-parser \
     hyprland-protocols-git \
-    ibus-bamboo \
     laigter \
     larksuite-bin \
     libastal-4-git \
@@ -72,6 +73,7 @@ paru -S --needed --noconfirm \
     neovim-nightly-bin \
     nitch-git \
     nmgui-bin \
+    notion-app-enhanced \
     nouveau-fw \
     paru-bin \
     paru-debug \
@@ -92,7 +94,6 @@ paru -S --needed --noconfirm \
     sing-box-bin \
     spicetify-cli \
     spotify \
-    spotx-git \
     thorium-browser-bin \
     todoist-appimage \
     tofi \
@@ -102,6 +103,7 @@ paru -S --needed --noconfirm \
     vesktop-bin \
     visual-studio-code-bin \
     wlogout \
+    xarchiver-gtk2 \
     yay-bin \
     zen-browser-bin \
 

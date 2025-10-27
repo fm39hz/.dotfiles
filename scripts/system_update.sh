@@ -23,28 +23,6 @@ pacman -Qqm > $today/aurandlocal.lst
 # 2) Official repo only
 pacman -Qqe | grep -vxF -f $today/aurandlocal.lst > $today/main.lst
 
-# Now generate packages.json as before
-set json_path ~/.config/hypr/com.fm39hz.everland/pkginst/packages.json
-mkdir -p (dirname $json_path)
-
-echo '{' > $json_path
-echo '    "packages": [' >> $json_path
-
-for pkg in (cat $today/main.lst)
-    echo "        { \"package\": \"$pkg\" }," >> $json_path
-end
-
-# Remove trailing comma from last item
-sed -i '$ s/},/}/' $json_path
-
-echo '    ],' >> $json_path
-echo '    "options": []' >> $json_path
-echo '}' >> $json_path
-
-echo "packages.json generated at $json_path"
-cd ~/.config/hypr/ || exit
-zip -r ~/.config/com.fm39hz.everland.pkginst com.fm39hz.everland
-
 # Update install.sh with current AUR packages
 set install_script ~/.config/scripts/install.sh
 echo "Updating install.sh with current AUR packages"
