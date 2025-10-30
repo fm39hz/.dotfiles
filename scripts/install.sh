@@ -35,6 +35,8 @@ paru -S --needed --noconfirm \
     gpu-screen-recorder \
     grimblast-git \
     gruvbox-dark-icons-gtk \
+    gtk-engine-murrine \
+    gtk2 \
     gui-for-singbox \
     how-cli-bin \
     http-parser \
