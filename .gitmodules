@@ -10,3 +10,6 @@
 [submodule "spicetify/Themes"]
 	path = spicetify/Themes
 	url = https://github.com/spicetify/spicetify-themes.git
+[submodule "ghostty/cursor-shaders"]
+	path = ghostty/cursor-shaders
+	url = https://github.com/sahaj-b/ghostty-cursor-shaders
