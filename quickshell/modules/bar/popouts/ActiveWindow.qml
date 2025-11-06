@@ -15,7 +15,7 @@ Item {
         ? Hyprland.clients.filter(c => c.workspace?.id === workspaceId)
         : []
 
-    implicitWidth: workspaceClients.length > 0 ? child.implicitWidth : -Appearance.padding.large * 2
+    implicitWidth: child.implicitWidth
     implicitHeight: child.implicitHeight
 
     Column {
@@ -25,14 +25,33 @@ Item {
         spacing: Appearance.spacing.normal
 
         StyledText {
-            text: `Workspace ${root.workspaceId} (${root.workspaceClients.length} window${root.workspaceClients.length === 1 ? "" : "s"})`
+            text: `Workspace ${root.workspaceId}`
             font.pointSize: Appearance.font.size.small
             color: Colours.palette.m3onSurfaceVariant
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }
 
+        Row {
+            visible: root.workspaceClients.length === 0
+            spacing: Appearance.spacing.normal
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            IconImage {
+                implicitSize: 24
+                source: "dialog-question"
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            StyledText {
+                text: qsTr("No Active Windows")
+                font.pointSize: Appearance.font.size.normal
+                anchors.verticalCenter: parent.verticalCenter
+            }
+        }
+
         Repeater {
+            visible: root.workspaceClients.length > 0
             model: ScriptModel {
                 values: root.workspaceClients
             }

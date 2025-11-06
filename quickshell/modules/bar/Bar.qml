@@ -185,7 +185,7 @@ Item {
                     
                     StateLayer {
                         anchors.centerIn: parent
-                        implicitWidth: parent.implicitWidth
+                        implicitWidth: implicitHeight
                         implicitHeight: implicitHeight
                         radius: Appearance.rounding.full
 
