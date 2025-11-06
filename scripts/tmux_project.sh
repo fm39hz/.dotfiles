@@ -40,49 +40,95 @@ detect_project_type() {
   # Specific project type detection (order matters - most specific first)
 
   # Game Development
-  [ -f "$path/project.godot" ] && echo "godot" && return
-  [ -f "$path/ProjectSettings/ProjectVersion.txt" ] && echo "unity" && return
+  [ -f "$path/project.godot" ] && {
+    echo "godot"
+    return
+  }
+  [ -f "$path/ProjectSettings/ProjectVersion.txt" ] && {
+    echo "unity"
+    return
+  }
 
   # Mobile Development
-  [ -f "$path/pubspec.yaml" ] && echo "flutter" && return
-  [ -f "$path/ios/Podfile" ] && [ -f "$path/android/build.gradle" ] && echo "reactnative" && return
+  [ -f "$path/pubspec.yaml" ] && {
+    echo "flutter"
+    return
+  }
+  [ -f "$path/ios/Podfile" ] && [ -f "$path/android/build.gradle" ] && {
+    echo "reactnative"
+    return
+  }
 
   # .NET Family
-  if ls "$path"/*.csproj >/dev/null 2>&1 || ls "$path"/*.sln >/dev/null 2>&1; then
+  shopt -s nullglob
+  local csprojs=("$path"/*.csproj)
+  local slns=("$path"/*.sln)
+  shopt -u nullglob
+  if [ ${#csprojs[@]} -gt 0 ] || [ ${#slns[@]} -gt 0 ]; then
     echo "dotnet" && return
   fi
-  [ -f "$path/project.json" ] && grep -q "Microsoft" "$path/project.json" && echo "dotnet" && return
+  [ -f "$path/project.json" ] && [[ $(<"$path/project.json") == *"Microsoft"* ]] && {
+    echo "dotnet"
+    return
+  }
 
   # Web Frameworks (check package.json content for specifics)
   if [ -f "$path/package.json" ]; then
-    if grep -q '"next"' "$path/package.json"; then
-      echo "nextjs" && return
-    elif grep -q '"react"' "$path/package.json" && grep -q '"@types/react"' "$path/package.json"; then
-      echo "react" && return
-    elif grep -q '"vue"' "$path/package.json"; then
-      echo "vue" && return
-    elif grep -q '"@angular"' "$path/package.json"; then
-      echo "angular" && return
-    elif grep -q '"svelte"' "$path/package.json"; then
-      echo "svelte" && return
-    elif grep -q '"electron"' "$path/package.json"; then
-      echo "electron" && return
-    else
-      echo "node" && return
-    fi
+    local pkg_content
+    pkg_content=$(<"$path/package.json")
+    case "$pkg_content" in
+    *'"next"'*)
+      echo "nextjs"
+      return
+      ;;
+    *'"react"'*'"@types/react"'* | *'"@types/react"'*'"react"'*)
+      echo "react"
+      return
+      ;;
+    *'"vue"'*)
+      echo "vue"
+      return
+      ;;
+    *'"@angular"'*)
+      echo "angular"
+      return
+      ;;
+    *'"svelte"'*)
+      echo "svelte"
+      return
+      ;;
+    *'"electron"'*)
+      echo "electron"
+      return
+      ;;
+    *)
+      echo "node"
+      return
+      ;;
+    esac
   fi
 
   # Languages
-  [ -f "$path/Cargo.toml" ] && echo "rust" && return
-  [ -f "$path/go.mod" ] && echo "go" && return
+  [ -f "$path/Cargo.toml" ] && {
+    echo "rust"
+    return
+  }
+  [ -f "$path/go.mod" ] && {
+    echo "go"
+    return
+  }
 
   # Python (check for specific frameworks)
-  if [ -f "$path/pyproject.toml" ] || [ -f "$path/requirements.txt" ] || [ -f "$path/setup.py" ]; then
-    if [ -f "$path/manage.py" ] || grep -q "django" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+  local py_req_files=()
+  [ -f "$path/pyproject.toml" ] && py_req_files+=("$path/pyproject.toml")
+  [ -f "$path/requirements.txt" ] && py_req_files+=("$path/requirements.txt")
+
+  if [ ${#py_req_files[@]} -gt 0 ] || [ -f "$path/setup.py" ]; then
+    if [ -f "$path/manage.py" ] || ([ ${#py_req_files[@]} -gt 0 ] && grep -q "django" "${py_req_files[@]}" 2>/dev/null); then
       echo "django" && return
-    elif grep -q "flask" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+    elif ([ ${#py_req_files[@]} -gt 0 ] && grep -q "flask" "${py_req_files[@]}" 2>/dev/null); then
       echo "flask" && return
-    elif grep -q "fastapi" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+    elif ([ ${#py_req_files[@]} -gt 0 ] && grep -q "fastapi" "${py_req_files[@]}" 2>/dev/null); then
       echo "fastapi" && return
     else
       echo "python" && return
@@ -90,14 +136,32 @@ detect_project_type() {
   fi
 
   # Other Languages
-  [ -f "$path/composer.json" ] && echo "php" && return
-  [ -f "$path/Gemfile" ] && echo "ruby" && return
-  [ -f "$path/pom.xml" ] && echo "maven" && return
-  [ -f "$path/build.gradle" ] || [ -f "$path/build.gradle.kts" ] && echo "gradle" && return
+  [ -f "$path/composer.json" ] && {
+    echo "php"
+    return
+  }
+  [ -f "$path/Gemfile" ] && {
+    echo "ruby"
+    return
+  }
+  [ -f "$path/pom.xml" ] && {
+    echo "maven"
+    return
+  }
+  [ -f "$path/build.gradle" ] || [ -f "$path/build.gradle.kts" ] && {
+    echo "gradle"
+    return
+  }
 
   # Build Systems
-  [ -f "$path/CMakeLists.txt" ] && echo "cmake" && return
-  [ -f "$path/Makefile" ] && echo "make" && return
+  [ -f "$path/CMakeLists.txt" ] && {
+    echo "cmake"
+    return
+  }
+  [ -f "$path/Makefile" ] && {
+    echo "make"
+    return
+  }
 
   # Configuration/Dotfiles
   if [[ "$(basename "$path")" =~ ^\..*config.*|dotfiles?$ ]] || [ -d "$path/.config" ]; then
@@ -105,14 +169,32 @@ detect_project_type() {
   fi
 
   # Infrastructure
-  [ -f "$path/docker-compose.yml" ] || [ -f "$path/docker-compose.yaml" ] && echo "docker" && return
-  [ -f "$path/Dockerfile" ] && echo "docker" && return
-  [ -f "$path/terraform.tf" ] || [ -f "$path/main.tf" ] && echo "terraform" && return
-  [ -f "$path/ansible.cfg" ] || [ -d "$path/playbooks" ] && echo "ansible" && return
+  [ -f "$path/docker-compose.yml" ] || [ -f "$path/docker-compose.yaml" ] && {
+    echo "docker"
+    return
+  }
+  [ -f "$path/Dockerfile" ] && {
+    echo "docker"
+    return
+  }
+  [ -f "$path/terraform.tf" ] || [ -f "$path/main.tf" ] && {
+    echo "terraform"
+    return
+  }
+  [ -f "$path/ansible.cfg" ] || [ -d "$path/playbooks" ] && {
+    echo "ansible"
+    return
+  }
 
   # Documentation
-  [ -f "$path/mkdocs.yml" ] && echo "docs" && return
-  [ -f "$path/Gemfile" ] && grep -q "jekyll" "$path/Gemfile" && echo "jekyll" && return
+  [ -f "$path/mkdocs.yml" ] && {
+    echo "docs"
+    return
+  }
+  [ -f "$path/Gemfile" ] && grep -q "jekyll" "$path/Gemfile" && {
+    echo "jekyll"
+    return
+  }
 
   # Generic project detection (fallback)
   if git -C "$path" rev-parse --git-dir >/dev/null 2>&1 ||
@@ -129,12 +211,12 @@ detect_project_type() {
 # Generate session name with smart project-type prefix
 generate_session_name() {
   local project_root="$1"
+  # The second argument is an optional project_type to avoid re-detection.
+  local project_type=${2:-$(detect_project_type "$project_root")}
   local project_name
   project_name=$(basename "$project_root" | sed 's/^\.//')
   local base_name
   base_name=$(echo "$project_name" | tr '[:upper:]' '[:lower:]' | tr ' .' '-')
-  local project_type
-  project_type=$(detect_project_type "$project_root")
 
   if [ -n "$project_type" ]; then
     echo "$project_type-$base_name"
@@ -334,8 +416,8 @@ fi
 
 # If no query was passed, show session picker with option to create new
 PROJECT_ROOT=$(find_project_root "$(pwd)")
-SESSION_NAME=$(generate_session_name "$PROJECT_ROOT")
 PROJECT_TYPE=$(detect_project_type "$PROJECT_ROOT")
+SESSION_NAME=$(generate_session_name "$PROJECT_ROOT" "$PROJECT_TYPE")
 
 # Show session picker
 SELECTED=$(fzf_select_session "$SESSION_NAME")
