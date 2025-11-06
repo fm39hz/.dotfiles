@@ -80,12 +80,21 @@ Item {
 
         screen: root.screen
 
-        anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
-        anchors.horizontalCenterOffset: {
-            const center = root.popouts.currentCenter - Config.border.thickness;
-            const screenCenter = root.width / 2;
-            return center - screenCenter;
+        x: {
+            const center = popouts.currentCenter - Config.border.thickness;
+            const screenWidth = root.width;
+            const popoutWidth = popouts.width;
+
+            let newX = center - popoutWidth / 2;
+
+            if (newX < 0) {
+                newX = 0;
+            } else if (newX + popoutWidth > screenWidth) {
+                newX = screenWidth - popoutWidth;
+            }
+
+            return newX;
         }
     }
 }

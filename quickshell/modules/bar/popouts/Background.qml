@@ -8,6 +8,8 @@ ShapePath {
 
     required property Wrapper wrapper
     required property bool invertBottomRounding
+    readonly property bool fusedLeft: wrapper.fusedLeft
+    readonly property bool fusedRight: wrapper.fusedRight
     readonly property real rounding: Config.border.rounding
     readonly property bool flatten: wrapper.height < rounding * 2
     readonly property real roundingY: flatten ? wrapper.height / 2 : rounding
@@ -19,7 +21,7 @@ ShapePath {
     PathArc {
         relativeX: root.rounding
         relativeY: root.roundingY
-        radiusX: root.rounding
+        radiusX: root.fusedLeft ? 0 : root.rounding
         radiusY: Math.min(root.rounding, root.wrapper.height)
     }
 
@@ -31,7 +33,7 @@ ShapePath {
     PathArc {
         relativeX: root.rounding
         relativeY: root.roundingY
-        radiusX: root.rounding
+        radiusX: root.fusedLeft ? 0 : root.rounding
         radiusY: Math.min(root.rounding, root.wrapper.height)
         direction: PathArc.Counterclockwise
     }
@@ -44,7 +46,7 @@ ShapePath {
     PathArc {
         relativeX: root.rounding
         relativeY: -root.roundingY
-        radiusX: root.rounding
+        radiusX: root.fusedRight ? 0 : root.rounding
         radiusY: Math.min(root.rounding, root.wrapper.height)
         direction: PathArc.Counterclockwise
     }
@@ -57,7 +59,7 @@ ShapePath {
     PathArc {
         relativeX: root.rounding
         relativeY: -root.roundingY
-        radiusX: root.rounding
+        radiusX: root.fusedRight ? 0 : root.rounding
         radiusY: Math.min(root.rounding, root.wrapper.height)
     }
 

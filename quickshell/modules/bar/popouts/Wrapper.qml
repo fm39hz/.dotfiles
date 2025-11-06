@@ -14,6 +14,9 @@ Item {
     property alias currentWorkspace: content.currentWorkspace
     property alias currentSpecialWorkspace: content.currentSpecialWorkspace
 
+    readonly property bool fusedLeft: x <= 0
+    readonly property bool fusedRight: x + width >= parent.width
+
     visible: width > 0 && height > 0
 
     implicitWidth: content.implicitWidth
