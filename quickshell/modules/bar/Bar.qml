@@ -176,7 +176,6 @@ Item {
             // LEFT SECTION: OS Icon + Workspaces + Window Title
             RowLayout {
                 Layout.column: 0
-                Layout.alignment: Qt.AlignHLeft
                 Layout.preferredWidth: gridLayout.sideWidth
                 Layout.maximumWidth: gridLayout.sideWidth
                 
@@ -275,10 +274,9 @@ Item {
 
             // RIGHT SECTION: Tray + System Status + Power
             RowLayout {
-                Layout.column: 3
+                Layout.column: 2
                 Layout.preferredWidth: gridLayout.sideWidth
                 Layout.maximumWidth: gridLayout.sideWidth
-                anchors.right: parent.right
                 spacing: 8
                 
                 // FLEX-END: Add spacer to push items to the right edge

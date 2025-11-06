@@ -37,7 +37,7 @@ Singleton {
                         strength: parseInt(net[1]),
                         frequency: parseInt(net[2]),
                         ssid: net[3],
-                        bssid: net[4].replace(rep2, ":")
+                        // bssid: net[4].replace(rep2, ":")
                     };
                 });
                 const rNetworks = root.networks;
@@ -62,8 +62,8 @@ Singleton {
 
     component AccessPoint: QtObject {
         required property var lastIpcObject
-        readonly property string ssid: lastIpcObject.ssid
-        readonly property string bssid: lastIpcObject.bssid
+        // readonly property string ssid: lastIpcObject.ssid
+        // readonly property string bssid: lastIpcObject.bssid
         readonly property int strength: lastIpcObject.strength
         readonly property int frequency: lastIpcObject.frequency
         readonly property bool active: lastIpcObject.active
