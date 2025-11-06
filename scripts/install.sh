@@ -28,6 +28,7 @@ paru -S --needed --noconfirm \
     colloid-everforest-gtk-theme-git \
     devspace-bin \
     electron37-bin \
+    electron39-bin \
     everforest-icon-theme-git \
     flutter-bin \
     gnu-netcat \
