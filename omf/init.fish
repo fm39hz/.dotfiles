@@ -22,6 +22,7 @@ alias top "btop --utf-force"
 # alias tmn "tmux new -s"
 # alias tml "tmux ls"
 alias tmz "~/.config/scripts/zj_project.sh"
+alias tmx "~/.config/scripts/tmux_project.sh"
 alias ff fastfetch
 
 # Neovim aliases
