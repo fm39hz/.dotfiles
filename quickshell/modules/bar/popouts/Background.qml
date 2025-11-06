@@ -16,7 +16,6 @@ ShapePath {
     strokeWidth: -1
     fillColor: Config.border.colour
 
-    // Use EXACTLY the same path as Dashboard.Background since both are top-anchored
     PathArc {
         relativeX: root.rounding
         relativeY: root.roundingY
@@ -26,15 +25,15 @@ ShapePath {
 
     PathLine {
         relativeX: 0
-        relativeY: root.wrapper.height - root.roundingY * 2
+        relativeY: root.wrapper.height - (fusedLeft ? 0 : root.roundingY * 2)
     }
 
     PathArc {
         relativeX: root.rounding
-        relativeY: root.roundingY
+        relativeY: fusedLeft ? -root.roundingY : root.roundingY
         radiusX: root.rounding
         radiusY: root.rounding
-        direction: PathArc.Counterclockwise
+        direction: fusedLeft ? PathArc.Clockwise : PathArc.Counterclockwise
     }
 
     PathLine {
@@ -44,15 +43,15 @@ ShapePath {
 
     PathArc {
         relativeX: root.rounding
-        relativeY: -root.roundingY
+        relativeY: fusedRight ? root.roundingY : -root.roundingY
         radiusX: root.rounding
         radiusY: root.rounding
-        direction: PathArc.Counterclockwise
+        direction: fusedRight ? PathArc.Clockwise : PathArc.Counterclockwise
     }
 
     PathLine {
         relativeX: 0
-        relativeY: -(root.wrapper.height - root.roundingY * 2)
+        relativeY: -(root.wrapper.height - (fusedRight ? 0 : root.roundingY * 2))
     }
 
     PathArc {
