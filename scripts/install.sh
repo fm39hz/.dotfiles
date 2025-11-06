@@ -26,11 +26,11 @@ paru -S --needed --noconfirm \
     calibre-bin \
     carapace \
     colloid-everforest-gtk-theme-git \
+    devspace-bin \
     electron37-bin \
     everforest-icon-theme-git \
     flutter-bin \
     gnu-netcat \
-    google-breakpad \
     gopreload-git \
     gpu-screen-recorder \
     grimblast-git \
@@ -90,10 +90,8 @@ paru -S --needed --noconfirm \
     python3-xcgf \
     python3-xcpf \
     pywal-spicetify \
-    quickshell \
     rtl8821au-dkms-git \
     sendme-bin \
-    sing-box-bin \
     spicetify-cli \
     spotify \
     thorium-browser-bin \
