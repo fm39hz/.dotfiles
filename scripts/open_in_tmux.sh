@@ -24,8 +24,8 @@ fi
 
 # Find tmux pane that has nvim AND is in the project directory
 NVIM_PANE=$(tmux list-panes -a -F '#{session_name}:#{window_index}.#{pane_index} #{pane_current_command} #{pane_current_path}' |
-  grep -E '(nvim|neovim)' |
-  grep "$PROJECT_ROOT" |
+  rg -E '(nvim|neovim)' |
+  rg "$PROJECT_ROOT" |
   head -1 |
   cut -d' ' -f1)
 
@@ -35,7 +35,7 @@ if [ -n "$NVIM_PANE" ]; then
 else
   # No nvim found in project dir, look for any shell in project dir and start nvim
   SHELL_PANE=$(tmux list-panes -a -F '#{session_name}:#{window_index}.#{pane_index} #{pane_current_path}' |
-    grep "$PROJECT_ROOT" |
+    rg "$PROJECT_ROOT" |
     head -1 |
     cut -d' ' -f1)
 

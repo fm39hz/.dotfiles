@@ -1,6 +1,6 @@
 #!/bin/bash
 
-status="$(nmcli general status | grep -oh "\w*connect\w*")"
+status="$(nmcli general status | rg -oh "\w*connect\w*")"
 wifi=""
 
 if [[ "$status" == "disconnected" ]]; then
@@ -8,7 +8,7 @@ if [[ "$status" == "disconnected" ]]; then
 elif [[ "$status" == "connecting" ]]; then
   wifi="󱍸 "
 elif [[ "$status" == "connected" ]]; then
-  # strength="$(nmcli -f IN-USE,SIGNAL device wifi | grep '*' | awk '{print $2}')"
+  # strength="$(nmcli -f IN-USE,SIGNAL device wifi | rg '*' | awk '{print $2}')"
   strength="$(python ~/.config/hypr/scripts/wifi_conn_strength)"
   if [[ "$?" == "0" ]]; then
     if [[ "$strength" -eq "0" ]]; then

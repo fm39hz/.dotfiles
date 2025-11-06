@@ -124,11 +124,11 @@ detect_project_type() {
   [ -f "$path/requirements.txt" ] && py_req_files+=("$path/requirements.txt")
 
   if [ ${#py_req_files[@]} -gt 0 ] || [ -f "$path/setup.py" ]; then
-    if [ -f "$path/manage.py" ] || ([ ${#py_req_files[@]} -gt 0 ] && grep -q "django" "${py_req_files[@]}" 2>/dev/null); then
+    if [ -f "$path/manage.py" ] || ([ ${#py_req_files[@]} -gt 0 ] && rg -q "django" "${py_req_files[@]}" 2>/dev/null); then
       echo "django" && return
-    elif ([ ${#py_req_files[@]} -gt 0 ] && grep -q "flask" "${py_req_files[@]}" 2>/dev/null); then
+    elif ([ ${#py_req_files[@]} -gt 0 ] && rg -q "flask" "${py_req_files[@]}" 2>/dev/null); then
       echo "flask" && return
-    elif ([ ${#py_req_files[@]} -gt 0 ] && grep -q "fastapi" "${py_req_files[@]}" 2>/dev/null); then
+    elif ([ ${#py_req_files[@]} -gt 0 ] && rg -q "fastapi" "${py_req_files[@]}" 2>/dev/null); then
       echo "fastapi" && return
     else
       echo "python" && return
@@ -191,7 +191,7 @@ detect_project_type() {
     echo "docs"
     return
   }
-  [ -f "$path/Gemfile" ] && grep -q "jekyll" "$path/Gemfile" && {
+  [ -f "$path/Gemfile" ] && rg -q "jekyll" "$path/Gemfile" && {
     echo "jekyll"
     return
   }

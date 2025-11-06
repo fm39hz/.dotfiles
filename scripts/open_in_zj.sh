@@ -9,7 +9,7 @@ done
 PROJECT_NAME=$(basename "$PROJECT_ROOT" | tr '[:upper:]' '[:lower:]' | tr ' .' '-')
 
 # Try to send to the project's session
-if zellij list-sessions -n 2>/dev/null | grep -q "^$PROJECT_NAME"; then
+if zellij list-sessions -n 2>/dev/null | rg -q "^$PROJECT_NAME"; then
   zellij action write-chars $'\x1b' --session "$PROJECT_NAME"
   zellij action write-chars ":tabedit $FILE"$'\n' --session "$PROJECT_NAME"
 else

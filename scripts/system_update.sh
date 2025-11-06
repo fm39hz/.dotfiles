@@ -21,7 +21,7 @@ mkdir -p $today
 pacman -Qqm > $today/aurandlocal.lst
 
 # 2) Official repo only
-pacman -Qqe | grep -vxF -f $today/aurandlocal.lst > $today/main.lst
+pacman -Qqe | rg -vxF -f $today/aurandlocal.lst > $today/main.lst
 
 # Update install.sh with current AUR packages
 set install_script ~/.config/scripts/install.sh

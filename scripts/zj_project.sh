@@ -51,21 +51,21 @@ detect_project_type() {
   if ls "$path"/*.csproj >/dev/null 2>&1 || ls "$path"/*.sln >/dev/null 2>&1; then
     echo "dotnet" && return
   fi
-  [ -f "$path/project.json" ] && grep -q "Microsoft" "$path/project.json" && echo "dotnet" && return
+  [ -f "$path/project.json" ] && rg -q "Microsoft" "$path/project.json" && echo "dotnet" && return
 
   # Web Frameworks (check package.json content for specifics)
   if [ -f "$path/package.json" ]; then
-    if grep -q '"next"' "$path/package.json"; then
+    if rg -q '"next"' "$path/package.json"; then
       echo "nextjs" && return
-    elif grep -q '"react"' "$path/package.json" && grep -q '"@types/react"' "$path/package.json"; then
+    elif rg -q '"react"' "$path/package.json" && rg -q '"@types/react"' "$path/package.json"; then
       echo "react" && return
-    elif grep -q '"vue"' "$path/package.json"; then
+    elif rg -q '"vue"' "$path/package.json"; then
       echo "vue" && return
-    elif grep -q '"@angular"' "$path/package.json"; then
+    elif rg -q '"@angular"' "$path/package.json"; then
       echo "angular" && return
-    elif grep -q '"svelte"' "$path/package.json"; then
+    elif rg -q '"svelte"' "$path/package.json"; then
       echo "svelte" && return
-    elif grep -q '"electron"' "$path/package.json"; then
+    elif rg -q '"electron"' "$path/package.json"; then
       echo "electron" && return
     else
       echo "node" && return
@@ -78,11 +78,11 @@ detect_project_type() {
 
   # Python (check for specific frameworks)
   if [ -f "$path/pyproject.toml" ] || [ -f "$path/requirements.txt" ] || [ -f "$path/setup.py" ]; then
-    if [ -f "$path/manage.py" ] || grep -q "django" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+    if [ -f "$path/manage.py" ] || rg -q "django" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
       echo "django" && return
-    elif grep -q "flask" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+    elif rg -q "flask" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
       echo "flask" && return
-    elif grep -q "fastapi" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
+    elif rg -q "fastapi" "$path/requirements.txt" "$path/pyproject.toml" 2>/dev/null; then
       echo "fastapi" && return
     else
       echo "python" && return
@@ -112,7 +112,7 @@ detect_project_type() {
 
   # Documentation
   [ -f "$path/mkdocs.yml" ] && echo "docs" && return
-  [ -f "$path/Gemfile" ] && grep -q "jekyll" "$path/Gemfile" && echo "jekyll" && return
+  [ -f "$path/Gemfile" ] && rg -q "jekyll" "$path/Gemfile" && echo "jekyll" && return
 
   # Generic project detection (fallback)
   if git -C "$path" rev-parse --git-dir >/dev/null 2>&1 ||
@@ -150,13 +150,13 @@ list_all_sessions() {
 
 # List only active sessions
 list_active_sessions() {
-  zellij ls --no-formatting 2>/dev/null | grep -v "EXITED" | awk '{print $1}'
+  zellij ls --no-formatting 2>/dev/null | rg -v "EXITED" | awk '{print $1}'
 }
 
 # Check if session is dead/exited
 is_session_dead() {
   local session="$1"
-  zellij ls --no-formatting 2>/dev/null | grep "^$session" | grep -q "EXITED"
+  zellij ls --no-formatting 2>/dev/null | rg "^$session" | rg -q "EXITED"
 }
 
 # Fuzzy match a session (including dead ones for resurrection)
@@ -181,7 +181,7 @@ fuzzy_match_session() {
 fzf_select_session_with_status() {
   zellij ls --no-formatting 2>/dev/null | while read -r line; do
     session=$(echo "$line" | awk '{print $1}')
-    if echo "$line" | grep -q "EXITED"; then
+    if echo "$line" | rg -q "EXITED"; then
       echo "󰚛  $session (dead - will resurrect)"
     else
       echo "  $session (active)"
@@ -204,7 +204,7 @@ smart_attach() {
     fi
   else
     # Check if session exists at all
-    if list_all_sessions | grep -q "^$session_name$"; then
+    if list_all_sessions | rg -q "^$session_name$"; then
       echo " Attaching to active session: $session_name"
       zellij attach "$session_name"
     else
@@ -219,11 +219,11 @@ show_all_sessions() {
   echo "󰈙 All Zellij sessions:"
   zellij ls --no-formatting 2>/dev/null | while read -r line; do
     session=$(echo "$line" | awk '{print $1}')
-    if echo "$line" | grep -q "EXITED"; then
-      created=$(echo "$line" | grep -o '\[.*\]')
+    if echo "$line" | rg -q "EXITED"; then
+      created=$(echo "$line" | rg -o '\[.*\]')
       echo "󰚛 $session $created (can be resurrected)"
     else
-      created=$(echo "$line" | grep -o '\[.*\]')
+      created=$(echo "$line" | rg -o '\[.*\]')
       echo " $session $created"
     fi
   done
@@ -265,7 +265,7 @@ if [ -n "$QUERY" ]; then
     EXACT="$BASE_QUERY"
   fi
 
-  if list_all_sessions | grep -q "^$EXACT$"; then
+  if list_all_sessions | rg -q "^$EXACT$"; then
     MATCHED="$EXACT"
   else
     # Try fuzzy match
@@ -296,7 +296,7 @@ SESSION_NAME=$(generate_session_name "$PROJECT_ROOT")
 PROJECT_TYPE=$(detect_project_type "$PROJECT_ROOT")
 
 # Check if session exists (dead or alive)
-if list_all_sessions | grep -q "^$SESSION_NAME$"; then
+if list_all_sessions | rg -q "^$SESSION_NAME$"; then
   if is_session_dead "$SESSION_NAME"; then
     echo "  Found dead project session: $SESSION_NAME"
     echo "󰙴  Resurrecting in $PROJECT_ROOT..."

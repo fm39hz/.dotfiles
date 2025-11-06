@@ -51,13 +51,13 @@ manage_focus() {
 	local target_workspace="$3"
 	local search_by_class="${4:-false}"
 	local extra_args="$5"
-	local grep_pattern=""
+	local rg_pattern=""
 
-	# Set the grep pattern based on whether we're searching by class or title
+	# Set the rg pattern based on whether we're searching by class or title
 	if [[ "$search_by_class" == "true" ]]; then
-		grep_pattern="class: $search_term"
+		rg_pattern="class: $search_term"
 	else
-		grep_pattern="$search_term"
+		rg_pattern="$search_term"
 	fi
 
 	# Function to retrieve and process workspace information
@@ -66,27 +66,27 @@ manage_focus() {
 		local workspace
 
 		# Try to get workspace from column 2
-		workspace=$(hyprctl clients | rg -B 5 "$pattern" | grep "workspace" | awk '{print $2}' | head -n 1)
+		workspace=$(hyprctl clients | rg -B 5 "$pattern" | rg "workspace" | awk '{print $2}' | head -n 1)
 
 		# Check if the workspace is numeric and greater than 0
 		if [[ ! "$workspace" =~ ^[0-9]+$ ]] || ((workspace < 0)); then
 			# Try column 3 and remove parentheses if needed
-			workspace=$(hyprctl clients | rg -B 5 "$pattern" | grep "workspace" | awk '{print $3}' | head -n 1 | sed 's/[()]//g')
+			workspace=$(hyprctl clients | rg -B 5 "$pattern" | rg "workspace" | awk '{print $3}' | head -n 1 | sed 's/[()]//g')
 		fi
 		echo "$workspace"
 	}
 
 	# Check if any window with the search term exists
-	echo "Checking for existing window for $grep_pattern"
-	if hyprctl clients | rg -q "$grep_pattern"; then
+	echo "Checking for existing window for $rg_pattern"
+	if hyprctl clients | rg -q "$rg_pattern"; then
 		# If an app window is open, find its workspace
 		echo "Found existing window for $search_term"
-		target_workspace=$(get_workspace "$grep_pattern")
+		target_workspace=$(get_workspace "$rg_pattern")
 		hyprctl dispatch workspace "$target_workspace"
 		return
 	fi
 	hyprctl dispatch workspace "$target_workspace"
-	hyprctl dispatch plugin:xtd:moveorexec "$grep_pattern", "app2unit $app_class"
+	hyprctl dispatch plugin:xtd:moveorexec "$rg_pattern", "app2unit $app_class"
 }
 function close_apps() {
 	BRAVE=$(find_apps brave-browser-nightly | wc -l)
