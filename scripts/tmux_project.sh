@@ -10,11 +10,11 @@
 #   dotfiles-config      (Configuration files)
 #   documents            (Regular directory - no prefix)
 #
-# Usage: bind with tmz
-#   tmz                   # Auto-detect current directory
-#   tmz myapp             # Find/create session matching "myapp"
-#   tmz --list            # List all sessions
-#   tmz --kill-all        # Kill all sessions
+# Usage: bind with tmx
+#   tmx                   # Show session picker (blank = create new for current dir)
+#   tmx myapp             # Find/create session matching "myapp"
+#   tmx --list            # List all sessions
+#   tmx --kill-all        # Kill all sessions
 
 # Function to find project root (based on typical markers)
 find_project_root() {
@@ -172,11 +172,38 @@ fuzzy_match_session() {
   done
 }
 
-# FZF session selector
+# FZF session selector with option to create new
+# Returns: exit code 0 with selection, 1 if cancelled, 2 if create new requested
 fzf_select_session() {
-  tmux ls -F "#{session_name}: #{session_windows} windows (created #{session_created_string})" 2>/dev/null |
-    fzf --prompt="󰋼 Pick a session: " --height=40% --reverse --ansi |
-    cut -d: -f1
+  local current_project="$1"
+  local prompt_text="󰋼 Pick a session (Enter = new session for current dir): "
+
+  # Add a special entry for creating new session
+  local selection
+  selection=$({
+    echo "󰐕 [Create new session: $current_project]"
+    tmux ls -F "#{session_name}: #{session_windows} windows (created #{session_created_string})" 2>/dev/null
+  } | fzf --prompt="$prompt_text" --height=40% --reverse --ansi --header="Press Enter on blank or first item to create new session")
+
+  local fzf_exit=$?
+
+  # Check fzf exit code
+  if [ $fzf_exit -ne 0 ]; then
+    # User cancelled (Ctrl-C, Esc, etc)
+    return 1
+  fi
+
+  if [[ "$selection" == "󰐕 [Create new session:"* ]]; then
+    # User wants to create new session
+    return 2
+  elif [ -n "$selection" ]; then
+    # User selected an existing session
+    echo "$selection" | cut -d: -f1
+    return 0
+  else
+    # Empty selection shouldn't happen with proper fzf, but treat as cancel
+    return 1
+  fi
 }
 
 # Smart attach/switch
@@ -281,38 +308,64 @@ if [ -n "$QUERY" ]; then
     echo " No matching session found for '$QUERY'"
     echo ""
     echo "󰈙 Available sessions:"
-    ALT=$(fzf_select_session)
-    if [ -n "$ALT" ]; then
+    ALT=$(fzf_select_session "")
+    ALT_EXIT=$?
+
+    if [ $ALT_EXIT -eq 1 ]; then
+      # User cancelled
+      echo "  Cancelled."
+      exit 0
+    elif [ $ALT_EXIT -eq 2 ]; then
+      # User wants to create new
+      echo "  Creating new session..."
+      smart_attach "$EXACT" "$CURRENT_ROOT"
+      exit $?
+    elif [ -n "$ALT" ]; then
+      # User selected existing session
       smart_attach "$ALT"
       exit $?
     else
-      echo "  No session selected. Creating new session..."
-      smart_attach "$EXACT" "$CURRENT_ROOT"
-      exit $?
+      # Shouldn't happen, but treat as cancel
+      echo "  Cancelled."
+      exit 0
     fi
   fi
 fi
 
-# If no query was passed, auto-detect and create if not exists
+# If no query was passed, show session picker with option to create new
 PROJECT_ROOT=$(find_project_root "$(pwd)")
 SESSION_NAME=$(generate_session_name "$PROJECT_ROOT")
 PROJECT_TYPE=$(detect_project_type "$PROJECT_ROOT")
 
-# Check if session exists
-if session_exists "$SESSION_NAME"; then
-  echo " Found existing project session: $SESSION_NAME"
-else
+# Show session picker
+SELECTED=$(fzf_select_session "$SESSION_NAME")
+SELECT_EXIT=$?
+
+# Handle fzf result
+if [ $SELECT_EXIT -eq 1 ]; then
+  # User cancelled (Ctrl-C, Esc, etc)
+  echo "  Cancelled."
+  exit 0
+elif [ $SELECT_EXIT -eq 2 ]; then
+  # User wants to create new session
   if [ -n "$PROJECT_TYPE" ]; then
     echo " Creating new project session: $SESSION_NAME"
   else
     echo "󰙴 Creating new session: $SESSION_NAME"
   fi
   echo " Location: $PROJECT_ROOT"
+
+  cd "$PROJECT_ROOT" 2>/dev/null || {
+    echo "  Cannot enter $PROJECT_ROOT"
+    exit 1
+  }
+
+  smart_attach "$SESSION_NAME" "$PROJECT_ROOT"
+elif [ -n "$SELECTED" ]; then
+  # User selected an existing session
+  smart_attach "$SELECTED"
+else
+  # Shouldn't happen, but treat as cancel
+  echo "  Cancelled."
+  exit 0
 fi
-
-cd "$PROJECT_ROOT" 2>/dev/null || {
-  echo "  Cannot enter $PROJECT_ROOT"
-  exit 1
-}
-
-smart_attach "$SESSION_NAME" "$PROJECT_ROOT"
