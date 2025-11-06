@@ -4,6 +4,6 @@ import QtQuick
 
 JsonObject {
     property color colour: Colours.palette.m3surface
-    property int thickness: Appearance.padding.normal
+    property int thickness: 11
     property int rounding: Appearance.rounding.normal
 }
