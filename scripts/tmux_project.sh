@@ -10,11 +10,11 @@
 #   dotfiles-config      (Configuration files)
 #   documents            (Regular directory - no prefix)
 #
-# Usage: bind with tmx
-#   tmx                   # Show session picker (blank = create new for current dir)
-#   tmx myapp             # Find/create session matching "myapp"
-#   tmx --list            # List all sessions
-#   tmx --kill-all        # Kill all sessions
+# Usage: bind with tm
+#   tm                   # Show session picker (blank = create new for current dir)
+#   tm myapp             # Find/create session matching "myapp"
+#   tm --list            # List all sessions
+#   tm --kill-all        # Kill all sessions
 
 # Function to find project root (based on typical markers)
 find_project_root() {
