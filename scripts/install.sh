@@ -13,99 +13,270 @@ echo "Installing AUR packages..."
 paru -S --needed --noconfirm \
     64gram-desktop-bin \
     7-zip-bin \
+    acpi \
+    adobe-source-han-sans-cn-fonts \
+    adobe-source-han-serif-cn-fonts \
     ags-hyprpanel-git \
+    alacritty \
     anytype-bin \
     app2unit-git \
-    appimagelauncher \
-    appmenu-glib-translator-git \
-    aylurs-gtk-shell-git \
+    aspnet-runtime \
+    aubio \
+    aws-sdk-cpp \
+    base \
+    base-devel \
     beekeeper-studio-bin \
+    bitwarden \
+    blender \
+    blueman \
+    bluez \
+    bluez-utils \
     brave-nightly-bin \
+    brightnessctl \
     bruno-bin \
+    btop \
     bun-bin \
     calibre-bin \
     carapace \
+    cava \
+    chafa \
+    clang \
+    cloudflared \
+    cmake \
+    cmatrix \
     colloid-everforest-gtk-theme-git \
+    composer \
+    dart-sass \
+    ddcutil \
     devspace-bin \
-    electron37-bin \
-    electron39-bin \
+    diff-so-fancy \
+    docker \
+    docker-buildx \
+    docker-compose \
+    dotnet-sdk \
+    dotnet-sdk-8.0 \
+    earlyoom \
+    efibootmgr \
+    entr \
     everforest-icon-theme-git \
+    eza \
+    fastfetch \
+    fcitx5-bamboo \
+    fcitx5-configtool \
+    fd \
+    ffmpegthumbnailer \
+    figlet \
+    fish \
     flutter-bin \
-    gnu-netcat \
+    fprintd \
+    fzf \
+    ghostty \
+    gimp \
+    git \
+    git-lfs \
+    github-cli \
+    gnome-bluetooth-3.0 \
+    gnome-calculator \
+    gnome-disk-utility \
+    gnome-keyring \
+    go \
     gopreload-git \
+    gpsd \
     gpu-screen-recorder \
+    graphviz \
+    grc \
+    greetd \
     grimblast-git \
     gruvbox-dark-icons-gtk \
+    gst-plugin-pipewire \
+    gst-plugins-good \
     gtk-engine-murrine \
-    gtk2 \
     gui-for-singbox \
+    gum \
     how-cli-bin \
-    http-parser \
-    hyprland-protocols-git \
+    html-xml-utils \
+    hyprcursor \
+    hyprgraphics \
+    hypridle \
+    hyprland \
+    hyprland-guiutils \
+    hyprland-qt-support \
+    hyprlang \
+    hyprlock \
+    hyprpaper \
+    hyprpicker \
+    hyprpolkitagent \
+    hyprshot \
+    hyprsunset \
+    hyprutils \
+    hyprwayland-scanner \
+    ibus \
+    imagemagick \
+    inetutils \
+    intel-media-driver \
+    intel-ucode \
+    iw \
+    iwd \
+    jdk17-openjdk \
+    kdeconnect \
+    keyd \
+    kitty \
+    kubectl \
+    kvantum \
     laigter \
     larksuite-bin \
-    libastal-4-git \
-    libastal-apps-git \
-    libastal-auth-git \
-    libastal-battery-git \
-    libastal-bluetooth-git \
-    libastal-cava-git \
-    libastal-git \
-    libastal-greetd-git \
-    libastal-hyprland-git \
-    libastal-io-git \
-    libastal-meta \
-    libastal-mpris-git \
-    libastal-network-git \
-    libastal-notifd-git \
-    libastal-powerprofiles-git \
-    libastal-river-git \
-    libastal-tray-git \
-    libastal-wireplumber-git \
-    libcava \
-    libinput-gestures \
+    lazydocker \
+    lazygit \
+    libfaketime \
     libinput-gestures-qt \
     libinput-multiplier \
+    libnotify \
+    libpulse \
+    libqalculate \
+    libreoffice-fresh-vi \
+    libva-intel-driver \
+    libva-nvidia-driver \
+    libva-utils \
     lightnovel-crawler-bin \
+    linux-firmware \
+    linux-headers \
+    linux-lts \
     localsend-bin \
+    lshw \
+    lua51 \
     luajit-tiktoken-bin \
+    luarocks \
+    lxsession \
+    lynx \
+    man-db \
+    mariadb \
     matugen-bin \
+    maven \
     microsoft-edge-stable-bin \
+    minikube \
     mongodb-tools-bin \
+    mono \
+    mpd \
+    nasm \
     neofetch \
+    neovide \
     neovim-nightly-bin \
+    network-manager-applet \
+    networkmanager \
+    ninja \
     nitch-git \
+    nix \
+    nmap \
     nmgui-bin \
+    nodejs-lts-jod \
+    notification-daemon \
     notion-app-enhanced \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji \
     nouveau-fw \
+    npm \
+    nsxiv \
+    nushell \
+    nvidia-lts \
+    nwg-look \
+    obs-studio \
+    obsidian \
+    pacman-contrib \
     paru-bin \
     paru-debug \
-    pm2ml \
+    php \
+    pipewire \
+    pipewire-alsa \
+    pipewire-jack \
+    pipewire-pulse \
+    plantuml \
+    plocate \
     postman-bin \
+    power-profiles-daemon \
     powerpill \
+    powertop \
+    python-build \
     python-gpustat \
-    python-nvidia-ml-py \
-    python-pywal16 \
+    python-installer \
+    python-libtmux \
+    python-pip \
     python-pywalfox \
-    python3-memoizedb \
-    python3-xcgf \
-    python3-xcpf \
     pywal-spicetify \
+    qt5-wayland \
+    qt5ct \
+    quickshell \
+    ripgrep \
+    rofi \
+    rsync \
     rtl8821au-dkms-git \
+    rust \
+    secrets \
     sendme-bin \
+    sigil \
+    solaar \
+    sox \
+    speedtest-cli \
     spicetify-cli \
     spotify \
+    starship \
+    steam \
+    superfile \
+    swww \
+    thefuck \
     thorium-browser-bin \
+    thunar \
+    thunar-archive-plugin \
+    thunar-media-tags-plugin \
+    thunar-shares-plugin \
+    thunar-vcs-plugin \
+    tiled \
+    tldr \
+    tmux \
     todoist-appimage \
     tofi \
+    tree \
+    tree-sitter \
+    ttf-dejavu \
+    ttf-jetbrains-mono \
+    ttf-jetbrains-mono-nerd \
     ttf-material-icons-git \
     ttf-material-symbols-variable-git \
-    unionfs-fuse \
+    ueberzug \
+    unarchiver \
+    unrar \
+    unzip \
+    uwsm \
     vesktop-bin \
+    vi \
     visual-studio-code-bin \
+    vivid \
+    vlc \
+    vlc-plugin-x264 \
+    vlc-plugin-x265 \
+    vulkan-intel \
+    waybar \
+    wget \
+    wine \
+    wireplumber \
     wlogout \
+    wmctrl \
     xarchiver-gtk2 \
+    xclip \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-hyprland \
+    xorg-xev \
+    yad \
     yay-bin \
+    yazi \
+    yq \
+    zathura \
+    zathura-pdf-mupdf \
+    zed \
+    zellij \
     zen-browser-bin \
+    zoxide \
+    zram-generator \
+    zsh \
 
 echo "AUR packages installation complete!"
