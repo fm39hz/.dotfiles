@@ -11,15 +11,15 @@ Singleton {
     id: root
 
     readonly property list<Action> list: [
-        Action {
-            name: qsTr("Scheme")
-            desc: qsTr("Change the current colour scheme")
-            icon: "palette"
-
-            function onClicked(list: AppList): void {
-                root.autocomplete(list, "scheme");
-            }
-        },
+        // Action {
+        //     name: qsTr("Scheme")
+        //     desc: qsTr("Change the current colour scheme")
+        //     icon: "palette"
+        //
+        //     function onClicked(list: AppList): void {
+        //         root.autocomplete(list, "scheme");
+        //     }
+        // },
         Action {
             name: qsTr("Wallpaper")
             desc: qsTr("Change the current wallpaper")
@@ -27,15 +27,6 @@ Singleton {
 
             function onClicked(list: AppList): void {
                 root.autocomplete(list, "wallpaper");
-            }
-        },
-        Action {
-            name: qsTr("Variant")
-            desc: qsTr("Change the current scheme variant")
-            icon: "colors"
-
-            function onClicked(list: AppList): void {
-                root.autocomplete(list, "variant");
             }
         },
         Action {
@@ -47,41 +38,21 @@ Singleton {
                 root.autocomplete(list, "output");
             }
         },
-        Action {
-            name: qsTr("Transparency")
-            desc: qsTr("Change shell transparency")
-            icon: "opacity"
-            disabled: true
-
-            function onClicked(list: AppList): void {
-                root.autocomplete(list, "transparency");
-            }
-        },
-        Action {
-            name: qsTr("Light")
-            desc: qsTr("Change the scheme to light mode")
-            icon: "light_mode"
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Colours.setMode("light");
-            }
-        },
-        Action {
-            name: qsTr("Dark")
-            desc: qsTr("Change the scheme to dark mode")
-            icon: "dark_mode"
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Colours.setMode("dark");
-            }
-        },
+        // Action {
+        //     name: qsTr("Transparency")
+        //     desc: qsTr("Change shell transparency")
+        //     icon: "opacity"
+        //     disabled: true
+        //
+        //     function onClicked(list: AppList): void {
+        //         root.autocomplete(list, "transparency");
+        //     }
+        // },
         Action {
             name: qsTr("Shutdown")
             desc: qsTr("Shutdown the system")
-            icon: "󰐥"
-            disabled: !Config.launcher.enableDangerousActions
+            icon: "power"
+            disabled: false
 
             function onClicked(list: AppList): void {
                 list.visibilities.launcher = false;
@@ -92,7 +63,6 @@ Singleton {
             name: qsTr("Reboot")
             desc: qsTr("Reboot the system")
             icon: "cached"
-            disabled: !Config.launcher.enableDangerousActions
 
             function onClicked(list: AppList): void {
                 list.visibilities.launcher = false;
@@ -107,7 +77,7 @@ Singleton {
 
             function onClicked(list: AppList): void {
                 list.visibilities.launcher = false;
-                Quickshell.execDetached(["loginctl", "terminate-user", ""]);
+                Quickshell.execDetached(["loginctl", "terminate-user", "$USER"]);
             }
         },
         Action {
@@ -117,7 +87,7 @@ Singleton {
 
             function onClicked(list: AppList): void {
                 list.visibilities.launcher = false;
-                Quickshell.execDetached(["loginctl", "lock-session"]);
+                Quickshell.execDetached(["hyprlock"]);
             }
         },
         Action {
@@ -127,7 +97,7 @@ Singleton {
 
             function onClicked(list: AppList): void {
                 list.visibilities.launcher = false;
-                Quickshell.execDetached(["systemctl", "suspend-then-hibernate"]);
+                Quickshell.execDetached(["systemctl", "hibernate"]);
             }
         }
     ]
