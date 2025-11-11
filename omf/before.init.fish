@@ -1,3 +1,6 @@
+# Vi mode
+set -g fish_key_bindings fish_vi_key_bindings
+
 # Zoxide
 zoxide init fish | source
 

@@ -7,6 +7,5 @@ package https://github.com/jorgebucaran/replay.fish
 package https://github.com/PatrickF1/fzf.fish
 package license
 package thefuck
-package vi-mode
 theme bobthefish
 theme default
