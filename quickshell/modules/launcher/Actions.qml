@@ -39,6 +39,15 @@ Singleton {
             }
         },
         Action {
+            name: qsTr("Audio Output")
+            desc: qsTr("Change the current audio output")
+            icon: "volume_up"
+
+            function onClicked(list: AppList): void {
+                root.autocomplete(list, "output");
+            }
+        },
+        Action {
             name: qsTr("Transparency")
             desc: qsTr("Change shell transparency")
             icon: "opacity"

@@ -16,6 +16,7 @@ ListView {
     property bool isAction: search.text.startsWith(Config.launcher.actionPrefix)
     property bool isScheme: search.text.startsWith(`${Config.launcher.actionPrefix}scheme `)
     property bool isVariant: search.text.startsWith(`${Config.launcher.actionPrefix}variant `)
+    property bool isOutput: search.text.startsWith(`${Config.launcher.actionPrefix}output `)
 
     function getModelValues() {
         let text = search.text;
@@ -23,6 +24,8 @@ ListView {
             return Schemes.fuzzyQuery(text);
         if (isVariant)
             return M3Variants.fuzzyQuery(text);
+        if (isOutput)
+            return AudioOutputs.fuzzyQuery(text);
         if (isAction)
             return Actions.fuzzyQuery(text);
         if (text.startsWith(Config.launcher.actionPrefix))
@@ -53,6 +56,8 @@ ListView {
             return schemeItem;
         if (isVariant)
             return variantItem;
+        if (isOutput)
+            return outputItem;
         if (isAction)
             return actionItem;
         return appItem;
@@ -139,6 +144,14 @@ ListView {
         }
     }
 
+    Component {
+        id: outputItem
+
+        AudioOutputItem {
+            list: root
+        }
+    }
+
     Behavior on isAction {
         ChangeAnim {}
     }
@@ -148,6 +161,10 @@ ListView {
     }
 
     Behavior on isVariant {
+        ChangeAnim {}
+    }
+
+    Behavior on isOutput {
         ChangeAnim {}
     }
 
