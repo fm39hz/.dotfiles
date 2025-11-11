@@ -1,10 +1,11 @@
 package foreign-env
 package fzf
+package https://github.com/franciscolourenco/done
 package https://github.com/jorgebucaran/autopair.fish
 package https://github.com/jorgebucaran/fish-bax
 package https://github.com/jorgebucaran/replay.fish
+package https://github.com/PatrickF1/fzf.fish
 package license
-package sudope
 package thefuck
 package vi-mode
 theme bobthefish

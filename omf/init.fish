@@ -1,23 +1,5 @@
-# fenv "source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-# Fish configuration
-set -U fish_prompt_pwd_dir_length 10
-set -U fish_escape_delay_ms 10
-set -U fish_cursor_default block
-set -U fish_cursor_insert line
-
-# carapace config
-# set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
-# carapace _carapace | source
-
-# Color config
-set -U fish_color_selection --background=7A8478 --foreground=232A2E
-set -U fish_color_search_match --background=7A8478 --foreground=232A2E
-
-# Convenient config
-set -U LANG en_US.UTF-8
-set -U LC_ALL en_US.UTF-8
-set -U EDITOR nvim
-alias top "btop --utf-force"
+# Convienience aliases and environment variables for Fish shell
+alias top "btop --force-utf"
 # alias tmz "~/.config/scripts/zj_project.sh"
 alias ls "exa --group-directories-first --icons --git --color-scale --long --header"
 alias tm "~/.config/scripts/tmux_project.sh"
