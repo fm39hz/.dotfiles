@@ -14,11 +14,11 @@ paru -Qdtq | paru -Rns --noconfirm -
 
 # Snapshot package lists
 notify-send "System update" "Snapshotting package lists"
-set today ~/.config/.backup/(date +%Y-%m-%d)
+set today "$HOME/.config/.backup/$(date +%Y-%m-%d)"
 mkdir -p $today
 
 # 1) AUR & local
-pacman -Qqm > $today/aurandlocal.lst
+pacman -Qqe > $today/aurandlocal.lst
 
 # 2) Official repo only
 pacman -Qqe | rg -vxF -f $today/aurandlocal.lst > $today/main.lst
