@@ -32,7 +32,7 @@ ShapePath {
         relativeX: root.rounding
         relativeY: fusedLeft ? -root.roundingY : root.roundingY
         radiusX: root.rounding
-        radiusY: root.rounding
+        radiusY: root.roundingY
         direction: fusedLeft ? PathArc.Clockwise : PathArc.Counterclockwise
     }
 
@@ -45,7 +45,7 @@ ShapePath {
         relativeX: root.rounding
         relativeY: fusedRight ? root.roundingY : -root.roundingY
         radiusX: root.rounding
-        radiusY: root.rounding
+        radiusY: root.roundingY
         direction: fusedRight ? PathArc.Clockwise : PathArc.Counterclockwise
     }
 
