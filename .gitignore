@@ -2,6 +2,7 @@
 kde?*
 arkrc
 QtProject.conf
+quickshell/app_stats.json
 
 # Nix
 nix/*/result

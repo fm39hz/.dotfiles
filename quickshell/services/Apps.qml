@@ -2,16 +2,35 @@ pragma Singleton
 
 import "root:/utils/scripts/fuzzysort.js" as Fuzzy
 import Quickshell
+import Quickshell.Io
+import "root:/utils" // For Paths.config
 
 Singleton {
     id: root
 
-    // Persistent storage for app usage statistics
-    PersistentProperties {
-        id: usageStats
-        property var appFrequency: ({}) // Map of app ID to launch count
-        property var appLastUsed: ({})  // Map of app ID to timestamp
+    // FileView to manage app_stats.json for persistent storage
+    FileView {
+        id: appStatsFileView
+        // Use Paths.config to get the configuration directory
+        path: `${Paths.config}/app_stats.json`
+        watchChanges: true // Watch for external changes to the file
+
+        // JsonAdapter to hold the actual data
+        JsonAdapter {
+            id: appStatsAdapter
+            property var appFrequency: ({}) // Map of app ID to launch count
+            property var appLastUsed: ({})  // Map of app ID to timestamp
+        }
+
+        // When the adapter's properties are updated, write to file
+        onAdapterUpdated: appStatsFileView.writeAdapter()
+
+        // When the file changes externally, reload the adapter
+        onFileChanged: appStatsFileView.reload()
     }
+
+    // Expose the appStatsAdapter as usageStats for compatibility with existing code
+    readonly property var usageStats: appStatsAdapter
 
     readonly property list<DesktopEntry> list: DesktopEntries.applications.values.filter(a => !a.noDisplay).sort((a, b) => {
         // Sort by frequency first, then by name
@@ -52,14 +71,15 @@ Singleton {
     }
 
     function launch(entry: DesktopEntry): void {
-        // Track app usage
+        // Track app usage by updating the properties of the JsonAdapter
+        // Create new objects to ensure reactivity and trigger updates
         const newFrequency = Object.assign({}, usageStats.appFrequency);
         newFrequency[entry.id] = (newFrequency[entry.id] || 0) + 1;
-        usageStats.appFrequency = newFrequency;
+        usageStats.appFrequency = newFrequency; // This assignment triggers onAdapterUpdated
 
         const newLastUsed = Object.assign({}, usageStats.appLastUsed);
         newLastUsed[entry.id] = Date.now();
-        usageStats.appLastUsed = newLastUsed;
+        usageStats.appLastUsed = newLastUsed; // This assignment triggers onAdapterUpdated
 
         // Launch the app
         if (entry.execString.startsWith("sh -c"))
