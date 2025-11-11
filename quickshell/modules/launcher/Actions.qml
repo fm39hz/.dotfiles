@@ -37,7 +37,7 @@ Singleton {
             function onClicked(list: AppList): void {
                 root.autocomplete(list, "output");
             }
-        },
+        }
         // Action {
         //     name: qsTr("Transparency")
         //     desc: qsTr("Change shell transparency")
@@ -48,58 +48,58 @@ Singleton {
         //         root.autocomplete(list, "transparency");
         //     }
         // },
-        Action {
-            name: qsTr("Shutdown")
-            desc: qsTr("Shutdown the system")
-            icon: "power"
-            disabled: false
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Quickshell.execDetached(["systemctl", "poweroff"]);
-            }
-        },
-        Action {
-            name: qsTr("Reboot")
-            desc: qsTr("Reboot the system")
-            icon: "cached"
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Quickshell.execDetached(["systemctl", "reboot"]);
-            }
-        },
-        Action {
-            name: qsTr("Logout")
-            desc: qsTr("Log out of the current session")
-            icon: "exit_to_app"
-            disabled: !Config.launcher.enableDangerousActions
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Quickshell.execDetached(["loginctl", "terminate-user", "$USER"]);
-            }
-        },
-        Action {
-            name: qsTr("Lock")
-            desc: qsTr("Lock the current session")
-            icon: "lock"
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Quickshell.execDetached(["hyprlock"]);
-            }
-        },
-        Action {
-            name: qsTr("Sleep")
-            desc: qsTr("Suspend then hibernate")
-            icon: "bedtime"
-
-            function onClicked(list: AppList): void {
-                list.visibilities.launcher = false;
-                Quickshell.execDetached(["systemctl", "hibernate"]);
-            }
-        }
+        // Action {
+        //     name: qsTr("Shutdown")
+        //     desc: qsTr("Shutdown the system")
+        //     icon: "power"
+        //     disabled: false
+        //
+        //     function onClicked(list: AppList): void {
+        //         list.visibilities.launcher = false;
+        //         Quickshell.execDetached(["systemctl", "poweroff"]);
+        //     }
+        // },
+        // Action {
+        //     name: qsTr("Reboot")
+        //     desc: qsTr("Reboot the system")
+        //     icon: "cached"
+        //
+        //     function onClicked(list: AppList): void {
+        //         list.visibilities.launcher = false;
+        //         Quickshell.execDetached(["systemctl", "reboot"]);
+        //     }
+        // },
+        // Action {
+        //     name: qsTr("Logout")
+        //     desc: qsTr("Log out of the current session")
+        //     icon: "exit_to_app"
+        //     disabled: !Config.launcher.enableDangerousActions
+        //
+        //     function onClicked(list: AppList): void {
+        //         list.visibilities.launcher = false;
+        //         Quickshell.execDetached(["loginctl", "terminate-user", "$USER"]);
+        //     }
+        // },
+        // Action {
+        //     name: qsTr("Lock")
+        //     desc: qsTr("Lock the current session")
+        //     icon: "lock"
+        //
+        //     function onClicked(list: AppList): void {
+        //         list.visibilities.launcher = false;
+        //         Quickshell.execDetached(["hyprlock"]);
+        //     }
+        // },
+        // Action {
+        //     name: qsTr("Sleep")
+        //     desc: qsTr("Suspend then hibernate")
+        //     icon: "bedtime"
+        //
+        //     function onClicked(list: AppList): void {
+        //         list.visibilities.launcher = false;
+        //         Quickshell.execDetached(["systemctl", "hibernate"]);
+        //     }
+        // }
     ]
 
     readonly property list<var> preppedActions: list.filter(a => !a.disabled).map(a => ({
