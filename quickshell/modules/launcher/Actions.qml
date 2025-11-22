@@ -35,7 +35,7 @@ Singleton {
             icon: "volume_up"
 
             function onClicked(list: AppList): void {
-                root.autocomplete(list, "audio");
+                root.autocomplete(list, "output");
             }
         }
         // Action {
