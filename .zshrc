@@ -159,3 +159,6 @@ export PATH="/home/fm39hz/.config/godotenv/godot/bin:$PATH"
 tmux-git-autofetch() {(/home/fm39hz/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
 add-zsh-hook chpwd tmux-git-autofetch
     
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/fm39hz/.cache/lm-studio/bin"
