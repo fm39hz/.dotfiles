@@ -24,8 +24,9 @@ fish_add_path -U "$ANDROID_HOME/tools/bin/"
 fish_add_path -U "$ANDROID_HOME/emulator"
 fish_add_path -U "$ANDROID_HOME/tools/"
 
-# Dotnet path
+# Dotnet
 fish_add_path -U "$HOME/.dotnet/tools"
+set -U DOTNET_WATCH_RESTART_ON_RUDE_EDIT true
 
 # Laravel
 fish_add_path -U "$HOME/.config/composer/vendor/bin"

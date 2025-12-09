@@ -19,7 +19,7 @@ let carapace_completer = {|spans: list<string>|
 let external_completer = {|spans|
     let expanded_alias = scope aliases
     | where name == $spans.0
-    | get -i 0.expansion
+    | get -o 0.expansion
 
     let spans = if $expanded_alias != null {
         $spans
@@ -31,7 +31,6 @@ let external_completer = {|spans|
 
     match $spans.0 {
         nu => $fish_completer
-        git => $fish_completer
         asdf => $fish_completer
         _ => $carapace_completer
     } | do $in $spans

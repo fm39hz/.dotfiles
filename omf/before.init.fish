@@ -8,9 +8,9 @@ zoxide init fish | source
 fish_add_path /home/fm39hz/.spicetify
 
 # Carapace
-set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
-carapace _carapace | source
-
+# set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
+# carapace _carapace | source
+#
 # LM Studio
 set -gx PATH $PATH /home/fm39hz/.cache/lm-studio/bin
 
