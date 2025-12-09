@@ -47,6 +47,8 @@ Singleton {
     readonly property list<var> preppedApps: list.map(a => ({
                 name: Fuzzy.prepare(a.name),
                 comment: Fuzzy.prepare(a.comment),
+                genericName: Fuzzy.prepare(a.genericName),
+                keywords: Fuzzy.prepare(a.keywords.join(" ")),
                 entry: a,
                 frequency: usageStats.appFrequency[a.id] || 0
             }))
@@ -54,8 +56,14 @@ Singleton {
     function fuzzyQuery(search: string): var { // Idk why list<DesktopEntry> doesn't work
         const results = Fuzzy.go(search, preppedApps, {
             all: true,
-            keys: ["name", "comment"],
-            scoreFn: r => r[0].score > 0 ? r[0].score * 0.9 + r[1].score * 0.1 : 0
+            keys: ["name", "genericName", "comment", "keywords"],
+            scoreFn: r => {
+                const nameScore = r[0].score > 0 ? r[0].score : 0;
+                const genericScore = r[1].score > 0 ? r[1].score : 0;
+                const commentScore = r[2].score > 0 ? r[2].score : 0;
+                const keywordsScore = r[3].score > 0 ? r[3].score : 0;
+                return nameScore * 0.5 + genericScore * 0.2 + commentScore * 0.15 + keywordsScore * 0.15;
+            }
         });
 
         // Boost score based on frequency
