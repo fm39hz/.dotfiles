@@ -33,7 +33,6 @@ paru -S --needed --noconfirm \
     bluez-utils \
     brave-nightly-bin \
     brightnessctl \
-    bruno-bin \
     btop \
     bun-bin \
     calibre-bin \
@@ -128,7 +127,6 @@ paru -S --needed --noconfirm \
     lazydocker \
     lazygit \
     libfaketime \
-    libinput-gestures-qt \
     libinput-multiplier \
     libnotify \
     libpulse \
@@ -141,6 +139,7 @@ paru -S --needed --noconfirm \
     linux-firmware \
     linux-headers \
     linux-lts \
+    lmstudio \
     localsend-bin \
     lshw \
     lua51 \
@@ -182,6 +181,7 @@ paru -S --needed --noconfirm \
     nwg-look \
     obs-studio \
     obsidian \
+    opencode-bin \
     pacman-contrib \
     paru-bin \
     paru-debug \
@@ -206,11 +206,13 @@ paru -S --needed --noconfirm \
     qt5-wayland \
     qt5ct \
     quickshell \
+    readest \
     ripgrep \
     rofi \
     rsync \
     rtl8821au-dkms-git \
     rust \
+    scalar-desktop-bin \
     secrets \
     sendme-bin \
     sigil \
@@ -219,6 +221,7 @@ paru -S --needed --noconfirm \
     speedtest-cli \
     spicetify-cli \
     spotify \
+    spotx-git \
     starship \
     steam \
     superfile \
@@ -246,6 +249,7 @@ paru -S --needed --noconfirm \
     unarchiver \
     unrar \
     unzip \
+    uv \
     uwsm \
     vesktop-bin \
     vi \
