@@ -21,6 +21,7 @@ paru -S --needed --noconfirm \
     anytype-bin \
     app2unit-git \
     aspnet-runtime \
+    aspnet-targeting-pack \
     aubio \
     aws-sdk-cpp \
     base \
@@ -54,9 +55,11 @@ paru -S --needed --noconfirm \
     docker-compose \
     dotnet-sdk \
     dotnet-sdk-8.0 \
+    dotnet-sdk-9.0 \
     earlyoom \
     efibootmgr \
     entr \
+    epubcheck \
     everforest-icon-theme-git \
     eza \
     fastfetch \
