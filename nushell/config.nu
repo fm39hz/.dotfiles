@@ -11,22 +11,6 @@ alias lzg = lazygit
 alias lzd = lazydocker
 alias tm = ~/.config/scripts/tmux_project.sh
 # alias sysclear = yay -Qdtq | yay -Rns -
-def "nu-complete zoxide path" [context: string] {
-    let parts = $context | split row " " | skip 1
-    {
-      options: {
-        sort: false,
-        completion_algorithm: prefix,
-        positional: false,
-        case_sensitive: false,
-      },
-      completions: (zoxide query --list --exclude $env.PWD -- ...$parts | lines),
-    }
-  }
-
-def --env --wrapped z [...rest: string@"nu-complete zoxide path"] {
-  __zoxide_z ...$rest
-}
   $env.config = {
     show_banner: false
 
@@ -35,15 +19,25 @@ def --env --wrapped z [...rest: string@"nu-complete zoxide path"] {
         name: toggle_sudo
         modifier: alt
         keycode: char_s
-        mode: [emacs, vi_insert, vi_normal] # Hoạt động ở mọi chế độ
+        mode: [emacs, vi_insert, vi_normal]
         event: {
           send: ExecuteHostCommand
           cmd: "
             let line = (commandline)
-            if ($line | str starts-with 'sudo ') {
-                commandline edit --replace ($line | str substring 5..)
+            
+            # Xác định đối tượng cần xử lý: dòng hiện tại hoặc lịch sử
+            let target = if ($line | is-empty) {
+                # Lấy lệnh cuối cùng, 'str trim' để xóa ký tự xuống dòng thừa nếu có
+                history | last 1 | get command | get 0 | str trim
             } else {
-                commandline edit --replace ($'sudo ($line)')
+                $line
+            }
+
+            # Logic toggle sudo
+            if ($target | str starts-with 'sudo ') {
+                commandline edit --replace ($target | str substring 5..)
+            } else {
+                commandline edit --replace ($'sudo ($target)')
             }
           "
         }
