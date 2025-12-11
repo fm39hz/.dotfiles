@@ -26,6 +26,7 @@ $conda\
 $line_break$character"""
 
 palette = 'everforest_dark'
+scan_timeout = 2000
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
