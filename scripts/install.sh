@@ -259,6 +259,7 @@ paru -S --needed --noconfirm \
     visual-studio-code-bin \
     vivid \
     vlc \
+    vlc-plugin-ffmpeg \
     vlc-plugin-x264 \
     vlc-plugin-x265 \
     vulkan-intel \
