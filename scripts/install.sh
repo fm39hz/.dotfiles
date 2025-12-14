@@ -88,7 +88,6 @@ paru -S --needed --noconfirm \
     graphviz \
     grc \
     greetd \
-    grimblast-git \
     gruvbox-dark-icons-gtk \
     gst-plugin-pipewire \
     gst-plugins-good \
@@ -97,21 +96,15 @@ paru -S --needed --noconfirm \
     gum \
     how-cli-bin \
     html-xml-utils \
-    hyprcursor \
-    hyprgraphics \
     hypridle \
-    hyprland \
-    hyprland-guiutils \
+    hyprland-git \
     hyprland-qt-support \
-    hyprlang \
-    hyprlock \
-    hyprpaper \
+    hyprlock-git \
+    hyprpaper-git \
     hyprpicker \
     hyprpolkitagent \
     hyprshot \
     hyprsunset \
-    hyprutils \
-    hyprwayland-scanner \
     ibus \
     imagemagick \
     inetutils \
@@ -126,7 +119,6 @@ paru -S --needed --noconfirm \
     kubectl \
     kvantum \
     laigter \
-    larksuite-bin \
     lazydocker \
     lazygit \
     libfaketime \
