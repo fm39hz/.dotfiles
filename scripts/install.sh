@@ -41,6 +41,7 @@ paru -S --needed --noconfirm \
     cava \
     chafa \
     clang \
+    classin-bin \
     cloudflared \
     cmake \
     cmatrix \
@@ -221,6 +222,7 @@ paru -S --needed --noconfirm \
     steam \
     superfile \
     swww \
+    tauri-cli \
     thefuck \
     thorium-browser-bin \
     thunar \
