@@ -41,6 +41,7 @@ paru -S --needed --noconfirm \
     cava \
     chafa \
     clang \
+    classin-bin \
     cloudflared \
     cmake \
     cmatrix \
@@ -94,6 +95,7 @@ paru -S --needed --noconfirm \
     gtk-engine-murrine \
     gui-for-singbox \
     gum \
+    helm \
     how-cli-bin \
     html-xml-utils \
     hypridle \
@@ -172,14 +174,13 @@ paru -S --needed --noconfirm \
     npm \
     nsxiv \
     nushell \
-    nvidia-lts \
+    nvidia-open-lts \
     nwg-look \
     obs-studio \
     obsidian \
     opencode-bin \
     pacman-contrib \
-    paru-bin \
-    paru-debug \
+    paru \
     php \
     pipewire \
     pipewire-alsa \
@@ -221,6 +222,7 @@ paru -S --needed --noconfirm \
     steam \
     superfile \
     swww \
+    tauri-cli \
     thefuck \
     thorium-browser-bin \
     thunar \
