@@ -25,6 +25,7 @@ $conda\
 [](fg:color_bg3 bg:transparent)\
 $line_break$character"""
 
+add_newline = false
 palette = 'everforest_dark'
 scan_timeout = 2000
 command_timeout = 2000
