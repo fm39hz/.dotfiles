@@ -1,0 +1,7 @@
+# ~/.config/sesh/sesh.toml
+
+# Chỉ hiện 1 cấp tên thư mục (mặc định là 1)
+dir_length = 1
+
+# Ưu tiên các session đang chạy và cấu hình thủ công lên đầu
+sort_order = ["tmux", "config", "zoxide"]
