@@ -41,152 +41,91 @@ detect_project_type() {
     echo "go"
     return
   }
+
   if [[ "$(basename "$path")" =~ ^\..*config.*|dotfiles?$ ]] || [ -d "$path/.config" ]; then
     echo "dotfiles"
     return
   fi
-  echo ""
 }
 
 generate_session_name() {
   local project_root="$1"
   local project_type=${2:-$(detect_project_type "$project_root")}
-  local project_name
-  project_name=$(basename "$project_root" | sed 's/^\.//')
+  local project_name="${project_root##*/}"
+  project_name="${project_name#.}"
+
   local base_name
   base_name=$(echo "$project_name" | tr '[:upper:]' '[:lower:]' | tr ' .' '-')
   [ -n "$project_type" ] && echo "$project_type-$base_name" || echo "$base_name"
 }
 
-list_all_sessions() {
-  tmux ls -F "#{session_name}" 2>/dev/null
-}
-
-session_exists() {
-  tmux has-session -t "$1" 2>/dev/null
-}
-
 list_available_tmuxp_presets() {
   local active_sessions
-  active_sessions=$(list_all_sessions)
+  active_sessions=$(tmux ls -F "#{session_name}" 2>/dev/null)
+
   if [ -d "$TMUXP_CONFIG_DIR" ]; then
-    for file in "$TMUXP_CONFIG_DIR"/*.json; do
-      [ -e "$file" ] || continue
-      local name
-      name=$(basename "$file")
-      name="${name%.*}"
-      if ! echo "$active_sessions" | grep -qxw "$name"; then
-        echo "󱔐 [Preset] $name"
-      fi
-    done
+    fd -e json . "$TMUXP_CONFIG_DIR" --exec-batch basename -s .json |
+      rg -vFxf <(echo "$active_sessions") | sed 's/^/󱔐 [Preset] /'
   fi
 }
 
 smart_attach() {
   local target="$1"
   local project_root="$2"
-  local final_session_name="$target"
+  local final_session_name="${target#*] }"
 
-  if [[ "$target" == "󱔐 [Preset] "* ]]; then
-    final_session_name=$(echo "$target" | sed 's/󱔐 \[Preset\] //')
-  fi
-
-  if ! session_exists "$final_session_name"; then
+  if ! tmux has-session -t "$final_session_name" 2>/dev/null; then
     if [ -f "$TMUXP_CONFIG_DIR/${final_session_name}.json" ]; then
-      echo " 󱔐 Baking layout (JSON): $final_session_name"
+      echo " 󱔐 Baking layout: $final_session_name"
       tmuxp load -d -y "$final_session_name" >/dev/null 2>&1
     else
-      echo " 󰙴 Creating generic session: $final_session_name"
+      echo " 󰙴 Creating session: $final_session_name"
       tmux new-session -d -s "$final_session_name" -c "${project_root:-$(pwd)}"
     fi
   fi
 
-  if session_exists "$final_session_name"; then
-    [ -n "$TMUX" ] && tmux switch-client -t "$final_session_name" || tmux attach-session -t "$final_session_name"
-  fi
-}
-
-freeze_session() {
-  local selected="$1"
-
-  if [ -z "$selected" ]; then
-    local sessions
-    sessions=$(list_all_sessions)
-    [ -z "$sessions" ] && {
-      echo "  No active sessions to freeze."
-      return
-    }
-    selected=$(echo "$sessions" | fzf --prompt="󱔐 Select session to bake (JSON): " --height=40% --reverse --ansi)
-  fi
-
-  if [ -n "$selected" ]; then
-    echo " 󱔐 Attempting to bake layout: $selected..."
-    local output_path="$TMUXP_CONFIG_DIR/${selected}.json"
-
-    tmuxp freeze --save-to "$output_path" --quiet --force --yes -f json "$selected"
-
-    if [ -f "$output_path" ]; then
-      if command -v jq >/dev/null 2>&1; then
-        jq 'walk(if type == "array" then map(select(tostring | contains("cd /") | not)) else . end)' "$output_path" >"${output_path}.tmp" && mv "${output_path}.tmp" "$output_path"
-      fi
-
-      echo " 󰙴 Successfully baked '$selected' to $output_path"
-      [ -n "$TMUX" ] && tmux display-message "󱔐 Session $selected Baked (JSON)!"
-    else
-      echo " 󰚌 Error: JSON file generation failed."
-    fi
-  fi
+  [ -n "$TMUX" ] && tmux switch-client -t "$final_session_name" || tmux attach-session -t "$final_session_name"
 }
 
 fzf_select_session() {
   local current_project="$1"
-  local prompt_text="󰋼 Pick a session (Enter = new session for current dir): "
   local selection
+
   selection=$({
     echo "󰐕 [Create new session: $current_project]"
     list_available_tmuxp_presets
     tmux ls -F "󰈙 [Active] #{session_name}: #{session_windows} windows" 2>/dev/null
-  } | fzf --prompt="$prompt_text" --height=40% --reverse --ansi --header="Presets tự động ẩn nếu đã chạy")
+  } | fzf --prompt="󰋼 Session: " --height=40% --reverse --ansi)
 
-  local fzf_exit=$?
-  [ $fzf_exit -ne 0 ] && return 1
+  [ $? -ne 0 ] && return 1
 
   if [[ "$selection" == "󰐕 [Create new session:"* ]]; then
     return 2
   elif [[ "$selection" == "󱔐 [Preset] "* ]]; then
     echo "$selection"
     return 0
-  elif [ -n "$selection" ]; then
-    echo "$selection" | sed 's/󰈙 \[Active\] //' | cut -d: -f1
+  else
+    echo "$selection" | rg -o '\[Active\] ([^:]+)' -r '$1'
     return 0
   fi
 }
 
 case "$1" in
+--kill-all)
+  tmux ls -F "#{session_name}" 2>/dev/null | xargs -I{} tmux kill-session -t "{}"
+  exit 0
+  ;;
 --list | -l)
   tmux ls 2>/dev/null
   exit 0
   ;;
---kill-all)
-  list_all_sessions | while read -r s; do tmux kill-session -t "$s"; done
-  exit 0
-  ;;
---freeze | -f)
-  freeze_session "$2"
-  exit 0
-  ;;
 esac
 
-QUERY="$1"
 PROJECT_ROOT=$(find_project_root "$(pwd)")
 SESSION_NAME=$(generate_session_name "$PROJECT_ROOT")
 
-if [ -n "$QUERY" ]; then
-  if [ -f "$TMUXP_CONFIG_DIR/${QUERY}.json" ]; then
-    smart_attach "󱔐 [Preset] $QUERY"
-  else
-    smart_attach "$QUERY" "$PROJECT_ROOT"
-  fi
+if [ -n "$1" ]; then
+  smart_attach "$1" "$PROJECT_ROOT"
   exit 0
 fi
 
@@ -195,5 +134,5 @@ RET=$?
 if [ $RET -eq 2 ]; then
   smart_attach "$SESSION_NAME" "$PROJECT_ROOT"
 elif [ $RET -eq 0 ]; then
-  smart_attach "$SELECTED"
+  smart_attach "$SELECTED" "$PROJECT_ROOT"
 fi
