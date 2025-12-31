@@ -1,0 +1,38 @@
+{
+  "session_name": "dotfiles-config",
+  "windows": [
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "nvim"
+      },
+      "window_name": "nvim",
+      "layout": "c4be,156x36,0,0,1",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "focus": "true",
+      "start_directory": "/home/fm39hz/.config"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "nvim"
+      },
+      "window_name": "nvim",
+      "layout": "c4bf,156x36,0,0,2",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "start_directory": "/home/fm39hz/.config/nvim-lazyvim"
+    }
+  ]
+}

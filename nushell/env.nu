@@ -8,3 +8,10 @@ $env.config.edit_mode = 'vi'
 $env.DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION = "true"
 # mkdir ~/.cache/carapace
 # carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+# Path definition
+let cargo_bin = ($env.HOME | path join .cargo bin)
+let go_bin = ($env.HOME | path join go bin)
+
+# Add path
+$env.PATH = ($env.PATH | split row (char esep) | append $cargo_bin | append $go_bin | uniq)

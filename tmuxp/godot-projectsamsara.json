@@ -1,0 +1,38 @@
+{
+  "session_name": "godot-projectsamsara",
+  "windows": [
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "nvim"
+      },
+      "window_name": "nvim",
+      "layout": "e28f,156x36,0,0,20",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "focus": "true",
+      "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "nu"
+      },
+      "window_name": "nu",
+      "layout": "e290,156x36,0,0,21",
+      "panes": [
+        {
+          "shell_command": "nu",
+          "focus": "true"
+        }
+      ],
+      "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "session_name": "project-nvim-dap-godot-mono",
+  "windows": [
+    {
+      "options": {
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false
+      },
+      "window_name": "editor",
+      "layout": "6294,156x36,0,0,15",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "focus": "true",
+      "start_directory": "/home/fm39hz/Workspace/Personal/Rice/nvim-dap-godot-mono"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false
+      },
+      "window_name": "shell",
+      "layout": "6295,156x36,0,0,16",
+      "panes": [
+        {
+          "shell_command": "nu",
+          "focus": "true"
+        }
+      ],
+      "start_directory": "/home/fm39hz/Workspace/Personal/Rice/nvim-dap-godot-mono"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "session_name": "dotnet-grimoire-net",
+  "windows": [
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "Grimoire.NET"
+      },
+      "window_name": "Grimoire.NET",
+      "layout": "c4c5,156x36,0,0,8",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "focus": "true",
+      "start_directory": "/home/fm39hz/Workspace/Personal/Books/Grimoire.NET"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "test"
+      },
+      "window_name": "test",
+      "layout": "aee0,156x36,0,0[156x18,0,0,9,156x17,0,19,10]",
+      "panes": [
+        {
+          "start_directory": "/home/fm39hz/Workspace/Personal/Books/Grimoire.NET"
+        },
+        {
+          "start_directory": "/home/fm39hz/Workspace/Personal/Books/Grimoire.NET/test"
+        }
+      ]
+    }
+  ]
+}
