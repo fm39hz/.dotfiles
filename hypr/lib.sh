@@ -86,7 +86,7 @@ manage_focus() {
     return
   fi
   hyprctl dispatch workspace "$target_workspace"
-  hyprctl dispatch plugin:xtd:moveorexec "$rg_pattern", "app2unit -s b $app_class"
+  hyprctl dispatch plugin:xtd:moveorexec "$rg_pattern", "app2unit -s b $app_class $extra_args"
 }
 function close_apps() {
   BRAVE=$(find_apps brave-browser-nightly | wc -l)
