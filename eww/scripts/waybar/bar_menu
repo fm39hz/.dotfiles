@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-window="bar-menu"
-
-eww open --toggle $window

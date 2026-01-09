@@ -88,6 +88,9 @@ _export_template_download_directory = "/home/fm39hz/.cache/godot"
 _script_setup_templates_dictionary = {}
 _script_setup_use_script_templates = false
 dotnet/editor/editor_path_optional = ""
+asset_library/available_urls = {
+"godotengine.org (Official)": "https://godotengine.org/asset-library/api"
+}
 shortcuts = [{
 "name": "editor/clear_output",
 "shortcuts": [SubResource("InputEventKey_7bcdl")]
