@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Bar
-~/.config/quickshell/run.fish &
+~/.config/hypr/scripts/bar.sh &
 
 # Chạy các service nền trước
 lxsession &
