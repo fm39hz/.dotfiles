@@ -27,8 +27,8 @@ $line_break$character"""
 
 add_newline = false
 palette = 'everforest_dark'
-scan_timeout = 2000
-command_timeout = 2000
+scan_timeout = 200
+command_timeout = 500
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'

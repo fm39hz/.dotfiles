@@ -27,8 +27,8 @@ fzf_select_session() {
   get_data() {
     echo "󰐕 [Create: $1]"
     tmux ls -F "󰈙 [Active] #{session_name}: #{session_windows} windows" 2>/dev/null
-    [ -d "$TMUXP_CONFIG_DIR" ] && fd -e json . "$TMUXP_CONFIG_DIR" --exec-batch basename -s .json | sed 's/^/󱔐 [Preset] /'
-    zoxide query -l | sed 's/^/📁 [Zoxide] /'
+    [ -d "$TMUXP_CONFIG_DIR" ] && fd -e json . "$TMUXP_CONFIG_DIR" --exec-batch basename -s .json | sed 's/^/ [Preset] /'
+    zoxide query -l | sed 's/^/ [Zoxide] /'
   }
 
   export -f get_data
@@ -59,9 +59,9 @@ smart_connect() {
     target="$session_name"
   elif [[ "$selection" == "󰈙 [Active] "* ]]; then
     target=$(echo "$selection" | sed -E 's/.*\[Active\] ([^:]+):.*/\1/')
-  elif [[ "$selection" == "󱔐 [Preset] "* ]]; then
+  elif [[ "$selection" == " [Preset] "* ]]; then
     target="${selection#*] }"
-  elif [[ "$selection" == "📁 [Zoxide] "* ]]; then
+  elif [[ "$selection" == " [Zoxide] "* ]]; then
     target="${selection#*] }"
   fi
 
@@ -69,7 +69,7 @@ smart_connect() {
   bname=$(basename "$target")
   if ! tmux has-session -t "$bname" 2>/dev/null; then
     if [ -f "$TMUXP_CONFIG_DIR/${bname}.json" ]; then
-      echo "󱔐 Baking layout: $bname"
+      echo " Baking layout: $bname"
       tmuxp load -d -y "$bname" >/dev/null 2>&1
     fi
   fi
