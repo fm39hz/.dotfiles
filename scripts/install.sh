@@ -73,6 +73,7 @@ paru -S --needed --noconfirm \
     flutter-bin \
     fprintd \
     fzf \
+    geekbench \
     ghostty \
     gimp \
     git \
@@ -211,6 +212,7 @@ paru -S --needed --noconfirm \
     scalar-desktop-bin \
     secrets \
     sendme-bin \
+    sesh-bin \
     sigil \
     solaar \
     sox \
@@ -233,6 +235,7 @@ paru -S --needed --noconfirm \
     tiled \
     tldr \
     tmux \
+    tmuxp \
     todoist-appimage \
     tofi \
     tree \

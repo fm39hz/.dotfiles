@@ -5,5 +5,5 @@ hash = "e01006bfb38951ea89031bd918b20dbb"
 
 [[flavor.deps]]
 use = "Chromium-3-Oxide/everforest-medium"
-rev = "3d5f847"
-hash = "9b4190e2447f2c843fee23ea5f068f6"
+rev = "0158f0f"
+hash = "a7c36abf0b13289aceb1c20a17c6a63e"
