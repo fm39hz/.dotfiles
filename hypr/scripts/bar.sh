@@ -3,4 +3,5 @@
 # app2unit -s b hyprpanel
 
 kill "$(pidof quickshell)"
-~/.config/quickshell/run.fish
+qs -c caelestia
+# ~/.config/quickshell/run.fish
