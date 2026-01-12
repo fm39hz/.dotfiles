@@ -19,6 +19,14 @@ $env.SNACKS_GHOSTTY = true
 # Path definition
 let cargo_bin = ($env.HOME | path join .cargo bin)
 let go_bin = ($env.HOME | path join go bin)
+let dotnet_bin = ($env.HOME | path join .dotnet tools)
 
 # Add path
-$env.PATH = ($env.PATH | split row (char esep) | append $cargo_bin | append $go_bin | uniq)
+$env.PATH = (
+    $env.PATH 
+    | split row (char esep) 
+    | append $cargo_bin 
+    | append $go_bin 
+    | append $dotnet_bin
+    | uniq
+)
