@@ -73,6 +73,7 @@ paru -S --needed --noconfirm \
     flutter-bin \
     fprintd \
     fzf \
+    game-devices-udev \
     geekbench \
     ghostty \
     gimp \
@@ -161,7 +162,6 @@ paru -S --needed --noconfirm \
     network-manager-applet \
     networkmanager \
     ninja \
-    nitch-git \
     nix \
     nmap \
     nmgui-bin \
@@ -226,7 +226,6 @@ paru -S --needed --noconfirm \
     swww \
     tauri-cli \
     thefuck \
-    thorium-browser-bin \
     thunar \
     thunar-archive-plugin \
     thunar-media-tags-plugin \
