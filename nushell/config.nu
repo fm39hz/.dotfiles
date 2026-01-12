@@ -59,6 +59,16 @@ $env.config = {
         }
       },
       {
+        name: launch_tmux_manager
+        modifier: control
+        keycode: char_y
+        mode: [emacs, vi_normal, vi_insert]
+        event: {
+          send: ExecuteHostCommand
+          cmd: "yazi"
+        }
+      },
+      {
         name: hard_clear_screen
         modifier: alt
         keycode: char_l
