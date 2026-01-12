@@ -3,11 +3,11 @@
   "windows": [
     {
       "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false,
         "automatic-rename-format": "nvim"
       },
-      "window_name": "nvim",
+      "window_name": "editor",
       "layout": "e28f,156x36,0,0,20",
       "panes": [
         {
@@ -20,18 +20,12 @@
     },
     {
       "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
-        "automatic-rename-format": "nu"
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false,
+        "automatic-rename-format": "shell"
       },
-      "window_name": "nu",
+      "window_name": "terminal",
       "layout": "e290,156x36,0,0,21",
-      "panes": [
-        {
-          "shell_command": "nu",
-          "focus": "true"
-        }
-      ],
       "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara"
     }
   ]

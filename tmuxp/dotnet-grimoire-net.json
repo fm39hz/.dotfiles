@@ -3,11 +3,10 @@
   "windows": [
     {
       "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
-        "automatic-rename-format": "Grimoire.NET"
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false
       },
-      "window_name": "Grimoire.NET",
+      "window_name": "editor",
       "layout": "c4c5,156x36,0,0,8",
       "panes": [
         {

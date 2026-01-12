@@ -3,11 +3,11 @@
   "windows": [
     {
       "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
-        "automatic-rename-format": "nvim"
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false,
+        "automatic-rename-format": "config"
       },
-      "window_name": "nvim",
+      "window_name": "config",
       "layout": "c4be,156x36,0,0,1",
       "panes": [
         {
@@ -20,8 +20,8 @@
     },
     {
       "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
+        "@tmux_window_name_enabled": 0,
+        "automatic-rename": false,
         "automatic-rename-format": "nvim"
       },
       "window_name": "nvim",
