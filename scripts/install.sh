@@ -55,13 +55,13 @@ paru -S --needed --noconfirm \
     docker-buildx \
     docker-compose \
     dotnet-sdk \
-    dotnet-sdk-8.0 \
     dotnet-sdk-9.0 \
     earlyoom \
     efibootmgr \
     entr \
     epubcheck \
     everforest-icon-theme-git \
+    evtest \
     eza \
     fastfetch \
     fcitx5-bamboo \
@@ -117,6 +117,7 @@ paru -S --needed --noconfirm \
     iw \
     iwd \
     jdk17-openjdk \
+    joyutils \
     kdeconnect \
     keyd \
     kitty \
@@ -204,6 +205,7 @@ paru -S --needed --noconfirm \
     qt5ct \
     quickshell \
     readest \
+    resvg \
     ripgrep \
     rofi \
     rsync \
@@ -244,7 +246,6 @@ paru -S --needed --noconfirm \
     ttf-jetbrains-mono-nerd \
     ttf-material-icons-git \
     ttf-material-symbols-variable-git \
-    ueberzug \
     unarchiver \
     unrar \
     unzip \
@@ -270,6 +271,7 @@ paru -S --needed --noconfirm \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-hyprland \
     xorg-xev \
+    xpadneo-dkms \
     yad \
     yay-bin \
     yazi \
