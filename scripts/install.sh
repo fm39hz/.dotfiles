@@ -62,6 +62,7 @@ paru -S --needed --noconfirm \
     epubcheck \
     everforest-icon-theme-git \
     evtest \
+    ex-vi-compat \
     eza \
     fastfetch \
     fcitx5-bamboo \
@@ -252,7 +253,6 @@ paru -S --needed --noconfirm \
     uv \
     uwsm \
     vesktop-bin \
-    vi \
     visual-studio-code-bin \
     vivid \
     vlc \
