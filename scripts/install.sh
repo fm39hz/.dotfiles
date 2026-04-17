@@ -21,12 +21,14 @@ paru -S --needed --noconfirm \
     anytype-bin \
     app2unit-git \
     aspnet-runtime \
+    aspnet-runtime-8.0 \
     aspnet-targeting-pack \
     aubio \
     aws-sdk-cpp \
     base \
     base-devel \
     beekeeper-studio-bin \
+    bind \
     bitwarden \
     blender \
     blueman \
@@ -48,6 +50,7 @@ paru -S --needed --noconfirm \
     colloid-everforest-gtk-theme-git \
     composer \
     dart-sass \
+    dbeaver \
     ddcutil \
     devspace-bin \
     diff-so-fancy \
@@ -55,7 +58,7 @@ paru -S --needed --noconfirm \
     docker-buildx \
     docker-compose \
     dotnet-sdk \
-    dotnet-sdk-9.0 \
+    dotnet-sdk-8.0 \
     earlyoom \
     efibootmgr \
     entr \
@@ -67,6 +70,7 @@ paru -S --needed --noconfirm \
     fastfetch \
     fcitx5-bamboo \
     fcitx5-configtool \
+    fcitx5-lotus-bin \
     fd \
     ffmpegthumbnailer \
     figlet \
@@ -101,18 +105,18 @@ paru -S --needed --noconfirm \
     helm \
     how-cli-bin \
     html-xml-utils \
-    hypridle \
+    hypridle-git \
     hyprland-git \
-    hyprland-qt-support \
     hyprlock-git \
     hyprpaper-git \
-    hyprpicker \
-    hyprpolkitagent \
+    hyprpicker-git \
+    hyprpolkitagent-git \
     hyprshot \
-    hyprsunset \
-    ibus \
+    hyprsunset-git \
+    iloader-bin \
     imagemagick \
     inetutils \
+    intel-gpu-tools \
     intel-media-driver \
     intel-ucode \
     iw \
@@ -158,6 +162,7 @@ paru -S --needed --noconfirm \
     mono \
     mpd \
     nasm \
+    ncurses5-compat-libs \
     neofetch \
     neovide \
     neovim-nightly-bin \
@@ -181,7 +186,10 @@ paru -S --needed --noconfirm \
     nwg-look \
     obs-studio \
     obsidian \
+    openapi-tui \
     opencode-bin \
+    openresolv \
+    oracle-sqldeveloper \
     pacman-contrib \
     paru \
     php \
@@ -205,6 +213,7 @@ paru -S --needed --noconfirm \
     qt5-wayland \
     qt5ct \
     quickshell \
+    rclone-browser \
     readest \
     resvg \
     ripgrep \
@@ -226,7 +235,6 @@ paru -S --needed --noconfirm \
     starship \
     steam \
     superfile \
-    swww \
     tauri-cli \
     thefuck \
     thunar \
@@ -263,13 +271,15 @@ paru -S --needed --noconfirm \
     waybar \
     wget \
     wine \
+    wireguard-go-git \
+    wireguard-tools \
     wireplumber \
     wlogout \
     wmctrl \
     xarchiver-gtk2 \
     xclip \
     xdg-desktop-portal-gtk \
-    xdg-desktop-portal-hyprland \
+    xdg-desktop-portal-hyprland-git \
     xorg-xev \
     xpadneo-dkms \
     yad \

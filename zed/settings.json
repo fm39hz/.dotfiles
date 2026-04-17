@@ -1,6 +1,12 @@
 // Zed settings
 {
-	"language_models": {
+	"which_key": {
+  "enabled": true
+ },
+ "edit_predictions": {
+  "provider": "zed"
+ },
+ "language_models": {
 		"copilot_chat": {
 			"api_url": "https://api.githubcopilot.com/chat/completions",
 			"auth_url": "https://api.github.com/copilot_internal/v2/token",
@@ -9,17 +15,18 @@
 	},
 	"icon_theme": "Material Icon Theme",
 	"agent": {
-		"always_allow_tool_actions": true,
-		"default_model": {
+		"tool_permissions": {
+   "default": "allow"
+  },
+  "default_model": {
 			"provider": "copilot_chat",
-			"model": "claude-sonnet-4"
+			"model": "claude-haiku-4.5"
 		},
 	},
 	"collaboration_panel": {
 		"dock": "right"
 	},
 	"features": {
-		"edit_prediction_provider": "zed",
 		"copilot": true
 	},
 	"telemetry": {
@@ -51,7 +58,8 @@
 		"dock": "bottom"
 	},
 	"project_panel": {
-		"hide_gitignore": true,
+		"bold_folder_labels": true,
+  "hide_gitignore": true,
 		"dock": "right",
 		"default_width": 360
 	},
