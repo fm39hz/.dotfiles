@@ -42,16 +42,34 @@
         },
         "daily-combo": {
           "name": "daily-combo"
+        },
+        "claude": {
+          "name": "claude"
+        },
+        "cu/default": {
+          "name": "cu/default"
+        },
+        "cu/claude-4.5-opus-high-thinking": {
+          "name": "cu/claude-4.5-opus-high-thinking"
+        },
+        "cu/claude-4.5-sonnet": {
+          "name": "cu/claude-4.5-sonnet"
+        },
+        "cx/gpt-5.3-codex-xhigh": {
+          "name": "cx/gpt-5.3-codex-xhigh"
+        },
+        "cx/gpt-5.4": {
+          "name": "cx/gpt-5.4"
         }
       }
     }
   },
-  "model": "9router/ag/claude-sonnet-4-6",
+  "model": "9router/cx/gpt-5.4",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/daily-combo"
+      "model": "9router/ag/gemini-3.1-pro-low"
     }
   }
 }
