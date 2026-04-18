@@ -1,5 +1,19 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "godot": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "@coding-solo/godot-mcp"
+      ],
+      "enabled": true,
+      "environment": {
+        "DEBUG": "true"
+      }
+    }
+  },
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",

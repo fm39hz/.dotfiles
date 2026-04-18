@@ -12,6 +12,7 @@ $env.DOTNET_WATCH_RESTART_ON_RUDE_EDIT = true
 
 # Godot
 $env.GODOT = ([ $env.HOME .config godotenv godot bin godot ] | path join)
+$env.GODOT_PATH = $env.GODOT
 
 # Neovim
 $env.SNACKS_GHOSTTY = true
