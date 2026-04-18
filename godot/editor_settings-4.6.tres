@@ -1,0 +1,149 @@
+[gd_resource type="EditorSettings" format=3]
+
+[sub_resource type="InputEventKey" id="InputEventKey_7bcdl"]
+command_or_control_autoremap = true
+alt_pressed = true
+keycode = 75
+unicode = 75
+
+[sub_resource type="InputEventKey" id="InputEventKey_wts2y"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 84
+unicode = 116
+
+[sub_resource type="InputEventKey" id="InputEventKey_tyflg"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 83
+unicode = 115
+
+[sub_resource type="InputEventKey" id="InputEventKey_c5bya"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 69
+unicode = 101
+
+[sub_resource type="InputEventKey" id="InputEventKey_abegq"]
+device = -1
+alt_pressed = true
+ctrl_pressed = true
+physical_keycode = 68
+unicode = 100
+
+[resource]
+interface/editor/editor_language = "en"
+interface/editor/main_font_size = 16
+interface/editor/code_font_contextual_ligatures = 0
+interface/theme/color_preset = "Custom"
+interface/theme/spacing_preset = "Custom"
+interface/theme/icon_and_font_color = 2
+interface/theme/base_color = Color(0.20392157, 0.24705882, 0.26666668, 1)
+interface/theme/accent_color = Color(0.654902, 0.7529412, 0.5019608, 1)
+interface/theme/contrast = 0.3
+interface/theme/draw_extra_borders = true
+interface/theme/relationship_line_opacity = 0.86
+interface/theme/border_size = 2
+interface/theme/corner_radius = 6
+interface/theme/additional_spacing = 4
+interface/theme/custom_theme = "/home/fm39hz/.config/godot/minimal_theme.tres"
+filesystem/external_programs/terminal_emulator = "kitty"
+filesystem/file_dialog/show_hidden_files = true
+text_editor/theme/highlighting/symbol_color = Color(0.67, 0.79, 1, 1)
+text_editor/theme/highlighting/keyword_color = Color(1, 0.44, 0.52, 1)
+text_editor/theme/highlighting/control_flow_keyword_color = Color(1, 0.55, 0.8, 1)
+text_editor/theme/highlighting/base_type_color = Color(0.26, 1, 0.76, 1)
+text_editor/theme/highlighting/engine_type_color = Color(0.56, 1, 0.86, 1)
+text_editor/theme/highlighting/user_type_color = Color(0.78, 1, 0.93, 1)
+text_editor/theme/highlighting/comment_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/doc_comment_color = Color(0.6, 0.7, 0.8, 0.8)
+text_editor/theme/highlighting/string_color = Color(1, 0.93, 0.63, 1)
+text_editor/theme/highlighting/background_color = Color(0.1305098, 0.15811765, 0.17066666, 1)
+text_editor/theme/highlighting/completion_background_color = Color(0.18556863, 0.22482353, 0.24266668, 1)
+text_editor/theme/highlighting/completion_selected_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/completion_existing_color = Color(1, 1, 1, 0.14)
+text_editor/theme/highlighting/completion_font_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/text_color = Color(1, 1, 1, 0.75)
+text_editor/theme/highlighting/line_number_color = Color(1, 1, 1, 0.5)
+text_editor/theme/highlighting/safe_line_number_color = Color(1, 1.2, 1, 0.75)
+text_editor/theme/highlighting/caret_color = Color(1, 1, 1, 1)
+text_editor/theme/highlighting/selection_color = Color(0.654902, 0.7529412, 0.5019608, 0.4)
+text_editor/theme/highlighting/brace_mismatch_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/current_line_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/line_length_guideline_color = Color(0.20392157, 0.24705882, 0.26666668, 1)
+text_editor/theme/highlighting/word_highlighted_color = Color(1, 1, 1, 0.07)
+text_editor/theme/highlighting/number_color = Color(0.63, 1, 0.88, 1)
+text_editor/theme/highlighting/function_color = Color(0.34, 0.7, 1, 1)
+text_editor/theme/highlighting/member_variable_color = Color(0.736, 0.88, 1, 1)
+text_editor/theme/highlighting/mark_color = Color(1, 0.47, 0.42, 0.3)
+text_editor/theme/highlighting/warning_color = Color(0.83, 0.78, 0.62, 0.15)
+text_editor/theme/highlighting/breakpoint_color = Color(1, 0.47, 0.42, 1)
+text_editor/theme/highlighting/code_folding_color = Color(1, 1, 1, 0.27)
+text_editor/theme/highlighting/search_result_color = Color(1, 1, 1, 0.07)
+editors/3d_gizmos/gizmo_settings/bone_axis_length = 0.1
+editors/panning/2d_editor_panning_scheme = 1
+editors/animation/default_animation_step = 0.033333335
+network/connection/network_mode = 1
+project_manager/directory_naming_convention = 4
+interface/touchscreen/increase_scrollbar_touch_area = false
+editors/grid_map/palette_min_width = 230
+export/android/java_sdk_path = ""
+export/android/android_sdk_path = ""
+export/android/debug_keystore = "/home/fm39hz/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+export/macos/rcodesign = ""
+export/web/http_port = 8060
+export/web/tls_key = ""
+export/web/tls_certificate = ""
+export/windows/rcedit = ""
+export/windows/osslsigncode = ""
+export/windows/wine = ""
+_default_feature_profile = "FM39hz's"
+_use_favorites_root_selection = false
+network/debug_adapter/request_timeout = 1000
+editors/grid_map/editor_side = 1
+dotnet/editor/external_editor = 6
+dotnet/editor/custom_exec_path = "/home/fm39hz/.config/scripts/open_in_tmux.sh"
+dotnet/editor/custom_exec_path_args = "{file}"
+dotnet/build/verbosity_level = 2
+dotnet/build/problems_layout = 1
+aseprite/general/command_path = "/home/fm39hz/.local/share/Steam/steamapps/common/Aseprite/aseprite"
+_editor_settings_advanced_mode = true
+_project_settings_advanced_mode = true
+_export_template_download_directory = "/home/fm39hz/.cache/godot"
+_script_setup_templates_dictionary = {}
+_script_setup_use_script_templates = false
+dotnet/editor/editor_path_optional = ""
+_export_preset_advanced_mode = false
+export/android/scrcpy/screen_size = "1920x1080/120"
+export/macos/actool = ""
+shortcuts = [{
+"name": "editor/clear_output",
+"shortcuts": [SubResource("InputEventKey_7bcdl")]
+}, {
+"name": "scene_tree/change_node_type",
+"shortcuts": [SubResource("InputEventKey_wts2y")]
+}, {
+"name": "scene_tree/attach_script",
+"shortcuts": [SubResource("InputEventKey_tyflg")]
+}, {
+"name": "scene_tree/extend_script",
+"shortcuts": [SubResource("InputEventKey_c5bya")]
+}, {
+"name": "scene_tree/detach_script",
+"shortcuts": [SubResource("InputEventKey_abegq")]
+}]
+metadata/script_setup_templates_dictionary = {
+"AnimationPlayer": "0NodeDefault",
+"CharacterBody2D": "0CharacterBody2DBasic Movement",
+"Control": "0NodeDefault",
+"Label": "0NodeDefault",
+"Node": "0NodeDefault",
+"Node2D": "0NodeDefault",
+"Node3D": "0NodeDefault",
+"StaticBody2D": "0NodeDefault"
+}
+metadata/export_template_download_directory = "/home/fm39hz/.cache/godot"
