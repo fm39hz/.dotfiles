@@ -1,19 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-    "godot": {
-      "type": "local",
-      "command": [
-        "bunx",
-        "-y",
-        "@coding-solo/godot-mcp"
-      ],
-      "enabled": true,
-      "environment": {
-        "DEBUG": "true"
-      }
-    }
-  },
+  "plugin": [
+    "opencode-codebase-index",
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git"
+  ],
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",
@@ -34,14 +25,8 @@
         "ag/claude-opus-4-6-thinking": {
           "name": "ag/claude-opus-4-6-thinking"
         },
-        "ag/gemini-3.1-pro-low": {
-          "name": "ag/gemini-3.1-pro-low"
-        },
         "gh/claude-opus-4.5": {
           "name": "gh/claude-opus-4.5"
-        },
-        "daily-combo": {
-          "name": "daily-combo"
         },
         "claude": {
           "name": "claude"
@@ -60,16 +45,22 @@
         },
         "cx/gpt-5.4": {
           "name": "cx/gpt-5.4"
+        },
+        "ag/gemini-3.1-pro-high": {
+          "name": "ag/gemini-3.1-pro-high"
+        },
+        "daily": {
+          "name": "daily"
         }
       }
     }
   },
-  "model": "9router/cx/gpt-5.4",
+  "model": "9router/daily",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/ag/gemini-3.1-pro-low"
+      "model": "9router/ag/gemini-3.1-pro-high"
     }
   }
 }

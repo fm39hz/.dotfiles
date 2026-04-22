@@ -39,6 +39,6 @@ mangohud steam -silent &
 ~/.config/hypr/scripts/browser.sh
 ~/.config/hypr/scripts/note.sh
 hyprctl dispatch workspace 2
-
-# Fcitx focus engine
-~/.config/hypr/scripts/im_switcher.sh
+#
+# # Fcitx focus engine
+# ~/.config/hypr/scripts/im_switcher.sh

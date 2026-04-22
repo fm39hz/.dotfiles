@@ -14,6 +14,8 @@ handle_focus() {
   elif jq -e ".vietnamese | .[] | select(. == \"$win_class\")" "$CONFIG_FILE" >/dev/null; then
     fcitx5-remote -o
     # notify-send "Keyboard" "Switched to Vietnamese ($win_class)" -t 1000 # Bật để test
+  else
+    fcitx5-remote -c
   fi
 }
 
