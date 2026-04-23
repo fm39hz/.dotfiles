@@ -5,6 +5,19 @@
     "superpowers@git+https://github.com/obra/superpowers.git",
     "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git"
   ],
+  "mcp": {
+    "docshark": {
+      "type": "local",
+      "command": [
+        "bunx",
+        "-y",
+        "docshark",
+        "start",
+        "--stdio"
+      ],
+      "enabled": true
+    }
+  },
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",
@@ -13,12 +26,6 @@
         "apiKey": "sk_9router"
       },
       "models": {
-        "qw/coder-model": {
-          "name": "qw/coder-model"
-        },
-        "qw/qwen3-coder-plus": {
-          "name": "qw/qwen3-coder-plus"
-        },
         "ag/claude-sonnet-4-6": {
           "name": "ag/claude-sonnet-4-6"
         },
@@ -51,16 +58,12 @@
         },
         "daily": {
           "name": "daily"
+        },
+        "kr/claude-sonnet-4.5": {
+          "name": "kr/claude-sonnet-4.5"
         }
       }
     }
   },
-  "model": "9router/daily",
-  "agent": {
-    "explorer": {
-      "description": "Fast explorer subagent for codebase exploration",
-      "mode": "subagent",
-      "model": "9router/ag/gemini-3.1-pro-high"
-    }
-  }
+  "model": "9router/daily"
 }
