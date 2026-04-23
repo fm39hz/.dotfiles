@@ -97,6 +97,7 @@ yazi/plugins
 # Database client
 MongoDB Compass/
 beekeeper-studio/*
+sqlit
 **/*.db
 
 # AI config 
