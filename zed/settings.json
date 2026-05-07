@@ -1,6 +1,12 @@
 // Zed settings
 {
-	"which_key": {
+	"outline_panel": {
+  "dock": "left"
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "which_key": {
   "enabled": true
  },
  "edit_predictions": {
@@ -15,7 +21,8 @@
 	},
 	"icon_theme": "Material Icon Theme",
 	"agent": {
-		"tool_permissions": {
+		"dock": "right",
+  "tool_permissions": {
    "default": "allow"
   },
   "default_model": {

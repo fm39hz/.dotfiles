@@ -1,0 +1,38 @@
+{
+  "embeddingProvider": "auto",
+  "scope": "project",
+  "include": [
+    "**/*.{ts,js,py,go,rs,cs,csproj,slnx,json}"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/addons/**",
+    "**/obj/**",
+    "**/bin/**"
+  ],
+  "additionalInclude": [
+    "**/*.{txt,html,htm}",
+    "**/*.pdf"
+  ],
+  "indexing": {
+    "autoIndex": false,
+    "watchFiles": true,
+    "maxFileSize": 1048576,
+    "maxChunksPerFile": 50,
+    "semanticOnly": true,
+    "maxDepth": 10
+  },
+  "search": {
+    "maxResults": 7,
+    "minScore": 0.3,
+    "hybridWeight": 0.4
+  },
+  "reranker": {
+    "enabled": false,
+    "provider": "auto",
+    "model": "auto",
+    "apiKey": "{env:RERANK_API_KEY}",
+    "topN": 15,
+    "timeoutMs": 10000
+  }
+}

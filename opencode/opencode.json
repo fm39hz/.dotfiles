@@ -1,10 +1,20 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    "opencode-codebase-index",
+    "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git",
     "superpowers@git+https://github.com/obra/superpowers.git",
-    "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git"
+    "opencode-firecrawl"
   ],
+  "lsp": {
+    "roslyn": {
+      "extensions": [
+        "cs"
+      ],
+      "command": [
+        "/home/fm39hz/.local/share/nvim/mason/bin/roslyn"
+      ]
+    }
+  },
   "mcp": {
     "docshark": {
       "type": "local",
@@ -16,7 +26,7 @@
         "--stdio"
       ],
       "enabled": true
-    }
+    },
   },
   "provider": {
     "9router": {
@@ -34,9 +44,6 @@
         },
         "gh/claude-opus-4.5": {
           "name": "gh/claude-opus-4.5"
-        },
-        "claude": {
-          "name": "claude"
         },
         "cu/default": {
           "name": "cu/default"
@@ -56,14 +63,36 @@
         "ag/gemini-3.1-pro-high": {
           "name": "ag/gemini-3.1-pro-high"
         },
-        "daily": {
-          "name": "daily"
-        },
         "kr/claude-sonnet-4.5": {
           "name": "kr/claude-sonnet-4.5"
+        },
+        "coder": {
+          "name": "coder"
+        },
+        "daily-worker": {
+          "name": "daily-worker"
+        },
+        "context-holder": {
+          "name": "context-holder"
+        },
+        "reasoner": {
+          "name": "reasoner"
+        },
+        "ds/deepseek-reasoner": {
+          "name": "ds/deepseek-reasoner"
+        },
+        "glm/glm-5.1": {
+          "name": "glm/glm-5.1"
         }
       }
     }
   },
-  "model": "9router/daily"
+  "model": "9router/daily-worker",
+  "agent": {
+    "explorer": {
+      "description": "Fast explorer subagent for codebase exploration",
+      "mode": "subagent",
+      "model": "9router/daily-worker"
+    }
+  }
 }

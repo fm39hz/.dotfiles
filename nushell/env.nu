@@ -16,6 +16,8 @@ $env.GODOT_PATH = $env.GODOT
 
 # AI
 $env.OPENCODE_EXPERIMENTAL = true
+$env.CHROME_EXECUTABLE = "thorium-browser-avx2"
+$env.CHROME_PATH = $env.CHROME_EXECUTABLE
 
 # Neovim
 $env.SNACKS_GHOSTTY = true
@@ -25,6 +27,7 @@ let cargo_bin = ($env.HOME | path join .cargo bin)
 let go_bin = ($env.HOME | path join go bin)
 let dotnet_bin = ($env.HOME | path join .dotnet tools)
 let local_bin = ($env.HOME | path join .local bin)
+let steam_apps = ($env.HOME | path join .local share Steam steamapps common Aseprite)
 
 # Add path
 $env.PATH = (
@@ -34,5 +37,6 @@ $env.PATH = (
     | append $go_bin 
     | append $dotnet_bin
     | append $local_bin
+    | append $steam_apps
     | uniq
 )

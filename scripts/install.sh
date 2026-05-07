@@ -37,7 +37,7 @@ paru -S --needed --noconfirm \
     brave-nightly-bin \
     brightnessctl \
     btop \
-    bun-bin \
+    bun \
     calibre-bin \
     carapace \
     cava \
@@ -49,6 +49,7 @@ paru -S --needed --noconfirm \
     cmatrix \
     colloid-everforest-gtk-theme-git \
     composer \
+    cursor-bin \
     dart-sass \
     dbeaver \
     ddcutil \
@@ -83,6 +84,7 @@ paru -S --needed --noconfirm \
     ghostty \
     gimp \
     git \
+    git-filter-repo \
     git-lfs \
     github-cli \
     gnome-bluetooth-3.0 \
@@ -105,14 +107,22 @@ paru -S --needed --noconfirm \
     helm \
     how-cli-bin \
     html-xml-utils \
-    hypridle-git \
-    hyprland-git \
-    hyprlock-git \
-    hyprpaper-git \
-    hyprpicker-git \
-    hyprpolkitagent-git \
+    hyprcursor \
+    hyprgraphics \
+    hypridle \
+    hyprland \
+    hyprland-guiutils \
+    hyprland-qt-support \
+    hyprlang \
+    hyprlock \
+    hyprpaper \
+    hyprpicker \
+    hyprpolkitagent \
     hyprshot \
-    hyprsunset-git \
+    hyprsunset \
+    hyprtoolkit \
+    hyprutils \
+    hyprwayland-scanner \
     iloader-bin \
     imagemagick \
     inetutils \
@@ -207,7 +217,9 @@ paru -S --needed --noconfirm \
     python-gpustat \
     python-installer \
     python-libtmux \
+    python-oracledb \
     python-pip \
+    python-psycopg2 \
     python-pywalfox \
     pywal-spicetify \
     qt5-wayland \
@@ -226,17 +238,20 @@ paru -S --needed --noconfirm \
     sendme-bin \
     sesh-bin \
     sigil \
+    socat \
     solaar \
     sox \
     speedtest-cli \
     spicetify-cli \
     spotify \
     spotx-git \
+    sqlit \
     starship \
     steam \
     superfile \
     tauri-cli \
     thefuck \
+    thorium-browser-avx2-bin \
     thunar \
     thunar-archive-plugin \
     thunar-media-tags-plugin \
@@ -279,7 +294,7 @@ paru -S --needed --noconfirm \
     xarchiver-gtk2 \
     xclip \
     xdg-desktop-portal-gtk \
-    xdg-desktop-portal-hyprland-git \
+    xdg-desktop-portal-hyprland \
     xorg-xev \
     xpadneo-dkms \
     yad \

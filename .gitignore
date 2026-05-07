@@ -103,6 +103,9 @@ sqlit
 # AI config 
 TabNine/*
 !TabNine/*_config.json
+Windsurf
+*skills*
+*credentials*
 github-copilot/apps.json
 Jan
 LM Studio
