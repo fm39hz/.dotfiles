@@ -1,9 +1,20 @@
 {
-  "embeddingProvider": "auto",
+  "embeddingProvider": "custom",
   "scope": "project",
   "include": [
     "**/*.{ts,js,py,go,rs,cs,csproj,slnx,json}"
   ],
+  "customProvider": {
+    "baseUrl": "http://localhost:20128/v1",
+    "model": "openrouter/qwen/qwen3-embedding-8b",
+    "dimensions": 1024,
+    "apiKey": "sk_9router",
+    "maxTokens": 8192,
+    "timeoutMs": 30000,
+    "concurrency": 3,
+    "requestIntervalMs": 1000,
+    "maxBatchSize": 64
+  },
   "exclude": [
     "**/node_modules/**",
     "**/addons/**",
@@ -15,7 +26,7 @@
     "**/*.pdf"
   ],
   "indexing": {
-    "autoIndex": false,
+    "autoIndex": true,
     "watchFiles": true,
     "maxFileSize": 1048576,
     "maxChunksPerFile": 50,
@@ -28,11 +39,14 @@
     "hybridWeight": 0.4
   },
   "reranker": {
-    "enabled": false,
+    "enabled": true,
     "provider": "auto",
-    "model": "auto",
-    "apiKey": "{env:RERANK_API_KEY}",
+    "model": "gemini/gemini-embedding-2-preview",
+    "baseUrl": "http://localhost:20128/v1/embeddings",
     "topN": 15,
     "timeoutMs": 10000
+  },
+  "debug": {
+    "enabled": true
   }
 }

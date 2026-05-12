@@ -3,7 +3,8 @@
   "plugin": [
     "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git",
     "superpowers@git+https://github.com/obra/superpowers.git",
-    "opencode-firecrawl"
+    "opencode-firecrawl",
+    "opencode-codebase-index"
   ],
   "lsp": {
     "roslyn": {
@@ -81,18 +82,24 @@
         "ds/deepseek-reasoner": {
           "name": "ds/deepseek-reasoner"
         },
+        "cmc/deepseek/deepseek-v4-pro": {
+          "name": "cmc/deepseek/deepseek-v4-pro"
+        },
+        "cmc/deepseek/deepseek-v4-flash": {
+          "name": "cmc/deepseek/deepseek-v4-flash"
+        },
         "glm/glm-5.1": {
           "name": "glm/glm-5.1"
         }
       }
     }
   },
-  "model": "9router/daily-worker",
+  "model": "cmc/deepseek/deepseek-v4-pro",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/daily-worker"
+      "model": "cmc/deepseek/deepseek-v4-flash"
     }
   }
 }

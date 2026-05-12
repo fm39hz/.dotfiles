@@ -125,6 +125,7 @@ paru -S --needed --noconfirm \
     hyprwayland-scanner \
     iloader-bin \
     imagemagick \
+    imhex-bin \
     inetutils \
     intel-gpu-tools \
     intel-media-driver \
@@ -198,6 +199,7 @@ paru -S --needed --noconfirm \
     obsidian \
     openapi-tui \
     opencode-bin \
+    opencode-codebase-index-bin \
     openresolv \
     oracle-sqldeveloper \
     pacman-contrib \
@@ -209,6 +211,7 @@ paru -S --needed --noconfirm \
     pipewire-pulse \
     plantuml \
     plocate \
+    podman \
     postman-bin \
     power-profiles-daemon \
     powerpill \
@@ -285,6 +288,7 @@ paru -S --needed --noconfirm \
     vulkan-intel \
     waybar \
     wget \
+    windsurf \
     wine \
     wireguard-go-git \
     wireguard-tools \
