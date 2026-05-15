@@ -1,0 +1,22 @@
+{
+    "barPosition": "top",
+    "barSize": "fluid",
+    "colors": null,
+    "debug": false,
+    "disableHover": false,
+    "disableLockAnimation": false,
+    "disableLockBlur": false,
+    "floatingBar": false,
+    "fontFamily": "JetBrainsMono Nerd Font",
+    "fontSize": 16,
+    "hideAppIcons": false,
+    "hideWorkspaceNumbers": false,
+    "lazyLoadLockScreen": true,
+    "lockScreenCustomBackground": false,
+    "lockScreenMusicMode": false,
+    "openRgbDevices": [
+        0
+    ],
+    "use24HourFormat": false,
+    "wallpaperDirectory": "/home/fm39hz/Pictures/Wallpapers"
+}

@@ -16,6 +16,11 @@
       ]
     }
   },
+  "permission": {
+    "grep": "deny",
+    "glob": "deny",
+    "bash": "deny",
+  },
   "mcp": {
     "docshark": {
       "type": "local",
@@ -78,6 +83,12 @@
         },
         "reasoner": {
           "name": "reasoner"
+        },
+        "dev": {
+          "name": "dev"
+        },
+        "math": {
+          "name": "math"
         },
         "ds/deepseek-reasoner": {
           "name": "ds/deepseek-reasoner"

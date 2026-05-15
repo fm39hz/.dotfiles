@@ -1,0 +1,89 @@
+[app]
+theme = 'graphite_matcha'
+active_project = ''
+vim_mode = true
+show_help = true
+show_id = true
+rainbow = false
+gemini_api_key = ''
+ai_model = 'gemini-3.1-flash-lite-preview'
+mcp_enabled = true
+mcp_port = '8080'
+animations = true
+onboarding_completed = true
+
+[projects]
+default = 'default'
+shortcut = 'p'
+show_column = 'auto'
+
+[tags]
+
+[edit]
+preview = true
+
+[list]
+[list.order]
+right = ['tags', 'due', 'priority']
+
+[list.fields]
+[list.fields.due]
+minimal = true
+
+[theme]
+bg = ''
+fg = ''
+muted = ''
+border = ''
+accent = ''
+good = ''
+warn = ''
+bad = ''
+overlay = ''
+
+[storage]
+path = '/home/fm39hz/.config/kairo/kairo.db'
+
+[sync]
+enabled = false
+repo_path = '/home/fm39hz/.config/kairo/tasks-sync'
+remote = 'origin'
+branch = 'main'
+strategy = 'ours'
+auto_push = false
+
+[plugins]
+enabled = true
+dir = '/home/fm39hz/.config/kairo/plugins'
+
+[keymap]
+palette = 'ctrl+p'
+task_search = '/'
+new_task = 'n'
+edit_task = 'e'
+delete_task = 'd'
+open_task = 'enter'
+back = 'esc'
+quit = 'q'
+view_inbox = '1'
+view_today = '2'
+view_upcoming = '3'
+view_completed = '4'
+view_tag = 'f'
+view_priority = '5'
+cycle_theme = 't'
+open_plugin_dir = 'ctrl+g'
+manage_plugins = 'p'
+toggle_strike = 'z'
+toggle_collapse = 'space'
+duplicate_task = 'ctrl+d'
+help = '?'
+welcome_tour = 'ctrl+w'
+issues = 'i'
+discussions = 'u'
+changelog = 'c'
+settings = 'ctrl+s'
+import_export = 'x'
+ai_panel_toggle = 'ctrl+a'
+stats = 's'
+project_switcher = 'ctrl+e'

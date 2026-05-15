@@ -198,8 +198,6 @@ paru -S --needed --noconfirm \
     obs-studio \
     obsidian \
     openapi-tui \
-    opencode-bin \
-    opencode-codebase-index-bin \
     openresolv \
     oracle-sqldeveloper \
     pacman-contrib \
