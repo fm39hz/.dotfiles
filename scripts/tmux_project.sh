@@ -1,6 +1,7 @@
 #!/bin/bash
 
 TMUXP_CONFIG_DIR="$HOME/.config/tmuxp"
+SHELL=/bin/bash
 
 find_project_root() {
   local path="$1"
