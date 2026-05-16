@@ -1,7 +1,6 @@
 #!/bin/bash
 
 TMUXP_CONFIG_DIR="$HOME/.config/tmuxp"
-SHELL=/bin/bash
 
 find_project_root() {
   local path="$1"
@@ -35,6 +34,7 @@ fzf_select_session() {
   export -f get_data
   export TMUXP_CONFIG_DIR
 
+  # Force fzf to use bash as default shell
   selection=$(get_data "$current_project" | awk '
     {
       if ($2 == "[Active]") { name = $3; sub(/:$/, "", name) }
@@ -42,7 +42,7 @@ fzf_select_session() {
       else if ($2 == "[Zoxide]") { n = split($3, a, "/"); name = a[n] }
       else { name = $0 }
       if (name != "" && !visited[name]++) print $0
-    }' | fzf --prompt="󰋼 Sesh: " --height=40% --reverse --ansi --no-sort --tiebreak=index \
+    }' | SHELL=/bin/bash fzf --prompt="󰋼 Sesh: " --height=40% --reverse --ansi --no-sort --tiebreak=index \
     --header "Alt-x: Kill Session | Alt-b: Freeze Layout | Ctrl-j/k: Move" \
     --bind "alt-x:execute(tmux kill-session -t \$(echo {} | sed -E 's/.*\[Active\] ([^:]+):.*/\1/'))+reload(bash -c 'get_data $current_project' | awk '!visited[\$0]++')" \
     --bind "alt-b:execute(tmuxp freeze \$(echo {} | sed -E 's/.*\[Active\] ([^:]+):.*/\1/') --yes --force -f json -o $TMUXP_CONFIG_DIR/\$(echo {} | sed -E 's/.*\[Active\] ([^:]+):.*/\1/').json)+become(echo {})")
@@ -80,7 +80,8 @@ smart_connect() {
 
 case "$1" in
 -f | --freeze)
-  session=$(tmux ls -F "#{session_name}" | fzf --reverse --prompt="Freeze Session: ")
+  # Similar, force bash as fzf shell
+  session=$(tmux ls -F "#{session_name}" | SHELL=/bin/bash fzf --reverse --prompt="Freeze Session: ")
   [ -n "$session" ] && tmuxp freeze "$session" --yes --force -f json -o "$TMUXP_CONFIG_DIR/${session}.json"
   exit 0
   ;;
