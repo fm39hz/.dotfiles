@@ -25,7 +25,7 @@ hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("dms ipc call settings focusOrTog
 hl.bind(mainMod .. " + ALT + N", hl.dsp.exec_cmd("dms ipc call notifications toggle"))
 hl.bind(mainMod .. " + SHIFT + ALT + N", hl.dsp.exec_cmd("dms ipc call notepad toggle"))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("dms ipc call powermenu toggle"))
+hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("dms ipc call powermenu toggle"))
 
 hl.bind(mainMod .. " + SHIFT + slash", hl.dsp.exec_cmd("dms ipc call keybinds toggle hyprland"))
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("dms ipc call lock lock"))

@@ -90,5 +90,12 @@
   },
   "powerOptions": {
     "enabled": true
+  },
+  "dankKDEConnect": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
   }
 }
