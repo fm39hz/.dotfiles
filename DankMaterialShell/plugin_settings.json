@@ -97,5 +97,17 @@
   "calculator": {
     "enabled": true,
     "trigger": "="
+  },
+  "displayOutput": {
+    "enabled": true
+  },
+  "audioSwitcher": {
+    "enabled": true
+  },
+  "qrGenerator": {
+    "enabled": true
+  },
+  "musicLyrics": {
+    "enabled": true
   }
 }
