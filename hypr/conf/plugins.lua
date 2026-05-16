@@ -1,4 +1,3 @@
--- Nếu bạn clone vào ~/.config/hypr/hyprsplit
 local hs = require("hyprsplit")
 
 hs.config({
@@ -6,5 +5,4 @@ hs.config({
 	persistent_workspaces = true,
 })
 
--- Thiết lập thứ tự ưu tiên monitor
 hs.monitor_priority({ "eDP-1", "DP-1", "HDMI-A-1" })

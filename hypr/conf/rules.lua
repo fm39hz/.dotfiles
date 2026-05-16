@@ -7,7 +7,7 @@ hl.window_rule({ match = { class = "^jetbrains-.+$", float = true }, tag = "+jb"
 hl.window_rule({ match = { tag = "jb" }, no_initial_focus = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^$" }, stay_focused = true, min_size = { 1, 1 } })
 
--- Browser Popups (Phối hợp từ firefox.conf/electron.conf)
+-- Browser Popups
 hl.window_rule({
 	match = { class = "^(floorp|zen|brave-.*)$", title = "^(Library|Đăng nhập.*|Extension.*|Untitled.*)$" },
 	float = true,

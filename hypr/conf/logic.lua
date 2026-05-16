@@ -1,6 +1,7 @@
+local hs = require("hyprsplit")
 local M = {}
 
--- Tìm cửa sổ dựa trên regex
+-- Window matching
 local function get_win(term, is_class)
 	local wins = hl.get_windows()
 	for _, w in ipairs(wins) do
@@ -12,22 +13,24 @@ local function get_win(term, is_class)
 	return nil
 end
 
--- Logic focus ứng dụng (Thay thế manage_focus)
+-- Focus or Execute
 function M.app_focus(term, class, workspace, is_class, extra_args)
 	local win = get_win(term, is_class)
 	if win then
-		-- Nếu đã mở, focus vào workspace hiện tại của nó
-		hl.dispatch(hl.dsp.workspace.focus({ workspace = win.workspace.id }))
+		local target_ws = win.workspace.id
+
+		if target_ws < 0 then
+			target_ws = win.workspace.name or workspace
+		end
+
+		hl.dispatch(hs.dsp.focus({ workspace = target_ws }))
 	else
-		-- Nếu chưa mở, nhảy sang workspace đích và chạy ứng dụng
-		hl.dispatch(hl.dsp.workspace.focus({ workspace = workspace }))
-		-- Bạn có thể thêm "uwsm app -- " vào trước %s nếu vẫn dùng uwsm
+		hl.dispatch(hs.dsp.focus({ workspace = workspace }))
 		local cmd = string.format("%s %s", class, extra_args or "")
 		hl.dispatch(hl.dsp.exec_cmd(cmd))
 	end
 end
 
--- Logic kéo cửa sổ về hiện tại (Thay thế bring_window_to_current)
 function M.bring_here(term, class, is_class, extra_args)
 	local win = get_win(term, is_class)
 	if win then
