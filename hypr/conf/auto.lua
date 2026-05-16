@@ -9,7 +9,6 @@ hl.on("hyprland.start", function()
 	-- =====================================================================
 	-- 2. KHÓA MÀN HÌNH LẬP TỨC VÀ GHIM TIÊU ĐIỂM WORKSPACE 2
 	-- =====================================================================
-	hl.exec_cmd("runapp hyprlock")
 	hl.dispatch(hs.dsp.focus({ workspace = 2 }))
 
 	-- =====================================================================
@@ -36,8 +35,7 @@ hl.on("hyprland.start", function()
 	-- 5. UI TIỆN ÍCH & MỒI ỨNG DỤNG NGẦM (Delay 300ms)
 	-- =====================================================================
 	hl.timer(function()
-		-- Bật thanh Bar DMS qua kén C++ runapp siêu tốc
-		hl.exec_cmd("runapp " .. os.getenv("HOME") .. "/.config/hypr/scripts/bar.sh")
+		hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/bar.sh")
 
 		-- Khởi động Ghostty Terminal Daemon
 		hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
