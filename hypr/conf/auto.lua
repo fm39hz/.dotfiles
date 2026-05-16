@@ -2,17 +2,18 @@ local hs = require("hyprsplit")
 
 hl.on("hyprland.start", function()
 	-- =====================================================================
-	-- 1. PERMISSIONS SYSTEM
+	-- 1. PERMISSIONS
 	-- =====================================================================
 	hl.permission({ binary = "/usr/(bin|local/bin)/hyprpm", type = "plugin", mode = "allow" })
 
 	-- =====================================================================
-	-- 2. KHÓA MÀN HÌNH LẬP TỨC VÀ GHIM TIÊU ĐIỂM WORKSPACE 2
+	-- 2. SHELL
 	-- =====================================================================
+	hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/bar.sh")
 	hl.dispatch(hs.dsp.focus({ workspace = 2 }))
 
 	-- =====================================================================
-	-- 3. CORE SERVICES DAEMONS (Được dọn dẹp sang runapp)
+	-- 3. CORE SERVICES DAEMONS
 	-- =====================================================================
 	hl.exec_cmd("runapp fcitx5") -- Loại bỏ -d để hệ thống systemd quản lý chuẩn chỉ
 	hl.exec_cmd("runapp hyprpaper")
@@ -20,7 +21,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("runapp hyprsunset")
 
 	-- =====================================================================
-	-- 4. PERFORMANCE PRE-PRIMING CACHE (Giữ nguyên luồng ngầm)
+	-- 4. PERFORMANCE PRE-PRIMING CACHE
 	-- =====================================================================
 	hl.exec_cmd([[
         NU_VENDOR_DIR=$(nu -c 'print ($nu.data-dir | path join "vendor/autoload")')
@@ -32,21 +33,15 @@ hl.on("hyprland.start", function()
     ]])
 
 	-- =====================================================================
-	-- 5. UI TIỆN ÍCH & MỒI ỨNG DỤNG NGẦM (Delay 300ms)
+	-- 5. BOOTSTRAP UI & ESSENTIALS
 	-- =====================================================================
 	hl.timer(function()
-		hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/bar.sh")
-
-		-- Khởi động Ghostty Terminal Daemon
 		hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
 
-		-- Các thành phần quản lý thiết bị phần cứng
 		hl.exec_cmd("runapp solaar --window=hide")
 		hl.exec_cmd("runapp localsend --hidden")
 		hl.exec_cmd("runapp mangohud steam -silent")
 
-		-- Gọi ứng dụng đồ họa nặng trực tiếp qua runapp.
-		-- Nhờ Window Rules, chúng tự chui ngầm vào Scratchpad không lệch một pixel tiêu điểm.
 		hl.exec_cmd("runapp zen-browser")
 		hl.exec_cmd("runapp 64gram-desktop")
 	end, { timeout = 300, type = "oneshot" })
