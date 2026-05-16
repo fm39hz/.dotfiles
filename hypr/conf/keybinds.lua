@@ -7,17 +7,17 @@ local terminalCli = "kitty"
 local scripts = os.getenv("HOME") .. "/.config/hypr/scripts/"
 
 -- =====================================================================
--- Basic os map
+-- BINDS HỆ THỐNG CƠ BẢN (Đã bọc runapp cho Terminal tốc độ cao)
 -- =====================================================================
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("runapp " .. terminal))
 hl.bind(mainMod .. " + BACKSPACE", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + BACKSPACE", hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd(terminalCli .. " btop"))
+hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("runapp " .. terminalCli .. " btop"))
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- =====================================================================
--- Quickshell (DMS)
+-- DANK MATERIAL SHELL (DMS) - IPC CORE CALLS (Giữ nguyên Direct IPC)
 -- =====================================================================
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("dms ipc call clipboard toggle"))
@@ -30,19 +30,21 @@ hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("dms ipc call powermenu toggle")
 hl.bind(mainMod .. " + SHIFT + slash", hl.dsp.exec_cmd("dms ipc call keybinds toggle hyprland"))
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("dms ipc call lock lock"))
 hl.bind("CTRL + ALT + Delete", hl.dsp.exec_cmd("dms ipc call processlist focusOrToggle"))
-
 hl.bind(mainMod .. " + ALT + M", hl.dsp.exec_cmd("dms ipc call processlist focusOrToggle"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
 
-hl.bind("PRINT", hl.dsp.exec_cmd("dms screenshot full"))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("dms screenshot"))
-hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("dms screenshot window"))
+-- =====================================================================
+-- SCREENSHOTS DMS (Bọc runapp để systemd quản lý bộ nhớ đệm ảnh)
+-- =====================================================================
+hl.bind("PRINT", hl.dsp.exec_cmd("runapp dms screenshot full"))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("runapp dms screenshot"))
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("runapp dms screenshot window"))
 
+-- Multimedia & Brightness (DMS Native IPC)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("dms ipc call audio increment 3"), { repeating = true, locked = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("dms ipc call audio decrement 3"), { repeating = true, locked = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("dms ipc call audio mute"), { locked = true })
 hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("dms ipc call audio micmute"), { locked = true })
-
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("dms ipc call mpris playPause"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("dms ipc call mpris playPause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("dms ipc call mpris previous"), { locked = true })
@@ -57,7 +59,6 @@ hl.bind(
 	hl.dsp.exec_cmd("dms ipc call mpris decrement 3"),
 	{ repeating = true, locked = true }
 )
-
 hl.bind(
 	"XF86MonBrightnessUp",
 	hl.dsp.exec_cmd("dms ipc call brightness increment 5 ''"),
@@ -70,19 +71,18 @@ hl.bind(
 )
 
 -- =====================================================================
--- Hyprsplit workspaces
+-- HYPRSPLIT WORKSPACES
 -- =====================================================================
 for i = 1, 5 do
 	local key = i % 10
 	hl.bind(mainMod .. " + " .. key, hs.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hs.dsp.window.move({ workspace = i, follow = false }))
 end
-
 hl.bind(mainMod .. " + F12", hs.dsp.workspace.swap_monitors({ monitor1 = "current", monitor2 = "+1" }))
 hl.bind(mainMod .. " + G", hs.dsp.grab_rogue_windows())
 
 -- =====================================================================
--- Special workspaces & App focus logic
+-- SPECIAL WORKSPACES & APP LOGIC
 -- =====================================================================
 local specials = { P = "scratchpad", C = "chat", D = "debug", B = "browser", N = "note" }
 for key, name in pairs(specials) do
@@ -107,7 +107,7 @@ hl.bind(mainMod .. " + CTRL + N", function()
 end)
 
 -- =====================================================================
--- Window navigation & resize
+-- WINDOW NAVIGATION & RESIZE
 -- =====================================================================
 local directions = { H = "l", L = "r", K = "u", J = "d", left = "l", right = "r", up = "u", down = "d" }
 for key, dir in pairs(directions) do
@@ -124,11 +124,11 @@ hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("dms ipc call window-rules toggle"))
 
 -- =====================================================================
--- Devices
+-- LAPTOP PARTS
 -- =====================================================================
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(scripts .. "sleep.sh"), { locked = true })
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd(scripts .. "unlock.sh"), { locked = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("runapp " .. scripts .. "sleep.sh"), { locked = true })
+hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("runapp " .. scripts .. "unlock.sh"), { locked = true })
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })

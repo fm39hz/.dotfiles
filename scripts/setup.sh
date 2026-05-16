@@ -47,7 +47,7 @@ sudo systemctl enable greetd.service
 sudo systemctl enable bluetooth.service
 
 # Symlink script & rc files
-sudo ln -S ~/.config/greetd/config.toml /etc/greetd/config.toml
+sudo ln -s ~/.config/greetd/config.toml /etc/greetd/config.toml
 # sudo ln -s ~/.config/scripts/hyprland_autolog.sh /etc/profile.d/hyprland_autolog.sh
 
 # Config global gitattributes

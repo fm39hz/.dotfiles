@@ -1,22 +1,27 @@
+local hs = require("hyprsplit")
+
 hl.on("hyprland.start", function()
 	-- =====================================================================
-	-- Permission
+	-- 1. PERMISSIONS SYSTEM
 	-- =====================================================================
-	hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
+	hl.permission({ binary = "/usr/(bin|local/bin)/hyprpm", type = "plugin", mode = "allow" })
 
 	-- =====================================================================
-	-- Environment & Core Services
+	-- 2. KHÓA MÀN HÌNH LẬP TỨC VÀ GHIM TIÊU ĐIỂM WORKSPACE 2
 	-- =====================================================================
-	hl.exec_cmd(
-		"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && "
-			.. "/usr/libexec/polkit-gnome-authentication-agent-1 & "
-			.. "hyprctl setcursor everforest-cursors 32 && "
-			.. "hyprpm reload && "
-			.. "lxsession & fcitx5 -d & hyprpaper & hypridle & hyprsunset"
-	)
+	hl.exec_cmd("runapp hyprlock")
+	hl.dispatch(hs.dsp.focus({ workspace = 2 }))
 
 	-- =====================================================================
-	-- Cache
+	-- 3. CORE SERVICES DAEMONS (Được dọn dẹp sang runapp)
+	-- =====================================================================
+	hl.exec_cmd("runapp fcitx5") -- Loại bỏ -d để hệ thống systemd quản lý chuẩn chỉ
+	hl.exec_cmd("runapp hyprpaper")
+	hl.exec_cmd("runapp hypridle")
+	hl.exec_cmd("runapp hyprsunset")
+
+	-- =====================================================================
+	-- 4. PERFORMANCE PRE-PRIMING CACHE (Giữ nguyên luồng ngầm)
 	-- =====================================================================
 	hl.exec_cmd([[
         NU_VENDOR_DIR=$(nu -c 'print ($nu.data-dir | path join "vendor/autoload")')
@@ -28,26 +33,23 @@ hl.on("hyprland.start", function()
     ]])
 
 	-- =====================================================================
-	-- UI
+	-- 5. UI TIỆN ÍCH & MỒI ỨNG DỤNG NGẦM (Delay 300ms)
 	-- =====================================================================
 	hl.timer(function()
-		-- Bar
-		hl.exec_cmd("~/.config/hypr/scripts/bar.sh")
+		-- Bật thanh Bar DMS qua kén C++ runapp siêu tốc
+		hl.exec_cmd("runapp " .. os.getenv("HOME") .. "/.config/hypr/scripts/bar.sh")
 
-		-- Terminal
-		hl.exec_cmd("ghostty --quit-after-last-window-closed=false --initial-window=false")
+		-- Khởi động Ghostty Terminal Daemon
+		hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
 
-		-- Devices
-		hl.exec_cmd("solaar --window=hide")
-		hl.exec_cmd("localsend --hidden")
-		hl.exec_cmd("mangohud steam -silent")
+		-- Các thành phần quản lý thiết bị phần cứng
+		hl.exec_cmd("runapp solaar --window=hide")
+		hl.exec_cmd("runapp localsend --hidden")
+		hl.exec_cmd("runapp mangohud steam -silent")
 
-		-- Bootstrap workspace
-		local logic = require("conf.logic")
-		logic.app_focus("zen", "zen-browser", "special:browser", true)
-		logic.app_focus("64Gram", "64gram-desktop", "special:chat", true)
-
-		-- Default workspace focus
-		hl.dispatch(hl.dsp.focus({ workspace = 2 }))
-	end, { timeout = 250, type = "oneshot" })
+		-- Gọi ứng dụng đồ họa nặng trực tiếp qua runapp.
+		-- Nhờ Window Rules, chúng tự chui ngầm vào Scratchpad không lệch một pixel tiêu điểm.
+		hl.exec_cmd("runapp zen-browser")
+		hl.exec_cmd("runapp 64gram-desktop")
+	end, { timeout = 300, type = "oneshot" })
 end)

@@ -18,7 +18,7 @@ hl.env("QT_IM_MODULE", "wayland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_SESSION_DESKTOP", "hyprland")
 hl.env("GDK_BACKEND", "wayland,x11")
-hl.env("QT_QPA_PLAYFORM", "wayland")
+hl.env("QT_QPA_PLATFORM", "wayland")
 
 -- gpu
 hl.env("AQ_DRM_DEVICES", "/dev/dri/card2:/dev/dri/card1:/dev/dri/card0")
