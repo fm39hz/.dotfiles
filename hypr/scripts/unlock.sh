@@ -1,6 +1,5 @@
 #!/bin/bash
 hyprctl keyword monitor "e-DP-1, enable" &
 hyprctl reload &
-~/.config/hypr/scripts/hyprpanel.sh
 # hyprpanel
-hyprlock
+dms ipc call lock lock
