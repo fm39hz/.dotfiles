@@ -7,7 +7,6 @@ hl.window_rule({ match = { class = "^jetbrains-.+$", float = true }, tag = "+jb"
 hl.window_rule({ match = { tag = "jb" }, no_initial_focus = true })
 hl.window_rule({ match = { class = "^(steam)$", title = "^$" }, stay_focused = true, min_size = { 1, 1 } })
 
--- ĐẢM BẢO KHÔNG LỆCH FOCUS: Ép Zen Browser tự chui vào scratchpad ngầm khi khởi động
 hl.window_rule({ match = { initial_class = "zen" }, workspace = "special:browser" })
 hl.window_rule({ match = { initial_title = "Steam", initial_class = "" }, workspace = "special:scratchpad" })
 
