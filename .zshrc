@@ -162,3 +162,5 @@ add-zsh-hook chpwd tmux-git-autofetch
 
 # Added by LM Studio CLI tool (lms)
 export PATH="$PATH:/home/fm39hz/.cache/lm-studio/bin"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
