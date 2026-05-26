@@ -202,7 +202,7 @@
   "dankLauncherV2UnloadOnClose": true,
   "useAutoLocation": true,
   "weatherEnabled": true,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "Everforest-Dark",
   "cursorSettings": {
     "theme": "System Default",
@@ -227,9 +227,9 @@
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
-  "fontFamily": "Amazon Ember Display Heavy",
+  "fontFamily": "Amazon Ember Display",
   "monoFontFamily": "JetBrains Mono",
-  "fontWeight": 700,
+  "fontWeight": 800,
   "fontScale": 1.25,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
@@ -253,13 +253,13 @@
   "batterySuspendBehavior": 0,
   "batteryProfileName": "",
   "batteryChargeLimit": 100,
-  "lockBeforeSuspend": false,
+  "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
   "fadeToLockEnabled": true,
   "fadeToLockGracePeriod": 5,
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
-  "launchPrefix": "",
+  "launchPrefix": "runapp",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {},
   "bluetoothDevicePins": {},
@@ -301,12 +301,12 @@
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
   "dockOpenOnOverview": false,
-  "dockPosition": 1,
+  "dockPosition": 0,
   "dockSpacing": 4,
   "dockBottomGap": 0,
   "dockMargin": 0,
   "dockIconSize": 40,
-  "dockIndicatorStyle": "circle",
+  "dockIndicatorStyle": "line",
   "dockBorderEnabled": false,
   "dockBorderColor": "surfaceText",
   "dockBorderOpacity": 1,
@@ -369,7 +369,7 @@
   "osdPowerProfileEnabled": true,
   "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
-  "powerActionHoldDuration": 0.5,
+  "powerActionHoldDuration": 0.25,
   "powerMenuActions": [
     "reboot",
     "logout",
@@ -417,7 +417,11 @@
       "leftWidgets": [
         "launcherButton",
         "workspaceSwitcher",
-        "focusedWindow"
+        {
+          "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowCompactMode": false
+        }
       ],
       "centerWidgets": [
         "music",
@@ -427,11 +431,25 @@
       "rightWidgets": [
         "systemTray",
         "clipboard",
-        "cpuUsage",
-        "memUsage",
+        {
+          "id": "cpuUsage",
+          "enabled": true,
+          "minimumWidth": false
+        },
+        {
+          "id": "memUsage",
+          "enabled": true,
+          "minimumWidth": false
+        },
         "notificationButton",
         "battery",
-        "controlCenterButton"
+        {
+          "id": "controlCenterButton",
+          "enabled": true,
+          "showAudioPercent": false,
+          "showBrightnessIcon": false,
+          "showMicIcon": false
+        }
       ],
       "spacing": 0,
       "innerPadding": 4,

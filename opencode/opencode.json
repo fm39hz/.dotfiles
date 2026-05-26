@@ -17,9 +17,9 @@
     }
   },
   "permission": {
-    "grep": "deny",
-    "glob": "deny",
-    "bash": "deny",
+    "grep": "ask",
+    "glob": "ask",
+    "bash": "ask",
   },
   "mcp": {
     "docshark": {

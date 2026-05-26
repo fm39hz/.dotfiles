@@ -164,3 +164,7 @@ add-zsh-hook chpwd tmux-git-autofetch
 export PATH="$PATH:/home/fm39hz/.cache/lm-studio/bin"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/fm39hz/.local/bin:$PATH"

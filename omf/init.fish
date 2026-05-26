@@ -47,3 +47,21 @@ fish_add_path -U "$HOME/.local/share/Steam/steamapps/common/Aseprite"
 # Docker alias
 alias dockerup "docker-compose --log-level ERROR up -d --build"
 alias dockerdown "docker-compose down"
+# --- Tmux Manager ---
+# Ctrl + b: Mở tmux_project.sh
+bind \cb '
+        if test -z "$TMUX"
+            ~/.config/scripts/tmux_project.sh
+        else
+            echo "Bạn đang ở trong Tmux rồi!"
+        end
+        commandline -f repaint
+    '
+
+# --- Yazi ---
+# Ctrl + y: Mở yazi
+bind \cy 'yazi; commandline -f repaint'
+
+# --- Hard Clear Screen ---
+# Alt + l: Xóa màn hình
+bind \el 'clear; commandline -f repaint'

@@ -109,5 +109,9 @@
   },
   "musicLyrics": {
     "enabled": true
+  },
+  "developerUtilities": {
+    "enabled": true,
+    "autoCloseOnCopy": true
   }
 }

@@ -1,43 +1,56 @@
 // Zed settings
 {
+	"agent_servers": {
+  "kimi": {
+   "type": "registry"
+  },
+  "opencode": {
+   "type": "registry"
+  }
+ },
+ "document_folding_ranges": "on",
+	"semantic_tokens": "combined",
+	"text_rendering_mode": "platform_default",
 	"outline_panel": {
-  "dock": "left"
- },
- "git_panel": {
-  "dock": "left"
- },
- "which_key": {
-  "enabled": true
- },
- "edit_predictions": {
-  "provider": "zed"
- },
- "language_models": {
+		"dock": "left",
+	},
+	"git_panel": {
+		"dock": "right",
+	},
+	"which_key": {
+		"enabled": true,
+	},
+	"edit_predictions": {
+		"provider": "zed",
+	},
+	"language_models": {
 		"copilot_chat": {
 			"api_url": "https://api.githubcopilot.com/chat/completions",
 			"auth_url": "https://api.github.com/copilot_internal/v2/token",
-			"models_url": "https://api.githubcopilot.com/models"
-		}
+			"models_url": "https://api.githubcopilot.com/models",
+		},
 	},
 	"icon_theme": "Material Icon Theme",
 	"agent": {
 		"dock": "right",
-  "tool_permissions": {
-   "default": "allow"
-  },
-  "default_model": {
-			"provider": "copilot_chat",
-			"model": "claude-haiku-4.5"
+		"tool_permissions": {
+			"default": "allow",
+		},
+		"default_model": {
+			"effort": "high",
+   "enable_thinking": true,
+   "provider": "copilot_chat",
+			"model": "gpt-5-mini",
 		},
 	},
 	"collaboration_panel": {
-		"dock": "right"
+		"dock": "right",
 	},
 	"features": {
-		"copilot": true
+		"copilot": true,
 	},
 	"telemetry": {
-		"metrics": false
+		"metrics": false,
 	},
 	"base_keymap": "VSCode",
 	"theme": "Everforest Dark Medium",
@@ -60,22 +73,32 @@
 		"shell": "system",
 		"toolbar": {
 			"position": "top",
-			"breadcrumbs": true
+			"breadcrumbs": true,
 		},
-		"dock": "bottom"
+		"dock": "bottom",
 	},
 	"project_panel": {
-		"bold_folder_labels": true,
-  "hide_gitignore": true,
+		"hide_hidden": false,
+  "git_status_indicator": true,
+  "diagnostic_badges": true,
+  "bold_folder_labels": true,
+		"hide_gitignore": true,
 		"dock": "right",
-		"default_width": 360
+		"default_width": 360,
 	},
 	"lsp": {
 		"omnisharp": {
-			"binary": {}
-		}
+			"binary": {},
+		},
 	},
 	"languages": {
-		"CSharp": {}
-	}
+		"CSharp": {
+			"formatter": {
+				"external": {
+					"command": "dotnet",
+					"arguments": ["format", "$FIlE"],
+				},
+			},
+		},
+	},
 }

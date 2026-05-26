@@ -18,6 +18,7 @@ paru -S --needed --noconfirm \
     adobe-source-han-serif-cn-fonts \
     ags-hyprpanel-git \
     alacritty \
+    amazon-fonts \
     anytype-bin \
     app2unit-git \
     aspnet-runtime \
@@ -47,6 +48,7 @@ paru -S --needed --noconfirm \
     cloudflared \
     cmake \
     cmatrix \
+    codex-desktop-linux \
     colloid-everforest-gtk-theme-git \
     composer \
     cursor-bin \
@@ -55,6 +57,7 @@ paru -S --needed --noconfirm \
     ddcutil \
     devspace-bin \
     diff-so-fancy \
+    dms-shell \
     docker \
     docker-buildx \
     docker-compose \
@@ -114,6 +117,7 @@ paru -S --needed --noconfirm \
     hyprland-guiutils \
     hyprland-qt-support \
     hyprlang \
+    hyprlauncher \
     hyprlock \
     hyprpaper \
     hyprpicker \
@@ -136,6 +140,7 @@ paru -S --needed --noconfirm \
     joyutils \
     kdeconnect \
     keyd \
+    kiro-ide \
     kitty \
     kubectl \
     kvantum \
@@ -164,7 +169,7 @@ paru -S --needed --noconfirm \
     lxsession \
     lynx \
     man-db \
-    mariadb \
+    mangohud \
     matugen-bin \
     maven \
     microsoft-edge-stable-bin \
@@ -197,6 +202,7 @@ paru -S --needed --noconfirm \
     nwg-look \
     obs-studio \
     obsidian \
+    ocrmypdf \
     openapi-tui \
     openresolv \
     oracle-sqldeveloper \
@@ -233,6 +239,7 @@ paru -S --needed --noconfirm \
     rofi \
     rsync \
     rtl8821au-dkms-git \
+    runapp \
     rust \
     scalar-desktop-bin \
     secrets \
@@ -251,6 +258,7 @@ paru -S --needed --noconfirm \
     steam \
     superfile \
     tauri-cli \
+    tesseract-data-eng \
     thefuck \
     thorium-browser-avx2-bin \
     thunar \

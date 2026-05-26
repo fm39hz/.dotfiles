@@ -51,6 +51,8 @@ bruno
 Code/*
 cursor
 Kiro
+Antigravity*
+Codex
 JetBrains
 jgit
 !zed/*.json
@@ -71,6 +73,8 @@ obsidian/*
 
 # Brower cache
 thorium/*
+chromium
+google-chrome
 content_shell/*
 torbrowser
 configstore
@@ -107,7 +111,7 @@ TabNine/*
 Windsurf
 *skills*
 *credentials*
-github-copilot/apps.json
+github-copilot/*
 Jan
 LM Studio
 how
