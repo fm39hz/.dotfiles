@@ -1,5 +1,6 @@
 {
   "session_name": "project-nvim-dap-godot-mono",
+  "start_directory": "/home/fm39hz/Workspace/Personal/Rice/nvim-dap-godot-mono",
   "windows": [
     {
       "options": {
@@ -14,8 +15,7 @@
           "focus": "true"
         }
       ],
-      "focus": "true",
-      "start_directory": "/home/fm39hz/Workspace/Personal/Rice/nvim-dap-godot-mono"
+      "focus": "true"
     },
     {
       "options": {
@@ -29,8 +29,7 @@
           "shell_command": "nu",
           "focus": "true"
         }
-      ],
-      "start_directory": "/home/fm39hz/Workspace/Personal/Rice/nvim-dap-godot-mono"
+      ]
     }
   ]
 }

@@ -1,5 +1,6 @@
 {
   "session_name": "bat-dong-san-web",
+  "start_directory": "/home/fm39hz/Workspace/HUCE/bat-dong-san-web",
   "windows": [
     {
       "options": {
@@ -14,8 +15,7 @@
           "focus": "true"
         }
       ],
-      "focus": "true",
-      "start_directory": "/home/fm39hz/Workspace/HUCE/bat-dong-san-web"
+      "focus": "true"
     },
     {
       "options": {
@@ -24,14 +24,7 @@
         "automatic-rename-format": "bat-dong-san-web"
       },
       "window_name": "bat-dong-san-web",
-      "layout": "c386,144x36,0,0,9",
-      "panes": [
-        {
-          "shell_command": "nu",
-          "focus": "true"
-        }
-      ],
-      "start_directory": "/home/fm39hz/Workspace/HUCE/bat-dong-san-web"
+      "layout": "c386,144x36,0,0,9"
     }
   ]
 }

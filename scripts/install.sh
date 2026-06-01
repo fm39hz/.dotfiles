@@ -19,6 +19,7 @@ paru -S --needed --noconfirm \
     ags-hyprpanel-git \
     alacritty \
     amazon-fonts \
+    antigravity \
     anytype-bin \
     app2unit-git \
     aspnet-runtime \
@@ -48,7 +49,6 @@ paru -S --needed --noconfirm \
     cloudflared \
     cmake \
     cmatrix \
-    codex-desktop-linux \
     colloid-everforest-gtk-theme-git \
     composer \
     cursor-bin \
@@ -178,6 +178,7 @@ paru -S --needed --noconfirm \
     mono \
     mpd \
     nasm \
+    ncdu \
     ncurses5-compat-libs \
     neofetch \
     neovide \
@@ -203,6 +204,7 @@ paru -S --needed --noconfirm \
     obs-studio \
     obsidian \
     ocrmypdf \
+    openai-codex \
     openapi-tui \
     openresolv \
     oracle-sqldeveloper \

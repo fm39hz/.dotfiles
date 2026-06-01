@@ -1,5 +1,6 @@
 {
   "session_name": "dotnet-grimoire-net",
+  "start_directory": "/home/fm39hz/Workspace/Personal/Books/Grimoire.NET",
   "windows": [
     {
       "options": {
@@ -14,8 +15,7 @@
           "focus": "true"
         }
       ],
-      "focus": "true",
-      "start_directory": "/home/fm39hz/Workspace/Personal/Books/Grimoire.NET"
+      "focus": "true"
     },
     {
       "options": {

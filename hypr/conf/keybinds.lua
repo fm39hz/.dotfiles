@@ -84,7 +84,7 @@ hl.bind(mainMod .. " + G", hs.dsp.grab_rogue_windows())
 -- =====================================================================
 -- SPECIAL WORKSPACES & APP LOGIC
 -- =====================================================================
-local specials = { P = "scratchpad", C = "chat", D = "debug", B = "browser", N = "note" }
+local specials = { P = "scratchpad", C = "chat", D = "debug", B = "browser", N = "note", M = "music" }
 for key, name in pairs(specials) do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.workspace.toggle_special(name))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = "special:" .. name }))
@@ -104,6 +104,9 @@ hl.bind(mainMod .. " + CTRL + N", function()
 		true,
 		"--enable-features=UseOzonePlatform --ozone-platform=wayland"
 	)
+end)
+hl.bind(mainMod .. " + CTRL + M", function()
+	logic.app_focus("spotify", "spotify", "special:music", true)
 end)
 
 -- =====================================================================

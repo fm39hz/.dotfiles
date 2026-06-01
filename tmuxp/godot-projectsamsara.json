@@ -1,5 +1,6 @@
 {
   "session_name": "godot-projectsamsara",
+  "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara",
   "windows": [
     {
       "options": {
@@ -15,8 +16,7 @@
           "focus": "true"
         }
       ],
-      "focus": "true",
-      "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara"
+      "focus": "true"
     },
     {
       "options": {
@@ -25,8 +25,7 @@
         "automatic-rename-format": "shell"
       },
       "window_name": "terminal",
-      "layout": "e290,156x36,0,0,21",
-      "start_directory": "/home/fm39hz/Workspace/Personal/Game/ProjectSamsara"
+      "layout": "e290,156x36,0,0,21"
     }
   ]
 }
