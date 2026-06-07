@@ -20,7 +20,6 @@ paru -S --needed --noconfirm \
     amazon-fonts \
     antigravity \
     anytype-bin \
-    app2unit-git \
     aspnet-runtime \
     aspnet-runtime-8.0 \
     aspnet-targeting-pack \
@@ -212,7 +211,6 @@ paru -S --needed --noconfirm \
     openai-codex \
     openapi-tui \
     opencode \
-    opencode-desktop-bin \
     openresolv \
     oracle-sqldeveloper \
     pacman-contrib \

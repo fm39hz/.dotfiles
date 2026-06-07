@@ -77,6 +77,19 @@ $env.config = {
           send: ExecuteHostCommand
           cmd: "clear"
         }
+      },
+      {
+        name: update_system
+        modifier: alt
+        keycode: char_u
+        mode: [emacs, vi_normal, vi_insert]
+        event: {
+          send: ExecuteHostCommand
+          cmd: "
+          clear
+          ~/.config/scripts/system_update.sh
+          "
+        }
       }
     ]
 }
