@@ -51,24 +51,6 @@
         "gh/claude-opus-4.5": {
           "name": "gh/claude-opus-4.5"
         },
-        "cu/default": {
-          "name": "cu/default"
-        },
-        "cu/claude-4.5-opus-high-thinking": {
-          "name": "cu/claude-4.5-opus-high-thinking"
-        },
-        "cu/claude-4.5-sonnet": {
-          "name": "cu/claude-4.5-sonnet"
-        },
-        "cx/gpt-5.3-codex-xhigh": {
-          "name": "cx/gpt-5.3-codex-xhigh"
-        },
-        "cx/gpt-5.4": {
-          "name": "cx/gpt-5.4"
-        },
-        "ag/gemini-3.1-pro-high": {
-          "name": "ag/gemini-3.1-pro-high"
-        },
         "kr/claude-sonnet-4.5": {
           "name": "kr/claude-sonnet-4.5"
         },
@@ -81,36 +63,15 @@
         "context-holder": {
           "name": "context-holder"
         },
-        "reasoner": {
-          "name": "reasoner"
-        },
-        "dev": {
-          "name": "dev"
-        },
-        "math": {
-          "name": "math"
-        },
-        "ds/deepseek-reasoner": {
-          "name": "ds/deepseek-reasoner"
-        },
-        "cmc/deepseek/deepseek-v4-pro": {
-          "name": "cmc/deepseek/deepseek-v4-pro"
-        },
-        "cmc/deepseek/deepseek-v4-flash": {
-          "name": "cmc/deepseek/deepseek-v4-flash"
-        },
-        "glm/glm-5.1": {
-          "name": "glm/glm-5.1"
-        }
       }
     }
   },
-  "model": "cmc/deepseek/deepseek-v4-pro",
+  "model": "daily-worker",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "cmc/deepseek/deepseek-v4-flash"
+      "model": "daily-worker"
     }
   }
 }

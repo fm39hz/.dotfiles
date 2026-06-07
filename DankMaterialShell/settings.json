@@ -30,10 +30,10 @@
   "useFahrenheit": false,
   "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
-  "animationSpeed": 2,
+  "animationSpeed": 3,
   "customAnimationDuration": 500,
   "syncComponentAnimationSpeeds": true,
-  "popoutAnimationSpeed": 2,
+  "popoutAnimationSpeed": 3,
   "popoutCustomAnimationDuration": 150,
   "modalAnimationSpeed": 1,
   "modalCustomAnimationDuration": 150,
@@ -143,7 +143,7 @@
   "workspaceOccupiedColorMode": "none",
   "workspaceUnfocusedColorMode": "default",
   "workspaceUrgentColorMode": "default",
-  "workspaceFocusedBorderEnabled": false,
+  "workspaceFocusedBorderEnabled": true,
   "workspaceFocusedBorderColor": "primary",
   "workspaceFocusedBorderThickness": 2,
   "workspaceNameIcons": {},
@@ -230,7 +230,7 @@
   "fontFamily": "Amazon Ember Display",
   "monoFontFamily": "JetBrains Mono",
   "fontWeight": 800,
-  "fontScale": 1.25,
+  "fontScale": 1.35,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -262,7 +262,11 @@
   "launchPrefix": "runapp",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
+  "bluetoothDevicePins": {
+    "preferredDevice": [
+      "DC:F0:1B:DD:AF:9A"
+    ]
+  },
   "audioInputDevicePins": {},
   "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
@@ -415,8 +419,18 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
-        "workspaceSwitcher",
+        {
+          "id": "launcherButton",
+          "enabled": true
+        },
+        {
+          "id": "workspaceSwitcher",
+          "enabled": true
+        },
+        {
+          "id": "privacyIndicator",
+          "enabled": true
+        },
         {
           "id": "focusedWindow",
           "enabled": true,
@@ -429,8 +443,10 @@
         "weather"
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
         {
           "id": "cpuUsage",
           "enabled": true,
@@ -439,10 +455,17 @@
         {
           "id": "memUsage",
           "enabled": true,
-          "minimumWidth": false
+          "minimumWidth": false,
+          "showSwap": false
         },
-        "notificationButton",
-        "battery",
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
         {
           "id": "controlCenterButton",
           "enabled": true,

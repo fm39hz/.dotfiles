@@ -21,7 +21,9 @@ hl.env("GDK_BACKEND", "wayland,x11")
 hl.env("QT_QPA_PLATFORM", "wayland")
 
 -- gpu
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card2:/dev/dri/card1:/dev/dri/card0")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("NVD_BACKEND", "direct")
+-- hl.env("AQ_DRM_DEVICES", "/dev/dri/card2:/dev/dri/card2:/dev/dri/card1")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")

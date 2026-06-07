@@ -113,5 +113,11 @@
   "developerUtilities": {
     "enabled": true,
     "autoCloseOnCopy": true
+  },
+  "screenRecorder": {
+    "enabled": true
+  },
+  "nvidiaGpuMonitor": {
+    "enabled": true
   }
 }

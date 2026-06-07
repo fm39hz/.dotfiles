@@ -16,7 +16,6 @@ paru -S --needed --noconfirm \
     acpi \
     adobe-source-han-sans-cn-fonts \
     adobe-source-han-serif-cn-fonts \
-    ags-hyprpanel-git \
     alacritty \
     amazon-fonts \
     antigravity \
@@ -26,6 +25,7 @@ paru -S --needed --noconfirm \
     aspnet-runtime-8.0 \
     aspnet-targeting-pack \
     aubio \
+    aws-cli \
     aws-sdk-cpp \
     base \
     base-devel \
@@ -45,10 +45,10 @@ paru -S --needed --noconfirm \
     cava \
     chafa \
     clang \
-    classin-bin \
     cloudflared \
     cmake \
     cmatrix \
+    codex-desktop-linux \
     colloid-everforest-gtk-theme-git \
     composer \
     cursor-bin \
@@ -90,6 +90,7 @@ paru -S --needed --noconfirm \
     git-filter-repo \
     git-lfs \
     github-cli \
+    gjs \
     gnome-bluetooth-3.0 \
     gnome-calculator \
     gnome-disk-utility \
@@ -107,6 +108,7 @@ paru -S --needed --noconfirm \
     gtk-engine-murrine \
     gui-for-singbox \
     gum \
+    gvfs \
     helm \
     how-cli-bin \
     html-xml-utils \
@@ -147,6 +149,7 @@ paru -S --needed --noconfirm \
     laigter \
     lazydocker \
     lazygit \
+    lib32-nvidia-utils \
     libfaketime \
     libinput-multiplier \
     libnotify \
@@ -160,6 +163,7 @@ paru -S --needed --noconfirm \
     linux-firmware \
     linux-headers \
     linux-lts \
+    linux-lts-headers \
     lmstudio \
     localsend-bin \
     lshw \
@@ -172,6 +176,7 @@ paru -S --needed --noconfirm \
     mangohud \
     matugen-bin \
     maven \
+    mesa-utils \
     microsoft-edge-stable-bin \
     minikube \
     mongodb-tools-bin \
@@ -199,13 +204,15 @@ paru -S --needed --noconfirm \
     npm \
     nsxiv \
     nushell \
-    nvidia-open-lts \
+    nvidia-open-dkms \
     nwg-look \
     obs-studio \
     obsidian \
     ocrmypdf \
     openai-codex \
     openapi-tui \
+    opencode \
+    opencode-desktop-bin \
     openresolv \
     oracle-sqldeveloper \
     pacman-contrib \
@@ -223,7 +230,6 @@ paru -S --needed --noconfirm \
     powerpill \
     powertop \
     python-build \
-    python-gpustat \
     python-installer \
     python-libtmux \
     python-oracledb \
@@ -243,6 +249,7 @@ paru -S --needed --noconfirm \
     rtl8821au-dkms-git \
     runapp \
     rust \
+    s3fs-fuse \
     scalar-desktop-bin \
     secrets \
     sendme-bin \
@@ -296,7 +303,6 @@ paru -S --needed --noconfirm \
     vulkan-intel \
     waybar \
     wget \
-    windsurf \
     wine \
     wireguard-go-git \
     wireguard-tools \
