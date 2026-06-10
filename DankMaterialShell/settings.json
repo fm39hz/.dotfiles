@@ -357,7 +357,7 @@
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
   "notificationHistoryMaxAgeDays": 7,
-  "notificationHistorySaveLow": true,
+  "notificationHistorySaveLow": false,
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
   "notificationRules": [],
@@ -428,19 +428,32 @@
           "enabled": true
         },
         {
+          "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowCompactMode": true
+        },
+        {
+          "id": "globalMenu",
+          "enabled": true
+        }
+      ],
+      "centerWidgets": [
+        {
           "id": "privacyIndicator",
           "enabled": true
         },
         {
-          "id": "focusedWindow",
-          "enabled": true,
-          "focusedWindowCompactMode": false
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
         }
-      ],
-      "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
       ],
       "rightWidgets": [
         {
