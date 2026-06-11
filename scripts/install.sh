@@ -30,7 +30,6 @@ paru -S --needed --noconfirm \
     base-devel \
     beekeeper-studio-bin \
     bind \
-    bitwarden \
     blender \
     blueman \
     bluez \
