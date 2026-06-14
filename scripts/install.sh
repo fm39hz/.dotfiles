@@ -104,7 +104,6 @@ paru -S --needed --noconfirm \
     gst-plugin-pipewire \
     gst-plugins-good \
     gtk-engine-murrine \
-    gui-for-singbox \
     gum \
     gvfs \
     helm \
@@ -285,6 +284,7 @@ paru -S --needed --noconfirm \
     ttf-jetbrains-mono-nerd \
     ttf-material-icons-git \
     ttf-material-symbols-variable-git \
+    ttfautohint \
     unarchiver \
     unrar \
     unzip \
