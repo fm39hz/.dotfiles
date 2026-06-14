@@ -29,7 +29,7 @@ STARSHIP_SHELL="nu" starship prompt --status=0 >/dev/null 2>&1 &
 
 # Đợi một chút cho hệ thống ổn định rồi chạy các app nặng hơn
 sleep 1
-ghostty --quit-after-last-window-closed=false --initial-window=false &
+# ghostty --quit-after-last-window-closed=false --initial-window=false &
 solaar --window=hide &
 localsend --hidden &
 mangohud steam -silent &

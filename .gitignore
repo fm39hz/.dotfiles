@@ -98,6 +98,7 @@ yazi/flavors
 yazi/plugins
 *Thunar*
 *thunar*
+rclone*
 
 # Database client
 MongoDB Compass/
