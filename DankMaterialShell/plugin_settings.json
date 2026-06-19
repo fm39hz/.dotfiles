@@ -33,8 +33,5 @@
   },
   "nvidiaGpuMonitor": {
     "enabled": true
-  },
-  "globalMenu": {
-    "enabled": true
   }
 }

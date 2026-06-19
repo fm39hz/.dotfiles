@@ -14,6 +14,9 @@ $env.DOTNET_WATCH_RESTART_ON_RUDE_EDIT = true
 $env.GODOT = ([ $env.HOME .config godotenv godot bin godot ] | path join)
 $env.GODOT_PATH = $env.GODOT
 
+# Dev
+$env.PODMAN_COMPOSE_PROVIDER = "podman-compose"
+
 # AI
 $env.OPENCODE_EXPERIMENTAL = true
 $env.CHROME_EXECUTABLE = "thorium-browser-avx2"

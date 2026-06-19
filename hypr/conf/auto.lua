@@ -15,7 +15,7 @@ hl.on("hyprland.start", function()
 	-- =====================================================================
 	-- 3. CORE SERVICES DAEMONS
 	-- =====================================================================
-	hl.exec_cmd("runapp fcitx5") -- Loại bỏ -d để hệ thống systemd quản lý chuẩn chỉ
+	hl.exec_cmd("runapp fcitx5")
 	hl.exec_cmd("runapp hyprpaper")
 	hl.exec_cmd("runapp hypridle")
 	hl.exec_cmd("runapp hyprsunset")

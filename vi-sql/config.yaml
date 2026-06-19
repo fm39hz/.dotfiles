@@ -1,0 +1,41 @@
+version: 0.1.1
+log:
+    path: /tmp/vi-sql.log
+    level: info
+    prettyPrint: true
+editor:
+    command: ""
+    env: EDITOR
+    enabled: false
+ui:
+    schemaPanelWidth: 30
+    vimMode: true
+    mouse: true
+mcp:
+    enabled: true
+    port: 9741
+    allowRead: true
+    allowWrite: false
+    maxRows: 100
+security:
+    method: keyring
+showConnectionPage: true
+currentConnection: Grimoire
+connections:
+    - id: 37a70a1c-0500-4681-ab76-eb58838b179b
+      driver: postgres
+      dsn: ""
+      host: localhost
+      port: 5432
+      database: grimoire
+      username: admin
+      password: enc:keyring:0f4f5f77121b6cc919079d6e5948276070a4627daeab3483c80154291754b4c93a
+      sslMode: disable
+      name: Grimoire
+      timeout: 5
+      options:
+        alwaysConfirmActions: true
+      lastUsed: 2026-06-14T14:10:11.839760902+07:00
+styles:
+    nerdFont: true
+    currentStyle: default.yaml

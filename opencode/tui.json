@@ -1,0 +1,16 @@
+{
+  "plugin": [
+    // "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.15.0"
+  ],
+  "keybinds": {
+    "leader": "ctrl+alt",
+    "command_list": "ctrl+:",
+    "app_exit": "ctrl+c,<leader>q",
+    "messages_page_up": "ctrl+u,ctrl+alt+b,pageup",
+    "messages_page_down": "ctrl+d,ctrl+alt+f,pagedown"
+  },
+  "scroll_speed": 3,
+  "scroll_acceleration": {
+    "enabled": true
+  }
+}

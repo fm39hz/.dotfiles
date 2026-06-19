@@ -6,7 +6,7 @@
 -- credit https://github.com/end-4/dots-hyprland
 -- -----------------------------------------------------
 
--- Định nghĩa các đường cong Bezier
+-- Bezier
 hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 hl.curve("md3_standard", { type = "bezier", points = { { 0.2, 0 }, { 0, 1 } } })
 hl.curve("md3_decel", { type = "bezier", points = { { 0.05, 0.7 }, { 0.1, 1 } } })
@@ -22,14 +22,13 @@ hl.curve("easeOutExpo", { type = "bezier", points = { { 0.16, 1 }, { 0.3, 1 } } 
 hl.curve("softAcDecel", { type = "bezier", points = { { 0.26, 0.26 }, { 0.15, 1 } } })
 hl.curve("md2", { type = "bezier", points = { { 0.4, 0 }, { 0.2, 1 } } }) -- use with .2s duration
 
--- Cấu hình các Animation
+-- Animations
 hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "md3_decel", style = "popin 60%" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "md3_decel", style = "popin 60%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "md3_accel", style = "popin 60%" })
 hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "md3_decel" })
 
--- Các dòng bị đóng comment ở file gốc được giữ lại dưới dạng comment Lua:
 -- hl.animation({ leaf = "layers", enabled = true, speed = 2, bezier = "md3_decel", style = "slide" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 3, bezier = "menu_decel", style = "slide" })
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.6, bezier = "menu_accel" })

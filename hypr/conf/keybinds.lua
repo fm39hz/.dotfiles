@@ -7,7 +7,7 @@ local terminalCli = "kitty"
 local scripts = os.getenv("HOME") .. "/.config/hypr/scripts/"
 
 -- =====================================================================
--- BINDS HỆ THỐNG CƠ BẢN (Đã bọc runapp cho Terminal tốc độ cao)
+-- SYSTEM BINDS
 -- =====================================================================
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("runapp " .. terminal))
 hl.bind(mainMod .. " + BACKSPACE", hl.dsp.window.close())
@@ -17,7 +17,7 @@ hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- =====================================================================
--- DANK MATERIAL SHELL (DMS) - IPC CORE CALLS (Giữ nguyên Direct IPC)
+-- DANK MATERIAL SHELL (DMS)
 -- =====================================================================
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("dms ipc call clipboard toggle"))
@@ -34,13 +34,13 @@ hl.bind(mainMod .. " + ALT + M", hl.dsp.exec_cmd("dms ipc call processlist focus
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
 
 -- =====================================================================
--- SCREENSHOTS DMS (Bọc runapp để systemd quản lý bộ nhớ đệm ảnh)
+-- SCREENSHOTS DMS
 -- =====================================================================
 hl.bind("PRINT", hl.dsp.exec_cmd("runapp dms screenshot full"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("runapp dms screenshot"))
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("runapp dms screenshot window"))
 
--- Multimedia & Brightness (DMS Native IPC)
+-- Multimedia & Brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("dms ipc call audio increment 3"), { repeating = true, locked = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("dms ipc call audio decrement 3"), { repeating = true, locked = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("dms ipc call audio mute"), { locked = true })
@@ -106,7 +106,7 @@ hl.bind(mainMod .. " + CTRL + N", function()
 	)
 end)
 hl.bind(mainMod .. " + CTRL + M", function()
-	logic.app_focus("spotify", "spotify", "special:music", true)
+	logic.app_focus("spotify", "spotify-launcher", "special:music", true)
 end)
 
 -- =====================================================================

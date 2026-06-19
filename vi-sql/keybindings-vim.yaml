@@ -1,0 +1,239 @@
+navigation:
+    moveUp:
+        keys: [Up]
+        runes: [k]
+        description: Move up
+    moveDown:
+        keys: [Down]
+        runes: [j]
+        description: Move down
+    moveLeft:
+        keys: [Left]
+        runes: [h]
+        description: Move left
+    moveRight:
+        keys: [Right]
+        runes: [l]
+        description: Move right
+    goTop:
+        sequences: [gg]
+        description: Go top
+    goBottom:
+        runes: [G]
+        description: Go bottom
+    focusUp:
+        keys: [Ctrl+k]
+        description: Focus up
+    focusDown:
+        keys: [Ctrl+j]
+        description: Focus down
+    focusLeft:
+        keys: [Ctrl+h]
+        description: Focus left
+    focusRight:
+        keys: [Ctrl+l]
+        description: Focus right
+    autocompleteUp:
+        keys: [Ctrl+p, Up]
+        description: Autocomplete up
+    autocompleteDown:
+        keys: [Ctrl+n, Down]
+        description: Autocomplete down
+    autocompleteAccept:
+        keys: [Ctrl+y, Enter]
+        description: Autocomplete accept
+common:
+    close:
+        keys: [Esc]
+        description: Close
+    delete:
+        sequences: [dd]
+        description: Delete
+    add:
+        runes: [a]
+        description: Add
+    edit:
+        runes: [e]
+        description: Edit
+    copy:
+        sequences: [yy]
+        description: Copy
+    confirm:
+        keys: [Ctrl+s]
+        description: Confirm
+    filter:
+        runes: [/]
+        description: Filter
+    select:
+        keys: [Enter, Space]
+        description: Select
+    refresh:
+        keys: [Ctrl+r]
+        description: Refresh
+    clear:
+        keys: [Ctrl+u]
+        description: Clear
+    paste:
+        keys: [Ctrl+v]
+        description: Paste
+global:
+    closeApp:
+        keys: [Ctrl+c]
+        description: Close app
+    fullScreenHelp:
+        keys: [F1]
+        description: Help
+    openConnection:
+        keys: [Ctrl+o]
+        description: Open connections
+    changeStyle:
+        keys: [Alt+t]
+        description: Change style
+    togglefooter:
+        keys: [Alt+f]
+        description: Toggle footer
+main:
+    serverInfo:
+        keys: [Alt+s]
+        description: Server info
+    hideSchema:
+        runes: ['|']
+        description: Hide schemas
+    newTab:
+        keys: [Ctrl+t]
+        description: New tab
+    closeTab:
+        keys: [Ctrl+x]
+        description: Close tab
+    renameTab:
+        keys: [F2]
+        description: Rename tab
+    focusSchemaTree:
+        sequences: [ge]
+        description: Focus schemas
+    openActions:
+        runes: [':']
+        description: Actions
+    importData:
+        keys: [Alt+i]
+        description: Import CSV
+    goToTable:
+        sequences: [gt]
+        description: Go to table
+schema:
+    expandAll:
+        runes: [E]
+        description: Expand all
+    collapseAll:
+        runes: [W]
+        description: Collapse all
+    renameTable:
+        runes: [R]
+        description: Rename table
+    expandTable:
+        runes: [e]
+        description: Expand table
+    openStructure:
+        runes: [s]
+        description: Open structure
+    openIndexes:
+        runes: [i]
+        description: Open indexes
+data:
+    peekRow:
+        keys: [Enter]
+        runes: [o]
+        description: Peek row
+    fullPagePeek:
+        runes: [O]
+        description: Full peek
+    editRow:
+        runes: [E]
+        description: Edit
+    duplicateRow:
+        runes: [D]
+        description: Duplicate
+    copyCell:
+        sequences: [yc]
+        description: Copy cell
+    copyRow:
+        sequences: [yy]
+        description: Copy row
+    toggleOrderBar:
+        runes: [s]
+        description: Order bar
+    orderByColumn:
+        runes: [S]
+        description: Order by column
+    hideColumn:
+        runes: [H]
+        description: Hide column
+    resetHiddenColumns:
+        runes: [r]
+        description: Reset cols
+    multipleSelect:
+        runes: [V]
+        description: Start select
+    clearSelection:
+        keys: [Esc]
+        description: Clear selection
+    explainQuery:
+        keys: [Alt+e]
+        description: Explain query
+    exportData:
+        keys: [Alt+m]
+        description: Export data
+    followForeignKey:
+        sequences: [gd]
+        description: Follow FK
+    findReferences:
+        sequences: [gr]
+        description: Find references
+peeker:
+    copyHighlight:
+        runes: [C]
+        description: Copy highlight
+    expandRow:
+        keys: [Enter]
+        description: Expand
+    openValueViewer:
+        runes: [v]
+        description: Viewer
+    toggleFullScreen:
+        runes: [f]
+        description: Full screen
+sqlQueryEditor:
+    fullscreen:
+        keys: [Alt+z]
+        description: Toggle
+    openHistory:
+        keys: [Alt+r]
+        description: History
+    termEditor:
+        keys: [Ctrl+e]
+        description: Open in $EDITOR
+indexAddForm:
+    toggleSQLMode:
+        keys: [Ctrl+e]
+        description: SQL editor
+    addColumn:
+        keys: [Ctrl+a]
+        description: Add column
+structure:
+    renameColumn:
+        runes: [R]
+        description: Rename column
+    toggleDDLPane:
+        runes: [p]
+        description: Toggle DDL
+history:
+    purgeHistory:
+        keys: [Alt+d]
+        description: Purge history
+    copyQuery:
+        runes: [c]
+        description: Copy query
+explainViewer:
+    toggleMode:
+        runes: [t]
+        description: Toggle ANALYZE
