@@ -120,6 +120,9 @@ main:
     goToTable:
         sequences: [gt]
         description: Go to table
+    goToView:
+        sequences: [gv]
+        description: Go to view
 schema:
     expandAll:
         runes: [E]
@@ -159,6 +162,12 @@ data:
     copyRow:
         sequences: [yy]
         description: Copy row
+    copyRowJSON:
+        sequences: [yrj]
+        description: Copy row as JSON
+    copyRowCSV:
+        sequences: [yrc]
+        description: Copy row as CSV
     toggleOrderBar:
         runes: [s]
         description: Order bar

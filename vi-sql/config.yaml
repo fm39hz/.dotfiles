@@ -1,4 +1,4 @@
-version: 0.1.1
+version: 0.1.3
 log:
     path: /tmp/vi-sql.log
     level: info
@@ -20,7 +20,7 @@ mcp:
 security:
     method: keyring
 showConnectionPage: true
-currentConnection: Grimoire
+currentConnection: bat dong san
 connections:
     - id: 37a70a1c-0500-4681-ab76-eb58838b179b
       driver: postgres
@@ -36,6 +36,20 @@ connections:
       options:
         alwaysConfirmActions: true
       lastUsed: 2026-06-14T14:10:11.839760902+07:00
+    - id: 182cd3fe-2bf4-4493-9c83-88622ecdc8f4
+      driver: postgres
+      dsn: ""
+      host: localhost
+      port: 5432
+      database: bat_dong_san
+      username: postgres
+      password: enc:keyring:29bd19d21a5feadc4de5d93797250d52edb56654831797bdb4079336560b46c68c53fa1c
+      sslMode: disable
+      name: bat dong san
+      timeout: 5
+      options:
+        alwaysConfirmActions: true
+      lastUsed: 2026-07-03T18:49:01.940204466+07:00
 styles:
     nerdFont: true
     currentStyle: default.yaml

@@ -60,7 +60,7 @@
 	"ui_font_size": 20,
 	"buffer_font_size": 20,
 	"ui_font_family": "JetBrains Mono",
-	"buffer_font_family": "JetBrains Mono",
+	"buffer_font_family": "Iosevka Serif",
 	"ui_font_weight": 900,
 	"buffer_font_weight": 800,
 	"buffer_line_height": "comfortable",

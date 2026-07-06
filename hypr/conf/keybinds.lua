@@ -2,7 +2,7 @@ local hs = require("hyprsplit")
 local logic = require("conf.logic")
 
 local mainMod = "SUPER"
-local terminal = "ghostty"
+local terminal = "kitty -1"
 local terminalCli = "kitty"
 local scripts = os.getenv("HOME") .. "/.config/hypr/scripts/"
 

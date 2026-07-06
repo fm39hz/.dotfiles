@@ -22,6 +22,7 @@ nerd:
     tabQuery: 
     tabStructure: 
     tabIndex: 
+    view: "\U000F1094"
     primaryKey: 
     foreignKey: 
     completionKeyword: "\U000F0626"
@@ -58,6 +59,7 @@ ascii:
     tabQuery: Q
     tabStructure: S
     tabIndex: I
+    view: V
     primaryKey: '*'
     foreignKey: fk
     completionKeyword: kw

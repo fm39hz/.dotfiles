@@ -8,7 +8,6 @@
         "automatic-rename-format": "nvim"
       },
       "window_name": "nvim",
-      "layout": "c385,144x36,0,0,8",
       "panes": [
         {
           "shell_command": "nvim",
@@ -23,8 +22,7 @@
         "automatic-rename": true,
         "automatic-rename-format": "bat-dong-san-web"
       },
-      "window_name": "bat-dong-san-web",
-      "layout": "c386,144x36,0,0,9"
+      "window_name": "bat-dong-san-web"
     }
   ]
 }

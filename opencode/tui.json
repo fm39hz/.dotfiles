@@ -1,6 +1,6 @@
 {
   "plugin": [
-    // "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.15.0"
+    "vimcode@git+https://github.com/oribarilan/vimcode.git#v0.15.3"
   ],
   "keybinds": {
     "leader": "ctrl+alt",

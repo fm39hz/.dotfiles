@@ -20,17 +20,6 @@
     "bash": "ask",
   },
   "mcp": {
-    "docshark": {
-      "type": "local",
-      "command": [
-        "bunx",
-        "-y",
-        "docshark",
-        "start",
-        "--stdio"
-      ],
-      "enabled": true
-    },
     "codegraph": {
       "type": "local",
       "command": [
@@ -49,26 +38,32 @@
         "apiKey": "sk_9router"
       },
       "models": {
-        "ag/claude-sonnet-4-6": {
-          "name": "ag/claude-sonnet-4-6"
-        },
-        "ag/claude-opus-4-6-thinking": {
-          "name": "ag/claude-opus-4-6-thinking"
-        },
-        "gh/claude-opus-4.5": {
-          "name": "gh/claude-opus-4.5"
-        },
-        "kr/claude-sonnet-4.5": {
-          "name": "kr/claude-sonnet-4.5"
-        },
         "coder": {
           "name": "coder"
         },
         "daily-worker": {
           "name": "daily-worker"
         },
-        "context-holder": {
-          "name": "context-holder"
+        "mimo": {
+          "name": "mimo"
+        },
+        "qwen": {
+          "name": "qwen"
+        },
+        "deepseek": {
+          "name": "deepseek"
+        },
+        "claude": {
+          "name": "claude"
+        },
+        "kimi": {
+          "name": "kimi"
+        },
+        "glm": {
+          "name": "glm"
+        },
+        "minimax": {
+          "name": "minimax"
         },
       }
     }
@@ -78,7 +73,7 @@
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "daily-worker"
+      "model": "9router/minimax"
     }
   }
 }

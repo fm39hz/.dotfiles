@@ -1,0 +1,71 @@
+# ==============================================================================
+# 1. CORE & INTERACTIVE SETACTIVE
+# ==============================================================================
+shopt core.autocd=true                          
+shopt core.dotglob=true                         
+shopt prompt.expand_aliases=true                
+shopt set.vi=true                               
+
+# --- FIX STARSHIP (CÁCH THỦ CÔNG KHÔNG LO LỖI CÚ PHÁP) ---
+# Thay vì dùng eval sinh code Bash lỗi, ta bắt Starship in trực tiếp prompt ra 
+# thông qua tính năng nhúng hàm của shed (\@name)
+if command -v starship >/dev/null 2>&1; then
+    # Định nghĩa hàm lấy prompt từ starship
+    _shed_starship_prompt() {
+        starship prompt
+    }
+    # Nhúng hàm này trực tiếp vào biến prompt chính của shed
+    export PS1='\@_shed_starship_prompt'
+fi
+
+# --- FIX ZOXIDE ---
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init posix --hook prompt)"
+fi
+
+# ==============================================================================
+# 2. ALIASES
+# ==============================================================================
+alias top="btop --force-utf"
+alias ll="ls -l"
+alias la="ls -a"
+alias ff="fastfetch"
+alias lzg="lazygit"
+alias lzd="lazydocker"
+alias nvim_set_default="~/.config/scripts/nvim_default_picker.sh"
+alias nvim_direct_use="~/.config/scripts/nvim_direct_picker.sh"
+alias nvim_delete="~/.config/scripts/nvim_delete.sh"
+alias tm="~/.config/scripts/tmux_project.sh"
+
+# ==============================================================================
+# 3. CUSTOM LOGIC / FUNCTIONS (Thay thế cho các đoạn script Nushell)
+# ==============================================================================
+
+# Hàm xử lý Gọi Tmux Manager hoặc kiểm tra xem đang ở trong Tmux chưa (Ctrl + B)
+_shed_tmux_manager() {
+    if [ -z "$TMUX" ]; then
+        ~/.config/scripts/tmux_project.sh
+    else
+        echo "Bạn đang ở trong Tmux rồi!"
+    fi
+}
+
+# ==============================================================================
+# 4. KEYBINDINGS (Cập nhật chuẩn cú pháp thực thi hàm của shed)
+# ==============================================================================
+
+# Dùng cú pháp gửi chuỗi phím tắt thực thi lệnh thẳng cho shell
+keymap -in '<A-s>' '<CMD>normal \x01sudo \x05<CR>'
+keymap -in '<C-b>' '<C-U>_shed_tmux_manager<CR>'
+keymap -in '<C-y>' '<C-U>yazi<CR>'
+keymap -in '<A-l>' '<C-U>clear<CR>'
+keymap -in '<A-u>' '<C-U>clear; ~/.config/scripts/system_update.sh<CR>'
+
+# ==============================================================================
+# 5. COMPLETIONS & AUTO-COMMANDS
+# ==============================================================================
+# Do `shed` là một POSIX shell, nó tận dụng trực tiếp Carapace, Fzf hoặc cơ chế 
+# completion gốc của các tool mà không cần qua bộ phân tích lớp TSV/JSON phức tạp như Nu.
+
+# Đồng bộ lịch sử tức thì giữa các terminal khi hoàn thành lệnh
+autocmd on-completion-start 'hist --pull'

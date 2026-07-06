@@ -28,6 +28,7 @@ $env.SNACKS_GHOSTTY = true
 # Path definition
 let cargo_bin = ($env.HOME | path join .cargo bin)
 let go_bin = ($env.HOME | path join go bin)
+let bun_bin = ($env.HOME | path join .cache .bun bin)
 let dotnet_bin = ($env.HOME | path join .dotnet tools)
 let local_bin = ($env.HOME | path join .local bin)
 let steam_apps = ($env.HOME | path join .local share Steam steamapps common Aseprite)
@@ -38,6 +39,7 @@ $env.PATH = (
     | split row (char esep) 
     | append $cargo_bin 
     | append $go_bin 
+    | append $bun_bin 
     | append $dotnet_bin
     | append $local_bin
     | append $steam_apps

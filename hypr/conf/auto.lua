@@ -36,7 +36,8 @@ hl.on("hyprland.start", function()
 	-- 5. BOOTSTRAP UI & ESSENTIALS
 	-- =====================================================================
 	hl.timer(function()
-		hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
+		-- hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
+		hl.exec_cmd("runapp kitty -1 —start-as=hidden")
 
 		hl.exec_cmd("runapp solaar --window=hide")
 		hl.exec_cmd("runapp localsend --hidden")

@@ -31,6 +31,7 @@ paru -S --needed --noconfirm \
     beekeeper-studio-bin \
     bind \
     blender \
+    blesh-git \
     blueman \
     bluez \
     bluez-utils \
@@ -146,7 +147,6 @@ paru -S --needed --noconfirm \
     laigter \
     lazydocker \
     lazygit \
-    lib32-nvidia-utils \
     libfaketime \
     libinput-multiplier \
     libnotify \
@@ -154,7 +154,6 @@ paru -S --needed --noconfirm \
     libqalculate \
     libreoffice-fresh-vi \
     libva-intel-driver \
-    libva-nvidia-driver \
     libva-utils \
     lightnovel-crawler-bin \
     linux-firmware \
@@ -179,6 +178,7 @@ paru -S --needed --noconfirm \
     mongodb-tools-bin \
     mono \
     mpd \
+    mtr \
     nasm \
     ncdu \
     ncurses5-compat-libs \
@@ -201,11 +201,11 @@ paru -S --needed --noconfirm \
     npm \
     nsxiv \
     nushell \
-    nvidia-open-dkms \
     nwg-look \
     obs-studio \
     obsidian \
     ocrmypdf \
+    onlyoffice-bin \
     openai-codex \
     openapi-tui \
     opencode \
@@ -250,13 +250,14 @@ paru -S --needed --noconfirm \
     secrets \
     sendme-bin \
     sesh-bin \
+    shed-sh \
     sigil \
     socat \
     solaar \
     sox \
     speedtest-cli \
     spicetify-cli \
-    spotify \
+    spotify-launcher \
     spotx-git \
     sqlit \
     starship \
@@ -284,12 +285,14 @@ paru -S --needed --noconfirm \
     ttf-jetbrains-mono-nerd \
     ttf-material-icons-git \
     ttf-material-symbols-variable-git \
+    ttf-times-new-roman \
     ttfautohint \
     unarchiver \
     unrar \
     unzip \
     uv \
     uwsm \
+    v2rayn \
     vesktop-bin \
     visual-studio-code-bin \
     vivid \
@@ -316,6 +319,7 @@ paru -S --needed --noconfirm \
     yay-bin \
     yazi \
     yq \
+    zalo \
     zathura \
     zathura-pdf-mupdf \
     zed \

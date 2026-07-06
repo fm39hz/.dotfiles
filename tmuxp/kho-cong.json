@@ -1,0 +1,38 @@
+{
+  "session_name": "kho-cong",
+  "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/",
+  "windows": [
+    {
+      "options": {
+        "automatic-rename": true,
+        "automatic-rename-format": "nvim"
+      },
+      "window_name": "kho-cong",
+      "panes": [
+        {
+          "shell_command": "nvim",
+          "focus": "true"
+        }
+      ],
+      "focus": "true"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "cong"
+      },
+      "window_name": "cong",
+      "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/cong-dlqg/"
+    },
+    {
+      "options": {
+        "@tmux_window_name_enabled": 1,
+        "automatic-rename": true,
+        "automatic-rename-format": "kho"
+      },
+      "window_name": "cong",
+      "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/kho-dl-mo/"
+    }
+  ]
+}

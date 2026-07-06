@@ -9,7 +9,6 @@
         "automatic-rename-format": "config"
       },
       "window_name": "config",
-      "layout": "c4be,156x36,0,0,1",
       "panes": [
         {
           "shell_command": "nvim",
@@ -25,7 +24,6 @@
         "automatic-rename-format": "nvim"
       },
       "window_name": "nvim",
-      "layout": "c4bf,156x36,0,0,2",
       "panes": [
         {
           "shell_command": "nvim",
