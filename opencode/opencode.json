@@ -2,7 +2,6 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
     "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git",
-    "ponytails@git+https://github.com/DietrichGebert/ponytail/.opencode/plugins/ponytail.mjs"
   ],
   "lsp": {
     "roslyn": {
@@ -27,7 +26,7 @@
         "serve",
         "--mcp"
       ],
-      "enabled": true
+      "enabled": false
     },
   },
   "provider": {
@@ -73,7 +72,7 @@
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/minimax"
+      "model": "9router/daily-worker"
     }
   }
 }

@@ -17,22 +17,16 @@
       "focus": "true"
     },
     {
-      "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
-        "automatic-rename-format": "cong"
-      },
-      "window_name": "cong",
-      "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/cong-dlqg/"
-    },
-    {
-      "options": {
-        "@tmux_window_name_enabled": 1,
-        "automatic-rename": true,
-        "automatic-rename-format": "kho"
-      },
-      "window_name": "cong",
-      "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/kho-dl-mo/"
+      "window_name": "shell",
+      "panes": [
+        {
+          "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/cong-dlqg/",
+          "focus": "true"
+        },
+        {
+          "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/kho-dl-mo/"
+        }
+      ]
     }
   ]
 }
