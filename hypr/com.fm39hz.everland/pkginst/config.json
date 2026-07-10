@@ -1,9 +1,0 @@
-{
-  "name": "EverLand",
-  "description": "My configuration, install with https://github.com/mylinuxforwork/packages-installer",
-  "homepage": "https://github.com/fm39hz/.dotfiles",
-  "author": "FM39hz",
-  "copyright": "2025",
-  "managers": ["apt", "dnf", "pacman", "zypper"]
-}
-

@@ -10,7 +10,7 @@
     logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state, speed-change, pointer_speed,
     dpi_extended, backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered]
   _battery: 4096
-  _config_cookie: [106, 147]
+  _config_cookie: [245, 85]
   _modelId: B02340820000
   _sensitive: {dpi: false, hires-smooth-resolution: false, smart-shift: false, thumb-scroll-invert: false}
   _serial: DDE59E1D

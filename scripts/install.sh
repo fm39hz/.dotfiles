@@ -16,6 +16,7 @@ paru -S --needed --noconfirm \
     acpi \
     adobe-source-han-sans-cn-fonts \
     adobe-source-han-serif-cn-fonts \
+    adw-gtk-theme \
     alacritty \
     amazon-fonts \
     antigravity \
@@ -28,6 +29,7 @@ paru -S --needed --noconfirm \
     aws-sdk-cpp \
     base \
     base-devel \
+    bat \
     beekeeper-studio-bin \
     bind \
     blender \
@@ -54,6 +56,7 @@ paru -S --needed --noconfirm \
     dart-sass \
     dbeaver \
     ddcutil \
+    devin-desktop \
     devspace-bin \
     diff-so-fancy \
     dms-shell \
@@ -63,6 +66,7 @@ paru -S --needed --noconfirm \
     dotnet-sdk \
     dotnet-sdk-8.0 \
     earlyoom \
+    easyeffects \
     efibootmgr \
     entr \
     epubcheck \
@@ -80,6 +84,7 @@ paru -S --needed --noconfirm \
     fish \
     flutter-bin \
     fprintd \
+    fuzzel \
     fzf \
     game-devices-udev \
     geekbench \
@@ -98,6 +103,7 @@ paru -S --needed --noconfirm \
     gopreload-git \
     gpsd \
     gpu-screen-recorder \
+    gradia \
     graphviz \
     grc \
     greetd \
@@ -178,6 +184,7 @@ paru -S --needed --noconfirm \
     mongodb-tools-bin \
     mono \
     mpd \
+    mpvpaper \
     mtr \
     nasm \
     ncdu \
@@ -213,6 +220,7 @@ paru -S --needed --noconfirm \
     oracle-sqldeveloper \
     pacman-contrib \
     paru \
+    pavucontrol \
     php \
     pipewire \
     pipewire-alsa \
@@ -230,11 +238,14 @@ paru -S --needed --noconfirm \
     python-libtmux \
     python-oracledb \
     python-pip \
+    python-pipx \
     python-psycopg2 \
     python-pywalfox \
+    python312 \
     pywal-spicetify \
     qt5-wayland \
     qt5ct \
+    qt6-tools \
     quickshell \
     rclone-browser \
     readest \
@@ -263,8 +274,15 @@ paru -S --needed --noconfirm \
     starship \
     steam \
     superfile \
+    syntax-highlighting \
     tauri-cli \
+    tesseract-data-chi_sim \
+    tesseract-data-chi_tra \
     tesseract-data-eng \
+    tesseract-data-jpn \
+    tesseract-data-kor \
+    tesseract-data-lat \
+    tesseract-data-spa \
     thefuck \
     thorium-browser-avx2-bin \
     thunar \
@@ -283,8 +301,12 @@ paru -S --needed --noconfirm \
     ttf-dejavu \
     ttf-jetbrains-mono \
     ttf-jetbrains-mono-nerd \
+    ttf-league-gothic \
     ttf-material-icons-git \
     ttf-material-symbols-variable-git \
+    ttf-phosphor-icons \
+    ttf-roboto \
+    ttf-roboto-mono \
     ttf-times-new-roman \
     ttfautohint \
     unarchiver \
@@ -295,6 +317,7 @@ paru -S --needed --noconfirm \
     v2rayn \
     vesktop-bin \
     visual-studio-code-bin \
+    vivaldi \
     vivid \
     vlc \
     vlc-plugin-ffmpeg \
@@ -307,8 +330,11 @@ paru -S --needed --noconfirm \
     wireguard-go-git \
     wireguard-tools \
     wireplumber \
+    wl-clip-persist \
     wlogout \
+    wlsunset \
     wmctrl \
+    wtype \
     xarchiver-gtk2 \
     xclip \
     xdg-desktop-portal-gtk \
@@ -322,6 +348,7 @@ paru -S --needed --noconfirm \
     zalo \
     zathura \
     zathura-pdf-mupdf \
+    zbar \
     zed \
     zellij \
     zen-browser-bin \
