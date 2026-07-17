@@ -91,4 +91,9 @@ PROJECT_ROOT=$(find_project_root "$(pwd)")
 NAME=$(generate_session_name "$PROJECT_ROOT")
 
 SELECTED=$(fzf_select_session "$NAME")
-[ -n "$SELECTED" ] && smart_connect "$SELECTED" "$NAME"
+
+if [ -z "$SELECTED" ]; then
+  exit 0
+fi
+
+smart_connect "$SELECTED" "$NAME"
