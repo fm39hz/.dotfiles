@@ -18,17 +18,6 @@
     "glob": "ask",
     "bash": "ask",
   },
-  "mcp": {
-    "codegraph": {
-      "type": "local",
-      "command": [
-        "codegraph",
-        "serve",
-        "--mcp"
-      ],
-      "enabled": false
-    },
-  },
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",

@@ -49,13 +49,7 @@ $env.config = {
         mode: [emacs, vi_normal, vi_insert]
         event: {
           send: ExecuteHostCommand
-          cmd: "
-            if ($env | get -o TMUX | is-empty) {
-                ~/.config/scripts/tmux_project.sh
-            } else {
-                print 'Bạn đang ở trong Tmux rồi!'
-            }
-          "
+          cmd: tmux_project
         }
       },
       {

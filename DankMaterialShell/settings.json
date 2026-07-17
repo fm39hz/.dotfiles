@@ -21,7 +21,7 @@
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
-  "hyprlandLayoutGapsOverride": -1,
+  "hyprlandLayoutGapsOverride": 4,
   "hyprlandLayoutGapsOutOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
   "hyprlandLayoutBorderSize": -1,
@@ -34,7 +34,7 @@
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "auto",
-  "use24HourClock": true,
+  "clockFormat": "auto",
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -49,7 +49,7 @@
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
   "animationVariant": 0,
-  "motionEffect": 0,
+  "motionEffect": 2,
   "m3ElevationEnabled": true,
   "m3ElevationIntensity": 12,
   "m3ElevationOpacity": 30,
@@ -202,6 +202,7 @@
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
+  "mediaUseAlbumArtAccent": false,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
   "audioDeviceScrollVolumeEnabled": false,
@@ -228,7 +229,33 @@
   "runningAppsCurrentWorkspace": true,
   "runningAppsGroupByApp": false,
   "runningAppsCurrentMonitor": false,
-  "appIdSubstitutions": [],
+  "appIdSubstitutions": [
+    {
+      "pattern": "Spotify",
+      "replacement": "spotify",
+      "type": "exact"
+    },
+    {
+      "pattern": "beepertexts",
+      "replacement": "beeper",
+      "type": "exact"
+    },
+    {
+      "pattern": "home assistant desktop",
+      "replacement": "homeassistant-desktop",
+      "type": "exact"
+    },
+    {
+      "pattern": "com.transmissionbt.transmission",
+      "replacement": "transmission-gtk",
+      "type": "contains"
+    },
+    {
+      "pattern": "^steam_app_(\\d+)$",
+      "replacement": "steam_icon_$1",
+      "type": "regex"
+    }
+  ],
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
@@ -238,12 +265,10 @@
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
-  "greeterUse24HourClock": true,
-  "greeterShowSeconds": false,
-  "greeterPadHours12Hour": false,
   "greeterLockDateFormat": "",
   "greeterFontFamily": "",
   "greeterWallpaperFillMode": "",
+  "greeterPamExternallyManaged": false,
   "greeterSyncPending": false,
   "greeterSyncBaseline": {},
   "mediaSize": 1,
@@ -265,6 +290,7 @@
     "apps": "list"
   },
   "niriOverviewOverlayEnabled": true,
+  "niriOverviewLauncherStyle": "full",
   "dankLauncherV2Size": "large",
   "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": true,
@@ -373,7 +399,7 @@
   "batteryCriticalThreshold": 10,
   "batteryNotifyCritical": true,
   "batteryLowThreshold": 20,
-  "batteryNotifyLow": false,
+  "batteryNotifyLow": true,
   "batteryChargeLimitNotificationType": 0,
   "batteryLowNotificationType": 0,
   "batteryCriticalNotificationType": 1,
@@ -485,6 +511,9 @@
   "maxFprintTries": 15,
   "enableU2f": false,
   "u2fMode": "or",
+  "lockPamPath": "",
+  "lockPamInlineFprint": false,
+  "lockPamInlineU2f": false,
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 2,
   "lockScreenVideoEnabled": false,
@@ -492,7 +521,7 @@
   "lockScreenVideoCycling": false,
   "lockScreenWallpaperPath": "",
   "lockScreenWallpaperFillMode": "",
-  "lockScreenFontFamily": "",
+  "lockScreenFontFamily": "Iosevka Serif",
   "hideBrightnessSlider": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
@@ -548,6 +577,7 @@
   "updaterIntervalSeconds": 1800,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
+  "updaterIgnoredPackages": [],
   "displayNameMode": "system",
   "screenPreferences": {
     "wallpaper": [
@@ -758,6 +788,9 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
     }
   },
   "clipboardClickToPaste": false,
