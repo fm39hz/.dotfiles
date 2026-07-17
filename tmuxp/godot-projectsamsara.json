@@ -9,7 +9,6 @@
         "automatic-rename-format": "nvim"
       },
       "window_name": "editor",
-      "layout": "e28f,156x36,0,0,20",
       "panes": [
         {
           "shell_command": "nvim",
@@ -24,8 +23,7 @@
         "automatic-rename": false,
         "automatic-rename-format": "shell"
       },
-      "window_name": "terminal",
-      "layout": "e290,156x36,0,0,21"
+      "window_name": "terminal"
     }
   ]
 }

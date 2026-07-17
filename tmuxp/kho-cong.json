@@ -27,6 +27,15 @@
           "start_directory": "/home/fm39hz/Workspace/Tecapro/kho-cong/kho-dl-mo/"
         }
       ]
+    },
+    {
+      "window_name": "files",
+      "panes": [
+        {
+          "shell_command": "yazi",
+          "focus": "true"
+        }
+      ]
     }
   ]
 }
