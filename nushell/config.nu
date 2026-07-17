@@ -49,7 +49,7 @@ $env.config = {
         mode: [emacs, vi_normal, vi_insert]
         event: {
           send: ExecuteHostCommand
-          cmd: tmux_project
+          cmd: gotomux
         }
       },
       {
