@@ -1,0 +1,42 @@
+{
+  "name": "shape-0fbd2e14a5fc6340",
+  "windows": [
+    {
+      "name": "nvim",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "cwd": "kho-dl-mo",
+      "layout": "42bc,158x35,0,0{80x35,0,0[80x17,0,0,26,80x17,0,18,27],77x35,81,0[77x17,81,0,28,77x17,81,18,29]}",
+      "panes": [
+        {
+          "cwd": "cong-dlqg"
+        },
+        {
+          "cwd": "cong-dlqg"
+        },
+        {
+          "cwd": "kho-dl-mo"
+        },
+        {
+          "cwd": "kho-dl-mo"
+        }
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

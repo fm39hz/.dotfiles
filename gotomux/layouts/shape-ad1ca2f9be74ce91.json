@@ -1,0 +1,23 @@
+{
+  "name": "shape-ad1ca2f9be74ce91",
+  "windows": [
+    {
+      "name": "nvim",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "bat-dong-san-web",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "pi",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

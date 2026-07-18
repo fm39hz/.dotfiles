@@ -1,0 +1,17 @@
+{
+  "name": "default",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}
