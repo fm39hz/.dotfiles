@@ -1,0 +1,34 @@
+{
+  "id": "shape-5d05b65b5692f87e",
+  "label": "sh+p4+files+sh",
+  "name": "sh+p4+files+sh",
+  "windows": [
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

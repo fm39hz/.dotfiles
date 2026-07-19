@@ -1,0 +1,26 @@
+{
+  "id": "shape-120a36c29405635b",
+  "label": "editor+p2+sh",
+  "name": "editor+p2+sh",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

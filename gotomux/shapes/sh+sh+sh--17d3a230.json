@@ -1,20 +1,22 @@
 {
-  "name": "shape-ad1ca2f9be74ce91",
+  "id": "shape-8bd2bf8c17d3a230",
+  "label": "sh+sh+sh",
+  "name": "sh+sh+sh",
   "windows": [
     {
-      "name": "nvim",
+      "name": "shell",
       "panes": [
         {}
       ]
     },
     {
-      "name": "bat-dong-san-web",
+      "name": "shell",
       "panes": [
         {}
       ]
     },
     {
-      "name": "pi",
+      "name": "shell",
       "panes": [
         {}
       ]

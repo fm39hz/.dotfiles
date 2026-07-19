@@ -1,0 +1,57 @@
+{
+  "id": "shape-2b33acf7dbd088de",
+  "label": "nvim+nvim+nvim+t4+yazi+opencode",
+  "name": "nvim+nvim+nvim+t4+yazi+opencode",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    }
+  ]
+}

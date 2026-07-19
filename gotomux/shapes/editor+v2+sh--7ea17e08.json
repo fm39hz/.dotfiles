@@ -1,0 +1,27 @@
+{
+  "id": "shape-0abda64b7ea17e08",
+  "label": "editor+v2+sh",
+  "name": "editor+v2+sh",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "even-vertical",
+      "panes": [
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

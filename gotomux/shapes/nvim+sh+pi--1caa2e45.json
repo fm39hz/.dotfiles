@@ -1,0 +1,29 @@
+{
+  "id": "shape-228de40a1caa2e45",
+  "label": "nvim+sh+pi",
+  "name": "nvim+sh+pi",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "pi",
+      "panes": [
+        {
+          "cmd": "pi"
+        }
+      ]
+    }
+  ]
+}

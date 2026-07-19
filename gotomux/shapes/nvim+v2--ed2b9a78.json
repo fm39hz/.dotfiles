@@ -1,0 +1,23 @@
+{
+  "id": "shape-f82e9578ed2b9a78",
+  "label": "nvim+v2",
+  "name": "nvim+v2",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "split": "even-vertical",
+      "panes": [
+        {},
+        {}
+      ]
+    }
+  ]
+}

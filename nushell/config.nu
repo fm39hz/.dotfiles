@@ -43,7 +43,7 @@ $env.config = {
         }
       },
       {
-        name: launch_tmux_manager
+        name: launch_gotomux
         modifier: control
         keycode: char_b
         mode: [emacs, vi_normal, vi_insert]
@@ -53,7 +53,7 @@ $env.config = {
         }
       },
       {
-        name: launch_tmux_manager
+        name: launch_file_manager
         modifier: control
         keycode: char_y
         mode: [emacs, vi_normal, vi_insert]

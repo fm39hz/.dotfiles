@@ -1,0 +1,19 @@
+{
+  "id": "default",
+  "label": "default",
+  "name": "default",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

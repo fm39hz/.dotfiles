@@ -1,0 +1,35 @@
+{
+  "id": "shape-0fbd2e14a5fc6340",
+  "label": "sh+t4+files+sh",
+  "name": "sh+t4+files+sh",
+  "windows": [
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "shape-b13011cdc26fa6f2",
+  "label": "nvim+sh+claude",
+  "name": "nvim+sh+claude",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "claude",
+      "panes": [
+        {
+          "cmd": "claude"
+        }
+      ]
+    }
+  ]
+}

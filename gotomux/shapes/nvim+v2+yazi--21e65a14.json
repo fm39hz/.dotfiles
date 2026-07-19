@@ -1,0 +1,31 @@
+{
+  "id": "shape-2942bbbd21e65a14",
+  "label": "nvim+v2+yazi",
+  "name": "nvim+v2+yazi",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "even-vertical",
+      "panes": [
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    }
+  ]
+}

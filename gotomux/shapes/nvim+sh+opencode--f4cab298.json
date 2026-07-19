@@ -1,0 +1,29 @@
+{
+  "id": "shape-79f3966ff4cab298",
+  "label": "nvim+sh+opencode",
+  "name": "nvim+sh+opencode",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    }
+  ]
+}
