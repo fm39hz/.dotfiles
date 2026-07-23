@@ -116,6 +116,7 @@ paru -S --needed --noconfirm \
     helm \
     how-cli-bin \
     html-xml-utils \
+    hyperfine \
     hyprcursor \
     hyprgraphics \
     hypridle \

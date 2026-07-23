@@ -4,6 +4,7 @@
   "name": "nvim+sh+pi",
   "windows": [
     {
+      "fork": "1||nvim",
       "name": "editor",
       "panes": [
         {
@@ -12,12 +13,14 @@
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "1||pi",
       "name": "pi",
       "panes": [
         {

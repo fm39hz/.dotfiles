@@ -1,7 +1,7 @@
 {
-  "id": "shape-79f3966ff4cab298",
-  "label": "nvim+sh+opencode",
-  "name": "nvim+sh+opencode",
+  "id": "shape-0e354923ad663079",
+  "label": "nvim+sh+opencode+gotomux",
+  "name": "nvim+sh+opencode+gotomux",
   "windows": [
     {
       "fork": "1||nvim",
@@ -25,6 +25,15 @@
       "panes": [
         {
           "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "fork": "1||gotomux",
+      "name": "gotomux",
+      "panes": [
+        {
+          "cmd": "gotomux"
         }
       ]
     }

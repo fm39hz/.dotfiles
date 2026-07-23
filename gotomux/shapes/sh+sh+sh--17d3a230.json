@@ -4,18 +4,21 @@
   "name": "sh+sh+sh",
   "windows": [
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}

@@ -26,12 +26,10 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd([[
         NU_VENDOR_DIR=$(nu -c 'print ($nu.data-dir | path join "vendor/autoload")')
         mkdir -p "$NU_VENDOR_DIR"
-        tmux start-server
         starship init nu > "$NU_VENDOR_DIR/starship.nu" &
         zoxide init nushell > "$NU_VENDOR_DIR/zoxide.nu" &
         STARSHIP_SHELL="nu" starship prompt --status=0 >/dev/null 2>&1 &
     ]])
-
 	-- =====================================================================
 	-- 5. BOOTSTRAP UI & ESSENTIALS
 	-- =====================================================================

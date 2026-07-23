@@ -1,7 +1,7 @@
 {
-  "id": "shape-2b33acf7dbd088de",
-  "label": "nvim+nvim+nvim+t4+yazi+opencode",
-  "name": "nvim+nvim+nvim+t4+yazi+opencode",
+  "id": "shape-79c2aa3d65c33016",
+  "label": "nvim+nvim+nvim+t4+yazi+opencode+python",
+  "name": "nvim+nvim+nvim+t4+yazi+opencode+python",
   "windows": [
     {
       "fork": "1||nvim",
@@ -56,6 +56,15 @@
       "panes": [
         {
           "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "fork": "1||python",
+      "name": "python",
+      "panes": [
+        {
+          "cmd": "python"
         }
       ]
     }

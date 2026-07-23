@@ -1,0 +1,16 @@
+{
+  "id": "shape-c3fdbf763aafc69a",
+  "label": "nvim",
+  "name": "nvim",
+  "windows": [
+    {
+      "fork": "1||nvim",
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    }
+  ]
+}

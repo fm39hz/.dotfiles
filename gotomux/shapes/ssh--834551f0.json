@@ -1,0 +1,16 @@
+{
+  "id": "shape-e53126b8834551f0",
+  "label": "\"ssh",
+  "name": "\"ssh",
+  "windows": [
+    {
+      "fork": "1||\"ssh",
+      "name": "\"ssh",
+      "panes": [
+        {
+          "cmd": "\"ssh"
+        }
+      ]
+    }
+  ]
+}

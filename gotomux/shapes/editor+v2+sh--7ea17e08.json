@@ -4,12 +4,14 @@
   "name": "editor+v2+sh",
   "windows": [
     {
+      "fork": "1||",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "2|even-vertical|,",
       "name": "shell",
       "split": "even-vertical",
       "panes": [
@@ -18,6 +20,7 @@
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}

@@ -1,0 +1,12 @@
+[Unit]
+Description=gotomux session picker daemon
+Documentation=man:gotomux(1)
+
+[Service]
+Type=simple
+ExecStart=%h/go/bin/gotomuxd
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

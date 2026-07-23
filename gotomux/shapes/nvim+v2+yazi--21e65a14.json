@@ -4,6 +4,7 @@
   "name": "nvim+v2+yazi",
   "windows": [
     {
+      "fork": "1||nvim",
       "name": "editor",
       "panes": [
         {
@@ -12,6 +13,7 @@
       ]
     },
     {
+      "fork": "2|even-vertical|,",
       "name": "shell",
       "split": "even-vertical",
       "panes": [
@@ -20,6 +22,7 @@
       ]
     },
     {
+      "fork": "1||yazi",
       "name": "files",
       "panes": [
         {

@@ -4,12 +4,14 @@
   "name": "editor+p2+sh",
   "windows": [
     {
+      "fork": "1||",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "2||,",
       "name": "shell",
       "panes": [
         {},
@@ -17,6 +19,7 @@
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}

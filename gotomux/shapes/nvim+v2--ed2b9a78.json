@@ -4,6 +4,7 @@
   "name": "nvim+v2",
   "windows": [
     {
+      "fork": "1||nvim",
       "name": "editor",
       "panes": [
         {
@@ -12,6 +13,7 @@
       ]
     },
     {
+      "fork": "2|even-vertical|,",
       "name": "test",
       "split": "even-vertical",
       "panes": [

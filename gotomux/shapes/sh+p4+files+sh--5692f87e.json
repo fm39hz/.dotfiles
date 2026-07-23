@@ -4,12 +4,14 @@
   "name": "sh+p4+files+sh",
   "windows": [
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "4||,,,",
       "name": "shell",
       "panes": [
         {},
@@ -19,12 +21,14 @@
       ]
     },
     {
+      "fork": "1||",
       "name": "files",
       "panes": [
         {}
       ]
     },
     {
+      "fork": "1||",
       "name": "shell",
       "panes": [
         {}

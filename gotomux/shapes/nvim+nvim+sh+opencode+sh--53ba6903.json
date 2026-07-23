@@ -1,7 +1,7 @@
 {
-  "id": "shape-51d874bd30028e76",
-  "label": "nvim+nvim+sh",
-  "name": "nvim+nvim+sh",
+  "id": "shape-f148965a53ba6903",
+  "label": "nvim+nvim+sh+opencode+sh",
+  "name": "nvim+nvim+sh+opencode+sh",
   "windows": [
     {
       "fork": "1||nvim",
@@ -18,6 +18,22 @@
       "panes": [
         {
           "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "fork": "1||",
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "fork": "1||opencode",
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
         }
       ]
     },
