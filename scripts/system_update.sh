@@ -5,10 +5,6 @@ notify-send "System update" "Updating system packages"
 # run0 pacman -Syu --noconfirm
 paru -Syu --noconfirm
 
-# Update Oh My Fish and any installed plugins
-notify-send "System update" "Updating Oh My Fish and plugins"
-omf update
-
 # Remove dangling (orphans)
 paru -Qdtq | paru -Rns --noconfirm -
 
@@ -73,10 +69,6 @@ end
 
 # Refresh Go preload cache
 gopreload-batch-refresh.sh
-
-# Update Hyprland plugins
-notify-send "System update" "Updating Hyprland plugins"
-hyprpm update
 
 cd ~/.config/ || exit
 notify-send "System update" "Update Complete!"

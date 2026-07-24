@@ -1,26 +1,8 @@
 {
-  "id": "shape-79c2aa3d65c33016",
-  "label": "nvim+nvim+nvim+t4+yazi+opencode+python",
-  "name": "nvim+nvim+nvim+t4+yazi+opencode+python",
+  "id": "shape-7bcbffe520364c3d",
+  "label": "nvim+t4+yazi+opencode+python+sh",
+  "name": "nvim+t4+yazi+opencode+python+sh",
   "windows": [
-    {
-      "fork": "1||nvim",
-      "name": "editor",
-      "panes": [
-        {
-          "cmd": "nvim"
-        }
-      ]
-    },
-    {
-      "fork": "1||nvim",
-      "name": "editor",
-      "panes": [
-        {
-          "cmd": "nvim"
-        }
-      ]
-    },
     {
       "fork": "1||nvim",
       "name": "editor",
@@ -66,6 +48,13 @@
         {
           "cmd": "python"
         }
+      ]
+    },
+    {
+      "fork": "1||",
+      "name": "shell",
+      "panes": [
+        {}
       ]
     }
   ]

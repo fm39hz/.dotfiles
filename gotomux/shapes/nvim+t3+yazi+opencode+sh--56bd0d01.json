@@ -1,7 +1,7 @@
 {
-  "id": "shape-ea775c87ef76e5d2",
-  "label": "nvim+sh+opencode+sh",
-  "name": "nvim+sh+opencode+sh",
+  "id": "shape-864dbc8056bd0d01",
+  "label": "nvim+t3+yazi+opencode+sh",
+  "name": "nvim+t3+yazi+opencode+sh",
   "windows": [
     {
       "fork": "1||nvim",
@@ -13,10 +13,22 @@
       ]
     },
     {
-      "fork": "1||",
+      "fork": "3|tiled|,,",
       "name": "shell",
+      "split": "tiled",
       "panes": [
+        {},
+        {},
         {}
+      ]
+    },
+    {
+      "fork": "1||yazi",
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
       ]
     },
     {

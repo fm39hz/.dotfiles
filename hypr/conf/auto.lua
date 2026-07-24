@@ -36,10 +36,10 @@ hl.on("hyprland.start", function()
 	hl.timer(function()
 		-- hl.exec_cmd("runapp ghostty --quit-after-last-window-closed=false --initial-window=false")
 		hl.exec_cmd("runapp kitty -1 --start-as=hidden")
-
+		hl.exec_cmd("runapp tmux start-server")
 		hl.exec_cmd("runapp solaar --window=hide")
 		hl.exec_cmd("runapp localsend --hidden")
-		hl.exec_cmd("runapp mangohud steam -silent")
+		-- hl.exec_cmd("runapp mangohud steam -silent")
 
 		hl.exec_cmd("runapp zen-browser")
 		hl.exec_cmd("runapp 64gram-desktop")

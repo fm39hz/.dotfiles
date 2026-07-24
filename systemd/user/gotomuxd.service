@@ -8,5 +8,21 @@ ExecStart=%h/go/bin/gotomuxd
 Restart=on-failure
 RestartSec=2
 
+# KillMode=process is REQUIRED, not a preference.
+#
+# The daemon runs `tmux start-server` (ensureServer), so on any machine where
+# gotomuxd starts before the user's first tmux invocation the tmux SERVER becomes
+# a child process inside this unit's cgroup. With systemd's default
+# KillMode=control-group, `systemctl --user stop gotomuxd` — or a restart, or a
+# package upgrade — kills the whole cgroup and destroys every tmux session the
+# user has open. Verified directly: `systemctl --user status gotomuxd` listed
+# `tmux start-server` as a child of this unit, and a restart took all sessions
+# with it.
+#
+# KillMode=process limits the kill to the main process. gotomuxd handles SIGTERM
+# and tears down its own control-mode client, so nothing is leaked.
+KillMode=process
+TimeoutStopSec=10
+
 [Install]
 WantedBy=default.target

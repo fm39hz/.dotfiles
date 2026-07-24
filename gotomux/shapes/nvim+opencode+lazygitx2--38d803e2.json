@@ -1,7 +1,7 @@
 {
-  "id": "shape-1a012374ba91ce54",
-  "label": "nvim+sh+opencode+ssh",
-  "name": "nvim+sh+opencode+ssh",
+  "id": "shape-36771d9138d803e2",
+  "label": "nvim+opencode+lazygitx2",
+  "name": "nvim+opencode+lazygitx2",
   "windows": [
     {
       "fork": "1||nvim",
@@ -10,13 +10,6 @@
         {
           "cmd": "nvim"
         }
-      ]
-    },
-    {
-      "fork": "1||",
-      "name": "shell",
-      "panes": [
-        {}
       ]
     },
     {
@@ -29,11 +22,13 @@
       ]
     },
     {
-      "fork": "1||ssh",
-      "name": "ssh",
+      "fork": "2|even-vertical|,lazygit",
+      "name": "git",
+      "split": "even-vertical",
       "panes": [
+        {},
         {
-          "cmd": "ssh"
+          "cmd": "lazygit"
         }
       ]
     }

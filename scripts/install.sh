@@ -82,7 +82,6 @@ paru -S --needed --noconfirm \
     ffmpegthumbnailer \
     figlet \
     fish \
-    flutter-bin \
     fprintd \
     fuzzel \
     fzf \
@@ -155,7 +154,7 @@ paru -S --needed --noconfirm \
     lazydocker \
     lazygit \
     libfaketime \
-    libinput-multiplier \
+    libinput \
     libnotify \
     libpulse \
     libqalculate \
@@ -167,6 +166,7 @@ paru -S --needed --noconfirm \
     linux-headers \
     linux-lts \
     linux-lts-headers \
+    llvm \
     lmstudio \
     localsend-bin \
     lshw \
@@ -187,6 +187,7 @@ paru -S --needed --noconfirm \
     mpd \
     mpvpaper \
     mtr \
+    namcap \
     nasm \
     ncdu \
     ncurses5-compat-libs \
@@ -220,6 +221,7 @@ paru -S --needed --noconfirm \
     openresolv \
     oracle-sqldeveloper \
     pacman-contrib \
+    pandoc-cli \
     paru \
     pavucontrol \
     php \
@@ -230,7 +232,6 @@ paru -S --needed --noconfirm \
     plantuml \
     plocate \
     podman \
-    postman-bin \
     power-profiles-daemon \
     powerpill \
     powertop \
@@ -318,7 +319,6 @@ paru -S --needed --noconfirm \
     v2rayn \
     vesktop-bin \
     visual-studio-code-bin \
-    vivaldi \
     vivid \
     vlc \
     vlc-plugin-ffmpeg \
