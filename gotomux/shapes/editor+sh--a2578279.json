@@ -1,17 +1,17 @@
 {
-  "id": "shape-629fb756cf5ab9e3",
+  "id": "shape-db897b5da2578279",
   "label": "editor+sh",
   "name": "editor+sh",
   "windows": [
     {
-      "fork": "1||",
+      "fork": "shell",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "1||",
+      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

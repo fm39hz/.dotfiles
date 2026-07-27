@@ -4,14 +4,14 @@
   "name": "default",
   "windows": [
     {
-      "fork": "1||",
+      "fork": "shell",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "1||",
+      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

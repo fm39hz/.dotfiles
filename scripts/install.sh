@@ -82,6 +82,7 @@ paru -S --needed --noconfirm \
     ffmpegthumbnailer \
     figlet \
     fish \
+    floorp-bin \
     fprintd \
     fuzzel \
     fzf \

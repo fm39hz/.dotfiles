@@ -3,3 +3,4 @@ config-file=./theme.conf
 config-file=./shell.conf
 config-file=./gtk.conf
 keybind = shift+enter=text:\x1b\r
+quit-after-last-window-closed=false

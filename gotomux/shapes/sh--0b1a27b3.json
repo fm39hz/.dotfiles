@@ -1,0 +1,14 @@
+{
+  "id": "shape-1a616c030b1a27b3",
+  "label": "sh",
+  "name": "sh",
+  "windows": [
+    {
+      "fork": "shell",
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

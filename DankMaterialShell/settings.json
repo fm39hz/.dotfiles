@@ -412,15 +412,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "runapp",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {
-    "preferredDevice": [
-      "DC:F0:1B:DD:AF:9A"
-    ]
-  },
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -831,5 +822,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": true,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }

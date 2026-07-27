@@ -1,19 +1,20 @@
 {
-  "id": "shape-2942bbbd21e65a14",
-  "label": "nvim+v2+yazi",
-  "name": "nvim+v2+yazi",
+  "id": "shape-98e4b9a970d9dade",
+  "label": "editor+v2+files",
+  "name": "editor+v2+files",
   "windows": [
     {
-      "fork": "1||nvim",
+      "fork": "editor",
       "name": "editor",
       "panes": [
         {
+          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "2|even-vertical|,",
+      "fork": "shell,shell",
       "name": "shell",
       "split": "even-vertical",
       "panes": [
@@ -22,10 +23,11 @@
       ]
     },
     {
-      "fork": "1||yazi",
+      "fork": "files",
       "name": "files",
       "panes": [
         {
+          "class": "files",
           "cmd": "yazi"
         }
       ]

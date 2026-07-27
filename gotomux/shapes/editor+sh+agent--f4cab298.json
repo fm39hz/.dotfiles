@@ -1,30 +1,32 @@
 {
   "id": "shape-79f3966ff4cab298",
-  "label": "nvim+sh+opencode",
-  "name": "nvim+sh+opencode",
+  "label": "editor+sh+agent",
+  "name": "editor+sh+agent",
   "windows": [
     {
-      "fork": "1||nvim",
+      "fork": "editor",
       "name": "editor",
       "panes": [
         {
+          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "1||",
+      "fork": "shell",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "1||opencode",
-      "name": "opencode",
+      "fork": "agent",
+      "name": "pi",
       "panes": [
         {
-          "cmd": "opencode"
+          "class": "agent",
+          "cmd": "pi"
         }
       ]
     }
