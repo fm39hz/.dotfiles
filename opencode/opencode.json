@@ -1,67 +1,130 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "lsp-enforcement@git+https://github.com/fm39hz/open-code-lsp-enforcement.git",
-  ],
-  "lsp": {
-    "roslyn": {
-      "extensions": [
-        "cs"
-      ],
-      "command": [
-        "/home/fm39hz/.local/share/nvim/mason/bin/roslyn"
-      ]
-    }
-  },
-  "permission": {
-    "grep": "ask",
-    "glob": "ask",
-    "bash": "ask",
-  },
   "provider": {
     "9router": {
       "npm": "@ai-sdk/openai-compatible",
       "options": {
-        "baseURL": "http://localhost:20128/v1",
-        "apiKey": "sk_9router"
+        "baseURL": "http://127.0.0.1:20128/v1",
+        "apiKey": "sk-636c519db2767f2d-8574r6-c085dd24"
       },
       "models": {
         "coder": {
-          "name": "coder"
+          "name": "coder",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "daily-worker": {
-          "name": "daily-worker"
+          "name": "daily-worker",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "mimo": {
-          "name": "mimo"
+          "name": "mimo",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "qwen": {
-          "name": "qwen"
+          "name": "qwen",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "deepseek": {
-          "name": "deepseek"
+          "name": "deepseek",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "claude": {
-          "name": "claude"
+          "name": "claude",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "kimi": {
-          "name": "kimi"
+          "name": "kimi",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "glm": {
-          "name": "glm"
+          "name": "glm",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         },
         "minimax": {
-          "name": "minimax"
-        },
+          "name": "minimax",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
       }
     }
   },
-  "model": "daily-worker",
+  "model": "9router/daily-worker",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/daily-worker"
+      "model": "9router/small-support"
     }
   }
 }

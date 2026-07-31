@@ -1,0 +1,46 @@
+{
+  "id": "shape-c4092237e71fcf61",
+  "label": "editor+t3+files+agent+sh",
+  "fork": "a7c02d0977152c2e",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

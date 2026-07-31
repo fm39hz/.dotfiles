@@ -1,17 +1,15 @@
 {
   "id": "default",
   "label": "default",
-  "name": "default",
+  "fork": "db897b5da2578279",
   "windows": [
     {
-      "fork": "shell",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

@@ -1,20 +1,17 @@
 {
   "id": "shape-30a00221e5116bfc",
   "label": "editor+t4+files+agent+sh",
-  "name": "editor+t4+files+agent+sh",
+  "fork": "5d613c0cd83753a2",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "shell,shell,shell,shell",
       "name": "shell",
       "split": "tiled",
       "panes": [
@@ -25,27 +22,22 @@
       ]
     },
     {
-      "fork": "files",
       "name": "files",
       "panes": [
         {
-          "class": "files",
           "cmd": "yazi"
         }
       ]
     },
     {
-      "fork": "agent",
       "name": "opencode",
       "panes": [
         {
-          "class": "agent",
           "cmd": "opencode"
         }
       ]
     },
     {
-      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

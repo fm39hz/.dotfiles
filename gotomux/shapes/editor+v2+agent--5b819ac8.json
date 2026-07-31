@@ -1,20 +1,17 @@
 {
   "id": "shape-ef31db615b819ac8",
   "label": "editor+v2+agent",
-  "name": "editor+v2+agent",
+  "fork": "906d9b344c533cbd",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "shell,shell",
       "name": "shell",
       "split": "even-vertical",
       "panes": [
@@ -23,11 +20,9 @@
       ]
     },
     {
-      "fork": "agent",
       "name": "opencode",
       "panes": [
         {
-          "class": "agent",
           "cmd": "opencode"
         }
       ]

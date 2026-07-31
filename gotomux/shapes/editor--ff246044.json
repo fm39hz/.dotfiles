@@ -1,14 +1,12 @@
 {
   "id": "shape-1553cc62ff246044",
   "label": "editor",
-  "name": "editor",
+  "fork": "1553cc62ff246044",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]

@@ -1,0 +1,49 @@
+{
+  "id": "shape-4bd13259a89ee75b",
+  "label": "editor+makex4+files+agent+sh",
+  "fork": "b2b32b87d61e5dac",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "make",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {
+          "cmd": "make"
+        },
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

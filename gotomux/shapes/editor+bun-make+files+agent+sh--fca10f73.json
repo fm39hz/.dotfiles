@@ -1,0 +1,51 @@
+{
+  "id": "shape-b0291aa6fca10f73",
+  "label": "editor+bun/make+files+agent+sh",
+  "fork": "e56df741517bb83b",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "bun",
+      "split": "tiled",
+      "panes": [
+        {
+          "cmd": "bun"
+        },
+        {},
+        {
+          "cmd": "make"
+        },
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    }
+  ]
+}

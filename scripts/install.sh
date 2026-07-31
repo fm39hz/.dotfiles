@@ -20,10 +20,12 @@ paru -S --needed --noconfirm \
     alacritty \
     amazon-fonts \
     antigravity \
+    anydesk-bin \
     anytype-bin \
     aspnet-runtime \
     aspnet-runtime-8.0 \
     aspnet-targeting-pack \
+    atuin \
     aubio \
     aws-cli \
     aws-sdk-cpp \

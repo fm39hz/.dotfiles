@@ -1,20 +1,17 @@
 {
   "id": "shape-98e4b9a970d9dade",
   "label": "editor+v2+files",
-  "name": "editor+v2+files",
+  "fork": "fd0c3fd64bb34690",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "shell,shell",
       "name": "shell",
       "split": "even-vertical",
       "panes": [
@@ -23,11 +20,9 @@
       ]
     },
     {
-      "fork": "files",
       "name": "files",
       "panes": [
         {
-          "class": "files",
           "cmd": "yazi"
         }
       ]

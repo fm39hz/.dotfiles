@@ -1,0 +1,32 @@
+{
+  "id": "shape-c669a20f2d2f04cb",
+  "label": "editor+t3+agent",
+  "fork": "bf611ed420d586fb",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "claude",
+      "panes": [
+        {
+          "cmd": "claude"
+        }
+      ]
+    }
+  ]
+}

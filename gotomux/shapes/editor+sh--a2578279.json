@@ -1,17 +1,15 @@
 {
   "id": "shape-db897b5da2578279",
   "label": "editor+sh",
-  "name": "editor+sh",
+  "fork": "db897b5da2578279",
   "windows": [
     {
-      "fork": "shell",
       "name": "editor",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

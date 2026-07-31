@@ -53,6 +53,6 @@ customCommands:
         title: "Is the commit message correct?"
         body: "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}: {{ .Form.Description }}"
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: diff-so-fancy
+      command: diff-so-fancy

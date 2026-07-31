@@ -1,4 +1,4 @@
-version: 0.1.3
+version: 0.1.4
 log:
     path: /tmp/vi-sql.log
     level: info
@@ -20,7 +20,7 @@ mcp:
 security:
     method: keyring
 showConnectionPage: true
-currentConnection: bat dong san
+currentConnection: gotomux
 connections:
     - id: 37a70a1c-0500-4681-ab76-eb58838b179b
       driver: postgres
@@ -50,6 +50,20 @@ connections:
       options:
         alwaysConfirmActions: true
       lastUsed: 2026-07-03T18:49:01.940204466+07:00
+    - id: 5c737d0f-d6eb-414e-a42d-0a51e66a4752
+      driver: sqlite
+      dsn: ~/.local/share/gotomux/state.db
+      host: ""
+      port: 0
+      database: ""
+      username: ""
+      password: ""
+      sslMode: ""
+      name: gotomux
+      timeout: 0
+      options:
+        alwaysConfirmActions: true
+      lastUsed: 2026-07-29T10:04:23.8713588+07:00
 styles:
     nerdFont: true
     currentStyle: default.yaml

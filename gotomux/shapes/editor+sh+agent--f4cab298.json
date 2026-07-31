@@ -1,31 +1,26 @@
 {
   "id": "shape-79f3966ff4cab298",
   "label": "editor+sh+agent",
-  "name": "editor+sh+agent",
+  "fork": "079477cb27164e3a",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "shell",
       "name": "shell",
       "panes": [
         {}
       ]
     },
     {
-      "fork": "agent",
       "name": "pi",
       "panes": [
         {
-          "class": "agent",
           "cmd": "pi"
         }
       ]

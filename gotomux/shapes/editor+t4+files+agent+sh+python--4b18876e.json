@@ -1,0 +1,55 @@
+{
+  "id": "shape-42a056924b18876e",
+  "label": "editor+t4+files+agent+sh+python",
+  "fork": "9279e6cca88a9694",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "python",
+      "panes": [
+        {
+          "cmd": "python"
+        }
+      ]
+    }
+  ]
+}

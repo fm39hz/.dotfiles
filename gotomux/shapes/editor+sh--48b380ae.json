@@ -1,20 +1,17 @@
 {
   "id": "shape-4afe8c6148b380ae",
   "label": "editor+sh",
-  "name": "editor+sh",
+  "fork": "4afe8c6148b380ae",
   "windows": [
     {
-      "fork": "editor",
       "name": "editor",
       "panes": [
         {
-          "class": "editor",
           "cmd": "nvim"
         }
       ]
     },
     {
-      "fork": "shell",
       "name": "shell",
       "panes": [
         {}

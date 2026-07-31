@@ -221,6 +221,9 @@ sqlQueryEditor:
     termEditor:
         keys: [Ctrl+e]
         description: Open in $EDITOR
+    prettify:
+        sequences: [gf]
+        description: Format SQL
 indexAddForm:
     toggleSQLMode:
         keys: [Ctrl+e]
