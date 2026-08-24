@@ -1,0 +1,53 @@
+{
+  "dankBatteryAlerts": {
+    "enabled": true
+  },
+  "dankLauncherKeys": {
+    "enabled": true
+  },
+  "powerOptions": {
+    "enabled": true
+  },
+  "dankKDEConnect": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "displayOutput": {
+    "enabled": true
+  },
+  "audioSwitcher": {
+    "enabled": true
+  },
+  "qrGenerator": {
+    "enabled": true
+  },
+  "developerUtilities": {
+    "enabled": true,
+    "autoCloseOnCopy": true
+  },
+  "screenRecorder": {
+    "enabled": true
+  },
+  "nvidiaGpuMonitor": {
+    "enabled": true
+  },
+  "bongoCat": {
+    "enabled": true,
+    "catColorMode": "primary",
+    "showMetrics": true,
+    "classicIdle": true,
+    "enableBlinking": true
+  },
+  "converter": {
+    "enabled": true
+  },
+  "lyricsOnPanel": {
+    "enabled": true
+  },
+  "materialPlayer": {
+    "enabled": true
+  }
+}

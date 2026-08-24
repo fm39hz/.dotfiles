@@ -1,0 +1,39 @@
+{
+  "id": "shape-ce6f4a6441975441",
+  "label": "editor+makex2+sh+files",
+  "fork": "62d6d4f9ff74da12",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "make",
+      "split": "even-vertical",
+      "panes": [
+        {
+          "cmd": "make"
+        },
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    }
+  ]
+}

@@ -11,4 +11,6 @@
 # This means that as long as any fish < 4.3 is still running on this system,
 # we cannot complete the migration.
 # As a workaround, erase the universal variable at every shell startup.
+status is-interactive; or return
+
 set --erase --universal fish_key_bindings

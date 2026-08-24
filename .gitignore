@@ -80,6 +80,9 @@ torbrowser
 configstore
 BraveSoftware
 microsoft-edge
+microsoft-edge-headless
+net.imput.helium
+notion
 
 # Development cache
 ag
@@ -119,6 +122,7 @@ Jan
 LM Studio
 how
 manicode
+Claude
 
 # Misc
 .backup
@@ -142,3 +146,7 @@ me.nabdev.iloader
 com.bilingify.readest
 zalo
 .semgrep
+dms
+gobroom
+shell-custom
+systemd/user

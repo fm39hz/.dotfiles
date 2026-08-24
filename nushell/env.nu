@@ -4,6 +4,11 @@ $env.config.show_banner = false
 $env.LS_COLORS = (vivid generate ~/.config/vivid/everforest.yml)
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 $env.config.edit_mode = 'vi'
+# Ghi đè chỉ báo con trỏ của Starship trong Nushell
+$env.PROMPT_INDICATOR = ""
+$env.PROMPT_INDICATOR_VI_INSERT = "| "
+$env.PROMPT_INDICATOR_VI_NORMAL = "> "
+$env.PROMPT_MULTILINE_INDICATOR = ""
 # Ép .NET hiển thị màu trong Nushell
 $env.DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION = true
 $env.DOTNET_WATCH_RESTART_ON_RUDE_EDIT = true
@@ -16,6 +21,9 @@ $env.GODOT_PATH = $env.GODOT
 
 # Dev
 $env.PODMAN_COMPOSE_PROVIDER = "podman-compose"
+
+# Office
+$env.SAL_USE_VCLPLUGIN = "gtk3"
 
 # AI
 $env.OPENCODE_EXPERIMENTAL = true

@@ -20,7 +20,7 @@ mcp:
 security:
     method: keyring
 showConnectionPage: true
-currentConnection: gotomux
+currentConnection: beekeeper
 connections:
     - id: 37a70a1c-0500-4681-ab76-eb58838b179b
       driver: postgres
@@ -35,7 +35,7 @@ connections:
       timeout: 5
       options:
         alwaysConfirmActions: true
-      lastUsed: 2026-06-14T14:10:11.839760902+07:00
+      lastUsed: 2026-08-13T10:08:46.453941944+07:00
     - id: 182cd3fe-2bf4-4493-9c83-88622ecdc8f4
       driver: postgres
       dsn: ""
@@ -63,7 +63,21 @@ connections:
       timeout: 0
       options:
         alwaysConfirmActions: true
-      lastUsed: 2026-07-29T10:04:23.8713588+07:00
+      lastUsed: 2026-08-13T10:08:49.207885135+07:00
+    - id: cd7dbdc8-8837-4d7e-975a-21188028de48
+      driver: sqlite
+      dsn: ~/.config/beekeeper-studio/app.db
+      host: ""
+      port: 0
+      database: ""
+      username: ""
+      password: ""
+      sslMode: ""
+      name: beekeeper
+      timeout: 0
+      options:
+        alwaysConfirmActions: true
+      lastUsed: 2026-09-14T15:24:00.40539657+07:00
 styles:
     nerdFont: true
     currentStyle: default.yaml

@@ -1,0 +1,53 @@
+{
+  "id": "shape-7de930572ff2442c",
+  "label": "editor+bun/make+files+agent+omp",
+  "fork": "8394b0d4122aba9c",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "bun",
+      "split": "tiled",
+      "panes": [
+        {
+          "cmd": "bun"
+        },
+        {},
+        {},
+        {
+          "cmd": "make"
+        }
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "omp",
+      "panes": [
+        {
+          "cmd": "omp"
+        }
+      ]
+    }
+  ]
+}

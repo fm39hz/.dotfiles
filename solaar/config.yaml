@@ -1,15 +1,15 @@
 - 1.1.20
 - _NAME: MX Master 3 Wireless Mouse
-  _absent: [hi-res-scroll, scroll-ratchet-torque, onboard_profiles, led_control, led_zone_, per-key-lighting, brightness_control, fn-swap, disable-keyboard-keys,
-    force-sensing, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params,
-    analog-button-tuning, haptic-level, haptic-play, sidetone, equalizer, adc_power_management, headset-eco-mode, headset-do-not-disturb, headset-mic-mute,
-    headset-mic-snr, headset-ai-nr, headset-ai-nr-level, headset-sidetone, headset-mic-gain, headset-mix-balance, headset-auto-sleep, headset-onboard-eq,
-    headset-eq-active-preset, headset-advanced-eq, headset_led_control, headset-onboard-effect, headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown,
-    headset-signature-passive, logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state,
-    logivoice-hpf-state, persistent-remappable-keys, report_rate_extended, report_rate, rgb_startup_animation, rgb_shutdown_animation, rgb_control, rgb_zone_,
-    backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, speed-change, pointer_speed, dpi_extended]
+  _absent: [hi-res-scroll, per-key-lighting, brightness_control, fn-swap, disable-keyboard-keys, force-sensing, crown-smooth, divert-crown, divert-gkeys,
+    m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, analog-button-tuning, haptic-level, haptic-play, sidetone,
+    equalizer, adc_power_management, headset-eco-mode, headset-do-not-disturb, headset-mic-mute, headset-mic-snr, headset-ai-nr, headset-ai-nr-level, headset-sidetone,
+    headset-mic-gain, headset-mix-balance, headset-auto-sleep, headset-onboard-eq, headset-eq-active-preset, headset-advanced-eq, headset_led_control, headset-onboard-effect,
+    headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown, headset-signature-passive, logivoice-nr-state, logivoice-ng-state,
+    logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state, rgb_startup_animation, rgb_shutdown_animation,
+    rgb_control, rgb_zone_, led_control, led_zone_, report_rate_extended, report_rate, persistent-remappable-keys, scroll-ratchet-torque, onboard_profiles,
+    backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, speed-change, dpi_extended]
   _battery: 4096
-  _config_cookie: [105, 0]
+  _config_cookie: [213, 122]
   _modelId: B02340820000
   _sensitive: {dpi: false, hires-smooth-resolution: false, smart-shift: false, thumb-scroll-invert: false}
   _serial: DDE59E1D
@@ -24,6 +24,7 @@
   hires-smooth-invert: false
   hires-smooth-resolution: true
   lowres-scroll-mode: false
+  pointer_speed: 237
   reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 195: 195, 196: 196}
   rgb_idle_effect: !LEDEffectSetting {ID: 128, intensity: 50}
   rgb_idle_timeout: 60
@@ -65,5 +66,9 @@
   dpi: 1000
   reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 195: 195, 196: 196}
   thumb-scroll-mode: false
+- _NAME: MX Master 3 Wireless Mouse
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+- _NAME: MX Master 3 Wireless Mouse
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
 - _NAME: MX Master 3 Wireless Mouse
   _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}

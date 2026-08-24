@@ -1,3 +1,5 @@
+status is-interactive; or return
+
 set -g theme_nerd_fonts yes
 set -g theme_powerline_fonts no
 set -g theme_display_git yes

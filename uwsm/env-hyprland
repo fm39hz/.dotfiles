@@ -9,7 +9,10 @@ export ELECTRON_OZONE_PLATFORM_HINT='auto'
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=Hyprland
-export AQ_DRM_DEVICES="/dev/dri/card2:/dev/dri/card1"
+export AQ_DRM_DEVICES="/dev/dri/invidia-card:/dev/dri/intel-card"
+# export AQ_FORCE_LINEAR_BLIT=0
+# export AQ_MGPU_NO_EXPLICIT=1
+# export AQ_NO_MODIFIERS=1
 
 # ############# Others #############
 export _JAVA_AWT_WM_NONREPARENTING=1

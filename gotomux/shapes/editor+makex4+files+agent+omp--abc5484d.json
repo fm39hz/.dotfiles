@@ -1,0 +1,51 @@
+{
+  "id": "shape-f400df7babc5484d",
+  "label": "editor+makex4+files+agent+omp",
+  "fork": "1a420871bcc92ba9",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "make",
+      "split": "tiled",
+      "panes": [
+        {},
+        {},
+        {},
+        {
+          "cmd": "make"
+        }
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "opencode",
+      "panes": [
+        {
+          "cmd": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "omp",
+      "panes": [
+        {
+          "cmd": "omp"
+        }
+      ]
+    }
+  ]
+}

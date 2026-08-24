@@ -48,6 +48,8 @@ paru -S --needed --noconfirm \
     cava \
     chafa \
     clang \
+    claude-code \
+    claude-desktop \
     cloudflared \
     cmake \
     cmatrix \
@@ -58,18 +60,21 @@ paru -S --needed --noconfirm \
     dart-sass \
     dbeaver \
     ddcutil \
+    debtap \
     devin-desktop \
     devspace-bin \
     diff-so-fancy \
-    dms-shell \
     docker \
     docker-buildx \
     docker-compose \
     dotnet-sdk \
     dotnet-sdk-8.0 \
+    dux-shell \
     earlyoom \
     easyeffects \
     efibootmgr \
+    egl-gbm \
+    egl-wayland \
     entr \
     epubcheck \
     everforest-icon-theme-git \
@@ -103,6 +108,7 @@ paru -S --needed --noconfirm \
     gnome-keyring \
     go \
     gopreload-git \
+    gowall-bin \
     gpsd \
     gpu-screen-recorder \
     gradia \
@@ -115,6 +121,7 @@ paru -S --needed --noconfirm \
     gtk-engine-murrine \
     gum \
     gvfs \
+    helium-browser-bin \
     helm \
     how-cli-bin \
     html-xml-utils \
@@ -127,7 +134,6 @@ paru -S --needed --noconfirm \
     hyprland-qt-support \
     hyprlang \
     hyprlauncher \
-    hyprlock \
     hyprpaper \
     hyprpicker \
     hyprpolkitagent \
@@ -146,6 +152,7 @@ paru -S --needed --noconfirm \
     iw \
     iwd \
     jdk17-openjdk \
+    jmeter \
     joyutils \
     kdeconnect \
     keyd \
@@ -158,6 +165,7 @@ paru -S --needed --noconfirm \
     lazygit \
     libfaketime \
     libinput \
+    libinput-tools \
     libnotify \
     libpulse \
     libqalculate \
@@ -172,6 +180,7 @@ paru -S --needed --noconfirm \
     llvm \
     lmstudio \
     localsend-bin \
+    love \
     lshw \
     lua51 \
     luajit-tiktoken-bin \
@@ -185,7 +194,6 @@ paru -S --needed --noconfirm \
     mesa-utils \
     microsoft-edge-stable-bin \
     minikube \
-    mongodb-tools-bin \
     mono \
     mpd \
     mpvpaper \
@@ -205,7 +213,7 @@ paru -S --needed --noconfirm \
     nmgui-bin \
     nodejs-lts-jod \
     notification-daemon \
-    notion-app-enhanced \
+    notion \
     noto-fonts \
     noto-fonts-cjk \
     noto-fonts-emoji \
@@ -220,8 +228,10 @@ paru -S --needed --noconfirm \
     onlyoffice-bin \
     openai-codex \
     openapi-tui \
-    opencode \
+    opencode-beta \
     openresolv \
+    openvpn \
+    openvpn3-git \
     oracle-sqldeveloper \
     pacman-contrib \
     pandoc-cli \
@@ -266,7 +276,6 @@ paru -S --needed --noconfirm \
     secrets \
     sendme-bin \
     sesh-bin \
-    shed-sh \
     sigil \
     socat \
     solaar \
@@ -288,8 +297,6 @@ paru -S --needed --noconfirm \
     tesseract-data-kor \
     tesseract-data-lat \
     tesseract-data-spa \
-    thefuck \
-    thorium-browser-avx2-bin \
     thunar \
     thunar-archive-plugin \
     thunar-media-tags-plugin \
@@ -303,6 +310,7 @@ paru -S --needed --noconfirm \
     tofi \
     tree \
     tree-sitter \
+    trivy \
     ttf-dejavu \
     ttf-jetbrains-mono \
     ttf-jetbrains-mono-nerd \
@@ -320,7 +328,9 @@ paru -S --needed --noconfirm \
     uv \
     uwsm \
     v2rayn \
+    veet \
     vesktop-bin \
+    viber \
     visual-studio-code-bin \
     vivid \
     vlc \
@@ -328,6 +338,7 @@ paru -S --needed --noconfirm \
     vlc-plugin-x264 \
     vlc-plugin-x265 \
     vulkan-intel \
+    vulkan-nouveau \
     waybar \
     wget \
     wine \

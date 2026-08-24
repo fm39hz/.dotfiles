@@ -1,0 +1,31 @@
+{
+  "id": "shape-8cd7ecf72626889f",
+  "label": "editor+bun+omp",
+  "fork": "8cd7ecf72626889f",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "bun",
+      "panes": [
+        {
+          "cmd": "bun"
+        }
+      ]
+    },
+    {
+      "name": "omp",
+      "panes": [
+        {
+          "cmd": "omp"
+        }
+      ]
+    }
+  ]
+}

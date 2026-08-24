@@ -1,0 +1,57 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "audioSwitcher": {
+      "repo": "https://github.com/CD-Z/dms-plugins",
+      "commit": "c510ed4f29c5128512130051100e5c86464c95a6"
+    },
+    "bongoCat": {
+      "repo": "https://github.com/hthienloc/dms-bongo-cat",
+      "commit": "237b1a34b2fb8d90e4f4c8656af758c3d7dab638"
+    },
+    "calculator": {
+      "repo": "https://github.com/rochacbruno/DankCalculator",
+      "commit": "73073d051d08254633f28f89d2609344c8289813"
+    },
+    "converter": {
+      "repo": "https://github.com/viewerofall-labs/weather-viewer",
+      "path": "converter",
+      "commit": "1892857e462be9b830582d891e989a61fe194d75"
+    },
+    "dankBatteryAlerts": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankBatteryAlerts",
+      "commit": "9e2752586d79a6509b93c00c6fa4be0334ae4755"
+    },
+    "dankKDEConnect": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankKDEConnect",
+      "commit": "9e2752586d79a6509b93c00c6fa4be0334ae4755"
+    },
+    "dankLauncherKeys": {
+      "repo": "https://github.com/AvengeMedia/dms-plugins",
+      "path": "DankLauncherKeys",
+      "commit": "9e2752586d79a6509b93c00c6fa4be0334ae4755"
+    },
+    "developerUtilities": {
+      "repo": "https://github.com/xxyangyoulin/dms-plugin-developer-utilities",
+      "commit": "51143ca6a2df83959abfa1ea20643eae8b202992"
+    },
+    "displayOutput": {
+      "repo": "https://github.com/xyzsteven/dms-displayoutput",
+      "commit": "3bee076c67761aaba2b4b129a7c2d2acc8552545"
+    },
+    "materialPlayer": {
+      "repo": "https://github.com/notsopreety/materialPlayer",
+      "commit": "0305afcd246e91c19cc03b44dc4f354ab78621c3"
+    },
+    "powerOptions": {
+      "repo": "https://github.com/Nazahim/PowerOptions",
+      "commit": "95fa7949fd9614a21bcc7a14ff8cc917a7208cf8"
+    },
+    "screenRecorder": {
+      "repo": "https://github.com/arqueon/dms-screen-recorder",
+      "commit": "40364a8530f4364e2fd6b0eb8802d5fe4f241b8f"
+    }
+  }
+}

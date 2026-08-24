@@ -135,7 +135,6 @@ alias nvim_delete="~/.config/scripts/nvim_delete.sh"
 alias omzconfig="nvim ~/.config/.zshrc"
 alias tempnote="cd ~/Workspace/Notes/ && nvim TempNote.md"
 alias aemu="emulator -avd Pixel_3a_API_34_extension_level_7_x86_64"
-eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
 # Android Dev environment
@@ -148,6 +147,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/
 # Flutter environment
 # export PATH="$PATH:$HOME/.pub-cache/bin"
 export CHROME_EXECUTABLE='thorium-browser'
+export SNACKS_GHOSTTY=true
+export PODMAN_COMPOSE_PROVIDER="podman-compose"
 
 # GodotEnv environment
 alias godotenv="$HOME/.dotnet/tools/godotenv"
@@ -168,3 +169,27 @@ export PATH="$PATH:/home/fm39hz/.cache/lm-studio/bin"
 
 # Added by Antigravity CLI installer
 export PATH="/home/fm39hz/.local/bin:$PATH"
+
+# Aseprite
+export PATH="$HOME/.local/share/Steam/steamapps/common/Aseprite:$PATH"
+
+# Keybindings
+# Ctrl+B: gotomux
+CtrlB() { gotomux; zle -I }
+zle -N CtrlB
+bindkey '^b' CtrlB
+
+# Ctrl+Y: yazi
+CtrlY() { yazi; zle -I }
+zle -N CtrlY
+bindkey '^y' CtrlY
+
+# Ctrl+L: hard clear (xóa sạch buffer terminal)
+CtrlL() { clear; zle -I }
+zle -N CtrlL
+bindkey '^l' CtrlL
+
+# Alt+U: system update
+AltU() { clear; ~/.config/scripts/system_update.sh }
+zle -N AltU
+bindkey '\eu' AltU

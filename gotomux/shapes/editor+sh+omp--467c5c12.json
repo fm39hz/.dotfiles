@@ -1,0 +1,27 @@
+{
+  "id": "shape-43e8bd1f467c5c12",
+  "label": "editor+sh+omp",
+  "fork": "43e8bd1f467c5c12",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "omp",
+      "panes": [
+        {
+          "cmd": "omp"
+        }
+      ]
+    }
+  ]
+}

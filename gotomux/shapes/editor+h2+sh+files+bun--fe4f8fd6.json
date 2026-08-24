@@ -1,0 +1,45 @@
+{
+  "id": "shape-6fc3e578fe4f8fd6",
+  "label": "editor+h2+sh+files+bun",
+  "fork": "b3006617e3d6efa9",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "even-horizontal",
+      "panes": [
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "bun",
+      "panes": [
+        {
+          "cmd": "bun"
+        }
+      ]
+    }
+  ]
+}

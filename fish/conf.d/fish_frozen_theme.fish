@@ -8,6 +8,8 @@
 # for appropriate commands to add to ~/.config/fish/config.fish instead.
 # See also the release notes for fish 4.3.0 (run `help relnotes`).
 
+status is-interactive; or return
+
 set --global fish_color_autosuggestion brblack
 set --global fish_color_cancel -r
 set --global fish_color_command normal

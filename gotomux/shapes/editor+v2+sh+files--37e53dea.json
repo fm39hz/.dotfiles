@@ -1,0 +1,37 @@
+{
+  "id": "shape-69ce841e37e53dea",
+  "label": "editor+v2+sh+files",
+  "fork": "00e001b35f50d1a9",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "split": "even-vertical",
+      "panes": [
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    }
+  ]
+}

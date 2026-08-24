@@ -1,0 +1,50 @@
+{
+  "id": "shape-c6993db0e60d8394",
+  "label": "editor+makex3+bun+files+bun",
+  "fork": "9c0d49fc7e830a82",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "make",
+      "split": "tiled",
+      "panes": [
+        {
+          "cmd": "make"
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "name": "bun",
+      "panes": [
+        {
+          "cmd": "bun"
+        }
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "bun",
+      "panes": [
+        {
+          "cmd": "bun"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "shape-9bd1cef5dd751e38",
+  "label": "editor+sh+omp",
+  "fork": "9bd1cef5dd751e38",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "omp",
+      "panes": [
+        {
+          "cmd": "omp"
+        }
+      ]
+    }
+  ]
+}

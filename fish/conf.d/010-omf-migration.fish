@@ -1,18 +1,17 @@
-# === Vi mode ===
-fish_vi_key_bindings
-fish_user_key_bindings  # apply custom bindings after vi mode
+if status is-interactive
+    # === Vi mode ===
+    fish_vi_key_bindings
+    fish_user_key_bindings # apply custom bindings after vi mode
 
-# === Cursor shape ===
-set -g fish_cursor_default block
-set -g fish_cursor_insert line
-set -g fish_escape_delay_ms 10
-set -g fish_prompt_pwd_dir_length 10
+    # === Cursor shape ===
+    # set -g fish_cursor_default block
+    # set -g fish_cursor_insert line
+    # set -g fish_escape_delay_ms 10
+    # set -g fish_prompt_pwd_dir_length 10
 
-# === Zoxide ===
-zoxide init fish | source
-
-# === The Fuck ===
-thefuck --alias | source
+    # === Zoxide ===
+    zoxide init fish | source
+end
 
 # === Editor ===
 set -gx EDITOR nvim

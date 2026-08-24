@@ -14,20 +14,15 @@ $c\
 $rust\
 $golang\
 $nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
 $python\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
-$conda\
 [](fg:color_bg3 bg:transparent)\
 $line_break$character"""
 
 add_newline = false
 palette = 'everforest_dark'
-scan_timeout = 200
+scan_timeout = 500
 command_timeout = 500
 
 [palettes.gruvbox_dark]
@@ -140,21 +135,25 @@ format = '[[ $symbol ](fg:color_fg0 bg:color_blue)]($style)'
 symbol = ""
 style = "bg:color_blue bold"
 format = '[[ $symbol ](fg:color_fg0 bg:color_blue)]($style)'
+disabled = true
 
 [java]
 symbol = ""
 style = "bg:color_blue bold"
 format = '[[ $symbol ](fg:color_fg0 bg:color_blue)]($style)'
+disabled = true
 
 [kotlin]
 symbol = ""
 style = "bg:color_blue bold"
 format = '[[ $symbol ](fg:color_fg0 bg:color_blue)]($style)'
+disabled = true
 
 [haskell]
 symbol = ""
 style = "bg:color_blue bold"
 format = '[[ $symbol ](fg:color_fg0 bg:color_blue)]($style)'
+disabled = true
 
 [python]
 symbol = ""
@@ -169,6 +168,7 @@ style = "bg:color_bg3 bold"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 
 [conda]
+disabled = true
 style = "bg:color_bg3 bold"
 format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 
@@ -183,7 +183,7 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:color_green bold)'
+success_symbol = '[](bold fg:color_green bold)'
 error_symbol = '[](bold fg:color_red bold)'
 vimcmd_symbol = '[](bold fg:color_green bold)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple bold)'

@@ -8,8 +8,8 @@
         "apiKey": "sk-636c519db2767f2d-8574r6-c085dd24"
       },
       "models": {
-        "coder": {
-          "name": "coder",
+        "tech-lead": {
+          "name": "tech-lead",
           "modalities": {
             "input": [
               "text",
@@ -20,8 +20,8 @@
             ]
           }
         },
-        "daily-worker": {
-          "name": "daily-worker",
+        "senior": {
+          "name": "senior",
           "modalities": {
             "input": [
               "text",
@@ -32,8 +32,8 @@
             ]
           }
         },
-        "mimo": {
-          "name": "mimo",
+        "middle": {
+          "name": "middle",
           "modalities": {
             "input": [
               "text",
@@ -44,68 +44,8 @@
             ]
           }
         },
-        "qwen": {
-          "name": "qwen",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "deepseek": {
-          "name": "deepseek",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "claude": {
-          "name": "claude",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "kimi": {
-          "name": "kimi",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "glm": {
-          "name": "glm",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          }
-        },
-        "minimax": {
-          "name": "minimax",
+        "junior": {
+          "name": "junior",
           "modalities": {
             "input": [
               "text",
@@ -119,12 +59,12 @@
       }
     }
   },
-  "model": "9router/daily-worker",
+  "model": "9router/junior",
   "agent": {
     "explorer": {
       "description": "Fast explorer subagent for codebase exploration",
       "mode": "subagent",
-      "model": "9router/small-support"
+      "model": "9router/junior"
     }
   }
 }

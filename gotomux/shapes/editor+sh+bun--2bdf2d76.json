@@ -1,0 +1,29 @@
+{
+  "id": "shape-f68e4d042bdf2d76",
+  "label": "editor+sh+bun",
+  "fork": "f68e4d042bdf2d76",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "bun",
+      "panes": [
+        {
+          "cmd": "bun"
+        }
+      ]
+    }
+  ]
+}
