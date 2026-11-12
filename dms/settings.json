@@ -21,7 +21,7 @@
   "appDrawerSectionViewModes": {
     "apps": "list"
   },
-  "dankLauncherV2Size": "medium",
+  "dankLauncherV2Size": "compact",
   "dankLauncherV2BorderEnabled": true,
   "dankLauncherV2UnloadOnClose": true,
   "useAutoLocation": true,
@@ -232,7 +232,9 @@
       "batteryColorMode": "theme",
       "hoverPopouts": false,
       "followInterfaceStyle": false,
-      "widgetFollowInterfaceStyle": true
+      "widgetFollowInterfaceStyle": true,
+      "clickActionFollowMouse": false,
+      "widgetStyle": "pills"
     },
     {
       "id": "dot1792744414340",
@@ -365,7 +367,9 @@
       "followInterfaceStyle": false,
       "widgetFollowInterfaceStyle": true,
       "island": false,
-      "dot": true
+      "dot": true,
+      "islandCompactThickness": 42,
+      "islandSatelliteGap": 16
     }
   ],
   "builtInPluginSettings": {
@@ -408,6 +412,7 @@
       "showOnLastDisplay": true,
       "position": 1,
       "mode": "compact",
+      "middleClickAction": "close",
       "taskbarAlign": "center",
       "widgetExpansion": "popout",
       "iconSize": 40,
@@ -533,7 +538,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "style": "expressive",
+        "style": "pill",
         "profileVisibility": "always",
         "passwordVisibility": "always"
       }
@@ -567,13 +572,13 @@
     {
       "id": "lock_power",
       "widgetType": "lockPower",
-      "enabled": true,
+      "enabled": false,
       "config": {
         "displayPreferences": [
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "shape": "round"
+        "shape": "cookie9"
       }
     }
   ],
@@ -624,7 +629,7 @@
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "style": "expressive",
+        "style": "pill",
         "profileVisibility": "always",
         "passwordVisibility": "always"
       }
@@ -646,13 +651,13 @@
     {
       "id": "lock_power",
       "widgetType": "lockPower",
-      "enabled": true,
+      "enabled": false,
       "config": {
         "displayPreferences": [
           "all"
         ],
         "syncPositionAcrossScreens": true,
-        "shape": "round"
+        "shape": "cookie9"
       }
     },
     {
@@ -667,17 +672,189 @@
       }
     }
   ],
-  "lockScreenShowPowerActions": true,
+  "lockScreenShowPowerActions": false,
   "lockScreenWallpaperPath": "/home/fm39hz/.config/Wallpaper/Lock.png",
   "lockPamExternallyManaged": false,
   "lockScreenVideoEnabled": false,
   "lockScreenPowerOffMonitorsOnLock": true,
-  "rememberLastQuery": true,
+  "rememberLastQuery": false,
   "launcherEnterAction": "launch",
   "launcherKeybinds": {},
   "mediaExcludePlayers": [
     "zalo"
   ],
   "bluetoothMprisEnabled": true,
-  "blurBorderOpacity": 0.35
+  "blurBorderOpacity": 0.35,
+  "launcherHistoryEnabled": true,
+  "frameLauncherEdgeHover": false,
+  "controlCenterWidgets": [
+    {
+      "id": "user",
+      "enabled": true,
+      "w": 5,
+      "h": 1,
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true,
+      "col": 5,
+      "row": 0
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true,
+      "col": 6,
+      "row": 0
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true,
+      "col": 7,
+      "row": 0
+    },
+    {
+      "id": "brightnessSlider",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 1
+    },
+    {
+      "id": "volumeSlider",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 1
+    },
+    {
+      "id": "wifi",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 2
+    },
+    {
+      "id": "bluetooth",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 2
+    },
+    {
+      "id": "audioOutput",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 3
+    },
+    {
+      "id": "audioInput",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 4
+    },
+    {
+      "id": "darkMode",
+      "enabled": true,
+      "w": 2,
+      "h": 1,
+      "col": 0,
+      "row": 4
+    },
+    {
+      "id": "nightMode",
+      "enabled": true,
+      "w": 2,
+      "h": 1,
+      "col": 2,
+      "row": 4
+    },
+    {
+      "id": "doNotDisturb",
+      "enabled": true,
+      "w": 2,
+      "h": 1,
+      "col": 4,
+      "row": 5
+    },
+    {
+      "id": "idleInhibitor",
+      "enabled": true,
+      "w": 2,
+      "h": 1,
+      "col": 6,
+      "row": 5
+    },
+    {
+      "id": "battery",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 5
+    },
+    {
+      "id": "diskUsage",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 6
+    },
+    {
+      "id": "runningApps",
+      "enabled": true,
+      "w": 7,
+      "h": 1,
+      "small": true,
+      "col": 0,
+      "row": 7
+    },
+    {
+      "id": "edit",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true,
+      "col": 7,
+      "row": 7
+    },
+    {
+      "id": "builtin_vpn",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 3
+    },
+    {
+      "id": "plugin_dankKDEConnect",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 6
+    }
+  ],
+  "interfaceStyle": "expressive",
+  "density": "spacious",
+  "osdPosition": 4
 }

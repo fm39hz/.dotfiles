@@ -146,6 +146,8 @@ me.nabdev.iloader
 com.bilingify.readest
 zalo
 .semgrep
+!dms/plugin_settings.json
+!dms/settings.json
 dms
 gobroom
 shell-custom

@@ -41,6 +41,7 @@ paru -S --needed --noconfirm \
     bluez-utils \
     brave-nightly-bin \
     brightnessctl \
+    bruno-bin \
     btop \
     bun \
     calibre-bin \
@@ -56,6 +57,7 @@ paru -S --needed --noconfirm \
     codex-desktop-linux \
     colloid-everforest-gtk-theme-git \
     composer \
+    crane \
     cursor-bin \
     dart-sass \
     dbeaver \
@@ -289,6 +291,7 @@ paru -S --needed --noconfirm \
     steam \
     superfile \
     syntax-highlighting \
+    tablepro \
     tauri-cli \
     tesseract-data-chi_sim \
     tesseract-data-chi_tra \

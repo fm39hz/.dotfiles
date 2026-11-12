@@ -1,0 +1,43 @@
+{
+  "id": "shape-9ffcf890b351e42f",
+  "label": "editor+sh+sh+files+agent",
+  "fork": "9ffcf890b351e42f",
+  "windows": [
+    {
+      "name": "editor",
+      "panes": [
+        {
+          "cmd": "nvim"
+        }
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "shell",
+      "panes": [
+        {}
+      ]
+    },
+    {
+      "name": "files",
+      "panes": [
+        {
+          "cmd": "yazi"
+        }
+      ]
+    },
+    {
+      "name": "codex",
+      "panes": [
+        {
+          "cmd": "codex"
+        }
+      ]
+    }
+  ]
+}
